@@ -114,5 +114,119 @@ namespace WindowsFormsApp1
                 this.Close();
             }
         }
+
+        #region Restringindo acessos aos Relatórios de nivel -2
+        private void AbreFormularioBaseNivel(int nivel, Form formulario)
+        {
+            // usuário logado
+            if (Globais.logado)
+            {
+                // Só acessa nivel >= 2 Master
+                if (Globais.nivel >= nivel)
+                {
+                    // Procedimentos
+                    formulario.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Acesso não permitido!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("É necessário ter um usuário logado!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void relatóriosDeInserçãoDeProdutosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // usuário logado
+            if (Globais.logado)
+            {
+                // Só acessa nivel >= 2 Master
+                if (Globais.nivel >= 2)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Acesso não permitido!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("É necessário ter um usuário logado!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void relatórioDeRetiradaDeProdutosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // usuário logado
+            if (Globais.logado)
+            {
+                // Só acessa nivel >= 2 Master
+                if (Globais.nivel >= 2)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Acesso não permitido!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("É necessário ter um usuário logado!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void relatórioDeTodosOsMateriaisInseridosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // usuário logado
+            if (Globais.logado)
+            {
+                // Só acessa nivel >= 2 Master
+                if (Globais.nivel >= 2)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Acesso não permitido!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("É necessário ter um usuário logado!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void relatórioDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // usuário logado
+            if (Globais.logado)
+            {
+                // Só acessa nivel >= 2 Master
+                if (Globais.nivel >= 2)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Acesso não permitido!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("É necessário ter um usuário logado!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        #endregion
+
+        private void adicionarUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_AddUsuario form_AddUsuario = new Form_AddUsuario();
+            AbreFormularioBaseNivel(2, form_AddUsuario);
+        }
     }
 }

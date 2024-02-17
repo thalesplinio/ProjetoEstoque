@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 // --
 using System.Data.SQLite;
 using System.Data;
+using System.Windows.Forms;
+using System.ComponentModel.Design;
 
 
 namespace WindowsFormsApp1
@@ -69,6 +71,83 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }
+        #endregion
+
+        #region Funções Form_AddUsuario / inserir usuário
+        public static void NovoUsuario(Usuario usuario)
+        {
+            // verificando se o usuário existe
+            if (ExisteUserName(usuario))
+            {
+                MessageBox.Show("Nome de usuário já existe!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // inserindo no banco
+            try
+            {
+                DateTime data = DateTime.Now;
+                var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+                var command = ConexaoBanco().CreateCommand();
+                command.CommandText = @"
+                    INSERT INTO usuarios 
+                        (
+                            nome_completo, nome_usuario, email, telefone, 
+                            senha, data_cadastro, usuario_ativo, nivel_acesso
+                        ) 
+                    VALUES 
+                        (
+                            @nome_completo, @nome_usuario, @email, @telefone, @senha, @data_cadastro, @usuario_ativo, @nivel_acesso
+                        )";
+                command.Parameters.AddWithValue("nome_completo", usuario.nome_completo);
+                command.Parameters.AddWithValue("nome_usuario", usuario.nome_usuario);
+                command.Parameters.AddWithValue("email", usuario.email);
+                command.Parameters.AddWithValue("telefone", usuario.telefone);
+                command.Parameters.AddWithValue("senha", usuario.senha);
+                command.Parameters.AddWithValue("data_cadastro", dataFormatada);
+                command.Parameters.AddWithValue("usuario_ativo", usuario.usuario_ativo);
+                command.Parameters.AddWithValue("nivel_acesso", usuario.nivel_acesso);
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Usuário cadastrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ConexaoBanco().Close();
+            }
+            catch ( Exception ex) 
+            {
+                MessageBox.Show($"Não foi possivel cadastrar usuario ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ConexaoBanco().Close();
+            }
+        }
+
+        /// Rotinas gerais para verificar se já existe um usuário com o mesmo nome
+        public static bool ExisteUserName(Usuario usuario)
+        {
+            bool res;
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            var command  = ConexaoBanco().CreateCommand();
+            command.CommandText = "SELECT nome_usuario FROM usuarios WHERE nome_usuario='"+usuario.nome_usuario+"'";
+
+            // verificando numero de linhas retornadas
+            dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+            dataAdapter.Fill(dataTable);
+            
+            if(dataTable.Rows.Count > 0)
+            {
+                // encontrou resultado
+                res = true;
+            }
+            else
+            {
+                res = false;
+            }
+
+            return res;
+        }
+
+
         #endregion
     }
 }

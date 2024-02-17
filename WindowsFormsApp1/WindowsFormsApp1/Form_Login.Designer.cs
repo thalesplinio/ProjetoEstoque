@@ -35,11 +35,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ktb_senha = new Krypton.Toolkit.KryptonTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_entrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_info = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_entrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,6 +79,7 @@
             this.ktb_Login.StateCommon.Border.Rounding = 8F;
             this.ktb_Login.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ktb_Login.TabIndex = 1;
+            this.ktb_Login.Text = "teste2";
             // 
             // label1
             // 
@@ -110,6 +111,7 @@
             this.ktb_senha.StateCommon.Border.Rounding = 8F;
             this.ktb_senha.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ktb_senha.TabIndex = 2;
+            this.ktb_senha.Text = "123";
             // 
             // panel1
             // 
@@ -120,24 +122,6 @@
             this.panel1.Size = new System.Drawing.Size(104, 35);
             this.panel1.TabIndex = 7;
             // 
-            // btn_entrar
-            // 
-            this.btn_entrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_entrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_entrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_entrar.Image = global::WindowsFormsApp1.Properties.Resources.log_in;
-            this.btn_entrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_entrar.Location = new System.Drawing.Point(-2, -4);
-            this.btn_entrar.Name = "btn_entrar";
-            this.btn_entrar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_entrar.Size = new System.Drawing.Size(108, 43);
-            this.btn_entrar.TabIndex = 3;
-            this.btn_entrar.Text = "      Entrar";
-            this.btn_entrar.UseVisualStyleBackColor = false;
-            this.btn_entrar.Click += new System.EventHandler(this.btn_entrar_Click);
-            this.btn_entrar.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-            this.btn_entrar.MouseLeave += new System.EventHandler(this.btn_entrar_MouseLeave);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_cancel);
@@ -146,24 +130,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(104, 35);
             this.panel2.TabIndex = 8;
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_cancel.Image = global::WindowsFormsApp1.Properties.Resources.cross;
-            this.btn_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cancel.Location = new System.Drawing.Point(-2, -4);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_cancel.Size = new System.Drawing.Size(108, 43);
-            this.btn_cancel.TabIndex = 4;
-            this.btn_cancel.Text = "      Cancelar";
-            this.btn_cancel.UseVisualStyleBackColor = false;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            this.btn_cancel.MouseEnter += new System.EventHandler(this.btn_cancel_MouseEnter);
-            this.btn_cancel.MouseLeave += new System.EventHandler(this.btn_cancel_MouseLeave);
             // 
             // panel3
             // 
@@ -189,6 +155,42 @@
             this.btn_info.UseVisualStyleBackColor = false;
             this.btn_info.MouseEnter += new System.EventHandler(this.btn_info_MouseEnter);
             this.btn_info.MouseLeave += new System.EventHandler(this.btn_info_MouseLeave);
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_cancel.Image = global::WindowsFormsApp1.Properties.Resources.cross;
+            this.btn_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cancel.Location = new System.Drawing.Point(-2, -4);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_cancel.Size = new System.Drawing.Size(108, 43);
+            this.btn_cancel.TabIndex = 4;
+            this.btn_cancel.Text = "      Cancelar";
+            this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            this.btn_cancel.MouseEnter += new System.EventHandler(this.btn_cancel_MouseEnter);
+            this.btn_cancel.MouseLeave += new System.EventHandler(this.btn_cancel_MouseLeave);
+            // 
+            // btn_entrar
+            // 
+            this.btn_entrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_entrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_entrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_entrar.Image = global::WindowsFormsApp1.Properties.Resources.log_in;
+            this.btn_entrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_entrar.Location = new System.Drawing.Point(-2, -4);
+            this.btn_entrar.Name = "btn_entrar";
+            this.btn_entrar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_entrar.Size = new System.Drawing.Size(108, 43);
+            this.btn_entrar.TabIndex = 3;
+            this.btn_entrar.Text = "      Entrar";
+            this.btn_entrar.UseVisualStyleBackColor = false;
+            this.btn_entrar.Click += new System.EventHandler(this.btn_entrar_Click);
+            this.btn_entrar.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.btn_entrar.MouseLeave += new System.EventHandler(this.btn_entrar_MouseLeave);
             // 
             // pictureBox1
             // 

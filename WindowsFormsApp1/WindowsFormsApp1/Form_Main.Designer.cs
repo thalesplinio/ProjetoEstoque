@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_gerencia = new System.Windows.Forms.Panel();
-            this.btn_gerenciar = new System.Windows.Forms.Button();
             this.panel_logo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_listar = new System.Windows.Forms.Panel();
@@ -67,6 +66,7 @@
             this.relatórioDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesGeraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_gerenciar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_gerencia.SuspendLayout();
             this.panel_logo.SuspendLayout();
@@ -82,7 +82,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.panel1.Controls.Add(this.panel_gerencia);
             this.panel1.Controls.Add(this.panel_logo);
             this.panel1.Controls.Add(this.panel_listar);
             this.panel1.Controls.Add(this.panel_inicio);
@@ -97,29 +96,10 @@
             // panel_gerencia
             // 
             this.panel_gerencia.Controls.Add(this.btn_gerenciar);
-            this.panel_gerencia.Location = new System.Drawing.Point(706, 0);
+            this.panel_gerencia.Location = new System.Drawing.Point(704, 23);
             this.panel_gerencia.Name = "panel_gerencia";
             this.panel_gerencia.Size = new System.Drawing.Size(151, 40);
             this.panel_gerencia.TabIndex = 7;
-            // 
-            // btn_gerenciar
-            // 
-            this.btn_gerenciar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_gerenciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_gerenciar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_gerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_gerenciar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_gerenciar.Image = global::WindowsFormsApp1.Properties.Resources.configuration;
-            this.btn_gerenciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_gerenciar.Location = new System.Drawing.Point(-4, -5);
-            this.btn_gerenciar.Name = "btn_gerenciar";
-            this.btn_gerenciar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_gerenciar.Size = new System.Drawing.Size(159, 50);
-            this.btn_gerenciar.TabIndex = 3;
-            this.btn_gerenciar.Text = "        Gerenciar estoque";
-            this.btn_gerenciar.UseVisualStyleBackColor = false;
-            this.btn_gerenciar.MouseEnter += new System.EventHandler(this.btn_gerenciar_MouseEnter);
-            this.btn_gerenciar.MouseLeave += new System.EventHandler(this.btn_gerenciar_MouseLeave);
             // 
             // panel_logo
             // 
@@ -350,28 +330,28 @@
             // 
             this.inserirMaterialToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.open_box;
             this.inserirMaterialToolStripMenuItem.Name = "inserirMaterialToolStripMenuItem";
-            this.inserirMaterialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inserirMaterialToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.inserirMaterialToolStripMenuItem.Text = "Inserir material";
             // 
             // listarMateriaisToolStripMenuItem
             // 
             this.listarMateriaisToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.completed_task;
             this.listarMateriaisToolStripMenuItem.Name = "listarMateriaisToolStripMenuItem";
-            this.listarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.listarMateriaisToolStripMenuItem.Text = "Listar materiais";
             // 
             // retirarMateriaisToolStripMenuItem
             // 
             this.retirarMateriaisToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.remove;
             this.retirarMateriaisToolStripMenuItem.Name = "retirarMateriaisToolStripMenuItem";
-            this.retirarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.retirarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.retirarMateriaisToolStripMenuItem.Text = "Retirar materiais";
             // 
             // tarocarUsuárioToolStripMenuItem
             // 
             this.tarocarUsuárioToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.user;
             this.tarocarUsuárioToolStripMenuItem.Name = "tarocarUsuárioToolStripMenuItem";
-            this.tarocarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tarocarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.tarocarUsuárioToolStripMenuItem.Text = "Trocar usuário";
             this.tarocarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.tarocarUsuárioToolStripMenuItem_Click);
             // 
@@ -379,7 +359,7 @@
             // 
             this.sairToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources._switch;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -420,6 +400,7 @@
             this.adicionarUsuáriosToolStripMenuItem.Name = "adicionarUsuáriosToolStripMenuItem";
             this.adicionarUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.adicionarUsuáriosToolStripMenuItem.Text = "Adicionar usuários";
+            this.adicionarUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.adicionarUsuáriosToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -438,6 +419,7 @@
             this.relatóriosDeInserçãoDeProdutosToolStripMenuItem.Name = "relatóriosDeInserçãoDeProdutosToolStripMenuItem";
             this.relatóriosDeInserçãoDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.relatóriosDeInserçãoDeProdutosToolStripMenuItem.Text = "Relatórios de inserção de produtos";
+            this.relatóriosDeInserçãoDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.relatóriosDeInserçãoDeProdutosToolStripMenuItem_Click);
             // 
             // relatórioDeRetiradaDeProdutosToolStripMenuItem
             // 
@@ -445,6 +427,7 @@
             this.relatórioDeRetiradaDeProdutosToolStripMenuItem.Name = "relatórioDeRetiradaDeProdutosToolStripMenuItem";
             this.relatórioDeRetiradaDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.relatórioDeRetiradaDeProdutosToolStripMenuItem.Text = "Relatório de retirada de produtos";
+            this.relatórioDeRetiradaDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeRetiradaDeProdutosToolStripMenuItem_Click);
             // 
             // relatórioDeTodosOsMateriaisInseridosToolStripMenuItem
             // 
@@ -452,6 +435,7 @@
             this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem.Name = "relatórioDeTodosOsMateriaisInseridosToolStripMenuItem";
             this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem.Text = "Relatório de todos os materiais inseridos";
+            this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem_Click);
             // 
             // relatórioDeUsuáriosToolStripMenuItem
             // 
@@ -459,6 +443,7 @@
             this.relatórioDeUsuáriosToolStripMenuItem.Name = "relatórioDeUsuáriosToolStripMenuItem";
             this.relatórioDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.relatórioDeUsuáriosToolStripMenuItem.Text = "Relatório de usuários";
+            this.relatórioDeUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeUsuáriosToolStripMenuItem_Click);
             // 
             // configuraçõesToolStripMenuItem
             // 
@@ -475,11 +460,31 @@
             this.configuraçõesGeraisToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.configuraçõesGeraisToolStripMenuItem.Text = "Configurações gerais";
             // 
+            // btn_gerenciar
+            // 
+            this.btn_gerenciar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_gerenciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_gerenciar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gerenciar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_gerenciar.Image = global::WindowsFormsApp1.Properties.Resources.configuration;
+            this.btn_gerenciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_gerenciar.Location = new System.Drawing.Point(-4, -5);
+            this.btn_gerenciar.Name = "btn_gerenciar";
+            this.btn_gerenciar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_gerenciar.Size = new System.Drawing.Size(159, 50);
+            this.btn_gerenciar.TabIndex = 3;
+            this.btn_gerenciar.Text = "        Gerenciar estoque";
+            this.btn_gerenciar.UseVisualStyleBackColor = false;
+            this.btn_gerenciar.MouseEnter += new System.EventHandler(this.btn_gerenciar_MouseEnter);
+            this.btn_gerenciar.MouseLeave += new System.EventHandler(this.btn_gerenciar_MouseLeave);
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.panel_gerencia);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
