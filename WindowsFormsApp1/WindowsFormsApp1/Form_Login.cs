@@ -19,10 +19,14 @@ namespace WindowsFormsApp1
         public Color corControl = Color.FromArgb(240, 240, 240);
         public Color corControlLight = Color.FromArgb(227, 227, 227);
         #endregion
-        
-        public Form_Login()
+
+        DataTable dataTable = null;
+
+        Form_Main form_main;
+        public Form_Login(Form_Main form)
         {
             InitializeComponent();
+            form_main = form;
         }
 
         #region Buttons color Hover
@@ -57,6 +61,37 @@ namespace WindowsFormsApp1
         }
         #endregion
 
+        private void btn_entrar_Click(object sender, EventArgs e)
+        {
+            string userName = ktb_Login.Text;
+            string password = ktb_senha.Text;
+
+            if(userName == "" || password == "")
+            {
+                MessageBox.Show("Usuário ou senha inválidos!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ktb_Login.Focus();
+                return;
+            }
+
+            string sqlQuery = @"SELECT * FROM usuarios WHERE nome_usuario='"+userName+"' AND senha='"+password+"'";
+            dataTable = Banco.Consulta(sqlQuery);
+
+            // 1 = logado
+            // 0 = nao encontrado
+            if(dataTable.Rows.Count == 1)
+            {
+                // usuario logado
+                form_main.lb_UserLogado.Text = dataTable.Rows[0].Field<string>("nome_usuario");
+                Globais.nivel = int.Parse(dataTable.Rows[0].Field<Int64>("nivel_acesso").ToString());
+                Globais.logado = true;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Usuário não encontrado", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ktb_Login.Focus();
+            }
+        }
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             this.Close();

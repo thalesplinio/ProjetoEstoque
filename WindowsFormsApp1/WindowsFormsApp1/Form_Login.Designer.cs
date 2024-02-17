@@ -33,7 +33,7 @@
             this.ktb_Login = new Krypton.Toolkit.KryptonTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            this.ktb_senha = new Krypton.Toolkit.KryptonTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_entrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -98,18 +98,18 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Senha:";
             // 
-            // kryptonTextBox1
+            // ktb_senha
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(218, 168);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.PasswordChar = '*';
-            this.kryptonTextBox1.Size = new System.Drawing.Size(194, 27);
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.ktb_senha.Location = new System.Drawing.Point(218, 168);
+            this.ktb_senha.Name = "ktb_senha";
+            this.ktb_senha.PasswordChar = '*';
+            this.ktb_senha.Size = new System.Drawing.Size(194, 27);
+            this.ktb_senha.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 8F;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.TabIndex = 2;
+            this.ktb_senha.StateCommon.Border.Rounding = 8F;
+            this.ktb_senha.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktb_senha.TabIndex = 2;
             // 
             // panel1
             // 
@@ -134,6 +134,7 @@
             this.btn_entrar.TabIndex = 3;
             this.btn_entrar.Text = "      Entrar";
             this.btn_entrar.UseVisualStyleBackColor = false;
+            this.btn_entrar.Click += new System.EventHandler(this.btn_entrar_Click);
             this.btn_entrar.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
             this.btn_entrar.MouseLeave += new System.EventHandler(this.btn_entrar_MouseLeave);
             // 
@@ -207,7 +208,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.kryptonTextBox1);
+            this.Controls.Add(this.ktb_senha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ktb_Login);
             this.Controls.Add(this.lb_subTitleLogin);
@@ -236,7 +237,7 @@
         private Krypton.Toolkit.KryptonTextBox ktb_Login;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonTextBox ktb_senha;
         private System.Windows.Forms.Button btn_entrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
