@@ -424,6 +424,7 @@
             this.Name = "Form_AddUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar usuário do sistema";
+            this.Load += new System.EventHandler(this.Form_AddUsuario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

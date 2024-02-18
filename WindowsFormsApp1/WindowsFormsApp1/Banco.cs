@@ -174,7 +174,7 @@ namespace WindowsFormsApp1
                         email as 'E-Mail',
                         telefone as 'Telefone',
                         data_cadastro as 'Data Inserido',
-                        usuario_ativo as 'Usuário Ativo',
+                        usuario_ativo as 'Status do usuário',
                         nivel_acesso as 'Nível Acesso',
                         data_atualizacao as 'Data de Atualização'
                     FROM

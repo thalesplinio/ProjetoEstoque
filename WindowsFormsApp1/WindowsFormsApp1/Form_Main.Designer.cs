@@ -67,6 +67,7 @@
             this.relatórioDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesGeraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.panel1.SuspendLayout();
             this.panel_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -339,6 +340,7 @@
             this.inserirMaterialToolStripMenuItem,
             this.listarMateriaisToolStripMenuItem,
             this.retirarMateriaisToolStripMenuItem,
+            this.toolStripSeparator1,
             this.tarocarUsuárioToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
@@ -349,28 +351,28 @@
             // 
             this.inserirMaterialToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.open_box;
             this.inserirMaterialToolStripMenuItem.Name = "inserirMaterialToolStripMenuItem";
-            this.inserirMaterialToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.inserirMaterialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.inserirMaterialToolStripMenuItem.Text = "Inserir material";
             // 
             // listarMateriaisToolStripMenuItem
             // 
             this.listarMateriaisToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.completed_task;
             this.listarMateriaisToolStripMenuItem.Name = "listarMateriaisToolStripMenuItem";
-            this.listarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.listarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listarMateriaisToolStripMenuItem.Text = "Listar materiais";
             // 
             // retirarMateriaisToolStripMenuItem
             // 
             this.retirarMateriaisToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.remove;
             this.retirarMateriaisToolStripMenuItem.Name = "retirarMateriaisToolStripMenuItem";
-            this.retirarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.retirarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.retirarMateriaisToolStripMenuItem.Text = "Retirar materiais";
             // 
             // tarocarUsuárioToolStripMenuItem
             // 
             this.tarocarUsuárioToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.user;
             this.tarocarUsuárioToolStripMenuItem.Name = "tarocarUsuárioToolStripMenuItem";
-            this.tarocarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.tarocarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tarocarUsuárioToolStripMenuItem.Text = "Trocar usuário";
             this.tarocarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.tarocarUsuárioToolStripMenuItem_Click);
             // 
@@ -378,7 +380,7 @@
             // 
             this.sairToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources._switch;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -410,7 +412,7 @@
             // 
             this.adicionarUsuáriosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.add_user;
             this.adicionarUsuáriosToolStripMenuItem.Name = "adicionarUsuáriosToolStripMenuItem";
-            this.adicionarUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adicionarUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.adicionarUsuáriosToolStripMenuItem.Text = "Adicionar usuários";
             this.adicionarUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.adicionarUsuáriosToolStripMenuItem_Click);
             // 
@@ -418,7 +420,7 @@
             // 
             this.verUsuáriosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.group;
             this.verUsuáriosToolStripMenuItem.Name = "verUsuáriosToolStripMenuItem";
-            this.verUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.verUsuáriosToolStripMenuItem.Text = "Ver usuários";
             this.verUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.verUsuáriosToolStripMenuItem_Click_1);
             // 
@@ -480,6 +482,11 @@
             this.configuraçõesGeraisToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.configuraçõesGeraisToolStripMenuItem.Text = "Configurações gerais";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,7 +499,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = "Controle de estoque";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Main_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel_logo.ResumeLayout(false);
@@ -552,6 +559,7 @@
         private System.Windows.Forms.ToolStripMenuItem configuraçõesGeraisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
         public System.Windows.Forms.Label lb_UserLogado;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 

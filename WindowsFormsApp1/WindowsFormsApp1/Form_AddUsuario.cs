@@ -65,6 +65,16 @@ namespace WindowsFormsApp1
         }
 
         #endregion
+
+        private void Form_AddUsuario_Load(object sender, EventArgs e)
+        {
+
+            string vQueryStatus = @"SELECT nome_status FROM status_usuario";
+            cb_statusUsuario.Items.Clear();
+            cb_statusUsuario.DataSource = Banco.Consulta(vQueryStatus);
+            cb_statusUsuario.DisplayMember = "nome_status";
+            cb_statusUsuario.ValueMember = "nome_status";
+        }
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
             // Criando novo usuário

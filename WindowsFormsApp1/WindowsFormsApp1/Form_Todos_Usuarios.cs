@@ -47,13 +47,19 @@ namespace WindowsFormsApp1
             kryptonDataGridView1.Sort(kryptonDataGridView1.Columns["ID Usuário"], ListSortDirection.Descending);
             kryptonDataGridView1.Columns[0].Width = 90;
             kryptonDataGridView1.Columns[1].Width = 190;
-            kryptonDataGridView1.Columns[2].Width = 140;
+            kryptonDataGridView1.Columns[2].Width = 120;
             kryptonDataGridView1.Columns[3].Width = 180;
             kryptonDataGridView1.Columns[4].Width = 100;
             kryptonDataGridView1.Columns[5].Width = 107;
-            kryptonDataGridView1.Columns[6].Width = 90;
+            kryptonDataGridView1.Columns[6].Width = 110;
             kryptonDataGridView1.Columns[7].Width = 80;
             kryptonDataGridView1.Columns[8].Width = 120;
+
+            string vQueryStatus = @"SELECT nome_status FROM status_usuario";
+            cb_statusUsuario.Items.Clear();
+            cb_statusUsuario.DataSource = Banco.Consulta(vQueryStatus);
+            cb_statusUsuario.DisplayMember = "nome_status";
+            cb_statusUsuario.ValueMember = "nome_status";
         }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
