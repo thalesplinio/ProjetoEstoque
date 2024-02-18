@@ -30,12 +30,12 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lb_detalhesStatus = new System.Windows.Forms.Label();
+            this.mtb_telefone = new System.Windows.Forms.MaskedTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_Cancelar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_Salvar = new System.Windows.Forms.Button();
             this.panel_gerencia = new System.Windows.Forms.Panel();
-            this.btn_novoUsuario = new System.Windows.Forms.Button();
             this.nud_nivelAcesso = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.cb_statusUsuario = new System.Windows.Forms.ComboBox();
@@ -55,10 +55,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
+            this.btn_Salvar = new System.Windows.Forms.Button();
+            this.btn_novoUsuario = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.mtb_telefone = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_gerencia.SuspendLayout();
@@ -82,6 +85,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.mtb_telefone);
             this.groupBox2.Controls.Add(this.panel3);
             this.groupBox2.Controls.Add(this.panel2);
@@ -109,6 +113,31 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados do usuário";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lb_detalhesStatus);
+            this.groupBox3.Location = new System.Drawing.Point(605, 17);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(149, 89);
+            this.groupBox3.TabIndex = 20;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Detalhes do status";
+            // 
+            // lb_detalhesStatus
+            // 
+            this.lb_detalhesStatus.Location = new System.Drawing.Point(7, 20);
+            this.lb_detalhesStatus.Name = "lb_detalhesStatus";
+            this.lb_detalhesStatus.Size = new System.Drawing.Size(136, 66);
+            this.lb_detalhesStatus.TabIndex = 0;
+            // 
+            // mtb_telefone
+            // 
+            this.mtb_telefone.Location = new System.Drawing.Point(7, 184);
+            this.mtb_telefone.Mask = "(99) 00000-0000";
+            this.mtb_telefone.Name = "mtb_telefone";
+            this.mtb_telefone.Size = new System.Drawing.Size(189, 21);
+            this.mtb_telefone.TabIndex = 4;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btn_Cancelar);
@@ -116,26 +145,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(109, 40);
             this.panel3.TabIndex = 18;
-            // 
-            // btn_Cancelar
-            // 
-            this.btn_Cancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_Cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Cancelar.Image = global::WindowsFormsApp1.Properties.Resources.cross;
-            this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Cancelar.Location = new System.Drawing.Point(-5, -5);
-            this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_Cancelar.Size = new System.Drawing.Size(120, 50);
-            this.btn_Cancelar.TabIndex = 11;
-            this.btn_Cancelar.Text = "        Cancelar";
-            this.btn_Cancelar.UseVisualStyleBackColor = false;
-            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
-            this.btn_Cancelar.MouseEnter += new System.EventHandler(this.btn_Cancelar_MouseEnter);
-            this.btn_Cancelar.MouseLeave += new System.EventHandler(this.btn_Cancelar_MouseLeave);
             // 
             // panel2
             // 
@@ -145,26 +154,6 @@
             this.panel2.Size = new System.Drawing.Size(103, 40);
             this.panel2.TabIndex = 17;
             // 
-            // btn_Salvar
-            // 
-            this.btn_Salvar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_Salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_Salvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Salvar.Image = global::WindowsFormsApp1.Properties.Resources.diskette;
-            this.btn_Salvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Salvar.Location = new System.Drawing.Point(-3, -5);
-            this.btn_Salvar.Name = "btn_Salvar";
-            this.btn_Salvar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_Salvar.Size = new System.Drawing.Size(108, 50);
-            this.btn_Salvar.TabIndex = 10;
-            this.btn_Salvar.Text = "        Salvar";
-            this.btn_Salvar.UseVisualStyleBackColor = false;
-            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
-            this.btn_Salvar.MouseEnter += new System.EventHandler(this.btn_Salvar_MouseEnter);
-            this.btn_Salvar.MouseLeave += new System.EventHandler(this.btn_Salvar_MouseLeave);
-            // 
             // panel_gerencia
             // 
             this.panel_gerencia.Controls.Add(this.btn_novoUsuario);
@@ -172,26 +161,6 @@
             this.panel_gerencia.Name = "panel_gerencia";
             this.panel_gerencia.Size = new System.Drawing.Size(151, 40);
             this.panel_gerencia.TabIndex = 16;
-            // 
-            // btn_novoUsuario
-            // 
-            this.btn_novoUsuario.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_novoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_novoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_novoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_novoUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_novoUsuario.Image = global::WindowsFormsApp1.Properties.Resources.add;
-            this.btn_novoUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_novoUsuario.Location = new System.Drawing.Point(-5, -5);
-            this.btn_novoUsuario.Name = "btn_novoUsuario";
-            this.btn_novoUsuario.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_novoUsuario.Size = new System.Drawing.Size(159, 50);
-            this.btn_novoUsuario.TabIndex = 9;
-            this.btn_novoUsuario.Text = "        Novo Usuário";
-            this.btn_novoUsuario.UseVisualStyleBackColor = false;
-            this.btn_novoUsuario.Click += new System.EventHandler(this.btn_novoUsuario_Click);
-            this.btn_novoUsuario.MouseEnter += new System.EventHandler(this.btn_novoUsuario_MouseEnter);
-            this.btn_novoUsuario.MouseLeave += new System.EventHandler(this.btn_novoUsuario_MouseLeave);
             // 
             // nud_nivelAcesso
             // 
@@ -220,7 +189,7 @@
             this.cb_statusUsuario.Location = new System.Drawing.Point(429, 37);
             this.cb_statusUsuario.Name = "cb_statusUsuario";
             this.cb_statusUsuario.Size = new System.Drawing.Size(170, 23);
-            this.cb_statusUsuario.TabIndex = 13;
+            this.cb_statusUsuario.TabIndex = 7;
             // 
             // label9
             // 
@@ -362,6 +331,66 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_Cancelar
+            // 
+            this.btn_Cancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_Cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Cancelar.Image = global::WindowsFormsApp1.Properties.Resources.cross;
+            this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Cancelar.Location = new System.Drawing.Point(-5, -5);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_Cancelar.Size = new System.Drawing.Size(120, 50);
+            this.btn_Cancelar.TabIndex = 11;
+            this.btn_Cancelar.Text = "        Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = false;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            this.btn_Cancelar.MouseEnter += new System.EventHandler(this.btn_Cancelar_MouseEnter);
+            this.btn_Cancelar.MouseLeave += new System.EventHandler(this.btn_Cancelar_MouseLeave);
+            // 
+            // btn_Salvar
+            // 
+            this.btn_Salvar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_Salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_Salvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Salvar.Image = global::WindowsFormsApp1.Properties.Resources.diskette;
+            this.btn_Salvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Salvar.Location = new System.Drawing.Point(-3, -5);
+            this.btn_Salvar.Name = "btn_Salvar";
+            this.btn_Salvar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_Salvar.Size = new System.Drawing.Size(108, 50);
+            this.btn_Salvar.TabIndex = 10;
+            this.btn_Salvar.Text = "        Salvar";
+            this.btn_Salvar.UseVisualStyleBackColor = false;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
+            this.btn_Salvar.MouseEnter += new System.EventHandler(this.btn_Salvar_MouseEnter);
+            this.btn_Salvar.MouseLeave += new System.EventHandler(this.btn_Salvar_MouseLeave);
+            // 
+            // btn_novoUsuario
+            // 
+            this.btn_novoUsuario.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_novoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_novoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_novoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_novoUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_novoUsuario.Image = global::WindowsFormsApp1.Properties.Resources.add;
+            this.btn_novoUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_novoUsuario.Location = new System.Drawing.Point(-5, -5);
+            this.btn_novoUsuario.Name = "btn_novoUsuario";
+            this.btn_novoUsuario.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_novoUsuario.Size = new System.Drawing.Size(159, 50);
+            this.btn_novoUsuario.TabIndex = 9;
+            this.btn_novoUsuario.Text = "        Novo Usuário";
+            this.btn_novoUsuario.UseVisualStyleBackColor = false;
+            this.btn_novoUsuario.Click += new System.EventHandler(this.btn_novoUsuario_Click);
+            this.btn_novoUsuario.MouseEnter += new System.EventHandler(this.btn_novoUsuario_MouseEnter);
+            this.btn_novoUsuario.MouseLeave += new System.EventHandler(this.btn_novoUsuario_MouseLeave);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logo_opac;
@@ -370,14 +399,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(220, 196);
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
-            // 
-            // mtb_telefone
-            // 
-            this.mtb_telefone.Location = new System.Drawing.Point(7, 184);
-            this.mtb_telefone.Mask = "(99) 00000-0000";
-            this.mtb_telefone.Name = "mtb_telefone";
-            this.mtb_telefone.Size = new System.Drawing.Size(189, 21);
-            this.mtb_telefone.TabIndex = 4;
             // 
             // Form_AddUsuario
             // 
@@ -393,6 +414,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_gerencia.ResumeLayout(false);
@@ -436,5 +458,7 @@
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.MaskedTextBox mtb_telefone;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label lb_detalhesStatus;
     }
 }

@@ -15,19 +15,17 @@ namespace WindowsFormsApp1
         public Form_AddUsuario()
         {
             InitializeComponent();
+            lb_detalhesStatus.Text = "A = Ativo,\nB = Bloqueado,\nD = Desligado";
         }
         #region Set Colors Butons
         private struct RGBColorsButtons
         {
             public static Color corAzulPadrao = Color.FromArgb(42, 49, 67); // #2A3143
-            public static Color corVerdePadrao = Color.FromArgb(19, 106, 61); // #136A3D
+            public static Color corVerdePadrao = Color.FromArgb(45, 153, 97); // #136A3D
         }
         #endregion
 
         #region Buttons Hover Color
-
-        #endregion
-
         private void btn_novoUsuario_MouseEnter(object sender, EventArgs e)
         {
             btn_novoUsuario.BackColor = RGBColorsButtons.corVerdePadrao;
@@ -57,7 +55,7 @@ namespace WindowsFormsApp1
         {
             btn_Cancelar.BackColor = RGBColorsButtons.corAzulPadrao;
         }
-
+        #endregion
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
             // Criando novo usuário
@@ -75,7 +73,6 @@ namespace WindowsFormsApp1
 
             Banco.NovoUsuario(usuario);
         }
-
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             tb_nomeCompleto.Clear();
@@ -87,8 +84,8 @@ namespace WindowsFormsApp1
             cb_statusUsuario.Text = "";
             nud_nivelAcesso.Value = 0;
             tb_nomeCompleto.Focus();
+            this.Close();
         }
-
         private void btn_novoUsuario_Click(object sender, EventArgs e)
         {
             tb_nomeCompleto.Clear();

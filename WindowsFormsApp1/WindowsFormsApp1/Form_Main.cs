@@ -28,7 +28,9 @@ namespace WindowsFormsApp1
         private struct RGBColorsButtons
         {
             public static Color corAzulPadrao = Color.FromArgb(42, 49, 67); // #2A3143
-            public static Color corVerdePadrao = Color.FromArgb(19, 106, 61); // #136A3D
+            //public static Color corVerdePadrao = Color.FromArgb(19, 106, 61); // #136A3D
+            public static Color corVerdePadrao = Color.FromArgb(45, 153, 97); // #136A3D
+
         }
         #endregion
 
@@ -140,86 +142,22 @@ namespace WindowsFormsApp1
 
         private void relatóriosDeInserçãoDeProdutosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // usuário logado
-            if (Globais.logado)
-            {
-                // Só acessa nivel >= 2 Master
-                if (Globais.nivel >= 2)
-                {
-
-                }
-                else
-                {
-                    MessageBox.Show("Acesso não permitido!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else
-            {
-                MessageBox.Show("É necessário ter um usuário logado!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            // usuário logado Nivel 2
         }
 
         private void relatórioDeRetiradaDeProdutosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // usuário logado
-            if (Globais.logado)
-            {
-                // Só acessa nivel >= 2 Master
-                if (Globais.nivel >= 2)
-                {
-
-                }
-                else
-                {
-                    MessageBox.Show("Acesso não permitido!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else
-            {
-                MessageBox.Show("É necessário ter um usuário logado!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            // usuário logado Nivel 2
         }
 
         private void relatórioDeTodosOsMateriaisInseridosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // usuário logado
-            if (Globais.logado)
-            {
-                // Só acessa nivel >= 2 Master
-                if (Globais.nivel >= 2)
-                {
-
-                }
-                else
-                {
-                    MessageBox.Show("Acesso não permitido!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else
-            {
-                MessageBox.Show("É necessário ter um usuário logado!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            // usuário logado Nivel 2
         }
 
         private void relatórioDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // usuário logado
-            if (Globais.logado)
-            {
-                // Só acessa nivel >= 2 Master
-                if (Globais.nivel >= 2)
-                {
-
-                }
-                else
-                {
-                    MessageBox.Show("Acesso não permitido!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else
-            {
-                MessageBox.Show("É necessário ter um usuário logado!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            // usuário logado Nivel 2
         }
         #endregion
 
@@ -227,6 +165,12 @@ namespace WindowsFormsApp1
         {
             Form_AddUsuario form_AddUsuario = new Form_AddUsuario();
             AbreFormularioBaseNivel(2, form_AddUsuario);
+        }
+
+        private void verUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Todos_Usuarios form_Todos_Usuarios = new Form_Todos_Usuarios();
+            AbreFormularioBaseNivel(2, form_Todos_Usuarios);
         }
     }
 }

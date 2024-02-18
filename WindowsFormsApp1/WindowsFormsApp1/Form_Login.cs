@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     {
         #region Set Colors Butons
         public Color corAzulPadrao = Color.FromArgb(42, 49, 67); // #2A3143
-        public Color corVerdePadrao = Color.FromArgb(19, 106, 61); // #136A3D
+        public Color corVerdePadrao = Color.FromArgb(45, 153, 97); // #136A3D
 
         public Color corControl = Color.FromArgb(240, 240, 240);
         public Color corControlLight = Color.FromArgb(227, 227, 227);
