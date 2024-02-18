@@ -72,21 +72,18 @@ namespace WindowsFormsApp1
             usuario.nivel_acesso = Convert.ToInt32(Math.Round(nud_nivelAcesso.Value,0));    // 0 = zero casas decimais
 
             Banco.NovoUsuario(usuario);
+            LimpaCampos();
         }
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
-            tb_nomeCompleto.Clear();
-            tb_nomeUsuario.Clear();
-            tb_email.Clear();
-            mtb_telefone.Clear();
-            tb_senha.Clear();
-            tb_repeteSenha.Clear();
-            cb_statusUsuario.Text = "";
-            nud_nivelAcesso.Value = 0;
-            tb_nomeCompleto.Focus();
+            LimpaCampos();
             this.Close();
         }
         private void btn_novoUsuario_Click(object sender, EventArgs e)
+        {
+            LimpaCampos();
+        }
+        private void LimpaCampos()
         {
             tb_nomeCompleto.Clear();
             tb_nomeUsuario.Clear();

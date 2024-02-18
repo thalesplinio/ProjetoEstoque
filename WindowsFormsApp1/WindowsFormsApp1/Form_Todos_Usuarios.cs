@@ -25,15 +25,15 @@ namespace WindowsFormsApp1
 
             kryptonDataGridView1.DataSource = Banco.ObterDadosUsuarioBanco();
             kryptonDataGridView1.Sort(kryptonDataGridView1.Columns["ID Usuário"], ListSortDirection.Descending);
-            kryptonDataGridView1.Columns[0].Width = 80;
+            kryptonDataGridView1.Columns[0].Width = 90;
             kryptonDataGridView1.Columns[1].Width = 190;
             kryptonDataGridView1.Columns[2].Width = 140;
             kryptonDataGridView1.Columns[3].Width = 180;
             kryptonDataGridView1.Columns[4].Width = 100;
-            kryptonDataGridView1.Columns[5].Width = 110;
+            kryptonDataGridView1.Columns[5].Width = 107;
             kryptonDataGridView1.Columns[6].Width = 90;
             kryptonDataGridView1.Columns[7].Width = 80;
-            kryptonDataGridView1.Columns[8].Width = 100;
+            kryptonDataGridView1.Columns[8].Width = 120;
         }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
@@ -91,8 +91,7 @@ namespace WindowsFormsApp1
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-            DateTime data = DateTime.Now;
-            var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+            int linhaSelecionada = kryptonDataGridView1.SelectedRows[0].Index;
 
             Usuario usuario = new Usuario();
             usuario.id_usuario = Convert.ToInt32(tb_id.Text);
@@ -107,6 +106,19 @@ namespace WindowsFormsApp1
 
             kryptonDataGridView1.DataSource = Banco.ObterDadosUsuarioBanco();
             kryptonDataGridView1.Sort(kryptonDataGridView1.Columns["ID Usuário"], ListSortDirection.Descending);
+            kryptonDataGridView1.CurrentCell = kryptonDataGridView1[0, linhaSelecionada];
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Deseja realmente excluir este usuário?", "Confirmar exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            
+            if (res == DialogResult.Yes)
+            {
+                Banco.DeletarUsuario(tb_id.Text);
+                kryptonDataGridView1.DataSource = Banco.ObterDadosUsuarioBanco();
+                kryptonDataGridView1.Sort(kryptonDataGridView1.Columns["ID Usuário"], ListSortDirection.Descending);
+            }
         }
     }
 }

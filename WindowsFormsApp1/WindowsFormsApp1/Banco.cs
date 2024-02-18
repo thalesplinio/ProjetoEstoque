@@ -176,7 +176,7 @@ namespace WindowsFormsApp1
                         data_cadastro as 'Data Inserido',
                         usuario_ativo as 'Usuário Ativo',
                         nivel_acesso as 'Nível Acesso',
-                        data_atualizacao as 'Data Atualização'
+                        data_atualizacao as 'Data de Atualização'
                     FROM
                         usuarios";
 
@@ -244,6 +244,33 @@ namespace WindowsFormsApp1
                 dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
                 command.ExecuteNonQuery();
                 MessageBox.Show("Usuário atualizado com sucesso!", "Mensagem de atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conexaoPropria.Close();
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                MessageBox.Show($"Não foi Atualizar usuario ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        #endregion
+
+        #region DeletarUsuario
+        public static void DeletarUsuario(string id)
+        {
+            DateTime data = DateTime.Now;
+            var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"DELETE FROM usuarios WHERE id_usuario=" + id;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                command.ExecuteNonQuery();
                 conexaoPropria.Close();
             }
             catch (Exception ex)

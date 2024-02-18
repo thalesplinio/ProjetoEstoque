@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -36,6 +36,9 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lb_dataAlteracaoCadastro = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.tb_dataBanco = new System.Windows.Forms.Label();
             this.tb_tituloData = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -67,9 +70,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tb_email = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.lb_dataAlteracaoCadastro = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -131,9 +131,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.kryptonDataGridView1);
-            this.groupBox3.Location = new System.Drawing.Point(8, 266);
+            this.groupBox3.Location = new System.Drawing.Point(8, 245);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1121, 346);
+            this.groupBox3.Size = new System.Drawing.Size(1121, 367);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tabela de usuário";
@@ -144,8 +144,8 @@
             this.kryptonDataGridView1.AllowUserToDeleteRows = false;
             this.kryptonDataGridView1.AllowUserToResizeColumns = false;
             this.kryptonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.kryptonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -155,7 +155,7 @@
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.RowHeadersVisible = false;
             this.kryptonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(1115, 326);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1115, 347);
             this.kryptonDataGridView1.TabIndex = 0;
             this.kryptonDataGridView1.SelectionChanged += new System.EventHandler(this.kryptonDataGridView1_SelectionChanged);
             // 
@@ -189,15 +189,40 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(7, 20);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1119, 240);
+            this.groupBox2.Size = new System.Drawing.Size(1119, 219);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações";
             // 
+            // label11
+            // 
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Location = new System.Drawing.Point(239, 118);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(1, 13);
+            this.label11.TabIndex = 38;
+            // 
+            // lb_dataAlteracaoCadastro
+            // 
+            this.lb_dataAlteracaoCadastro.AutoSize = true;
+            this.lb_dataAlteracaoCadastro.Location = new System.Drawing.Point(421, 116);
+            this.lb_dataAlteracaoCadastro.Name = "lb_dataAlteracaoCadastro";
+            this.lb_dataAlteracaoCadastro.Size = new System.Drawing.Size(0, 15);
+            this.lb_dataAlteracaoCadastro.TabIndex = 37;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(246, 116);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(174, 15);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "Data de alteração do cadastro:";
+            // 
             // tb_dataBanco
             // 
             this.tb_dataBanco.AutoSize = true;
-            this.tb_dataBanco.Location = new System.Drawing.Point(109, 155);
+            this.tb_dataBanco.Location = new System.Drawing.Point(111, 116);
             this.tb_dataBanco.Name = "tb_dataBanco";
             this.tb_dataBanco.Size = new System.Drawing.Size(0, 15);
             this.tb_dataBanco.TabIndex = 35;
@@ -205,7 +230,7 @@
             // tb_tituloData
             // 
             this.tb_tituloData.AutoSize = true;
-            this.tb_tituloData.Location = new System.Drawing.Point(6, 155);
+            this.tb_tituloData.Location = new System.Drawing.Point(8, 116);
             this.tb_tituloData.Name = "tb_tituloData";
             this.tb_tituloData.Size = new System.Drawing.Size(103, 15);
             this.tb_tituloData.TabIndex = 34;
@@ -217,7 +242,7 @@
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.tb_senha);
             this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Location = new System.Drawing.Point(778, 20);
+            this.groupBox5.Location = new System.Drawing.Point(822, 16);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(207, 128);
             this.groupBox5.TabIndex = 33;
@@ -262,6 +287,7 @@
             // 
             this.tb_id.Location = new System.Drawing.Point(9, 37);
             this.tb_id.Name = "tb_id";
+            this.tb_id.ReadOnly = true;
             this.tb_id.Size = new System.Drawing.Size(102, 21);
             this.tb_id.TabIndex = 32;
             // 
@@ -277,7 +303,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.lb_detalhesStatus);
-            this.groupBox4.Location = new System.Drawing.Point(602, 63);
+            this.groupBox4.Location = new System.Drawing.Point(646, 59);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(149, 82);
             this.groupBox4.TabIndex = 21;
@@ -294,7 +320,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(838, 189);
+            this.panel4.Location = new System.Drawing.Point(847, 170);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(145, 40);
             this.panel4.TabIndex = 20;
@@ -315,10 +341,11 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "        Excluir usuário";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // nud_nivelAcesso
             // 
-            this.nud_nivelAcesso.Location = new System.Drawing.Point(9, 127);
+            this.nud_nivelAcesso.Location = new System.Drawing.Point(451, 81);
             this.nud_nivelAcesso.Name = "nud_nivelAcesso";
             this.nud_nivelAcesso.Size = new System.Drawing.Size(120, 21);
             this.nud_nivelAcesso.TabIndex = 26;
@@ -326,7 +353,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btn_Cancelar);
-            this.panel3.Location = new System.Drawing.Point(994, 189);
+            this.panel3.Location = new System.Drawing.Point(1003, 170);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(109, 40);
             this.panel3.TabIndex = 20;
@@ -351,7 +378,7 @@
             // 
             // mtb_telefone
             // 
-            this.mtb_telefone.Location = new System.Drawing.Point(451, 39);
+            this.mtb_telefone.Location = new System.Drawing.Point(9, 80);
             this.mtb_telefone.Mask = "(99) 00000-0000";
             this.mtb_telefone.Name = "mtb_telefone";
             this.mtb_telefone.Size = new System.Drawing.Size(145, 21);
@@ -360,7 +387,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_Salvar);
-            this.panel2.Location = new System.Drawing.Point(682, 189);
+            this.panel2.Location = new System.Drawing.Point(691, 170);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(145, 40);
             this.panel2.TabIndex = 19;
@@ -388,12 +415,12 @@
             this.tb_nomeCompleto.Location = new System.Drawing.Point(117, 37);
             this.tb_nomeCompleto.Name = "tb_nomeCompleto";
             this.tb_nomeCompleto.Size = new System.Drawing.Size(328, 21);
-            this.tb_nomeCompleto.TabIndex = 16;
+            this.tb_nomeCompleto.TabIndex = 1;
             // 
             // panel_gerencia
             // 
             this.panel_gerencia.Controls.Add(this.btn_novoUsuario);
-            this.panel_gerencia.Location = new System.Drawing.Point(9, 194);
+            this.panel_gerencia.Location = new System.Drawing.Point(6, 170);
             this.panel_gerencia.Name = "panel_gerencia";
             this.panel_gerencia.Size = new System.Drawing.Size(151, 40);
             this.panel_gerencia.TabIndex = 17;
@@ -419,7 +446,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 107);
+            this.label10.Location = new System.Drawing.Point(448, 61);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(157, 15);
             this.label10.TabIndex = 30;
@@ -442,7 +469,7 @@
             "A",
             "B",
             "D"});
-            this.cb_statusUsuario.Location = new System.Drawing.Point(602, 39);
+            this.cb_statusUsuario.Location = new System.Drawing.Point(646, 35);
             this.cb_statusUsuario.Name = "cb_statusUsuario";
             this.cb_statusUsuario.Size = new System.Drawing.Size(170, 23);
             this.cb_statusUsuario.TabIndex = 25;
@@ -450,7 +477,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(599, 21);
+            this.label9.Location = new System.Drawing.Point(643, 17);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(105, 15);
             this.label9.TabIndex = 29;
@@ -458,7 +485,7 @@
             // 
             // tb_nomeUsuario
             // 
-            this.tb_nomeUsuario.Location = new System.Drawing.Point(9, 83);
+            this.tb_nomeUsuario.Location = new System.Drawing.Point(451, 37);
             this.tb_nomeUsuario.Name = "tb_nomeUsuario";
             this.tb_nomeUsuario.Size = new System.Drawing.Size(189, 21);
             this.tb_nomeUsuario.TabIndex = 17;
@@ -466,7 +493,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 63);
+            this.label4.Location = new System.Drawing.Point(448, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 15);
             this.label4.TabIndex = 18;
@@ -475,7 +502,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(448, 21);
+            this.label6.Location = new System.Drawing.Point(6, 62);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 15);
             this.label6.TabIndex = 24;
@@ -483,44 +510,19 @@
             // 
             // tb_email
             // 
-            this.tb_email.Location = new System.Drawing.Point(208, 83);
+            this.tb_email.Location = new System.Drawing.Point(160, 81);
             this.tb_email.Name = "tb_email";
-            this.tb_email.Size = new System.Drawing.Size(388, 21);
+            this.tb_email.Size = new System.Drawing.Size(285, 21);
             this.tb_email.TabIndex = 19;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(205, 63);
+            this.label5.Location = new System.Drawing.Point(157, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 15);
             this.label5.TabIndex = 21;
             this.label5.Text = "E-Mail:";
-            // 
-            // lb_dataAlteracaoCadastro
-            // 
-            this.lb_dataAlteracaoCadastro.AutoSize = true;
-            this.lb_dataAlteracaoCadastro.Location = new System.Drawing.Point(407, 155);
-            this.lb_dataAlteracaoCadastro.Name = "lb_dataAlteracaoCadastro";
-            this.lb_dataAlteracaoCadastro.Size = new System.Drawing.Size(0, 15);
-            this.lb_dataAlteracaoCadastro.TabIndex = 37;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(244, 155);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(157, 15);
-            this.label12.TabIndex = 36;
-            this.label12.Text = "Data alteração de cadastro:";
-            // 
-            // label11
-            // 
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label11.Location = new System.Drawing.Point(237, 157);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(1, 13);
-            this.label11.TabIndex = 38;
             // 
             // Form_Todos_Usuarios
             // 
