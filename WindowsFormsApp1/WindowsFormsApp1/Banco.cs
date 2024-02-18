@@ -32,15 +32,14 @@ namespace WindowsFormsApp1
             DataTable dataTable = new DataTable();  // preenche com as informações da consulta
 
             try 
-            { 
-                using (var command = ConexaoBanco().CreateCommand())
-                {
-                    command.CommandText = @"SELECT * FROM usuarios";
-                    dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
-                    dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
-                    ConexaoBanco().Close();
-                    return dataTable;
-                }
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"SELECT * FROM usuarios";
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
             }
             catch (Exception ex)
             {
@@ -57,14 +56,14 @@ namespace WindowsFormsApp1
 
             try
             {
-                using (var command = ConexaoBanco().CreateCommand())
-                {
-                    command.CommandText = sql;
-                    dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
-                    dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
-                    ConexaoBanco().Close();
-                    return dataTable;
-                }
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = sql;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
             }
             catch (Exception ex)
             {
@@ -82,14 +81,15 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Nome de usuário já existe!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
             // inserindo no banco
             try
             {
                 DateTime data = DateTime.Now;
                 var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
 
-                var command = ConexaoBanco().CreateCommand();
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+
                 command.CommandText = @"
                     INSERT INTO usuarios 
                         (
@@ -111,12 +111,11 @@ namespace WindowsFormsApp1
 
                 command.ExecuteNonQuery();
                 MessageBox.Show("Usuário cadastrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ConexaoBanco().Close();
+                conexaoPropria.Close();
             }
             catch ( Exception ex) 
             {
                 MessageBox.Show($"Não foi possivel cadastrar usuario ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ConexaoBanco().Close();
             }
         }
 
@@ -127,11 +126,12 @@ namespace WindowsFormsApp1
             SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
             DataTable dataTable = new DataTable();  // preenche com as informações da consulta
 
-            var command  = ConexaoBanco().CreateCommand();
+            var conexaoPropria = ConexaoBanco();
+            var command  = conexaoPropria.CreateCommand();
             command.CommandText = "SELECT nome_usuario FROM usuarios WHERE nome_usuario='"+usuario.nome_usuario+"'";
 
             // verificando numero de linhas retornadas
-            dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+            dataAdapter = new SQLiteDataAdapter(command.CommandText, conexaoPropria);
             dataAdapter.Fill(dataTable);
             
             if(dataTable.Rows.Count > 0)
@@ -143,11 +143,9 @@ namespace WindowsFormsApp1
             {
                 res = false;
             }
-
+            conexaoPropria.Close();
             return res;
         }
-
-
         #endregion
     }
 }
