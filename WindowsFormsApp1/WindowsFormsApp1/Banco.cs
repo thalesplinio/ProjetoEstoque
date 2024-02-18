@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         #region Conexao banco
         private static SQLiteConnection ConexaoBanco()
         {
-            conexao = new SQLiteConnection("Data Source = E:\\Documentos\\0 - Documentos\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\banco\\banco_estoque.db");
+            conexao = new SQLiteConnection($@"Data Source={Globais.caminhoBanco}{Globais.nomeBanco}");
             conexao.Open();
             return conexao;
         }
