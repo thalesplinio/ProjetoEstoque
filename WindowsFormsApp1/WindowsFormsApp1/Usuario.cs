@@ -17,6 +17,8 @@ namespace WindowsFormsApp1
         public DateTime data_cadastro { get; set; }
         public string usuario_ativo { get; set; }
         public Int32 nivel_acesso { get; set; }
+        public DateTime data_atualizacao { get; set; }
+
 
         /*
             Para instanciar data

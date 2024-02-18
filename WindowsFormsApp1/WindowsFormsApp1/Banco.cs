@@ -72,7 +72,9 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region Funções Form_AddUsuario / inserir usuário
+        #region Funções Form_AddUsuario / NovoUsuario - ExisteUserName
+
+        #region NovoUsuario
         public static void NovoUsuario(Usuario usuario)
         {
             // verificando se o usuário existe
@@ -118,8 +120,10 @@ namespace WindowsFormsApp1
                 MessageBox.Show($"Não foi possivel cadastrar usuario ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        #endregion
 
         /// Rotinas gerais para verificar se já existe um usuário com o mesmo nome
+        #region ExisteUserName
         public static bool ExisteUserName(Usuario usuario)
         {
             bool res;
@@ -148,7 +152,11 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region Funções Form_Todos_Usuarios / ObterDadosUsuarioBanco / ObterDadosParaEdicao
+        #endregion
+
+        #region Funções Form_Todos_Usuarios / ObterDadosUsuarioBanco / ObterDadosParaEdicao / AtualizarUsuario
+
+        #region ObterDadosUsuarioBanco
         public static DataTable ObterDadosUsuarioBanco()
         {
             SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
@@ -167,7 +175,8 @@ namespace WindowsFormsApp1
                         telefone as 'Telefone',
                         data_cadastro as 'Data Inserido',
                         usuario_ativo as 'Usuário Ativo',
-                        nivel_acesso as 'Nível Acesso'
+                        nivel_acesso as 'Nível Acesso',
+                        data_atualizacao as 'Data Atualização'
                     FROM
                         usuarios";
 
@@ -181,7 +190,9 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }
+        #endregion
 
+        #region ObterDadosParaEdicao
         public static DataTable ObterDadosParaEdicao(string id)
         {
             SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
@@ -209,7 +220,41 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }
+        #endregion
+
+        #region AtualizarUsuario
+        public static void AtualizarUsuario(Usuario usuario)
+        {
+            DateTime data = DateTime.Now;
+            var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    UPDATE 
+                        usuarios
+                    SET
+                        nome_completo='"+usuario.nome_completo+"', nome_usuario= '"+usuario.nome_usuario+"', email = '"+usuario.email+"', telefone = '"+usuario.telefone+"', senha = '"+usuario.senha+"', usuario_ativo = '"+usuario.usuario_ativo+"', nivel_acesso = '"+usuario.nivel_acesso+"', data_atualizacao = '"+dataFormatada+"' WHERE id_usuario="+usuario.id_usuario;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                command.ExecuteNonQuery();
+                MessageBox.Show("Usuário atualizado com sucesso!", "Mensagem de atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conexaoPropria.Close();
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                MessageBox.Show($"Não foi Atualizar usuario ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        #endregion
 
         #endregion
+
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -67,6 +67,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tb_email = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.lb_dataAlteracaoCadastro = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -90,7 +93,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1090, 40);
+            this.panel1.Size = new System.Drawing.Size(1160, 40);
             this.panel1.TabIndex = 2;
             // 
             // label1
@@ -120,7 +123,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1065, 618);
+            this.groupBox1.Size = new System.Drawing.Size(1135, 618);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do usuário";
@@ -130,7 +133,7 @@
             this.groupBox3.Controls.Add(this.kryptonDataGridView1);
             this.groupBox3.Location = new System.Drawing.Point(8, 266);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1051, 346);
+            this.groupBox3.Size = new System.Drawing.Size(1121, 346);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tabela de usuário";
@@ -141,8 +144,8 @@
             this.kryptonDataGridView1.AllowUserToDeleteRows = false;
             this.kryptonDataGridView1.AllowUserToResizeColumns = false;
             this.kryptonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.kryptonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -152,12 +155,15 @@
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.RowHeadersVisible = false;
             this.kryptonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(1045, 326);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1115, 326);
             this.kryptonDataGridView1.TabIndex = 0;
             this.kryptonDataGridView1.SelectionChanged += new System.EventHandler(this.kryptonDataGridView1_SelectionChanged);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.lb_dataAlteracaoCadastro);
+            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.tb_dataBanco);
             this.groupBox2.Controls.Add(this.tb_tituloData);
             this.groupBox2.Controls.Add(this.groupBox5);
@@ -183,7 +189,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(7, 20);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1049, 240);
+            this.groupBox2.Size = new System.Drawing.Size(1119, 240);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações";
@@ -288,7 +294,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(778, 194);
+            this.panel4.Location = new System.Drawing.Point(838, 189);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(145, 40);
             this.panel4.TabIndex = 20;
@@ -320,7 +326,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btn_Cancelar);
-            this.panel3.Location = new System.Drawing.Point(934, 194);
+            this.panel3.Location = new System.Drawing.Point(994, 189);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(109, 40);
             this.panel3.TabIndex = 20;
@@ -354,7 +360,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_Salvar);
-            this.panel2.Location = new System.Drawing.Point(622, 194);
+            this.panel2.Location = new System.Drawing.Point(682, 189);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(145, 40);
             this.panel2.TabIndex = 19;
@@ -375,6 +381,7 @@
             this.btn_Salvar.TabIndex = 10;
             this.btn_Salvar.Text = "        Salvar alterações";
             this.btn_Salvar.UseVisualStyleBackColor = false;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
             // tb_nomeCompleto
             // 
@@ -490,11 +497,36 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "E-Mail:";
             // 
+            // lb_dataAlteracaoCadastro
+            // 
+            this.lb_dataAlteracaoCadastro.AutoSize = true;
+            this.lb_dataAlteracaoCadastro.Location = new System.Drawing.Point(407, 155);
+            this.lb_dataAlteracaoCadastro.Name = "lb_dataAlteracaoCadastro";
+            this.lb_dataAlteracaoCadastro.Size = new System.Drawing.Size(0, 15);
+            this.lb_dataAlteracaoCadastro.TabIndex = 37;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(244, 155);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(157, 15);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "Data alteração de cadastro:";
+            // 
+            // label11
+            // 
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Location = new System.Drawing.Point(237, 157);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(1, 13);
+            this.label11.TabIndex = 38;
+            // 
             // Form_Todos_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1090, 677);
+            this.ClientSize = new System.Drawing.Size(1160, 677);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -564,5 +596,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label tb_dataBanco;
         private System.Windows.Forms.Label tb_tituloData;
+        private System.Windows.Forms.Label lb_dataAlteracaoCadastro;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }
