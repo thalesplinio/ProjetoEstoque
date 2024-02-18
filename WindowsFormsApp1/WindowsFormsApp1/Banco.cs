@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        #region Consultas sql
+        #region Consultas sql / Usada no form_login
         public static DataTable Consulta(string sql)
         {
             SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
@@ -146,6 +146,70 @@ namespace WindowsFormsApp1
             conexaoPropria.Close();
             return res;
         }
+        #endregion
+
+        #region Funções Form_Todos_Usuarios / ObterDadosUsuarioBanco / ObterDadosParaEdicao
+        public static DataTable ObterDadosUsuarioBanco()
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT 
+                        id_usuario as 'ID Usuário',
+                        nome_completo as 'Nome completo',
+                        nome_usuario as 'Nome de usuário',
+                        email as 'E-Mail',
+                        telefone as 'Telefone',
+                        data_cadastro as 'Data Inserido',
+                        usuario_ativo as 'Usuário Ativo',
+                        nivel_acesso as 'Nível Acesso'
+                    FROM
+                        usuarios";
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static DataTable ObterDadosParaEdicao(string id)
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT 
+                        *
+                    FROM
+                        usuarios
+                    WHERE
+                        id_usuario="+id;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         #endregion
     }
 }

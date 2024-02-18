@@ -28,47 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.mtb_telefone = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tb_dataBanco = new System.Windows.Forms.Label();
+            this.tb_tituloData = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tb_repetirSenha = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tb_senha = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tb_id = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lb_detalhesStatus = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.nud_nivelAcesso = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
+            this.mtb_telefone = new System.Windows.Forms.MaskedTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Salvar = new System.Windows.Forms.Button();
+            this.tb_nomeCompleto = new System.Windows.Forms.TextBox();
+            this.panel_gerencia = new System.Windows.Forms.Panel();
+            this.btn_novoUsuario = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cb_statusUsuario = new System.Windows.Forms.ComboBox();
-            this.tb_nomeCompleto = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tb_nomeUsuario = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tb_email = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel_gerencia = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Cancelar = new System.Windows.Forms.Button();
-            this.btn_Salvar = new System.Windows.Forms.Button();
-            this.btn_novoUsuario = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lb_detalhesStatus = new System.Windows.Forms.Label();
+            this.tb_email = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_nivelAcesso)).BeginInit();
-            this.panel_gerencia.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_nivelAcesso)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel_gerencia.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,7 +90,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1060, 40);
+            this.panel1.Size = new System.Drawing.Size(1090, 40);
             this.panel1.TabIndex = 2;
             // 
             // label1
@@ -93,6 +104,15 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Todos os usuários";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 40);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.groupBox3);
@@ -100,21 +120,49 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1035, 539);
+            this.groupBox1.Size = new System.Drawing.Size(1065, 618);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do usuário";
             // 
-            // mtb_telefone
+            // groupBox3
             // 
-            this.mtb_telefone.Location = new System.Drawing.Point(205, 83);
-            this.mtb_telefone.Mask = "(99) 00000-0000";
-            this.mtb_telefone.Name = "mtb_telefone";
-            this.mtb_telefone.Size = new System.Drawing.Size(189, 21);
-            this.mtb_telefone.TabIndex = 20;
+            this.groupBox3.Controls.Add(this.kryptonDataGridView1);
+            this.groupBox3.Location = new System.Drawing.Point(8, 266);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1051, 346);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Tabela de usuário";
+            // 
+            // kryptonDataGridView1
+            // 
+            this.kryptonDataGridView1.AllowUserToAddRows = false;
+            this.kryptonDataGridView1.AllowUserToDeleteRows = false;
+            this.kryptonDataGridView1.AllowUserToResizeColumns = false;
+            this.kryptonDataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.kryptonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonDataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(3, 17);
+            this.kryptonDataGridView1.MultiSelect = false;
+            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
+            this.kryptonDataGridView1.RowHeadersVisible = false;
+            this.kryptonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1045, 326);
+            this.kryptonDataGridView1.TabIndex = 0;
+            this.kryptonDataGridView1.SelectionChanged += new System.EventHandler(this.kryptonDataGridView1_SelectionChanged);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.tb_dataBanco);
+            this.groupBox2.Controls.Add(this.tb_tituloData);
+            this.groupBox2.Controls.Add(this.groupBox5);
+            this.groupBox2.Controls.Add(this.tb_id);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.panel4);
             this.groupBox2.Controls.Add(this.nud_nivelAcesso);
@@ -135,134 +183,112 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(7, 20);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1022, 168);
+            this.groupBox2.Size = new System.Drawing.Size(1049, 240);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações";
             // 
-            // nud_nivelAcesso
+            // tb_dataBanco
             // 
-            this.nud_nivelAcesso.Location = new System.Drawing.Point(582, 84);
-            this.nud_nivelAcesso.Name = "nud_nivelAcesso";
-            this.nud_nivelAcesso.Size = new System.Drawing.Size(120, 21);
-            this.nud_nivelAcesso.TabIndex = 26;
+            this.tb_dataBanco.AutoSize = true;
+            this.tb_dataBanco.Location = new System.Drawing.Point(109, 155);
+            this.tb_dataBanco.Name = "tb_dataBanco";
+            this.tb_dataBanco.Size = new System.Drawing.Size(0, 15);
+            this.tb_dataBanco.TabIndex = 35;
             // 
-            // label4
+            // tb_tituloData
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 15);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Nome de usuário:";
+            this.tb_tituloData.AutoSize = true;
+            this.tb_tituloData.Location = new System.Drawing.Point(6, 155);
+            this.tb_tituloData.Name = "tb_tituloData";
+            this.tb_tituloData.Size = new System.Drawing.Size(103, 15);
+            this.tb_tituloData.TabIndex = 34;
+            this.tb_tituloData.Text = "Data de cadastro:";
             // 
-            // label10
+            // groupBox5
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(579, 64);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(157, 15);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "Nível de acesso do usuário:";
+            this.groupBox5.Controls.Add(this.tb_repetirSenha);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.tb_senha);
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Location = new System.Drawing.Point(778, 20);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(207, 128);
+            this.groupBox5.TabIndex = 33;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Redefinir senha";
             // 
-            // label3
+            // tb_repetirSenha
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 15);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Nome completo:";
+            this.tb_repetirSenha.Location = new System.Drawing.Point(6, 87);
+            this.tb_repetirSenha.Name = "tb_repetirSenha";
+            this.tb_repetirSenha.PasswordChar = '*';
+            this.tb_repetirSenha.Size = new System.Drawing.Size(189, 21);
+            this.tb_repetirSenha.TabIndex = 36;
             // 
-            // cb_statusUsuario
+            // label8
             // 
-            this.cb_statusUsuario.FormattingEnabled = true;
-            this.cb_statusUsuario.ItemHeight = 15;
-            this.cb_statusUsuario.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "D"});
-            this.cb_statusUsuario.Location = new System.Drawing.Point(400, 81);
-            this.cb_statusUsuario.Name = "cb_statusUsuario";
-            this.cb_statusUsuario.Size = new System.Drawing.Size(170, 23);
-            this.cb_statusUsuario.TabIndex = 25;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 67);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 15);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Repertir senha:";
             // 
-            // tb_nomeCompleto
+            // tb_senha
             // 
-            this.tb_nomeCompleto.Location = new System.Drawing.Point(6, 37);
-            this.tb_nomeCompleto.Name = "tb_nomeCompleto";
-            this.tb_nomeCompleto.Size = new System.Drawing.Size(388, 21);
-            this.tb_nomeCompleto.TabIndex = 16;
+            this.tb_senha.Location = new System.Drawing.Point(6, 39);
+            this.tb_senha.Name = "tb_senha";
+            this.tb_senha.PasswordChar = '*';
+            this.tb_senha.Size = new System.Drawing.Size(189, 21);
+            this.tb_senha.TabIndex = 34;
             // 
-            // label9
+            // label7
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(397, 65);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 15);
-            this.label9.TabIndex = 29;
-            this.label9.Text = "Status do usuário:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 15);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Senha:";
             // 
-            // tb_nomeUsuario
+            // tb_id
             // 
-            this.tb_nomeUsuario.Location = new System.Drawing.Point(6, 83);
-            this.tb_nomeUsuario.Name = "tb_nomeUsuario";
-            this.tb_nomeUsuario.Size = new System.Drawing.Size(189, 21);
-            this.tb_nomeUsuario.TabIndex = 17;
+            this.tb_id.Location = new System.Drawing.Point(9, 37);
+            this.tb_id.Name = "tb_id";
+            this.tb_id.Size = new System.Drawing.Size(102, 21);
+            this.tb_id.TabIndex = 32;
             // 
-            // label5
+            // label2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(397, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 15);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "E-Mail:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 15);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "ID Usuário:";
             // 
-            // tb_email
+            // groupBox4
             // 
-            this.tb_email.Location = new System.Drawing.Point(400, 37);
-            this.tb_email.Name = "tb_email";
-            this.tb_email.Size = new System.Drawing.Size(388, 21);
-            this.tb_email.TabIndex = 19;
+            this.groupBox4.Controls.Add(this.lb_detalhesStatus);
+            this.groupBox4.Location = new System.Drawing.Point(602, 63);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(149, 82);
+            this.groupBox4.TabIndex = 21;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Detalhes do status";
             // 
-            // label6
+            // lb_detalhesStatus
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(202, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 15);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Telefone:";
-            // 
-            // panel_gerencia
-            // 
-            this.panel_gerencia.Controls.Add(this.btn_novoUsuario);
-            this.panel_gerencia.Location = new System.Drawing.Point(6, 117);
-            this.panel_gerencia.Name = "panel_gerencia";
-            this.panel_gerencia.Size = new System.Drawing.Size(151, 40);
-            this.panel_gerencia.TabIndex = 17;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btn_Cancelar);
-            this.panel3.Location = new System.Drawing.Point(905, 117);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(109, 40);
-            this.panel3.TabIndex = 20;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btn_Salvar);
-            this.panel2.Location = new System.Drawing.Point(593, 117);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(145, 40);
-            this.panel2.TabIndex = 19;
+            this.lb_detalhesStatus.Location = new System.Drawing.Point(7, 20);
+            this.lb_detalhesStatus.Name = "lb_detalhesStatus";
+            this.lb_detalhesStatus.Size = new System.Drawing.Size(136, 52);
+            this.lb_detalhesStatus.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(749, 117);
+            this.panel4.Location = new System.Drawing.Point(778, 194);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(145, 40);
             this.panel4.TabIndex = 20;
@@ -284,6 +310,21 @@
             this.button1.Text = "        Excluir usuário";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // nud_nivelAcesso
+            // 
+            this.nud_nivelAcesso.Location = new System.Drawing.Point(9, 127);
+            this.nud_nivelAcesso.Name = "nud_nivelAcesso";
+            this.nud_nivelAcesso.Size = new System.Drawing.Size(120, 21);
+            this.nud_nivelAcesso.TabIndex = 26;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btn_Cancelar);
+            this.panel3.Location = new System.Drawing.Point(934, 194);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(109, 40);
+            this.panel3.TabIndex = 20;
+            // 
             // btn_Cancelar
             // 
             this.btn_Cancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
@@ -302,6 +343,22 @@
             this.btn_Cancelar.UseVisualStyleBackColor = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
+            // mtb_telefone
+            // 
+            this.mtb_telefone.Location = new System.Drawing.Point(451, 39);
+            this.mtb_telefone.Mask = "(99) 00000-0000";
+            this.mtb_telefone.Name = "mtb_telefone";
+            this.mtb_telefone.Size = new System.Drawing.Size(145, 21);
+            this.mtb_telefone.TabIndex = 20;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_Salvar);
+            this.panel2.Location = new System.Drawing.Point(622, 194);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(145, 40);
+            this.panel2.TabIndex = 19;
+            // 
             // btn_Salvar
             // 
             this.btn_Salvar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
@@ -318,6 +375,21 @@
             this.btn_Salvar.TabIndex = 10;
             this.btn_Salvar.Text = "        Salvar alterações";
             this.btn_Salvar.UseVisualStyleBackColor = false;
+            // 
+            // tb_nomeCompleto
+            // 
+            this.tb_nomeCompleto.Location = new System.Drawing.Point(117, 37);
+            this.tb_nomeCompleto.Name = "tb_nomeCompleto";
+            this.tb_nomeCompleto.Size = new System.Drawing.Size(328, 21);
+            this.tb_nomeCompleto.TabIndex = 16;
+            // 
+            // panel_gerencia
+            // 
+            this.panel_gerencia.Controls.Add(this.btn_novoUsuario);
+            this.panel_gerencia.Location = new System.Drawing.Point(9, 194);
+            this.panel_gerencia.Name = "panel_gerencia";
+            this.panel_gerencia.Size = new System.Drawing.Size(151, 40);
+            this.panel_gerencia.TabIndex = 17;
             // 
             // btn_novoUsuario
             // 
@@ -337,79 +409,117 @@
             this.btn_novoUsuario.UseVisualStyleBackColor = false;
             this.btn_novoUsuario.Click += new System.EventHandler(this.btn_novoUsuario_Click);
             // 
-            // pictureBox1
+            // label10
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 40);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 107);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(157, 15);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Nível de acesso do usuário:";
             // 
-            // groupBox3
+            // label3
             // 
-            this.groupBox3.Controls.Add(this.kryptonDataGridView1);
-            this.groupBox3.Location = new System.Drawing.Point(8, 195);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1021, 338);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tabela de usuário";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(114, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 15);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Nome completo:";
             // 
-            // kryptonDataGridView1
+            // cb_statusUsuario
             // 
-            this.kryptonDataGridView1.AllowUserToAddRows = false;
-            this.kryptonDataGridView1.AllowUserToDeleteRows = false;
-            this.kryptonDataGridView1.AllowUserToResizeColumns = false;
-            this.kryptonDataGridView1.AllowUserToResizeRows = false;
-            this.kryptonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(3, 17);
-            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(1015, 318);
-            this.kryptonDataGridView1.TabIndex = 0;
+            this.cb_statusUsuario.FormattingEnabled = true;
+            this.cb_statusUsuario.ItemHeight = 15;
+            this.cb_statusUsuario.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "D"});
+            this.cb_statusUsuario.Location = new System.Drawing.Point(602, 39);
+            this.cb_statusUsuario.Name = "cb_statusUsuario";
+            this.cb_statusUsuario.Size = new System.Drawing.Size(170, 23);
+            this.cb_statusUsuario.TabIndex = 25;
             // 
-            // groupBox4
+            // label9
             // 
-            this.groupBox4.Controls.Add(this.lb_detalhesStatus);
-            this.groupBox4.Location = new System.Drawing.Point(794, 22);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(149, 82);
-            this.groupBox4.TabIndex = 21;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Detalhes do status";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(599, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(105, 15);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Status do usuário:";
             // 
-            // lb_detalhesStatus
+            // tb_nomeUsuario
             // 
-            this.lb_detalhesStatus.Location = new System.Drawing.Point(7, 20);
-            this.lb_detalhesStatus.Name = "lb_detalhesStatus";
-            this.lb_detalhesStatus.Size = new System.Drawing.Size(136, 52);
-            this.lb_detalhesStatus.TabIndex = 0;
+            this.tb_nomeUsuario.Location = new System.Drawing.Point(9, 83);
+            this.tb_nomeUsuario.Name = "tb_nomeUsuario";
+            this.tb_nomeUsuario.Size = new System.Drawing.Size(189, 21);
+            this.tb_nomeUsuario.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 15);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Nome de usuário:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(448, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 15);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Telefone:";
+            // 
+            // tb_email
+            // 
+            this.tb_email.Location = new System.Drawing.Point(208, 83);
+            this.tb_email.Name = "tb_email";
+            this.tb_email.Size = new System.Drawing.Size(388, 21);
+            this.tb_email.TabIndex = 19;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(205, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 15);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "E-Mail:";
             // 
             // Form_Todos_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 598);
+            this.ClientSize = new System.Drawing.Size(1090, 677);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Todos_Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listagem de usuários";
+            this.Load += new System.EventHandler(this.Form_Todos_Usuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_nivelAcesso)).EndInit();
-            this.panel_gerencia.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nud_nivelAcesso)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel_gerencia.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -445,5 +555,14 @@
         private Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lb_detalhesStatus;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tb_id;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox tb_repetirSenha;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tb_senha;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label tb_dataBanco;
+        private System.Windows.Forms.Label tb_tituloData;
     }
 }
