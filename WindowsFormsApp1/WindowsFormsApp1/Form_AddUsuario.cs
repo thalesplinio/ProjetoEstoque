@@ -15,7 +15,6 @@ namespace WindowsFormsApp1
         public Form_AddUsuario()
         {
             InitializeComponent();
-            lb_detalhesStatus.Text = "A = Ativo,\nB = Bloqueado,\nD = Desligado";
         }
         #region Set Colors Butons
         private struct RGBColorsButtons
@@ -55,6 +54,16 @@ namespace WindowsFormsApp1
         {
             btn_Cancelar.BackColor = RGBColorsButtons.corAzulPadrao;
         }
+        private void btn_addStatus_MouseEnter(object sender, EventArgs e)
+        {
+            btn_addStatus.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_addStatus_MouseLeave(object sender, EventArgs e)
+        {
+            btn_addStatus.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+
         #endregion
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
@@ -94,6 +103,12 @@ namespace WindowsFormsApp1
             cb_statusUsuario.Text = "";
             nud_nivelAcesso.Value = 0;
             tb_nomeCompleto.Focus();
+        }
+
+        private void btn_addStatus_Click(object sender, EventArgs e)
+        {
+            Form_AddStatus form_AddStatus = new Form_AddStatus();
+            form_AddStatus.ShowDialog();
         }
     }
 }

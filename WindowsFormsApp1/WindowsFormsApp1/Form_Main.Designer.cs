@@ -410,7 +410,7 @@
             // 
             this.adicionarUsuáriosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.add_user;
             this.adicionarUsuáriosToolStripMenuItem.Name = "adicionarUsuáriosToolStripMenuItem";
-            this.adicionarUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.adicionarUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.adicionarUsuáriosToolStripMenuItem.Text = "Adicionar usuários";
             this.adicionarUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.adicionarUsuáriosToolStripMenuItem_Click);
             // 
@@ -418,9 +418,9 @@
             // 
             this.verUsuáriosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.group;
             this.verUsuáriosToolStripMenuItem.Name = "verUsuáriosToolStripMenuItem";
-            this.verUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.verUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verUsuáriosToolStripMenuItem.Text = "Ver usuários";
-            this.verUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.verUsuáriosToolStripMenuItem_Click);
+            this.verUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.verUsuáriosToolStripMenuItem_Click_1);
             // 
             // relatóriosToolStripMenuItem
             // 

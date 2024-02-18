@@ -167,7 +167,7 @@ namespace WindowsFormsApp1
             AbreFormularioBaseNivel(2, form_AddUsuario);
         }
 
-        private void verUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void verUsuáriosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Form_Todos_Usuarios form_Todos_Usuarios = new Form_Todos_Usuarios();
             AbreFormularioBaseNivel(2, form_Todos_Usuarios);

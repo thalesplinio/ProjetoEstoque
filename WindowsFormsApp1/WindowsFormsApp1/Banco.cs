@@ -283,5 +283,105 @@ namespace WindowsFormsApp1
 
         #endregion
 
+        #region AdicionarStatus / ObterStatus / ExcluirStatus / ObterDadosStatusParaEdicao
+        public static void AdicionarStatus(Status status)
+        {
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+
+                command.CommandText = @"
+                    INSERT INTO status_usuario (nome_status) VALUES (@nome_status)";
+                command.Parameters.AddWithValue("nome_status", status.nome_status);
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Status registrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conexaoPropria.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Não foi possivel cadastrar status ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public static DataTable ObterStatus()
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT 
+                        id_status as 'ID status',
+                        nome_status as 'Nome do status'
+                    FROM
+                        status_usuario";
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static DataTable ObterDadosStatusParaEdicao(string id)
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT 
+                        *
+                    FROM
+                        status_usuario
+                    WHERE
+                        id_status=" + id;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static void ExcluirStatus(string id)
+        {
+            DateTime data = DateTime.Now;
+            var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"DELETE FROM status_usuario WHERE id_status=" + id;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                command.ExecuteNonQuery();
+                conexaoPropria.Close();
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                MessageBox.Show($"Não foi removes o status ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        #endregion
+
     }
 }

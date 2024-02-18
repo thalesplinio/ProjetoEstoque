@@ -16,10 +16,30 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        #region Set Colors Butons
+        private struct RGBColorsButtons
+        {
+            public static Color corAzulPadrao = Color.FromArgb(42, 49, 67); // #2A3143
+            //public static Color corVerdePadrao = Color.FromArgb(19, 106, 61); // #136A3D
+            public static Color corVerdePadrao = Color.FromArgb(45, 153, 97); // #136A3D
+
+        }
+        #endregion
+
+        #region Buttons Hover Color
+        private void btn_addStatus_MouseEnter(object sender, EventArgs e)
+        {
+            btn_addStatus.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_addStatus_MouseLeave(object sender, EventArgs e)
+        {
+            btn_addStatus.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+        #endregion
 
         private void Form_Todos_Usuarios_Load(object sender, EventArgs e)
         {
-            lb_detalhesStatus.Text = "A = Ativo,\nB = Bloqueado,\nD = Desligado";
             tb_dataBanco.ForeColor = Color.Green;
             lb_dataAlteracaoCadastro.ForeColor = Color.Green;
 
@@ -119,6 +139,12 @@ namespace WindowsFormsApp1
                 kryptonDataGridView1.DataSource = Banco.ObterDadosUsuarioBanco();
                 kryptonDataGridView1.Sort(kryptonDataGridView1.Columns["ID Usuário"], ListSortDirection.Descending);
             }
+        }
+
+        private void btn_addStatus_Click(object sender, EventArgs e)
+        {
+            Form_AddStatus form_AddStatus = new Form_AddStatus();
+            form_AddStatus.ShowDialog();
         }
     }
 }

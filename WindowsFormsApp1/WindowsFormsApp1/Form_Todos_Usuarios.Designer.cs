@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -36,6 +36,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_addStatus = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.lb_dataAlteracaoCadastro = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tb_id = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lb_detalhesStatus = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.nud_nivelAcesso = new System.Windows.Forms.NumericUpDown();
@@ -76,8 +76,8 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_nivelAcesso)).BeginInit();
             this.panel3.SuspendLayout();
@@ -144,8 +144,8 @@
             this.kryptonDataGridView1.AllowUserToDeleteRows = false;
             this.kryptonDataGridView1.AllowUserToResizeColumns = false;
             this.kryptonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.kryptonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -161,6 +161,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.panel5);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.lb_dataAlteracaoCadastro);
             this.groupBox2.Controls.Add(this.label12);
@@ -169,7 +170,6 @@
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.tb_id);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.panel4);
             this.groupBox2.Controls.Add(this.nud_nivelAcesso);
             this.groupBox2.Controls.Add(this.panel3);
@@ -193,6 +193,34 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btn_addStatus);
+            this.panel5.Location = new System.Drawing.Point(646, 66);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(114, 35);
+            this.panel5.TabIndex = 39;
+            // 
+            // btn_addStatus
+            // 
+            this.btn_addStatus.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_addStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_addStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_addStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addStatus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_addStatus.Image = global::WindowsFormsApp1.Properties.Resources.clipboard;
+            this.btn_addStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_addStatus.Location = new System.Drawing.Point(-3, -7);
+            this.btn_addStatus.Name = "btn_addStatus";
+            this.btn_addStatus.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_addStatus.Size = new System.Drawing.Size(120, 50);
+            this.btn_addStatus.TabIndex = 10;
+            this.btn_addStatus.Text = "        Criar status";
+            this.btn_addStatus.UseVisualStyleBackColor = false;
+            this.btn_addStatus.Click += new System.EventHandler(this.btn_addStatus_Click);
+            this.btn_addStatus.MouseEnter += new System.EventHandler(this.btn_addStatus_MouseEnter);
+            this.btn_addStatus.MouseLeave += new System.EventHandler(this.btn_addStatus_MouseLeave);
             // 
             // label11
             // 
@@ -299,23 +327,6 @@
             this.label2.Size = new System.Drawing.Size(68, 15);
             this.label2.TabIndex = 31;
             this.label2.Text = "ID Usuário:";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.lb_detalhesStatus);
-            this.groupBox4.Location = new System.Drawing.Point(646, 59);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(149, 82);
-            this.groupBox4.TabIndex = 21;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Detalhes do status";
-            // 
-            // lb_detalhesStatus
-            // 
-            this.lb_detalhesStatus.Location = new System.Drawing.Point(7, 20);
-            this.lb_detalhesStatus.Name = "lb_detalhesStatus";
-            this.lb_detalhesStatus.Size = new System.Drawing.Size(136, 52);
-            this.lb_detalhesStatus.TabIndex = 0;
             // 
             // panel4
             // 
@@ -546,9 +557,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nud_nivelAcesso)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -587,8 +598,6 @@
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.GroupBox groupBox3;
         private Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label lb_detalhesStatus;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_id;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -601,5 +610,7 @@
         private System.Windows.Forms.Label lb_dataAlteracaoCadastro;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btn_addStatus;
     }
 }

@@ -22,3 +22,4 @@ E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsForms
 E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Data.SQLite.xml
 E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_AddUsuario.resources
 E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Todos_Usuarios.resources
+E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_AddStatus.resources

@@ -30,8 +30,8 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lb_detalhesStatus = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_addStatus = new System.Windows.Forms.Button();
             this.mtb_telefone = new System.Windows.Forms.MaskedTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_Cancelar = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_gerencia.SuspendLayout();
@@ -85,7 +85,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.groupBox3);
+            this.groupBox2.Controls.Add(this.panel4);
             this.groupBox2.Controls.Add(this.mtb_telefone);
             this.groupBox2.Controls.Add(this.panel3);
             this.groupBox2.Controls.Add(this.panel2);
@@ -113,22 +113,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados do usuário";
             // 
-            // groupBox3
+            // panel4
             // 
-            this.groupBox3.Controls.Add(this.lb_detalhesStatus);
-            this.groupBox3.Location = new System.Drawing.Point(605, 17);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(149, 89);
-            this.groupBox3.TabIndex = 20;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Detalhes do status";
+            this.panel4.Controls.Add(this.btn_addStatus);
+            this.panel4.Location = new System.Drawing.Point(605, 25);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(114, 35);
+            this.panel4.TabIndex = 18;
             // 
-            // lb_detalhesStatus
+            // btn_addStatus
             // 
-            this.lb_detalhesStatus.Location = new System.Drawing.Point(7, 20);
-            this.lb_detalhesStatus.Name = "lb_detalhesStatus";
-            this.lb_detalhesStatus.Size = new System.Drawing.Size(136, 66);
-            this.lb_detalhesStatus.TabIndex = 0;
+            this.btn_addStatus.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_addStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_addStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_addStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addStatus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_addStatus.Image = global::WindowsFormsApp1.Properties.Resources.clipboard;
+            this.btn_addStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_addStatus.Location = new System.Drawing.Point(-3, -7);
+            this.btn_addStatus.Name = "btn_addStatus";
+            this.btn_addStatus.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_addStatus.Size = new System.Drawing.Size(120, 50);
+            this.btn_addStatus.TabIndex = 10;
+            this.btn_addStatus.Text = "        Criar status";
+            this.btn_addStatus.UseVisualStyleBackColor = false;
+            this.btn_addStatus.Click += new System.EventHandler(this.btn_addStatus_Click);
+            this.btn_addStatus.MouseEnter += new System.EventHandler(this.btn_addStatus_MouseEnter);
+            this.btn_addStatus.MouseLeave += new System.EventHandler(this.btn_addStatus_MouseLeave);
             // 
             // mtb_telefone
             // 
@@ -417,7 +428,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_gerencia.ResumeLayout(false);
@@ -457,11 +468,11 @@
         private System.Windows.Forms.Button btn_novoUsuario;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_Cancelar;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.MaskedTextBox mtb_telefone;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label lb_detalhesStatus;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btn_addStatus;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_Salvar;
     }
 }
