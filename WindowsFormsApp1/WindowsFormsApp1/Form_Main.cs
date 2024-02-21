@@ -22,6 +22,8 @@ namespace WindowsFormsApp1
 
             DateTime date = DateTime.Now;
             lb_date.Text = $"{date:D} {date:T}";
+
+            lb_owner.Text = Globais.versao;
         }
 
         #region Set Colors Butons
