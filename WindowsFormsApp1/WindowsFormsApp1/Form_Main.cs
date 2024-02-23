@@ -37,16 +37,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region Buttons Hover Color
-        private void button1_MouseEnter(object sender, EventArgs e)
-        {
-            btn_inicio.BackColor = RGBColorsButtons.corVerdePadrao;
-        }
-
-        private void button1_MouseLeave(object sender, EventArgs e)
-        {
-            btn_inicio.BackColor = RGBColorsButtons.corAzulPadrao;
-        }
-
         private void btn_cadastrar_MouseEnter(object sender, EventArgs e)
         {
             btn_cadastrar.BackColor = RGBColorsButtons.corVerdePadrao;
@@ -106,16 +96,13 @@ namespace WindowsFormsApp1
 
         private void Form_Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult res = MessageBox.Show("Deseja realmente fechar a aplicação?", "Mensagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (res == DialogResult.No)
+            if(MessageBox.Show(
+                "Deseja realmente fechar a aplicação?",
+                "Fechar?",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.No)
             {
                 e.Cancel = true;
-                // usuario deslogado
-                lb_UserLogado.Text = "...";
-                Globais.nivel = 0;
-                Globais.logado = false;
-                this.Close();
             }
         }
 
@@ -173,6 +160,18 @@ namespace WindowsFormsApp1
         {
             Form_Todos_Usuarios form_Todos_Usuarios = new Form_Todos_Usuarios();
             AbreFormularioBaseNivel(2, form_Todos_Usuarios);
+        }
+
+        private void btn_cadastrar_Click(object sender, EventArgs e)
+        {
+            Form_Cadastro form_Cadastro = new Form_Cadastro();
+            AbreFormularioBaseNivel(1, form_Cadastro);
+        }
+
+        private void configuraçõesGeraisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Config form_Config = new Form_Config();
+            AbreFormularioBaseNivel(1, form_Config);
         }
     }
 }

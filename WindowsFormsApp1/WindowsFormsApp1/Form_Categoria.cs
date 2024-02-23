@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class Form_Categoria : Form
+    {
+        public Form_Categoria()
+        {
+            InitializeComponent();
+        }
+        private void Form_Categoria_Load(object sender, EventArgs e)
+        {
+            kryptonDataGridViewCategoria.DataSource = Banco.ObterCategoria();
+            kryptonDataGridViewCategoria.Sort(kryptonDataGridViewCategoria.Columns["ID Categoria"], ListSortDirection.Descending);
+            kryptonDataGridViewCategoria.Columns[0].Width = 100;
+            kryptonDataGridViewCategoria.Columns[1].Width = 315;
+        }
+        private void btn_addStatus_Click(object sender, EventArgs e)
+        {
+            Categoria categoria = new Categoria();
+            categoria.nome_categoria = tb_nomeCategoria.Text;
+            Banco.AdicionarCategoria(categoria);
+            tb_nomeCategoria.Clear();
+            kryptonDataGridViewCategoria.DataSource = Banco.ObterCategoria();
+            kryptonDataGridViewCategoria.Sort(kryptonDataGridViewCategoria.Columns["ID Categoria"], ListSortDirection.Descending);
+        }
+
+        private void kryptonDataGridViewCategoria_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridView dataGridView = (DataGridView)sender;
+            int contLinhas = dataGridView.SelectedRows.Count;
+
+            if (contLinhas > 0)
+            {
+                DataTable dataTable = new DataTable();
+                string idStatus = dataGridView.SelectedRows[0].Cells[0].Value.ToString(); // selecionando o id do usuario
+                dataTable = Banco.ObterDadosStatusParaEdicaoCategoria(idStatus);
+
+                tb_idCategoriaRemove.Text = dataTable.Rows[0].Field<Int64>("id_categoria").ToString();
+                tb_nomeCategoriaRemove.Text = dataTable.Rows[0].Field<string>("nome_categoria").ToString();
+            }
+        }
+
+        private void btn_removeCategoria_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Deseja realmente excluir esta categoria?", "Confirmar exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (res == DialogResult.Yes)
+            {
+                Banco.ExcluirCategoria(tb_idCategoriaRemove.Text);
+                kryptonDataGridViewCategoria.DataSource = Banco.ObterCategoria();
+                kryptonDataGridViewCategoria.Sort(kryptonDataGridViewCategoria.Columns["ID Categoria"], ListSortDirection.Descending);
+            }
+        }
+    }
+}

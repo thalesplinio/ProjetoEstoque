@@ -23,3 +23,8 @@ E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsForms
 E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_AddUsuario.resources
 E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Todos_Usuarios.resources
 E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_AddStatus.resources
+E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_DeskNivel.resources
+E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Cadastro.resources
+E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Config.resources
+E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Categoria.resources
+E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Tipo.resources

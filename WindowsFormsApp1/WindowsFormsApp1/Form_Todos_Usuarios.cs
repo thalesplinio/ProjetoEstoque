@@ -23,6 +23,10 @@ namespace WindowsFormsApp1
             //public static Color corVerdePadrao = Color.FromArgb(19, 106, 61); // #136A3D
             public static Color corVerdePadrao = Color.FromArgb(45, 153, 97); // #136A3D
 
+
+            public static Color corControl = Color.FromArgb(240, 240, 240);
+            public static Color corControlLight = Color.FromArgb(227, 227, 227);
+
         }
         #endregion
 
@@ -35,6 +39,15 @@ namespace WindowsFormsApp1
         private void btn_addStatus_MouseLeave(object sender, EventArgs e)
         {
             btn_addStatus.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+        private void btn_info_MouseEnter(object sender, EventArgs e)
+        {
+            btn_info.BackColor = RGBColorsButtons.corControlLight;
+        }
+
+        private void btn_info_MouseLeave(object sender, EventArgs e)
+        {
+            btn_info.BackColor = RGBColorsButtons.corControl;
         }
         #endregion
 
@@ -151,6 +164,12 @@ namespace WindowsFormsApp1
         {
             Form_AddStatus form_AddStatus = new Form_AddStatus();
             form_AddStatus.ShowDialog();
+        }
+
+        private void btn_info_Click(object sender, EventArgs e)
+        {
+            Form_DeskNivel form_DeskNivel = new Form_DeskNivel();
+            form_DeskNivel.ShowDialog();
         }
     }
 }

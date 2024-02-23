@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_gerencia = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lb_separador2 = new System.Windows.Forms.Label();
+            this.lb_UserLogado = new System.Windows.Forms.Label();
             this.panel_logo = new System.Windows.Forms.Panel();
             this.panel_listar = new System.Windows.Forms.Panel();
-            this.panel_inicio = new System.Windows.Forms.Panel();
-            this.panel_retirar = new System.Windows.Forms.Panel();
             this.panel_cadastrar = new System.Windows.Forms.Panel();
-            this.panel_gerencia = new System.Windows.Forms.Panel();
+            this.panel_retirar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lb_owner = new System.Windows.Forms.Label();
             this.lb_date = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_separador = new System.Windows.Forms.Label();
-            this.lb_UserLogado = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -48,14 +49,12 @@
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_gerenciar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_listar = new System.Windows.Forms.Button();
-            this.btn_inicio = new System.Windows.Forms.Button();
-            this.btn_retirar = new System.Windows.Forms.Button();
             this.btn_cadastrar = new System.Windows.Forms.Button();
+            this.btn_retirar = new System.Windows.Forms.Button();
             this.inserirMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarMateriaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retirarMateriaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,17 +68,15 @@
             this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesGeraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lb_separador2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel_gerencia.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel_logo.SuspendLayout();
             this.panel_listar.SuspendLayout();
-            this.panel_inicio.SuspendLayout();
-            this.panel_retirar.SuspendLayout();
             this.panel_cadastrar.SuspendLayout();
-            this.panel_gerencia.SuspendLayout();
+            this.panel_retirar.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -87,17 +84,55 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.panel1.Controls.Add(this.panel_gerencia);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel_logo);
             this.panel1.Controls.Add(this.panel_listar);
-            this.panel1.Controls.Add(this.panel_inicio);
-            this.panel1.Controls.Add(this.panel_retirar);
             this.panel1.Controls.Add(this.panel_cadastrar);
+            this.panel1.Controls.Add(this.panel_retirar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 23);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 40);
             this.panel1.TabIndex = 0;
+            // 
+            // panel_gerencia
+            // 
+            this.panel_gerencia.Controls.Add(this.btn_gerenciar);
+            this.panel_gerencia.Location = new System.Drawing.Point(549, 0);
+            this.panel_gerencia.Name = "panel_gerencia";
+            this.panel_gerencia.Size = new System.Drawing.Size(151, 40);
+            this.panel_gerencia.TabIndex = 7;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lb_separador2);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.lb_UserLogado);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(1127, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(137, 40);
+            this.panel3.TabIndex = 8;
+            // 
+            // lb_separador2
+            // 
+            this.lb_separador2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lb_separador2.Location = new System.Drawing.Point(0, 7);
+            this.lb_separador2.Name = "lb_separador2";
+            this.lb_separador2.Size = new System.Drawing.Size(1, 25);
+            this.lb_separador2.TabIndex = 8;
+            // 
+            // lb_UserLogado
+            // 
+            this.lb_UserLogado.AutoSize = true;
+            this.lb_UserLogado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_UserLogado.ForeColor = System.Drawing.SystemColors.Control;
+            this.lb_UserLogado.Location = new System.Drawing.Point(43, 13);
+            this.lb_UserLogado.Name = "lb_UserLogado";
+            this.lb_UserLogado.Size = new System.Drawing.Size(16, 15);
+            this.lb_UserLogado.TabIndex = 3;
+            this.lb_UserLogado.Text = "...";
             // 
             // panel_logo
             // 
@@ -110,42 +145,26 @@
             // panel_listar
             // 
             this.panel_listar.Controls.Add(this.btn_listar);
-            this.panel_listar.Location = new System.Drawing.Point(555, 0);
+            this.panel_listar.Location = new System.Drawing.Point(403, 0);
             this.panel_listar.Name = "panel_listar";
             this.panel_listar.Size = new System.Drawing.Size(151, 40);
             this.panel_listar.TabIndex = 6;
             // 
-            // panel_inicio
-            // 
-            this.panel_inicio.Controls.Add(this.btn_inicio);
-            this.panel_inicio.Location = new System.Drawing.Point(102, 0);
-            this.panel_inicio.Name = "panel_inicio";
-            this.panel_inicio.Size = new System.Drawing.Size(151, 40);
-            this.panel_inicio.TabIndex = 2;
-            // 
-            // panel_retirar
-            // 
-            this.panel_retirar.Controls.Add(this.btn_retirar);
-            this.panel_retirar.Location = new System.Drawing.Point(404, 0);
-            this.panel_retirar.Name = "panel_retirar";
-            this.panel_retirar.Size = new System.Drawing.Size(151, 40);
-            this.panel_retirar.TabIndex = 5;
-            // 
             // panel_cadastrar
             // 
             this.panel_cadastrar.Controls.Add(this.btn_cadastrar);
-            this.panel_cadastrar.Location = new System.Drawing.Point(253, 0);
+            this.panel_cadastrar.Location = new System.Drawing.Point(101, 0);
             this.panel_cadastrar.Name = "panel_cadastrar";
             this.panel_cadastrar.Size = new System.Drawing.Size(151, 40);
             this.panel_cadastrar.TabIndex = 4;
             // 
-            // panel_gerencia
+            // panel_retirar
             // 
-            this.panel_gerencia.Controls.Add(this.btn_gerenciar);
-            this.panel_gerencia.Location = new System.Drawing.Point(704, 23);
-            this.panel_gerencia.Name = "panel_gerencia";
-            this.panel_gerencia.Size = new System.Drawing.Size(151, 40);
-            this.panel_gerencia.TabIndex = 7;
+            this.panel_retirar.Controls.Add(this.btn_retirar);
+            this.panel_retirar.Location = new System.Drawing.Point(252, 0);
+            this.panel_retirar.Name = "panel_retirar";
+            this.panel_retirar.Size = new System.Drawing.Size(151, 40);
+            this.panel_retirar.TabIndex = 5;
             // 
             // panel2
             // 
@@ -195,17 +214,6 @@
             this.lb_separador.Name = "lb_separador";
             this.lb_separador.Size = new System.Drawing.Size(1, 22);
             this.lb_separador.TabIndex = 2;
-            // 
-            // lb_UserLogado
-            // 
-            this.lb_UserLogado.AutoSize = true;
-            this.lb_UserLogado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_UserLogado.ForeColor = System.Drawing.SystemColors.Control;
-            this.lb_UserLogado.Location = new System.Drawing.Point(43, 13);
-            this.lb_UserLogado.Name = "lb_UserLogado";
-            this.lb_UserLogado.Size = new System.Drawing.Size(16, 15);
-            this.lb_UserLogado.TabIndex = 3;
-            this.lb_UserLogado.Text = "...";
             // 
             // menuStrip1
             // 
@@ -277,25 +285,6 @@
             this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(96, 19);
             this.configuraçõesToolStripMenuItem.Text = "Configurações";
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lb_separador2);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.lb_UserLogado);
-            this.panel3.Location = new System.Drawing.Point(1124, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(137, 40);
-            this.panel3.TabIndex = 8;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.@__user;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
             // btn_gerenciar
             // 
             this.btn_gerenciar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
@@ -314,6 +303,15 @@
             this.btn_gerenciar.UseVisualStyleBackColor = false;
             this.btn_gerenciar.MouseEnter += new System.EventHandler(this.btn_gerenciar_MouseEnter);
             this.btn_gerenciar.MouseLeave += new System.EventHandler(this.btn_gerenciar_MouseLeave);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.@__user;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -343,24 +341,25 @@
             this.btn_listar.MouseEnter += new System.EventHandler(this.btn_listar_MouseEnter);
             this.btn_listar.MouseLeave += new System.EventHandler(this.btn_listar_MouseLeave);
             // 
-            // btn_inicio
+            // btn_cadastrar
             // 
-            this.btn_inicio.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_inicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_inicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_inicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_inicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_inicio.Image = global::WindowsFormsApp1.Properties.Resources.house;
-            this.btn_inicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inicio.Location = new System.Drawing.Point(-4, -5);
-            this.btn_inicio.Name = "btn_inicio";
-            this.btn_inicio.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_inicio.Size = new System.Drawing.Size(159, 50);
-            this.btn_inicio.TabIndex = 3;
-            this.btn_inicio.Text = "     Página inicial";
-            this.btn_inicio.UseVisualStyleBackColor = false;
-            this.btn_inicio.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-            this.btn_inicio.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.btn_cadastrar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_cadastrar.Image = global::WindowsFormsApp1.Properties.Resources.open_box;
+            this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cadastrar.Location = new System.Drawing.Point(-4, -5);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_cadastrar.Size = new System.Drawing.Size(159, 50);
+            this.btn_cadastrar.TabIndex = 3;
+            this.btn_cadastrar.Text = "     Cadastrar";
+            this.btn_cadastrar.UseVisualStyleBackColor = false;
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
+            this.btn_cadastrar.MouseEnter += new System.EventHandler(this.btn_cadastrar_MouseEnter);
+            this.btn_cadastrar.MouseLeave += new System.EventHandler(this.btn_cadastrar_MouseLeave);
             // 
             // btn_retirar
             // 
@@ -380,25 +379,6 @@
             this.btn_retirar.UseVisualStyleBackColor = false;
             this.btn_retirar.MouseEnter += new System.EventHandler(this.btn_retirar_MouseEnter);
             this.btn_retirar.MouseLeave += new System.EventHandler(this.btn_retirar_MouseLeave);
-            // 
-            // btn_cadastrar
-            // 
-            this.btn_cadastrar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_cadastrar.Image = global::WindowsFormsApp1.Properties.Resources.open_box;
-            this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cadastrar.Location = new System.Drawing.Point(-4, -5);
-            this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_cadastrar.Size = new System.Drawing.Size(159, 50);
-            this.btn_cadastrar.TabIndex = 3;
-            this.btn_cadastrar.Text = "     Cadastrar";
-            this.btn_cadastrar.UseVisualStyleBackColor = false;
-            this.btn_cadastrar.MouseEnter += new System.EventHandler(this.btn_cadastrar_MouseEnter);
-            this.btn_cadastrar.MouseLeave += new System.EventHandler(this.btn_cadastrar_MouseLeave);
             // 
             // inserirMaterialToolStripMenuItem
             // 
@@ -498,21 +478,13 @@
             this.configuraçõesGeraisToolStripMenuItem.Name = "configuraçõesGeraisToolStripMenuItem";
             this.configuraçõesGeraisToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.configuraçõesGeraisToolStripMenuItem.Text = "Configurações gerais";
-            // 
-            // lb_separador2
-            // 
-            this.lb_separador2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lb_separador2.Location = new System.Drawing.Point(0, 7);
-            this.lb_separador2.Name = "lb_separador2";
-            this.lb_separador2.Size = new System.Drawing.Size(1, 25);
-            this.lb_separador2.TabIndex = 8;
+            this.configuraçõesGeraisToolStripMenuItem.Click += new System.EventHandler(this.configuraçõesGeraisToolStripMenuItem_Click);
             // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.panel_gerencia);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -522,17 +494,16 @@
             this.Text = "Controle de estoque";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Main_FormClosing);
             this.panel1.ResumeLayout(false);
+            this.panel_gerencia.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel_logo.ResumeLayout(false);
             this.panel_listar.ResumeLayout(false);
-            this.panel_inicio.ResumeLayout(false);
-            this.panel_retirar.ResumeLayout(false);
             this.panel_cadastrar.ResumeLayout(false);
-            this.panel_gerencia.ResumeLayout(false);
+            this.panel_retirar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -544,8 +515,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel_logo;
-        private System.Windows.Forms.Panel panel_inicio;
-        private System.Windows.Forms.Button btn_inicio;
         private System.Windows.Forms.Panel panel_cadastrar;
         private System.Windows.Forms.Button btn_cadastrar;
         private System.Windows.Forms.Panel panel_retirar;

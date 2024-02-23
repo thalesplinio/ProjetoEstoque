@@ -30,6 +30,8 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_info = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_addStatus = new System.Windows.Forms.Button();
             this.mtb_telefone = new System.Windows.Forms.MaskedTextBox();
@@ -61,6 +63,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,6 +88,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.panel5);
             this.groupBox2.Controls.Add(this.panel4);
             this.groupBox2.Controls.Add(this.mtb_telefone);
             this.groupBox2.Controls.Add(this.panel3);
@@ -112,6 +116,32 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados do usuário";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btn_info);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Help;
+            this.panel5.Location = new System.Drawing.Point(555, 82);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(29, 27);
+            this.panel5.TabIndex = 20;
+            // 
+            // btn_info
+            // 
+            this.btn_info.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_info.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_info.Image = global::WindowsFormsApp1.Properties.Resources.info;
+            this.btn_info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_info.Location = new System.Drawing.Point(-8, -8);
+            this.btn_info.Name = "btn_info";
+            this.btn_info.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_info.Size = new System.Drawing.Size(49, 40);
+            this.btn_info.TabIndex = 5;
+            this.btn_info.UseVisualStyleBackColor = false;
+            this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
+            this.btn_info.MouseEnter += new System.EventHandler(this.btn_info_MouseEnter);
+            this.btn_info.MouseLeave += new System.EventHandler(this.btn_info_MouseLeave);
             // 
             // panel4
             // 
@@ -429,6 +459,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -475,5 +506,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.TextBox tb_email;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btn_info;
     }
 }

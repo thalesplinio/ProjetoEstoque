@@ -291,17 +291,16 @@ namespace WindowsFormsApp1
                 var conexaoPropria = ConexaoBanco();
                 var command = conexaoPropria.CreateCommand();
 
-                command.CommandText = @"
-                    INSERT INTO status_usuario (nome_status) VALUES (@nome_status)";
+                command.CommandText = @"INSERT INTO status_usuario (nome_status) VALUES (@nome_status)";
                 command.Parameters.AddWithValue("nome_status", status.nome_status);
 
                 command.ExecuteNonQuery();
-                MessageBox.Show("Status registrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Status de usuário registrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 conexaoPropria.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Não foi possivel cadastrar status ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Não foi possivel cadastrar status do usuário ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         public static DataTable ObterStatus()
@@ -381,6 +380,205 @@ namespace WindowsFormsApp1
                 MessageBox.Show($"Não foi removes o status ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        #endregion
+
+        #region SESSAO DE PRODUTOS
+        #region Sessão de Categorias
+        public static void AdicionarCategoria(Categoria categoria)
+        {
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+
+                command.CommandText = $"INSERT INTO categoria_produto (nome_categoria) VALUES (@nome_categoria)";
+                command.Parameters.AddWithValue("nome_categoria", categoria.nome_categoria);
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Categoria de produto registrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Não foi possivel cadastrar a categoria ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public static DataTable ObterCategoria()
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT 
+                        id_categoria as 'ID Categoria',
+                        nome_categoria as 'Nome da categoria'
+                    FROM
+                        categoria_produto";
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static DataTable ObterDadosStatusParaEdicaoCategoria(string id)
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT 
+                        *
+                    FROM
+                        categoria_produto
+                    WHERE
+                        id_categoria=" + id;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static void ExcluirCategoria(string id)
+        {
+            DateTime data = DateTime.Now;
+            var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"DELETE FROM categoria_produto WHERE id_categoria=" + id;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                command.ExecuteNonQuery();
+                conexaoPropria.Close();
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                MessageBox.Show($"Não foi removes a categoria ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        #endregion
+
+        #region Sessão de Tipos
+        public static void AdicionarTipo(Tipo tipo)
+        {
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+
+                command.CommandText = $"INSERT INTO tipo_produto (nome_tipo) VALUES (@nome_tipo)";
+                command.Parameters.AddWithValue("nome_tipo", tipo.nome_tipo);
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Tipo de produto registrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Não foi possivel cadastrar o tipo do produto ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public static DataTable ObterTipo()
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT 
+                        id_tipo as 'ID Tipo',
+                        nome_tipo as 'Nome do Tipo'
+                    FROM
+                        tipo_produto";
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static DataTable ObterDadosStatusParaEdicaoTipo(string id)
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT 
+                        *
+                    FROM
+                        tipo_produto
+                    WHERE
+                        id_tipo=" + id;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static void ExcluirTipo(string id)
+        {
+            DateTime data = DateTime.Now;
+            var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"DELETE FROM tipo_produto WHERE id_tipo=" + id;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                command.ExecuteNonQuery();
+                conexaoPropria.Close();
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                MessageBox.Show($"Não foi remover o tipo do produto ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        #endregion
+
         #endregion
 
     }

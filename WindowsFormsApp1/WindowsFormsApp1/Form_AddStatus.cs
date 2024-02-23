@@ -31,22 +31,22 @@ namespace WindowsFormsApp1
         #region Buttons Hover Color
         private void btn_addStatus_MouseEnter(object sender, EventArgs e)
         {
-            btn_addStatus.BackColor = RGBColorsButtons.corVerdePadrao;
+            btn_addCategoria.BackColor = RGBColorsButtons.corVerdePadrao;
         }
 
         private void btn_addStatus_MouseLeave(object sender, EventArgs e)
         {
-            btn_addStatus.BackColor = RGBColorsButtons.corAzulPadrao;
+            btn_addCategoria.BackColor = RGBColorsButtons.corAzulPadrao;
         }
 
         private void btn_removeStatus_MouseEnter(object sender, EventArgs e)
         {
-            btn_removeStatus.BackColor = RGBColorsButtons.corVerdePadrao;
+            btn_removeCategoria.BackColor = RGBColorsButtons.corVerdePadrao;
         }
 
         private void btn_removeStatus_MouseLeave(object sender, EventArgs e)
         {
-            btn_removeStatus.BackColor = RGBColorsButtons.corAzulPadrao;
+            btn_removeCategoria.BackColor = RGBColorsButtons.corAzulPadrao;
         }
         #endregion
 

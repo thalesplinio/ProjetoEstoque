@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -70,6 +70,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tb_email = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_info = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -83,6 +85,7 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_gerencia.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -144,8 +147,8 @@
             this.kryptonDataGridView1.AllowUserToDeleteRows = false;
             this.kryptonDataGridView1.AllowUserToResizeColumns = false;
             this.kryptonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.kryptonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -161,6 +164,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.panel6);
             this.groupBox2.Controls.Add(this.panel5);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.lb_dataAlteracaoCadastro);
@@ -535,6 +539,32 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "E-Mail:";
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btn_info);
+            this.panel6.Cursor = System.Windows.Forms.Cursors.Help;
+            this.panel6.Location = new System.Drawing.Point(576, 79);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(29, 27);
+            this.panel6.TabIndex = 40;
+            // 
+            // btn_info
+            // 
+            this.btn_info.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_info.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_info.Image = global::WindowsFormsApp1.Properties.Resources.info;
+            this.btn_info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_info.Location = new System.Drawing.Point(-8, -8);
+            this.btn_info.Name = "btn_info";
+            this.btn_info.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_info.Size = new System.Drawing.Size(49, 40);
+            this.btn_info.TabIndex = 5;
+            this.btn_info.UseVisualStyleBackColor = false;
+            this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
+            this.btn_info.MouseEnter += new System.EventHandler(this.btn_info_MouseEnter);
+            this.btn_info.MouseLeave += new System.EventHandler(this.btn_info_MouseLeave);
+            // 
             // Form_Todos_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -565,6 +595,7 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_gerencia.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -612,5 +643,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btn_addStatus;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btn_info;
     }
 }
