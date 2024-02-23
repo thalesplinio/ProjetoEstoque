@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
 
         private void btn_removeCategoria_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("Deseja realmente excluir esta categoria?", "Confirmar exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult res = MessageBox.Show("Deseja realmente excluir esta categoria de produto?", "Confirmar exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (res == DialogResult.Yes)
             {
