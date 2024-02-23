@@ -40,12 +40,16 @@
             this.btn_addCategoria = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlConfig.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,6 +95,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,11 +130,11 @@
             // btn_addTipo
             // 
             this.btn_addTipo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_addTipo.Location = new System.Drawing.Point(124, 40);
+            this.btn_addTipo.Location = new System.Drawing.Point(105, 40);
             this.btn_addTipo.Name = "btn_addTipo";
-            this.btn_addTipo.Size = new System.Drawing.Size(114, 23);
+            this.btn_addTipo.Size = new System.Drawing.Size(133, 23);
             this.btn_addTipo.TabIndex = 3;
-            this.btn_addTipo.Text = "Criar tipo";
+            this.btn_addTipo.Text = "Adicionar tipo";
             this.btn_addTipo.UseVisualStyleBackColor = true;
             this.btn_addTipo.Click += new System.EventHandler(this.btn_addTipo_Click);
             // 
@@ -147,11 +152,11 @@
             // btn_addCategoria
             // 
             this.btn_addCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_addCategoria.Location = new System.Drawing.Point(124, 39);
+            this.btn_addCategoria.Location = new System.Drawing.Point(105, 39);
             this.btn_addCategoria.Name = "btn_addCategoria";
-            this.btn_addCategoria.Size = new System.Drawing.Size(114, 23);
+            this.btn_addCategoria.Size = new System.Drawing.Size(133, 23);
             this.btn_addCategoria.TabIndex = 1;
-            this.btn_addCategoria.Text = "Criar categoria";
+            this.btn_addCategoria.Text = "Adicionar categoria";
             this.btn_addCategoria.UseVisualStyleBackColor = true;
             this.btn_addCategoria.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -173,6 +178,36 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Config. Usuarios";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Location = new System.Drawing.Point(7, 155);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(244, 91);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Fornecedores de produto";
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(6, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(232, 36);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Adicionar um fornecedor de produto no sistema";
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(105, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Adicionar fornecedor";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form_Config
             // 
@@ -196,6 +231,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -214,5 +250,8 @@
         private System.Windows.Forms.Button btn_addCategoria;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }

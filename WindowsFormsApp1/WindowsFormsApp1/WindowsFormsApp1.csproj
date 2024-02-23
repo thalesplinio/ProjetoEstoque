@@ -108,6 +108,12 @@
     <Compile Include="Form_DeskNivel.Designer.cs">
       <DependentUpon>Form_DeskNivel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Fornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Fornecedores.Designer.cs">
+      <DependentUpon>Form_Fornecedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DeskNivel.resx">
       <DependentUpon>Form_DeskNivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Fornecedores.resx">
+      <DependentUpon>Form_Fornecedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>

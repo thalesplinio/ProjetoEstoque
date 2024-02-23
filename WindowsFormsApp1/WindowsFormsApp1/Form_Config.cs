@@ -27,5 +27,11 @@ namespace WindowsFormsApp1
             Form_Tipo form_Tipo = new Form_Tipo();
             form_Tipo.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form_Fornecedores form_Fornecedores = new Form_Fornecedores();
+            form_Fornecedores.ShowDialog();
+        }
     }
 }
