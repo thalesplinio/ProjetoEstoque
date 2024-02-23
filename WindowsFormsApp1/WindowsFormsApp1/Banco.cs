@@ -581,5 +581,74 @@ namespace WindowsFormsApp1
 
         #endregion
 
+        #region SESSAO FORNECEDOR
+        public static bool ExisteFornecedor(Fornecedor fornecedor)
+        {
+            bool res;
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            var conexaoPropria = ConexaoBanco();
+            var command = conexaoPropria.CreateCommand();
+            command.CommandText = "SELECT nome FROM fornecedor_produto WHERE nome='" + fornecedor.nome + "'";
+
+            // verificando numero de linhas retornadas
+            dataAdapter = new SQLiteDataAdapter(command.CommandText, conexaoPropria);
+            dataAdapter.Fill(dataTable);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                // encontrou resultado
+                res = true;
+            }
+            else
+            {
+                res = false;
+            }
+            conexaoPropria.Close();
+            return res;
+        }
+
+        public static void NovoFornecedor(Fornecedor fornecedor)
+        {
+            if (ExisteFornecedor(fornecedor))
+            {
+                MessageBox.Show(
+                    "Nome do fornecedor já existe no sistema", 
+                    "Mensagem", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information);
+                return;
+            }
+            try
+            {
+                DateTime data = DateTime.Now;
+                var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+
+                command.CommandText = @"
+                    INSERT INTO fornecedor_produto 
+                        (nome, cnpj, endereco, telefone, email, data_criacao_cadastro) 
+                    VALUES 
+                        (@nome_tipo, @cnpj, @endereco, @telefone, @email, @data_criacao_cadastro)";
+                command.Parameters.AddWithValue("nome_tipo", fornecedor.nome);
+                command.Parameters.AddWithValue("cnpj", fornecedor.cnpj);
+                command.Parameters.AddWithValue("endereco", fornecedor.endereco);
+                command.Parameters.AddWithValue("telefone", fornecedor.telefone);
+                command.Parameters.AddWithValue("email", fornecedor.email);
+                command.Parameters.AddWithValue("data_criacao_cadastro", dataFormatada);
+                command.ExecuteNonQuery();
+
+                MessageBox.Show("Fornecedor registrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Não foi possivel cadastrar este fornecedor ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        #endregion
+
     }
 }

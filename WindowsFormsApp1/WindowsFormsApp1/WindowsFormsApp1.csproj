@@ -138,6 +138,7 @@
     <Compile Include="Form_Todos_Usuarios.Designer.cs">
       <DependentUpon>Form_Todos_Usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fornecedor.cs" />
     <Compile Include="Globais.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

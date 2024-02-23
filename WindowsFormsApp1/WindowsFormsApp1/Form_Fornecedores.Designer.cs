@@ -54,7 +54,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tb_enderecoFornecedor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tb_fnpjFornecedor = new System.Windows.Forms.TextBox();
+            this.tb_cnpjFornecedor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tb_nomeFornecedor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -112,7 +112,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.tb_enderecoFornecedor);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.tb_fnpjFornecedor);
+            this.groupBox1.Controls.Add(this.tb_cnpjFornecedor);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.tb_nomeFornecedor);
             this.groupBox1.Controls.Add(this.label2);
@@ -267,9 +267,10 @@
             this.btn_SalvarFornecedor.Name = "btn_SalvarFornecedor";
             this.btn_SalvarFornecedor.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btn_SalvarFornecedor.Size = new System.Drawing.Size(108, 50);
-            this.btn_SalvarFornecedor.TabIndex = 10;
+            this.btn_SalvarFornecedor.TabIndex = 7;
             this.btn_SalvarFornecedor.Text = "        Salvar";
             this.btn_SalvarFornecedor.UseVisualStyleBackColor = false;
+            this.btn_SalvarFornecedor.Click += new System.EventHandler(this.btn_SalvarFornecedor_Click);
             // 
             // panel_gerencia
             // 
@@ -292,7 +293,7 @@
             this.btn_novoFornecedor.Name = "btn_novoFornecedor";
             this.btn_novoFornecedor.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btn_novoFornecedor.Size = new System.Drawing.Size(159, 50);
-            this.btn_novoFornecedor.TabIndex = 9;
+            this.btn_novoFornecedor.TabIndex = 6;
             this.btn_novoFornecedor.Text = "        Novo Fornecedor";
             this.btn_novoFornecedor.UseVisualStyleBackColor = false;
             // 
@@ -302,14 +303,14 @@
             this.mtb_telefoneFornecedor.Mask = "(99) 00000-0000";
             this.mtb_telefoneFornecedor.Name = "mtb_telefoneFornecedor";
             this.mtb_telefoneFornecedor.Size = new System.Drawing.Size(189, 21);
-            this.mtb_telefoneFornecedor.TabIndex = 10;
+            this.mtb_telefoneFornecedor.TabIndex = 4;
             // 
             // tb_emailFornecedor
             // 
             this.tb_emailFornecedor.Location = new System.Drawing.Point(500, 41);
             this.tb_emailFornecedor.Name = "tb_emailFornecedor";
             this.tb_emailFornecedor.Size = new System.Drawing.Size(269, 21);
-            this.tb_emailFornecedor.TabIndex = 9;
+            this.tb_emailFornecedor.TabIndex = 5;
             // 
             // label6
             // 
@@ -334,7 +335,7 @@
             this.tb_enderecoFornecedor.Location = new System.Drawing.Point(255, 41);
             this.tb_enderecoFornecedor.Name = "tb_enderecoFornecedor";
             this.tb_enderecoFornecedor.Size = new System.Drawing.Size(239, 21);
-            this.tb_enderecoFornecedor.TabIndex = 5;
+            this.tb_enderecoFornecedor.TabIndex = 3;
             // 
             // label4
             // 
@@ -345,12 +346,12 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Endereço do fornecedor:";
             // 
-            // tb_fnpjFornecedor
+            // tb_cnpjFornecedor
             // 
-            this.tb_fnpjFornecedor.Location = new System.Drawing.Point(10, 87);
-            this.tb_fnpjFornecedor.Name = "tb_fnpjFornecedor";
-            this.tb_fnpjFornecedor.Size = new System.Drawing.Size(239, 21);
-            this.tb_fnpjFornecedor.TabIndex = 3;
+            this.tb_cnpjFornecedor.Location = new System.Drawing.Point(10, 87);
+            this.tb_cnpjFornecedor.Name = "tb_cnpjFornecedor";
+            this.tb_cnpjFornecedor.Size = new System.Drawing.Size(239, 21);
+            this.tb_cnpjFornecedor.TabIndex = 2;
             // 
             // label3
             // 
@@ -414,7 +415,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tb_enderecoFornecedor;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tb_fnpjFornecedor;
+        private System.Windows.Forms.TextBox tb_cnpjFornecedor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tb_nomeFornecedor;
         private System.Windows.Forms.Label label2;
