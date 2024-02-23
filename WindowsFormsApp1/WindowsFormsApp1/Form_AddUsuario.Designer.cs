@@ -450,7 +450,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox tb_email;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb_nomeUsuario;
         private System.Windows.Forms.Label label4;
@@ -475,5 +474,6 @@
         private System.Windows.Forms.Button btn_addStatus;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Salvar;
+        private System.Windows.Forms.TextBox tb_email;
     }
 }
