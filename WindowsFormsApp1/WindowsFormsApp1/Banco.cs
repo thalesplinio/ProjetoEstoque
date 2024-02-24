@@ -8,6 +8,7 @@ using System.Data.SQLite;
 using System.Data;
 using System.Windows.Forms;
 using System.ComponentModel.Design;
+using System.Data.Entity;
 
 
 namespace WindowsFormsApp1
@@ -608,7 +609,6 @@ namespace WindowsFormsApp1
             conexaoPropria.Close();
             return res;
         }
-
         public static void NovoFornecedor(Fornecedor fornecedor)
         {
             if (ExisteFornecedor(fornecedor))
@@ -646,6 +646,118 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show($"Não foi possivel cadastrar este fornecedor ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public static void AtualizarFornecedor(Fornecedor fornecedor)
+        {
+            DateTime data = DateTime.Now;
+            var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    UPDATE 
+                        fornecedor_produto
+                    SET
+                        nome='" + fornecedor.nome + "', cnpj= '" + fornecedor.cnpj + "', endereco = '" + fornecedor.endereco + "', telefone = '" + fornecedor.telefone + "', email = '" + fornecedor.email + "', data_atualizacao_cadastro = '" + dataFormatada + "' WHERE id_fornecedor=" + fornecedor.id_fornecedor;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                command.ExecuteNonQuery();
+                MessageBox.Show("Fornecedor atualizado com sucesso!", "Mensagem de atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conexaoPropria.Close();
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                MessageBox.Show($"Não foi Atualizar o fornecedor ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        public static DataTable ObterFornecedor()
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT 
+                        id_fornecedor as 'ID Fornecedor',
+                        nome as 'Nome do Fornecedor',
+                        cnpj as 'CNPJ',
+                        endereco as 'Endereço',
+                        telefone as 'Telefone',
+                        email as 'E-Mail',
+                        data_criacao_cadastro as 'Data de criação',
+                        data_atualizacao_cadastro as 'Data atualização'
+                    FROM
+                        fornecedor_produto";
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static DataTable ObterDadosStatusParaEdicaoFornecedor(string id)
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT 
+                        *
+                    FROM
+                        fornecedor_produto
+                    WHERE
+                        id_fornecedor=" + id;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static void ExcluirFornecedor(string id)
+        {
+            DateTime data = DateTime.Now;
+            var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"DELETE FROM fornecedor_produto WHERE id_fornecedor=" + id;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                command.ExecuteNonQuery();
+                conexaoPropria.Close();
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                MessageBox.Show($"Não foi remover o tipo do produto ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         #endregion

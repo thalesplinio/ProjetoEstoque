@@ -32,12 +32,10 @@ namespace WindowsFormsApp1
         {
             btn_novoUsuario.BackColor = RGBColorsButtons.corVerdePadrao;
         }
-
         private void btn_novoUsuario_MouseLeave(object sender, EventArgs e)
         {
             btn_novoUsuario.BackColor = RGBColorsButtons.corAzulPadrao;
         }
-
         private void btn_Salvar_MouseEnter(object sender, EventArgs e)
         {
             btn_Salvar.BackColor = RGBColorsButtons.corVerdePadrao;
@@ -61,10 +59,18 @@ namespace WindowsFormsApp1
         {
             btn_addStatus.BackColor = RGBColorsButtons.corVerdePadrao;
         }
-
         private void btn_addStatus_MouseLeave(object sender, EventArgs e)
         {
             btn_addStatus.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+        private void btn_info_MouseEnter(object sender, EventArgs e)
+        {
+            btn_info.BackColor = RGBColorsButtons.corControlLight;
+        }
+
+        private void btn_info_MouseLeave(object sender, EventArgs e)
+        {
+            btn_info.BackColor = RGBColorsButtons.corControl;
         }
 
         #endregion
@@ -117,22 +123,11 @@ namespace WindowsFormsApp1
             nud_nivelAcesso.Value = 0;
             tb_nomeCompleto.Focus();
         }
-
         private void btn_addStatus_Click(object sender, EventArgs e)
         {
             Form_AddStatus form_AddStatus = new Form_AddStatus();
             form_AddStatus.ShowDialog();
         }
-        private void btn_info_MouseEnter(object sender, EventArgs e)
-        {
-            btn_info.BackColor = RGBColorsButtons.corControlLight;
-        }
-
-        private void btn_info_MouseLeave(object sender, EventArgs e)
-        {
-            btn_info.BackColor = RGBColorsButtons.corControl;
-        }
-
         private void btn_info_Click(object sender, EventArgs e)
         {
             Form_DeskNivel form_DeskNivel = new Form_DeskNivel();

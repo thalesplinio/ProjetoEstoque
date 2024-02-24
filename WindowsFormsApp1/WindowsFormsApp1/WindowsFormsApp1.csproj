@@ -72,6 +72,12 @@
   <ItemGroup>
     <Compile Include="Banco.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="Form_AddFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AddFornecedor.Designer.cs">
+      <DependentUpon>Form_AddFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_AddStatus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <Compile Include="Status.cs" />
     <Compile Include="Tipo.cs" />
     <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="Form_AddFornecedor.resx">
+      <DependentUpon>Form_AddFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_AddStatus.resx">
       <DependentUpon>Form_AddStatus.cs</DependentUpon>
     </EmbeddedResource>
