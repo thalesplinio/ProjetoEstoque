@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cb_Fornecedor = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_limpaCampos = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -59,7 +60,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.kryptonDataGridViewCadastroProdutos = new Krypton.Toolkit.KryptonDataGridView();
-            this.cb_Fornecedor = new System.Windows.Forms.ComboBox();
+            this.openFileDialogIsertImageProduct = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -101,6 +102,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Iserir produtos no estoque";
+            // 
+            // cb_Fornecedor
+            // 
+            this.cb_Fornecedor.FormattingEnabled = true;
+            this.cb_Fornecedor.Location = new System.Drawing.Point(10, 38);
+            this.cb_Fornecedor.Name = "cb_Fornecedor";
+            this.cb_Fornecedor.Size = new System.Drawing.Size(245, 23);
+            this.cb_Fornecedor.TabIndex = 22;
             // 
             // panel1
             // 
@@ -160,18 +169,22 @@
             // 
             // btn_pegaUrl
             // 
+            this.btn_pegaUrl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_pegaUrl.Location = new System.Drawing.Point(313, 39);
             this.btn_pegaUrl.Name = "btn_pegaUrl";
             this.btn_pegaUrl.Size = new System.Drawing.Size(32, 23);
             this.btn_pegaUrl.TabIndex = 18;
             this.btn_pegaUrl.Text = "...";
             this.btn_pegaUrl.UseVisualStyleBackColor = true;
+            this.btn_pegaUrl.Click += new System.EventHandler(this.btn_pegaUrl_Click);
             // 
             // pictureBoxImageProduto
             // 
+            this.pictureBoxImageProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxImageProduto.Location = new System.Drawing.Point(9, 67);
             this.pictureBoxImageProduto.Name = "pictureBoxImageProduto";
             this.pictureBoxImageProduto.Size = new System.Drawing.Size(215, 153);
+            this.pictureBoxImageProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxImageProduto.TabIndex = 19;
             this.pictureBoxImageProduto.TabStop = false;
             // 
@@ -378,8 +391,8 @@
             this.kryptonDataGridViewCadastroProdutos.AllowUserToDeleteRows = false;
             this.kryptonDataGridViewCadastroProdutos.AllowUserToResizeColumns = false;
             this.kryptonDataGridViewCadastroProdutos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridViewCadastroProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridViewCadastroProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.kryptonDataGridViewCadastroProdutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridViewCadastroProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridViewCadastroProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -392,13 +405,9 @@
             this.kryptonDataGridViewCadastroProdutos.Size = new System.Drawing.Size(1187, 353);
             this.kryptonDataGridViewCadastroProdutos.TabIndex = 1;
             // 
-            // cb_Fornecedor
+            // openFileDialogIsertImageProduct
             // 
-            this.cb_Fornecedor.FormattingEnabled = true;
-            this.cb_Fornecedor.Location = new System.Drawing.Point(10, 38);
-            this.cb_Fornecedor.Name = "cb_Fornecedor";
-            this.cb_Fornecedor.Size = new System.Drawing.Size(245, 23);
-            this.cb_Fornecedor.TabIndex = 22;
+            this.openFileDialogIsertImageProduct.FileName = "openFileDialog1";
             // 
             // Form_Cadastro
             // 
@@ -465,5 +474,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_limpaCampos;
         private System.Windows.Forms.ComboBox cb_Fornecedor;
+        private System.Windows.Forms.OpenFileDialog openFileDialogIsertImageProduct;
     }
 }

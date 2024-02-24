@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace WindowsFormsApp1
 {
@@ -90,6 +92,41 @@ namespace WindowsFormsApp1
             cb_tipo.ValueMember = "nome_tipo";
         }
 
+        private void btn_pegaUrl_Click(object sender, EventArgs e)
+        {
+            string caminhoOrigem = "";
+            string imagem = "";
+            string pastaDestino = Globais.caminhoImageProduct;
+            string destinoCompleto = "";
 
+            //openFileDialogIsertImageProduct.Filter = "Imagens (*.bmp, *.jpg, *.png)|*.bmp;*.jpg;*.png";
+            openFileDialogIsertImageProduct.Filter = "Imagens (*.jpeg, *.jpg, *.png)|*.jpeg;*.jpg;*.png";
+
+            if (openFileDialogIsertImageProduct.ShowDialog() == DialogResult.OK)
+            {
+                caminhoOrigem = openFileDialogIsertImageProduct.FileName;   // retorna todo o caminho
+                imagem = openFileDialogIsertImageProduct.SafeFileName;      // somente o nome do arquivo
+                destinoCompleto = pastaDestino + imagem;                    // destino aonde ele vai ficar + nome do arquivo
+            }
+            if (File.Exists(destinoCompleto))
+            {
+                if (MessageBox.Show("Arquivo já existe no local de destino, deseja substituir?", "Mensagem de arquivo", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            // se sim copia a imagem
+            System.IO.File.Copy(caminhoOrigem, destinoCompleto, true);
+            // verificando se o arquivo foi copiado
+            if (File.Exists(destinoCompleto))
+            {
+                pictureBoxImageProduto.ImageLocation = destinoCompleto;
+                tb_urlImage.Text = imagem;
+            }
+            else
+            {
+                MessageBox.Show("Arquivo não foi copiado", "Mensagem de arquivo", MessageBoxButtons.OK);
+            }
+        }
     }
 }

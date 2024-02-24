@@ -72,12 +72,12 @@ namespace WindowsFormsApp1
         {
             kryptonDataGridViewFornecedor.DataSource = Banco.ObterFornecedor();
             kryptonDataGridViewFornecedor.Sort(kryptonDataGridViewFornecedor.Columns["ID Fornecedor"], ListSortDirection.Descending);
-            kryptonDataGridViewFornecedor.Columns[0].Width = 90;
+            kryptonDataGridViewFornecedor.Columns[0].Width = 110;
             kryptonDataGridViewFornecedor.Columns[1].Width = 170;
             kryptonDataGridViewFornecedor.Columns[2].Width = 90;
-            kryptonDataGridViewFornecedor.Columns[3].Width = 140;
+            kryptonDataGridViewFornecedor.Columns[3].Width = 170;
             kryptonDataGridViewFornecedor.Columns[4].Width = 100;
-            kryptonDataGridViewFornecedor.Columns[5].Width = 140;
+            kryptonDataGridViewFornecedor.Columns[5].Width = 170;
             kryptonDataGridViewFornecedor.Columns[6].Width = 100;
 
         }
