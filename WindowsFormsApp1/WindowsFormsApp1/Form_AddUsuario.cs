@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
         #region Set Colors Butons
         private struct RGBColorsButtons
         {
@@ -77,7 +78,6 @@ namespace WindowsFormsApp1
 
         private void Form_AddUsuario_Load(object sender, EventArgs e)
         {
-
             string vQueryStatus = @"SELECT nome_status FROM status_usuario";
             cb_statusUsuario.Items.Clear();
             cb_statusUsuario.DataSource = Banco.Consulta(vQueryStatus);

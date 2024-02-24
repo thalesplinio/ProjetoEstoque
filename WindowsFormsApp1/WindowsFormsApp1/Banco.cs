@@ -75,7 +75,6 @@ namespace WindowsFormsApp1
 
         #region Funções Form_AddUsuario / NovoUsuario - ExisteUserName
 
-        #region NovoUsuario
         public static void NovoUsuario(Usuario usuario)
         {
             // verificando se o usuário existe
@@ -121,10 +120,8 @@ namespace WindowsFormsApp1
                 MessageBox.Show($"Não foi possivel cadastrar usuario ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        #endregion
 
         /// Rotinas gerais para verificar se já existe um usuário com o mesmo nome
-        #region ExisteUserName
         public static bool ExisteUserName(Usuario usuario)
         {
             bool res;
@@ -151,13 +148,11 @@ namespace WindowsFormsApp1
             conexaoPropria.Close();
             return res;
         }
-        #endregion
 
         #endregion
 
         #region Funções Form_Todos_Usuarios / ObterDadosUsuarioBanco / ObterDadosParaEdicao / AtualizarUsuario
 
-        #region ObterDadosUsuarioBanco
         public static DataTable ObterDadosUsuarioBanco()
         {
             SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
@@ -191,9 +186,7 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }
-        #endregion
 
-        #region ObterDadosParaEdicao
         public static DataTable ObterDadosParaEdicao(string id)
         {
             SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
@@ -221,9 +214,7 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }
-        #endregion
 
-        #region AtualizarUsuario
         public static void AtualizarUsuario(Usuario usuario)
         {
             DateTime data = DateTime.Now;
@@ -253,7 +244,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show($"Não foi Atualizar usuario ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        #endregion
 
         #region DeletarUsuario
         public static void DeletarUsuario(string id)
@@ -384,6 +374,7 @@ namespace WindowsFormsApp1
         #endregion
 
         #region SESSAO DE PRODUTOS
+
         #region Sessão de Categorias
         public static void AdicionarCategoria(Categoria categoria)
         {
@@ -760,6 +751,10 @@ namespace WindowsFormsApp1
                 MessageBox.Show($"Não foi remover o tipo do produto ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        #endregion
+
+        #region CADASTRO DE PRODUTOS
+
         #endregion
 
     }
