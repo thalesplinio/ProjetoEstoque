@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
         #region Set Colors Butons
         private struct RGBColorsButtons
         {
@@ -79,7 +80,6 @@ namespace WindowsFormsApp1
             kryptonDataGridViewFornecedor.Columns[4].Width = 100;
             kryptonDataGridViewFornecedor.Columns[5].Width = 170;
             kryptonDataGridViewFornecedor.Columns[6].Width = 100;
-
         }
 
         private void btn_novoFornecedor_Click(object sender, EventArgs e)

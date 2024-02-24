@@ -96,5 +96,10 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void Form_Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

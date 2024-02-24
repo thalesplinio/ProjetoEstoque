@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cb_Fornecedor = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -212,6 +212,7 @@
             this.btn_insereProduto.TabIndex = 9;
             this.btn_insereProduto.Text = "        Inserir Produto";
             this.btn_insereProduto.UseVisualStyleBackColor = false;
+            this.btn_insereProduto.Click += new System.EventHandler(this.btn_insereProduto_Click);
             this.btn_insereProduto.MouseEnter += new System.EventHandler(this.btn_insereProduto_MouseEnter);
             this.btn_insereProduto.MouseLeave += new System.EventHandler(this.btn_insereProduto_MouseLeave);
             // 
@@ -391,8 +392,8 @@
             this.kryptonDataGridViewCadastroProdutos.AllowUserToDeleteRows = false;
             this.kryptonDataGridViewCadastroProdutos.AllowUserToResizeColumns = false;
             this.kryptonDataGridViewCadastroProdutos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridViewCadastroProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridViewCadastroProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.kryptonDataGridViewCadastroProdutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridViewCadastroProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridViewCadastroProdutos.Dock = System.Windows.Forms.DockStyle.Fill;

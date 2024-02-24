@@ -14,9 +14,17 @@ namespace WindowsFormsApp1
 {
     public partial class Form_Cadastro : Form
     {
-        public Form_Cadastro()
+        // Globais
+        string caminhoOrigem = "";
+        string imagem = "";
+        string pastaDestino = Globais.caminhoImageProduct;
+        string destinoCompleto = "";
+
+        Form_Main form_main;
+        public Form_Cadastro(Form_Main f)
         {
             InitializeComponent();
+            form_main = f;
         }
 
         #region Set Colors Butons
@@ -57,6 +65,8 @@ namespace WindowsFormsApp1
             DataFornecedor();
             DataCategoria();
             DataTipo();
+            kryptonDataGridViewCadastroProdutos.DataSource = Banco.ObterProdutos();
+            kryptonDataGridViewCadastroProdutos.Sort(kryptonDataGridViewCadastroProdutos.Columns["ID Produto"], ListSortDirection.Descending);
         }
         private void DataFornecedor()
         {
@@ -94,10 +104,10 @@ namespace WindowsFormsApp1
 
         private void btn_pegaUrl_Click(object sender, EventArgs e)
         {
-            string caminhoOrigem = "";
-            string imagem = "";
-            string pastaDestino = Globais.caminhoImageProduct;
-            string destinoCompleto = "";
+            caminhoOrigem = "";
+            imagem = "";
+            pastaDestino = Globais.caminhoImageProduct;
+            destinoCompleto = "";
 
             //openFileDialogIsertImageProduct.Filter = "Imagens (*.bmp, *.jpg, *.png)|*.bmp;*.jpg;*.png";
             openFileDialogIsertImageProduct.Filter = "Imagens (*.jpeg, *.jpg, *.png)|*.jpeg;*.jpg;*.png";
@@ -127,6 +137,49 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Arquivo não foi copiado", "Mensagem de arquivo", MessageBoxButtons.OK);
             }
+        }
+
+        private void btn_insereProduto_Click(object sender, EventArgs e)
+        {
+            #region tratando se imagem existe
+            //Verificando campo imagem
+            if (destinoCompleto == "")
+            {
+                if (MessageBox.Show("Nenhuma imagem foi selecionada para o produto, deseja continuar?", "Mensagem", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            if (destinoCompleto != "")
+            {
+                System.IO.File.Copy(caminhoOrigem, destinoCompleto, true);
+                if (File.Exists(destinoCompleto))
+                {
+                    pictureBoxImageProduto.ImageLocation = destinoCompleto;
+                }
+                else
+                {
+                    if (MessageBox.Show("ERRO ao encontrar a imagem, deseja continuar?", "Mensagem", MessageBoxButtons.YesNo) == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
+            }
+            #endregion
+
+            Produtos produto = new Produtos();
+            produto.id_fornecedor = cb_Fornecedor.Text;
+            produto.id_usuario = form_main.lb_UserLogado.Text;
+            produto.nome = tb_nomeProduto.Text;
+            produto.marca = tb_marca.Text;
+            produto.quantidade = nud_qtd.Text;
+            produto.quantidade_minima = nud_minQtd.Text;
+            produto.id_categoria = cb_categoria.Text;
+            produto.id_tipo_produto = cb_tipo.Text;
+            produto.descricao = rtb_desc.Text;
+            produto.image = tb_urlImage.Text;
+
+            Banco.AdicionarProduto(produto);
         }
     }
 }

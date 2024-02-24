@@ -30,13 +30,19 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_gerencia = new System.Windows.Forms.Panel();
+            this.btn_gerenciar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_separador2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lb_UserLogado = new System.Windows.Forms.Label();
             this.panel_logo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_listar = new System.Windows.Forms.Panel();
+            this.btn_listar = new System.Windows.Forms.Button();
             this.panel_cadastrar = new System.Windows.Forms.Panel();
+            this.btn_cadastrar = new System.Windows.Forms.Button();
             this.panel_retirar = new System.Windows.Forms.Panel();
+            this.btn_retirar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lb_owner = new System.Windows.Forms.Label();
             this.lb_date = new System.Windows.Forms.Label();
@@ -44,44 +50,38 @@
             this.lb_separador = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_gerenciar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_listar = new System.Windows.Forms.Button();
-            this.btn_cadastrar = new System.Windows.Forms.Button();
-            this.btn_retirar = new System.Windows.Forms.Button();
             this.inserirMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarMateriaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retirarMateriaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tarocarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarTodosOsRegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarFornecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verFornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosDeInserçãoDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeRetiradaDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesGeraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel_gerencia.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel_logo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_listar.SuspendLayout();
             this.panel_cadastrar.SuspendLayout();
             this.panel_retirar.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,6 +107,25 @@
             this.panel_gerencia.Size = new System.Drawing.Size(151, 40);
             this.panel_gerencia.TabIndex = 7;
             // 
+            // btn_gerenciar
+            // 
+            this.btn_gerenciar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_gerenciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_gerenciar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gerenciar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_gerenciar.Image = global::WindowsFormsApp1.Properties.Resources.configuration;
+            this.btn_gerenciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_gerenciar.Location = new System.Drawing.Point(-4, -5);
+            this.btn_gerenciar.Name = "btn_gerenciar";
+            this.btn_gerenciar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_gerenciar.Size = new System.Drawing.Size(159, 50);
+            this.btn_gerenciar.TabIndex = 3;
+            this.btn_gerenciar.Text = "        Gerenciar estoque";
+            this.btn_gerenciar.UseVisualStyleBackColor = false;
+            this.btn_gerenciar.MouseEnter += new System.EventHandler(this.btn_gerenciar_MouseEnter);
+            this.btn_gerenciar.MouseLeave += new System.EventHandler(this.btn_gerenciar_MouseLeave);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.lb_separador2);
@@ -125,6 +144,15 @@
             this.lb_separador2.Name = "lb_separador2";
             this.lb_separador2.Size = new System.Drawing.Size(1, 25);
             this.lb_separador2.TabIndex = 8;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.@__user;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // lb_UserLogado
             // 
@@ -145,6 +173,15 @@
             this.panel_logo.Size = new System.Drawing.Size(100, 40);
             this.panel_logo.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 40);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel_listar
             // 
             this.panel_listar.Controls.Add(this.btn_listar);
@@ -152,6 +189,25 @@
             this.panel_listar.Name = "panel_listar";
             this.panel_listar.Size = new System.Drawing.Size(151, 40);
             this.panel_listar.TabIndex = 6;
+            // 
+            // btn_listar
+            // 
+            this.btn_listar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_listar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_listar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_listar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_listar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_listar.Image = global::WindowsFormsApp1.Properties.Resources.completed_task;
+            this.btn_listar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_listar.Location = new System.Drawing.Point(-4, -5);
+            this.btn_listar.Name = "btn_listar";
+            this.btn_listar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_listar.Size = new System.Drawing.Size(159, 50);
+            this.btn_listar.TabIndex = 3;
+            this.btn_listar.Text = "     Listar produtos";
+            this.btn_listar.UseVisualStyleBackColor = false;
+            this.btn_listar.MouseEnter += new System.EventHandler(this.btn_listar_MouseEnter);
+            this.btn_listar.MouseLeave += new System.EventHandler(this.btn_listar_MouseLeave);
             // 
             // panel_cadastrar
             // 
@@ -161,6 +217,26 @@
             this.panel_cadastrar.Size = new System.Drawing.Size(151, 40);
             this.panel_cadastrar.TabIndex = 4;
             // 
+            // btn_cadastrar
+            // 
+            this.btn_cadastrar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_cadastrar.Image = global::WindowsFormsApp1.Properties.Resources.open_box;
+            this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cadastrar.Location = new System.Drawing.Point(-4, -5);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_cadastrar.Size = new System.Drawing.Size(159, 50);
+            this.btn_cadastrar.TabIndex = 3;
+            this.btn_cadastrar.Text = "     Cadastrar";
+            this.btn_cadastrar.UseVisualStyleBackColor = false;
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
+            this.btn_cadastrar.MouseEnter += new System.EventHandler(this.btn_cadastrar_MouseEnter);
+            this.btn_cadastrar.MouseLeave += new System.EventHandler(this.btn_cadastrar_MouseLeave);
+            // 
             // panel_retirar
             // 
             this.panel_retirar.Controls.Add(this.btn_retirar);
@@ -168,6 +244,25 @@
             this.panel_retirar.Name = "panel_retirar";
             this.panel_retirar.Size = new System.Drawing.Size(151, 40);
             this.panel_retirar.TabIndex = 5;
+            // 
+            // btn_retirar
+            // 
+            this.btn_retirar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_retirar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_retirar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_retirar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_retirar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_retirar.Image = global::WindowsFormsApp1.Properties.Resources.remove;
+            this.btn_retirar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_retirar.Location = new System.Drawing.Point(-4, -5);
+            this.btn_retirar.Name = "btn_retirar";
+            this.btn_retirar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_retirar.Size = new System.Drawing.Size(159, 50);
+            this.btn_retirar.TabIndex = 3;
+            this.btn_retirar.Text = "     Retirar produto";
+            this.btn_retirar.UseVisualStyleBackColor = false;
+            this.btn_retirar.MouseEnter += new System.EventHandler(this.btn_retirar_MouseEnter);
+            this.btn_retirar.MouseLeave += new System.EventHandler(this.btn_retirar_MouseLeave);
             // 
             // panel2
             // 
@@ -248,151 +343,6 @@
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 19);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(156, 6);
-            // 
-            // registrosToolStripMenuItem
-            // 
-            this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listarTodosOsRegistrosToolStripMenuItem});
-            this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
-            this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 19);
-            this.registrosToolStripMenuItem.Text = "Registros";
-            // 
-            // usuáriosToolStripMenuItem
-            // 
-            this.usuáriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarUsuáriosToolStripMenuItem,
-            this.verUsuáriosToolStripMenuItem});
-            this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(64, 19);
-            this.usuáriosToolStripMenuItem.Text = "Usuários";
-            // 
-            // relatóriosToolStripMenuItem
-            // 
-            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.relatóriosDeInserçãoDeProdutosToolStripMenuItem,
-            this.relatórioDeRetiradaDeProdutosToolStripMenuItem,
-            this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem,
-            this.relatórioDeUsuáriosToolStripMenuItem});
-            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
-            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 19);
-            this.relatóriosToolStripMenuItem.Text = "Relatórios";
-            // 
-            // configuraçõesToolStripMenuItem
-            // 
-            this.configuraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configuraçõesGeraisToolStripMenuItem});
-            this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
-            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(96, 19);
-            this.configuraçõesToolStripMenuItem.Text = "Configurações";
-            // 
-            // fornecedoresToolStripMenuItem
-            // 
-            this.fornecedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarFornecedorToolStripMenuItem,
-            this.verFornecedoresToolStripMenuItem});
-            this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(90, 19);
-            this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
-            // 
-            // btn_gerenciar
-            // 
-            this.btn_gerenciar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_gerenciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_gerenciar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_gerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_gerenciar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_gerenciar.Image = global::WindowsFormsApp1.Properties.Resources.configuration;
-            this.btn_gerenciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_gerenciar.Location = new System.Drawing.Point(-4, -5);
-            this.btn_gerenciar.Name = "btn_gerenciar";
-            this.btn_gerenciar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_gerenciar.Size = new System.Drawing.Size(159, 50);
-            this.btn_gerenciar.TabIndex = 3;
-            this.btn_gerenciar.Text = "        Gerenciar estoque";
-            this.btn_gerenciar.UseVisualStyleBackColor = false;
-            this.btn_gerenciar.MouseEnter += new System.EventHandler(this.btn_gerenciar_MouseEnter);
-            this.btn_gerenciar.MouseLeave += new System.EventHandler(this.btn_gerenciar_MouseLeave);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.@__user;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 40);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btn_listar
-            // 
-            this.btn_listar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_listar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_listar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_listar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_listar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_listar.Image = global::WindowsFormsApp1.Properties.Resources.completed_task;
-            this.btn_listar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_listar.Location = new System.Drawing.Point(-4, -5);
-            this.btn_listar.Name = "btn_listar";
-            this.btn_listar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_listar.Size = new System.Drawing.Size(159, 50);
-            this.btn_listar.TabIndex = 3;
-            this.btn_listar.Text = "     Listar produtos";
-            this.btn_listar.UseVisualStyleBackColor = false;
-            this.btn_listar.MouseEnter += new System.EventHandler(this.btn_listar_MouseEnter);
-            this.btn_listar.MouseLeave += new System.EventHandler(this.btn_listar_MouseLeave);
-            // 
-            // btn_cadastrar
-            // 
-            this.btn_cadastrar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_cadastrar.Image = global::WindowsFormsApp1.Properties.Resources.open_box;
-            this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cadastrar.Location = new System.Drawing.Point(-4, -5);
-            this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_cadastrar.Size = new System.Drawing.Size(159, 50);
-            this.btn_cadastrar.TabIndex = 3;
-            this.btn_cadastrar.Text = "     Cadastrar";
-            this.btn_cadastrar.UseVisualStyleBackColor = false;
-            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
-            this.btn_cadastrar.MouseEnter += new System.EventHandler(this.btn_cadastrar_MouseEnter);
-            this.btn_cadastrar.MouseLeave += new System.EventHandler(this.btn_cadastrar_MouseLeave);
-            // 
-            // btn_retirar
-            // 
-            this.btn_retirar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_retirar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_retirar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_retirar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_retirar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_retirar.Image = global::WindowsFormsApp1.Properties.Resources.remove;
-            this.btn_retirar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_retirar.Location = new System.Drawing.Point(-4, -5);
-            this.btn_retirar.Name = "btn_retirar";
-            this.btn_retirar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_retirar.Size = new System.Drawing.Size(159, 50);
-            this.btn_retirar.TabIndex = 3;
-            this.btn_retirar.Text = "     Retirar produto";
-            this.btn_retirar.UseVisualStyleBackColor = false;
-            this.btn_retirar.MouseEnter += new System.EventHandler(this.btn_retirar_MouseEnter);
-            this.btn_retirar.MouseLeave += new System.EventHandler(this.btn_retirar_MouseLeave);
-            // 
             // inserirMaterialToolStripMenuItem
             // 
             this.inserirMaterialToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.open_box;
@@ -414,6 +364,11 @@
             this.retirarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.retirarMateriaisToolStripMenuItem.Text = "Retirar materiais";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(156, 6);
+            // 
             // tarocarUsuárioToolStripMenuItem
             // 
             this.tarocarUsuárioToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.user;
@@ -430,12 +385,29 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // registrosToolStripMenuItem
+            // 
+            this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listarTodosOsRegistrosToolStripMenuItem});
+            this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
+            this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 19);
+            this.registrosToolStripMenuItem.Text = "Registros";
+            // 
             // listarTodosOsRegistrosToolStripMenuItem
             // 
             this.listarTodosOsRegistrosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.notes;
             this.listarTodosOsRegistrosToolStripMenuItem.Name = "listarTodosOsRegistrosToolStripMenuItem";
             this.listarTodosOsRegistrosToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.listarTodosOsRegistrosToolStripMenuItem.Text = "Listar todos os registros";
+            // 
+            // usuáriosToolStripMenuItem
+            // 
+            this.usuáriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adicionarUsuáriosToolStripMenuItem,
+            this.verUsuáriosToolStripMenuItem});
+            this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(64, 19);
+            this.usuáriosToolStripMenuItem.Text = "Usuários";
             // 
             // adicionarUsuáriosToolStripMenuItem
             // 
@@ -453,6 +425,15 @@
             this.verUsuáriosToolStripMenuItem.Text = "Ver usuários";
             this.verUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.verUsuáriosToolStripMenuItem_Click_1);
             // 
+            // fornecedoresToolStripMenuItem
+            // 
+            this.fornecedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adicionarFornecedorToolStripMenuItem,
+            this.verFornecedoresToolStripMenuItem});
+            this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(90, 19);
+            this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
+            // 
             // adicionarFornecedorToolStripMenuItem
             // 
             this.adicionarFornecedorToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.delivery_truck;
@@ -468,6 +449,17 @@
             this.verFornecedoresToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.verFornecedoresToolStripMenuItem.Text = "Ver fornecedores";
             this.verFornecedoresToolStripMenuItem.Click += new System.EventHandler(this.verFornecedoresToolStripMenuItem_Click);
+            // 
+            // relatóriosToolStripMenuItem
+            // 
+            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.relatóriosDeInserçãoDeProdutosToolStripMenuItem,
+            this.relatórioDeRetiradaDeProdutosToolStripMenuItem,
+            this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem,
+            this.relatórioDeUsuáriosToolStripMenuItem});
+            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 19);
+            this.relatóriosToolStripMenuItem.Text = "Relatórios";
             // 
             // relatóriosDeInserçãoDeProdutosToolStripMenuItem
             // 
@@ -501,6 +493,14 @@
             this.relatórioDeUsuáriosToolStripMenuItem.Text = "Relatório de usuários";
             this.relatórioDeUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeUsuáriosToolStripMenuItem_Click);
             // 
+            // configuraçõesToolStripMenuItem
+            // 
+            this.configuraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configuraçõesGeraisToolStripMenuItem});
+            this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
+            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(96, 19);
+            this.configuraçõesToolStripMenuItem.Text = "Configurações";
+            // 
             // configuraçõesGeraisToolStripMenuItem
             // 
             this.configuraçõesGeraisToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.gears;
@@ -522,19 +522,20 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Controle de estoque";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Main_FormClosing);
+            this.Load += new System.EventHandler(this.Form_Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel_gerencia.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel_logo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_listar.ResumeLayout(false);
             this.panel_cadastrar.ResumeLayout(false);
             this.panel_retirar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

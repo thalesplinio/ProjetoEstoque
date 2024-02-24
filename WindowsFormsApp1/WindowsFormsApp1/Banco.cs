@@ -754,6 +754,93 @@ namespace WindowsFormsApp1
         #endregion
 
         #region CADASTRO DE PRODUTOS
+        public static void AdicionarProduto(Produtos produtos)
+        {
+            try
+            {
+                DateTime data = DateTime.Now;
+                var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+
+                command.CommandText = @"
+                    INSERT INTO produtos 
+                        (
+                            id_usuario, id_fornecedor, nome, marca, 
+                            quantidade, quantidade_minima, id_categoria, id_tipo_produto, 
+                            descricao, data_criacao, image
+                        ) 
+                    VALUES 
+                        (
+                            @id_usuario, @id_fornecedor, @nome, @marca, @quantidade, @quantidade_minima, @id_categoria, @id_tipo_produto, @descricao, @data_criacao , @image
+                        )";
+                command.Parameters.AddWithValue("id_usuario", produtos.id_usuario);
+                command.Parameters.AddWithValue("id_fornecedor", produtos.id_fornecedor);
+                command.Parameters.AddWithValue("nome", produtos.nome);
+                command.Parameters.AddWithValue("marca", produtos.marca);
+                command.Parameters.AddWithValue("quantidade", produtos.quantidade);
+                command.Parameters.AddWithValue("quantidade_minima", produtos.quantidade_minima);
+                command.Parameters.AddWithValue("id_categoria", produtos.id_categoria);
+                command.Parameters.AddWithValue("id_tipo_produto", produtos.id_tipo_produto);
+                command.Parameters.AddWithValue("descricao", produtos.descricao);
+                command.Parameters.AddWithValue("data_criacao", dataFormatada);
+                command.Parameters.AddWithValue("image", produtos.image);
+
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Produto cadastrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conexaoPropria.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Não foi possivel cadastrar este produto ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public static DataTable ObterProdutos()
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT 
+                        id_produto as 'ID Produto',
+                        nome as 'Nome',
+                        marca as 'Marca',
+                        id_categoria as 'Categoria',
+                        descricao as 'Descrição',
+                        quantidade as 'Quantidade',
+                        quantidade_minima as 'Qtd. mínima',
+                        id_tipo_produto as 'Tipo de produto',
+                        data_criacao as 'Data de criação',
+                        data_atualizacao as 'Data de Atualização'
+                    FROM
+                        produtos";
+
+                //nome as 'Nome',
+                //marca as 'Marca',
+                //id_categoria as 'Categoria',
+                //descricao as 'Descrição',
+                //quantidade as 'Quantidade,
+                //quantidade_minima as 'Qtd minima',
+                //id_tipo_produto as 'Tipo do produto',
+                //data_criacao as 'Data de cadastro',
+                //data_atualizacao as 'Data de atualização'
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         #endregion
     }

@@ -164,7 +164,7 @@ namespace WindowsFormsApp1
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Form_Cadastro form_Cadastro = new Form_Cadastro();
+            Form_Cadastro form_Cadastro = new Form_Cadastro(this);
             AbreFormularioBaseNivel(1, form_Cadastro);
         }
 
@@ -184,6 +184,11 @@ namespace WindowsFormsApp1
         {
             Form_Fornecedores form_Fornecedores = new Form_Fornecedores();
             AbreFormularioBaseNivel(1, form_Fornecedores);
+        }
+
+        private void Form_Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
