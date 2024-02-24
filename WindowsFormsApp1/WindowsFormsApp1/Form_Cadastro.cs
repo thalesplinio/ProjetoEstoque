@@ -52,20 +52,39 @@ namespace WindowsFormsApp1
 
         private void Form_Cadastro_Load(object sender, EventArgs e)
         {
+            DataFornecedor();
+            DataCategoria();
+            DataTipo();
+        }
+        private void DataFornecedor()
+        {
             string vQueryFornecedor = @"SELECT nome FROM fornecedor_produto";
             cb_Fornecedor.Items.Clear();
+            cb_Fornecedor.Sorted = true;
+            cb_Fornecedor.MaxDropDownItems = 8;
+            cb_Fornecedor.IntegralHeight = false;
             cb_Fornecedor.DataSource = Banco.Consulta(vQueryFornecedor);
             cb_Fornecedor.DisplayMember = "nome";
             cb_Fornecedor.ValueMember = "nome";
-
+        }
+        private void DataCategoria()
+        {
             string vQueryCategoria = @"SELECT nome_categoria FROM categoria_produto";
             cb_categoria.Items.Clear();
+            cb_categoria.Sorted = true;
+            cb_categoria.MaxDropDownItems = 8;
+            cb_categoria.IntegralHeight = false;
             cb_categoria.DataSource = Banco.Consulta(vQueryCategoria);
             cb_categoria.DisplayMember = "nome_categoria";
             cb_categoria.ValueMember = "nome_categoria";
-
+        }
+        private void DataTipo()
+        {
             string vQueryTipo = @"SELECT nome_tipo FROM tipo_produto";
             cb_tipo.Items.Clear();
+            cb_tipo.Sorted = true;
+            cb_tipo.MaxDropDownItems = 8;
+            cb_tipo.IntegralHeight = false;
             cb_tipo.DataSource = Banco.Consulta(vQueryTipo);
             cb_tipo.DisplayMember = "nome_tipo";
             cb_tipo.ValueMember = "nome_tipo";

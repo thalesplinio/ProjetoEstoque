@@ -756,6 +756,5 @@ namespace WindowsFormsApp1
         #region CADASTRO DE PRODUTOS
 
         #endregion
-
     }
 }
