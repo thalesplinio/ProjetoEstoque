@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_removeCategoria = new System.Windows.Forms.Button();
             this.tb_idCategoriaRemove = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tb_nomeCategoriaRemove = new System.Windows.Forms.TextBox();
@@ -39,13 +40,12 @@
             this.kryptonDataGridViewCategoria = new Krypton.Toolkit.KryptonDataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_addCategoria = new System.Windows.Forms.Button();
             this.tb_nomeCategoria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_removeCategoria = new System.Windows.Forms.Button();
-            this.btn_addCategoria = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -77,6 +77,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(114, 35);
             this.panel1.TabIndex = 41;
+            // 
+            // btn_removeCategoria
+            // 
+            this.btn_removeCategoria.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_removeCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_removeCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_removeCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_removeCategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_removeCategoria.Image = global::WindowsFormsApp1.Properties.Resources.delete;
+            this.btn_removeCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_removeCategoria.Location = new System.Drawing.Point(-3, -7);
+            this.btn_removeCategoria.Name = "btn_removeCategoria";
+            this.btn_removeCategoria.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_removeCategoria.Size = new System.Drawing.Size(120, 50);
+            this.btn_removeCategoria.TabIndex = 10;
+            this.btn_removeCategoria.Text = "        Excluir";
+            this.btn_removeCategoria.UseVisualStyleBackColor = false;
+            this.btn_removeCategoria.Click += new System.EventHandler(this.btn_removeCategoria_Click);
+            this.btn_removeCategoria.MouseEnter += new System.EventHandler(this.btn_removeCategoria_MouseEnter);
+            this.btn_removeCategoria.MouseLeave += new System.EventHandler(this.btn_removeCategoria_MouseLeave);
             // 
             // tb_idCategoriaRemove
             // 
@@ -129,8 +149,8 @@
             this.kryptonDataGridViewCategoria.AllowUserToDeleteRows = false;
             this.kryptonDataGridViewCategoria.AllowUserToResizeColumns = false;
             this.kryptonDataGridViewCategoria.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridViewCategoria.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridViewCategoria.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.kryptonDataGridViewCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridViewCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridViewCategoria.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -164,6 +184,26 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(114, 35);
             this.panel5.TabIndex = 40;
+            // 
+            // btn_addCategoria
+            // 
+            this.btn_addCategoria.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_addCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_addCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_addCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addCategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_addCategoria.Image = global::WindowsFormsApp1.Properties.Resources.plus;
+            this.btn_addCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_addCategoria.Location = new System.Drawing.Point(-3, -7);
+            this.btn_addCategoria.Name = "btn_addCategoria";
+            this.btn_addCategoria.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_addCategoria.Size = new System.Drawing.Size(120, 50);
+            this.btn_addCategoria.TabIndex = 10;
+            this.btn_addCategoria.Text = "        Adicionar";
+            this.btn_addCategoria.UseVisualStyleBackColor = false;
+            this.btn_addCategoria.Click += new System.EventHandler(this.btn_addStatus_Click);
+            this.btn_addCategoria.MouseEnter += new System.EventHandler(this.btn_addCategoria_MouseEnter);
+            this.btn_addCategoria.MouseLeave += new System.EventHandler(this.btn_addCategoria_MouseLeave);
             // 
             // tb_nomeCategoria
             // 
@@ -211,42 +251,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(100, 40);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_removeCategoria
-            // 
-            this.btn_removeCategoria.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_removeCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_removeCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_removeCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_removeCategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_removeCategoria.Image = global::WindowsFormsApp1.Properties.Resources.delete;
-            this.btn_removeCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_removeCategoria.Location = new System.Drawing.Point(-3, -7);
-            this.btn_removeCategoria.Name = "btn_removeCategoria";
-            this.btn_removeCategoria.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_removeCategoria.Size = new System.Drawing.Size(120, 50);
-            this.btn_removeCategoria.TabIndex = 10;
-            this.btn_removeCategoria.Text = "        Excluir";
-            this.btn_removeCategoria.UseVisualStyleBackColor = false;
-            this.btn_removeCategoria.Click += new System.EventHandler(this.btn_removeCategoria_Click);
-            // 
-            // btn_addCategoria
-            // 
-            this.btn_addCategoria.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_addCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_addCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_addCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_addCategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_addCategoria.Image = global::WindowsFormsApp1.Properties.Resources.plus;
-            this.btn_addCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_addCategoria.Location = new System.Drawing.Point(-3, -7);
-            this.btn_addCategoria.Name = "btn_addCategoria";
-            this.btn_addCategoria.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_addCategoria.Size = new System.Drawing.Size(120, 50);
-            this.btn_addCategoria.TabIndex = 10;
-            this.btn_addCategoria.Text = "        Adicionar";
-            this.btn_addCategoria.UseVisualStyleBackColor = false;
-            this.btn_addCategoria.Click += new System.EventHandler(this.btn_addStatus_Click);
             // 
             // Form_Categoria
             // 

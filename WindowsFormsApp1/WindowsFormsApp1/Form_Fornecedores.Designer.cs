@@ -28,17 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.tb_idFornecedor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_ExcluirFornecedor = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.kryptonDataGridViewFornecedor = new Krypton.Toolkit.KryptonDataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_SalvarFornecedor = new System.Windows.Forms.Button();
             this.panel_gerencia = new System.Windows.Forms.Panel();
+            this.btn_novoFornecedor = new System.Windows.Forms.Button();
             this.mtb_telefoneFornecedor = new System.Windows.Forms.MaskedTextBox();
             this.tb_emailFornecedor = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,20 +54,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tb_nomeFornecedor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_ExcluirFornecedor = new System.Windows.Forms.Button();
-            this.btn_SalvarFornecedor = new System.Windows.Forms.Button();
-            this.btn_novoFornecedor = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewFornecedor)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel_gerencia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,11 +82,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(214, 9);
+            this.label1.Location = new System.Drawing.Point(427, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(264, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Iformações dos fornecedores";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 40);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
@@ -116,6 +125,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulário de cadastro de fornecedores";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(10, 111);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(367, 15);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Clique em Novo fornecedor para inserir um fornecedor no sistema";
+            // 
             // tb_idFornecedor
             // 
             this.tb_idFornecedor.Location = new System.Drawing.Point(10, 40);
@@ -141,6 +159,26 @@
             this.panel3.Size = new System.Drawing.Size(149, 40);
             this.panel3.TabIndex = 20;
             // 
+            // btn_ExcluirFornecedor
+            // 
+            this.btn_ExcluirFornecedor.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_ExcluirFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_ExcluirFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ExcluirFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ExcluirFornecedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_ExcluirFornecedor.Image = global::WindowsFormsApp1.Properties.Resources.delete;
+            this.btn_ExcluirFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ExcluirFornecedor.Location = new System.Drawing.Point(-7, -5);
+            this.btn_ExcluirFornecedor.Name = "btn_ExcluirFornecedor";
+            this.btn_ExcluirFornecedor.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_ExcluirFornecedor.Size = new System.Drawing.Size(160, 50);
+            this.btn_ExcluirFornecedor.TabIndex = 7;
+            this.btn_ExcluirFornecedor.Text = "        Excluir fornecedor";
+            this.btn_ExcluirFornecedor.UseVisualStyleBackColor = false;
+            this.btn_ExcluirFornecedor.Click += new System.EventHandler(this.button1_Click);
+            this.btn_ExcluirFornecedor.MouseEnter += new System.EventHandler(this.btn_ExcluirFornecedor_MouseEnter);
+            this.btn_ExcluirFornecedor.MouseLeave += new System.EventHandler(this.btn_ExcluirFornecedor_MouseLeave);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.kryptonDataGridViewFornecedor);
@@ -157,8 +195,8 @@
             this.kryptonDataGridViewFornecedor.AllowUserToDeleteRows = false;
             this.kryptonDataGridViewFornecedor.AllowUserToResizeColumns = false;
             this.kryptonDataGridViewFornecedor.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridViewFornecedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridViewFornecedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.kryptonDataGridViewFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridViewFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridViewFornecedor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -180,6 +218,26 @@
             this.panel2.Size = new System.Drawing.Size(202, 40);
             this.panel2.TabIndex = 19;
             // 
+            // btn_SalvarFornecedor
+            // 
+            this.btn_SalvarFornecedor.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_SalvarFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_SalvarFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_SalvarFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalvarFornecedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_SalvarFornecedor.Image = global::WindowsFormsApp1.Properties.Resources.diskette;
+            this.btn_SalvarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SalvarFornecedor.Location = new System.Drawing.Point(-3, -5);
+            this.btn_SalvarFornecedor.Name = "btn_SalvarFornecedor";
+            this.btn_SalvarFornecedor.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_SalvarFornecedor.Size = new System.Drawing.Size(214, 50);
+            this.btn_SalvarFornecedor.TabIndex = 7;
+            this.btn_SalvarFornecedor.Text = "        Alterar dados do fornecedor";
+            this.btn_SalvarFornecedor.UseVisualStyleBackColor = false;
+            this.btn_SalvarFornecedor.Click += new System.EventHandler(this.btn_SalvarFornecedor_Click);
+            this.btn_SalvarFornecedor.MouseEnter += new System.EventHandler(this.btn_SalvarFornecedor_MouseEnter);
+            this.btn_SalvarFornecedor.MouseLeave += new System.EventHandler(this.btn_SalvarFornecedor_MouseLeave);
+            // 
             // panel_gerencia
             // 
             this.panel_gerencia.Controls.Add(this.btn_novoFornecedor);
@@ -187,6 +245,26 @@
             this.panel_gerencia.Name = "panel_gerencia";
             this.panel_gerencia.Size = new System.Drawing.Size(151, 40);
             this.panel_gerencia.TabIndex = 17;
+            // 
+            // btn_novoFornecedor
+            // 
+            this.btn_novoFornecedor.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_novoFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_novoFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_novoFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_novoFornecedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_novoFornecedor.Image = global::WindowsFormsApp1.Properties.Resources.add;
+            this.btn_novoFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_novoFornecedor.Location = new System.Drawing.Point(-5, -5);
+            this.btn_novoFornecedor.Name = "btn_novoFornecedor";
+            this.btn_novoFornecedor.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_novoFornecedor.Size = new System.Drawing.Size(159, 50);
+            this.btn_novoFornecedor.TabIndex = 6;
+            this.btn_novoFornecedor.Text = "        Novo Fornecedor";
+            this.btn_novoFornecedor.UseVisualStyleBackColor = false;
+            this.btn_novoFornecedor.Click += new System.EventHandler(this.btn_novoFornecedor_Click);
+            this.btn_novoFornecedor.MouseEnter += new System.EventHandler(this.btn_novoFornecedor_MouseEnter);
+            this.btn_novoFornecedor.MouseLeave += new System.EventHandler(this.btn_novoFornecedor_MouseLeave);
             // 
             // mtb_telefoneFornecedor
             // 
@@ -269,78 +347,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome do fornecedor:";
             // 
-            // btn_ExcluirFornecedor
-            // 
-            this.btn_ExcluirFornecedor.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_ExcluirFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_ExcluirFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ExcluirFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ExcluirFornecedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_ExcluirFornecedor.Image = global::WindowsFormsApp1.Properties.Resources.delete;
-            this.btn_ExcluirFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ExcluirFornecedor.Location = new System.Drawing.Point(-7, -5);
-            this.btn_ExcluirFornecedor.Name = "btn_ExcluirFornecedor";
-            this.btn_ExcluirFornecedor.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_ExcluirFornecedor.Size = new System.Drawing.Size(160, 50);
-            this.btn_ExcluirFornecedor.TabIndex = 7;
-            this.btn_ExcluirFornecedor.Text = "        Excluir fornecedor";
-            this.btn_ExcluirFornecedor.UseVisualStyleBackColor = false;
-            this.btn_ExcluirFornecedor.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_SalvarFornecedor
-            // 
-            this.btn_SalvarFornecedor.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_SalvarFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_SalvarFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_SalvarFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SalvarFornecedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_SalvarFornecedor.Image = global::WindowsFormsApp1.Properties.Resources.diskette;
-            this.btn_SalvarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SalvarFornecedor.Location = new System.Drawing.Point(-3, -5);
-            this.btn_SalvarFornecedor.Name = "btn_SalvarFornecedor";
-            this.btn_SalvarFornecedor.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_SalvarFornecedor.Size = new System.Drawing.Size(214, 50);
-            this.btn_SalvarFornecedor.TabIndex = 7;
-            this.btn_SalvarFornecedor.Text = "        Alterar dados do fornecedor";
-            this.btn_SalvarFornecedor.UseVisualStyleBackColor = false;
-            this.btn_SalvarFornecedor.Click += new System.EventHandler(this.btn_SalvarFornecedor_Click);
-            // 
-            // btn_novoFornecedor
-            // 
-            this.btn_novoFornecedor.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_novoFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_novoFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_novoFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_novoFornecedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_novoFornecedor.Image = global::WindowsFormsApp1.Properties.Resources.add;
-            this.btn_novoFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_novoFornecedor.Location = new System.Drawing.Point(-5, -5);
-            this.btn_novoFornecedor.Name = "btn_novoFornecedor";
-            this.btn_novoFornecedor.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_novoFornecedor.Size = new System.Drawing.Size(159, 50);
-            this.btn_novoFornecedor.TabIndex = 6;
-            this.btn_novoFornecedor.Text = "        Novo Fornecedor";
-            this.btn_novoFornecedor.UseVisualStyleBackColor = false;
-            this.btn_novoFornecedor.Click += new System.EventHandler(this.btn_novoFornecedor_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 40);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 111);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(367, 15);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Clique em Novo fornecedor para inserir um fornecedor no sistema";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logo_opac;
@@ -366,6 +372,7 @@
             this.Load += new System.EventHandler(this.Form_Fornecedores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -373,7 +380,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewFornecedor)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel_gerencia.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 

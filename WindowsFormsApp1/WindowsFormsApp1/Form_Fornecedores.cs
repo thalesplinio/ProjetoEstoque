@@ -17,6 +17,48 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        #region Set Colors Butons
+        private struct RGBColorsButtons
+        {
+            public static Color corAzulPadrao = Color.FromArgb(42, 49, 67); // #2A3143
+            public static Color corVerdePadrao = Color.FromArgb(45, 153, 97); // #136A3D
+
+            public static Color corControl = Color.FromArgb(240, 240, 240);
+            public static Color corControlLight = Color.FromArgb(227, 227, 227);
+        }
+        #endregion
+
+        #region Buttons Hover Color
+        private void btn_novoFornecedor_MouseEnter(object sender, EventArgs e)
+        {
+            btn_novoFornecedor.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_novoFornecedor_MouseLeave(object sender, EventArgs e)
+        {
+            btn_novoFornecedor.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+
+        private void btn_SalvarFornecedor_MouseEnter(object sender, EventArgs e)
+        {
+            btn_SalvarFornecedor.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_SalvarFornecedor_MouseLeave(object sender, EventArgs e)
+        {
+            btn_SalvarFornecedor.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+
+        private void btn_ExcluirFornecedor_MouseEnter(object sender, EventArgs e)
+        {
+            btn_ExcluirFornecedor.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_ExcluirFornecedor_MouseLeave(object sender, EventArgs e)
+        {
+            btn_ExcluirFornecedor.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+        #endregion
         private void LimpaCampos()
         {
             tb_idFornecedor.Clear();
@@ -104,6 +146,8 @@ namespace WindowsFormsApp1
                 kryptonDataGridViewFornecedor.Sort(kryptonDataGridViewFornecedor.Columns["ID Fornecedor"], ListSortDirection.Descending);
             }
         }
+
+
     }
 
 }

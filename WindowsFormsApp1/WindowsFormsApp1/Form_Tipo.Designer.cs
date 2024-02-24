@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lb_tituloTipo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -127,6 +127,8 @@
             this.btn_removeTipo.Text = "        Excluir";
             this.btn_removeTipo.UseVisualStyleBackColor = false;
             this.btn_removeTipo.Click += new System.EventHandler(this.btn_removeTipo_Click);
+            this.btn_removeTipo.MouseEnter += new System.EventHandler(this.btn_removeTipo_MouseEnter);
+            this.btn_removeTipo.MouseLeave += new System.EventHandler(this.btn_removeTipo_MouseLeave);
             // 
             // tb_idTipoRemove
             // 
@@ -179,8 +181,8 @@
             this.kryptonDataGridViewTipo.AllowUserToDeleteRows = false;
             this.kryptonDataGridViewTipo.AllowUserToResizeColumns = false;
             this.kryptonDataGridViewTipo.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridViewTipo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridViewTipo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.kryptonDataGridViewTipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridViewTipo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridViewTipo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -232,6 +234,8 @@
             this.btn_addTipo.Text = "        Adicionar";
             this.btn_addTipo.UseVisualStyleBackColor = false;
             this.btn_addTipo.Click += new System.EventHandler(this.btn_addTipo_Click);
+            this.btn_addTipo.MouseEnter += new System.EventHandler(this.btn_addTipo_MouseEnter);
+            this.btn_addTipo.MouseLeave += new System.EventHandler(this.btn_addTipo_MouseLeave);
             // 
             // tb_nomeTipo
             // 

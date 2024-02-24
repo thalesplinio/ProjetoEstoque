@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -36,6 +36,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_info = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_addStatus = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -51,7 +53,7 @@
             this.tb_id = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ExluirUsuario = new System.Windows.Forms.Button();
             this.nud_nivelAcesso = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_Cancelar = new System.Windows.Forms.Button();
@@ -70,14 +72,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tb_email = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btn_info = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -85,7 +86,6 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_gerencia.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -147,8 +147,8 @@
             this.kryptonDataGridView1.AllowUserToDeleteRows = false;
             this.kryptonDataGridView1.AllowUserToResizeColumns = false;
             this.kryptonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.kryptonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -197,6 +197,32 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btn_info);
+            this.panel6.Cursor = System.Windows.Forms.Cursors.Help;
+            this.panel6.Location = new System.Drawing.Point(576, 79);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(29, 27);
+            this.panel6.TabIndex = 40;
+            // 
+            // btn_info
+            // 
+            this.btn_info.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_info.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_info.Image = global::WindowsFormsApp1.Properties.Resources.info;
+            this.btn_info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_info.Location = new System.Drawing.Point(-8, -8);
+            this.btn_info.Name = "btn_info";
+            this.btn_info.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_info.Size = new System.Drawing.Size(49, 40);
+            this.btn_info.TabIndex = 5;
+            this.btn_info.UseVisualStyleBackColor = false;
+            this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
+            this.btn_info.MouseEnter += new System.EventHandler(this.btn_info_MouseEnter);
+            this.btn_info.MouseLeave += new System.EventHandler(this.btn_info_MouseLeave);
             // 
             // panel5
             // 
@@ -334,29 +360,31 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btn_ExluirUsuario);
             this.panel4.Location = new System.Drawing.Point(847, 170);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(145, 40);
             this.panel4.TabIndex = 20;
             // 
-            // button1
+            // btn_ExluirUsuario
             // 
-            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::WindowsFormsApp1.Properties.Resources.delete;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-3, -5);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(153, 50);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "        Excluir usuário";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_ExluirUsuario.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_ExluirUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_ExluirUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ExluirUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ExluirUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_ExluirUsuario.Image = global::WindowsFormsApp1.Properties.Resources.delete;
+            this.btn_ExluirUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ExluirUsuario.Location = new System.Drawing.Point(-3, -5);
+            this.btn_ExluirUsuario.Name = "btn_ExluirUsuario";
+            this.btn_ExluirUsuario.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_ExluirUsuario.Size = new System.Drawing.Size(153, 50);
+            this.btn_ExluirUsuario.TabIndex = 10;
+            this.btn_ExluirUsuario.Text = "        Excluir usuário";
+            this.btn_ExluirUsuario.UseVisualStyleBackColor = false;
+            this.btn_ExluirUsuario.Click += new System.EventHandler(this.button1_Click);
+            this.btn_ExluirUsuario.MouseEnter += new System.EventHandler(this.btn_ExluirUsuario_MouseEnter);
+            this.btn_ExluirUsuario.MouseLeave += new System.EventHandler(this.btn_ExluirUsuario_MouseLeave);
             // 
             // nud_nivelAcesso
             // 
@@ -390,6 +418,8 @@
             this.btn_Cancelar.Text = "        Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            this.btn_Cancelar.MouseEnter += new System.EventHandler(this.btn_Cancelar_MouseEnter);
+            this.btn_Cancelar.MouseLeave += new System.EventHandler(this.btn_Cancelar_MouseLeave);
             // 
             // mtb_telefone
             // 
@@ -424,6 +454,8 @@
             this.btn_Salvar.Text = "        Salvar alterações";
             this.btn_Salvar.UseVisualStyleBackColor = false;
             this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
+            this.btn_Salvar.MouseEnter += new System.EventHandler(this.btn_Salvar_MouseEnter);
+            this.btn_Salvar.MouseLeave += new System.EventHandler(this.btn_Salvar_MouseLeave);
             // 
             // tb_nomeCompleto
             // 
@@ -457,6 +489,8 @@
             this.btn_novoUsuario.Text = "        Novo Usuário";
             this.btn_novoUsuario.UseVisualStyleBackColor = false;
             this.btn_novoUsuario.Click += new System.EventHandler(this.btn_novoUsuario_Click);
+            this.btn_novoUsuario.MouseEnter += new System.EventHandler(this.btn_novoUsuario_MouseEnter);
+            this.btn_novoUsuario.MouseLeave += new System.EventHandler(this.btn_novoUsuario_MouseLeave);
             // 
             // label10
             // 
@@ -539,32 +573,6 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "E-Mail:";
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btn_info);
-            this.panel6.Cursor = System.Windows.Forms.Cursors.Help;
-            this.panel6.Location = new System.Drawing.Point(576, 79);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(29, 27);
-            this.panel6.TabIndex = 40;
-            // 
-            // btn_info
-            // 
-            this.btn_info.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_info.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_info.Image = global::WindowsFormsApp1.Properties.Resources.info;
-            this.btn_info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_info.Location = new System.Drawing.Point(-8, -8);
-            this.btn_info.Name = "btn_info";
-            this.btn_info.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_info.Size = new System.Drawing.Size(49, 40);
-            this.btn_info.TabIndex = 5;
-            this.btn_info.UseVisualStyleBackColor = false;
-            this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
-            this.btn_info.MouseEnter += new System.EventHandler(this.btn_info_MouseEnter);
-            this.btn_info.MouseLeave += new System.EventHandler(this.btn_info_MouseLeave);
-            // 
             // Form_Todos_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -587,6 +595,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -595,7 +604,6 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_gerencia.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -622,7 +630,7 @@
         private System.Windows.Forms.Panel panel_gerencia;
         private System.Windows.Forms.Button btn_novoUsuario;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ExluirUsuario;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Panel panel2;

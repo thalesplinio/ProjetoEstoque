@@ -17,6 +17,39 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        #region Set Colors Butons
+        private struct RGBColorsButtons
+        {
+            public static Color corAzulPadrao = Color.FromArgb(42, 49, 67); // #2A3143
+            public static Color corVerdePadrao = Color.FromArgb(45, 153, 97); // #136A3D
+
+            public static Color corControl = Color.FromArgb(240, 240, 240);
+            public static Color corControlLight = Color.FromArgb(227, 227, 227);
+        }
+        #endregion
+
+        #region Buttons Hover Color
+        private void btn_addTipo_MouseEnter(object sender, EventArgs e)
+        {
+           btn_addTipo.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_addTipo_MouseLeave(object sender, EventArgs e)
+        {
+            btn_addTipo.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+
+        private void btn_removeTipo_MouseEnter(object sender, EventArgs e)
+        {
+            btn_removeTipo.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_removeTipo_MouseLeave(object sender, EventArgs e)
+        {
+            btn_removeTipo.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+        #endregion
+
         private void Form_Tipo_Load(object sender, EventArgs e)
         {
             kryptonDataGridViewTipo.DataSource = Banco.ObterTipo();
@@ -62,5 +95,7 @@ namespace WindowsFormsApp1
                 kryptonDataGridViewTipo.Sort(kryptonDataGridViewTipo.Columns["ID Tipo"], ListSortDirection.Descending);
             }
         }
+
+
     }
 }

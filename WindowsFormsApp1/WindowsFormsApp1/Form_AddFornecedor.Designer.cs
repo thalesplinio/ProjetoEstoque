@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_verTodosFornecedores = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_SalvarFornecedor = new System.Windows.Forms.Button();
             this.mtb_telefoneFornecedor = new System.Windows.Forms.MaskedTextBox();
@@ -45,17 +49,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_Cancelar = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -82,6 +82,62 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulário de cadastro de fornecedores";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btn_verTodosFornecedores);
+            this.panel4.Location = new System.Drawing.Point(10, 178);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(188, 40);
+            this.panel4.TabIndex = 20;
+            // 
+            // btn_verTodosFornecedores
+            // 
+            this.btn_verTodosFornecedores.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_verTodosFornecedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_verTodosFornecedores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_verTodosFornecedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_verTodosFornecedores.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_verTodosFornecedores.Image = global::WindowsFormsApp1.Properties.Resources.graph;
+            this.btn_verTodosFornecedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_verTodosFornecedores.Location = new System.Drawing.Point(-4, -5);
+            this.btn_verTodosFornecedores.Name = "btn_verTodosFornecedores";
+            this.btn_verTodosFornecedores.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_verTodosFornecedores.Size = new System.Drawing.Size(197, 50);
+            this.btn_verTodosFornecedores.TabIndex = 7;
+            this.btn_verTodosFornecedores.Text = "        Ver todos os fornecedores";
+            this.btn_verTodosFornecedores.UseVisualStyleBackColor = false;
+            this.btn_verTodosFornecedores.Click += new System.EventHandler(this.btn_verTodosFornecedores_Click);
+            this.btn_verTodosFornecedores.MouseEnter += new System.EventHandler(this.btn_verTodosFornecedores_MouseEnter);
+            this.btn_verTodosFornecedores.MouseLeave += new System.EventHandler(this.btn_verTodosFornecedores_MouseLeave);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btn_Cancelar);
+            this.panel3.Location = new System.Drawing.Point(466, 178);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(109, 40);
+            this.panel3.TabIndex = 21;
+            // 
+            // btn_Cancelar
+            // 
+            this.btn_Cancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_Cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Cancelar.Image = global::WindowsFormsApp1.Properties.Resources.cross;
+            this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Cancelar.Location = new System.Drawing.Point(-5, -5);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_Cancelar.Size = new System.Drawing.Size(120, 50);
+            this.btn_Cancelar.TabIndex = 11;
+            this.btn_Cancelar.Text = "        Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = false;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            this.btn_Cancelar.MouseEnter += new System.EventHandler(this.btn_Cancelar_MouseEnter);
+            this.btn_Cancelar.MouseLeave += new System.EventHandler(this.btn_Cancelar_MouseLeave);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_SalvarFornecedor);
@@ -107,6 +163,8 @@
             this.btn_SalvarFornecedor.Text = "        Salvar";
             this.btn_SalvarFornecedor.UseVisualStyleBackColor = false;
             this.btn_SalvarFornecedor.Click += new System.EventHandler(this.btn_SalvarFornecedor_Click);
+            this.btn_SalvarFornecedor.MouseEnter += new System.EventHandler(this.btn_SalvarFornecedor_MouseEnter);
+            this.btn_SalvarFornecedor.MouseLeave += new System.EventHandler(this.btn_SalvarFornecedor_MouseLeave);
             // 
             // mtb_telefoneFornecedor
             // 
@@ -230,58 +288,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btn_Cancelar);
-            this.panel3.Location = new System.Drawing.Point(466, 178);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(109, 40);
-            this.panel3.TabIndex = 21;
-            // 
-            // btn_Cancelar
-            // 
-            this.btn_Cancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_Cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Cancelar.Image = global::WindowsFormsApp1.Properties.Resources.cross;
-            this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Cancelar.Location = new System.Drawing.Point(-5, -5);
-            this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_Cancelar.Size = new System.Drawing.Size(120, 50);
-            this.btn_Cancelar.TabIndex = 11;
-            this.btn_Cancelar.Text = "        Cancelar";
-            this.btn_Cancelar.UseVisualStyleBackColor = false;
-            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(10, 178);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(188, 40);
-            this.panel4.TabIndex = 20;
-            // 
-            // button1
-            // 
-            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::WindowsFormsApp1.Properties.Resources.graph;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-4, -5);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(197, 50);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "        Ver todos os fornecedores";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form_AddFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,13 +303,13 @@
             this.Text = "Adicionar fornecedor no sistema";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -330,6 +336,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_verTodosFornecedores;
     }
 }

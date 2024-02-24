@@ -16,6 +16,48 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        #region Set Colors Butons
+        private struct RGBColorsButtons
+        {
+            public static Color corAzulPadrao = Color.FromArgb(42, 49, 67); // #2A3143
+            public static Color corVerdePadrao = Color.FromArgb(45, 153, 97); // #136A3D
+
+            public static Color corControl = Color.FromArgb(240, 240, 240);
+            public static Color corControlLight = Color.FromArgb(227, 227, 227);
+        }
+        #endregion
+
+        #region Buttons Hover Color
+        private void btn_verTodosFornecedores_MouseEnter(object sender, EventArgs e)
+        {
+            btn_verTodosFornecedores.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_verTodosFornecedores_MouseLeave(object sender, EventArgs e)
+        {
+            btn_verTodosFornecedores.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+
+        private void btn_SalvarFornecedor_MouseEnter(object sender, EventArgs e)
+        {
+            btn_SalvarFornecedor.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_SalvarFornecedor_MouseLeave(object sender, EventArgs e)
+        {
+            btn_SalvarFornecedor.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+
+        private void btn_Cancelar_MouseEnter(object sender, EventArgs e)
+        {
+            btn_Cancelar.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_Cancelar_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Cancelar.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+        #endregion
         private void LimpaCampos()
         {
             tb_nomeFornecedor.Clear();
@@ -37,13 +79,11 @@ namespace WindowsFormsApp1
             Banco.NovoFornecedor(fornecedor);
             LimpaCampos();
         }
-
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_verTodosFornecedores_Click(object sender, EventArgs e)
         {
             Form_Fornecedores form_Fornecedores = new Form_Fornecedores();
             form_Fornecedores.ShowDialog();

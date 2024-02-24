@@ -49,6 +49,46 @@ namespace WindowsFormsApp1
         {
             btn_info.BackColor = RGBColorsButtons.corControl;
         }
+        private void btn_novoUsuario_MouseEnter(object sender, EventArgs e)
+        {
+            btn_novoUsuario.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_novoUsuario_MouseLeave(object sender, EventArgs e)
+        {
+            btn_novoUsuario.BackColor = RGBColorsButtons.corAzulPadrao;
+
+        }
+        private void btn_Salvar_MouseEnter(object sender, EventArgs e)
+        {
+            btn_Salvar.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_Salvar_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Salvar.BackColor = RGBColorsButtons.corAzulPadrao;
+
+        }
+        private void btn_ExluirUsuario_MouseEnter(object sender, EventArgs e)
+        {
+            btn_ExluirUsuario.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_ExluirUsuario_MouseLeave(object sender, EventArgs e)
+        {
+            btn_ExluirUsuario.BackColor = RGBColorsButtons.corAzulPadrao;
+
+        }
+
+        private void btn_Cancelar_MouseEnter(object sender, EventArgs e)
+        {
+            btn_Cancelar.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_Cancelar_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Cancelar.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
         #endregion
 
         private void Form_Todos_Usuarios_Load(object sender, EventArgs e)
@@ -171,5 +211,7 @@ namespace WindowsFormsApp1
             Form_DeskNivel form_DeskNivel = new Form_DeskNivel();
             form_DeskNivel.ShowDialog();
         }
+
+
     }
 }
