@@ -283,6 +283,21 @@
   <ItemGroup>
     <None Include="bin\Debug\img\img 24\--user.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\img 24\truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\img 24\box-truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\img 24\delivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\img 24\shipped.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\img 24\delivery-truck.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

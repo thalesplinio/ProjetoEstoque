@@ -37,5 +37,16 @@ namespace WindowsFormsApp1
             Banco.NovoFornecedor(fornecedor);
             LimpaCampos();
         }
+
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form_Fornecedores form_Fornecedores = new Form_Fornecedores();
+            form_Fornecedores.ShowDialog();
+        }
     }
 }

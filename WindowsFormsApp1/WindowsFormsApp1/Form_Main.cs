@@ -173,5 +173,17 @@ namespace WindowsFormsApp1
             Form_Config form_Config = new Form_Config();
             AbreFormularioBaseNivel(1, form_Config);
         }
+
+        private void adicionarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_AddFornecedor form_AddFornecedor = new Form_AddFornecedor();
+            AbreFormularioBaseNivel(1, form_AddFornecedor);
+        }
+
+        private void verFornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Fornecedores form_Fornecedores = new Form_Fornecedores();
+            AbreFormularioBaseNivel(1, form_Fornecedores);
+        }
     }
 }

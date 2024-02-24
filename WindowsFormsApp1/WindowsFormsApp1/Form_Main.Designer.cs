@@ -49,6 +49,7 @@
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_gerenciar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,6 +64,8 @@
             this.listarTodosOsRegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarFornecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verFornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosDeInserçãoDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeRetiradaDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -222,6 +225,7 @@
             this.arquivoToolStripMenuItem,
             this.registrosToolStripMenuItem,
             this.usuáriosToolStripMenuItem,
+            this.fornecedoresToolStripMenuItem,
             this.relatóriosToolStripMenuItem,
             this.configuraçõesToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
@@ -284,6 +288,15 @@
             this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
             this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(96, 19);
             this.configuraçõesToolStripMenuItem.Text = "Configurações";
+            // 
+            // fornecedoresToolStripMenuItem
+            // 
+            this.fornecedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adicionarFornecedorToolStripMenuItem,
+            this.verFornecedoresToolStripMenuItem});
+            this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(90, 19);
+            this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
             // 
             // btn_gerenciar
             // 
@@ -440,6 +453,22 @@
             this.verUsuáriosToolStripMenuItem.Text = "Ver usuários";
             this.verUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.verUsuáriosToolStripMenuItem_Click_1);
             // 
+            // adicionarFornecedorToolStripMenuItem
+            // 
+            this.adicionarFornecedorToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.delivery_truck;
+            this.adicionarFornecedorToolStripMenuItem.Name = "adicionarFornecedorToolStripMenuItem";
+            this.adicionarFornecedorToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.adicionarFornecedorToolStripMenuItem.Text = "Adicionar fornecedor";
+            this.adicionarFornecedorToolStripMenuItem.Click += new System.EventHandler(this.adicionarFornecedorToolStripMenuItem_Click);
+            // 
+            // verFornecedoresToolStripMenuItem
+            // 
+            this.verFornecedoresToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.box_truck;
+            this.verFornecedoresToolStripMenuItem.Name = "verFornecedoresToolStripMenuItem";
+            this.verFornecedoresToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.verFornecedoresToolStripMenuItem.Text = "Ver fornecedores";
+            this.verFornecedoresToolStripMenuItem.Click += new System.EventHandler(this.verFornecedoresToolStripMenuItem_Click);
+            // 
             // relatóriosDeInserçãoDeProdutosToolStripMenuItem
             // 
             this.relatóriosDeInserçãoDeProdutosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.graph;
@@ -553,6 +582,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lb_separador2;
+        private System.Windows.Forms.ToolStripMenuItem fornecedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adicionarFornecedorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verFornecedoresToolStripMenuItem;
     }
 }
 
