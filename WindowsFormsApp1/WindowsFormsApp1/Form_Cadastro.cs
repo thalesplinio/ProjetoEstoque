@@ -58,16 +58,43 @@ namespace WindowsFormsApp1
         {
             btn_insereProduto.BackColor = RGBColorsButtons.corAzulPadrao;
         }
+        private void btn_adicionaImagem_MouseEnter(object sender, EventArgs e)
+        {
+            btn_adicionaImagem.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+        private void btn_adicionaImagem_MouseLeave(object sender, EventArgs e)
+        {
+            btn_adicionaImagem.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
         #endregion
 
+        private void LimparCampos()
+        {
+            tb_nomeProduto.Clear();
+            tb_marca.Clear();
+            nud_qtd.Value = 0;
+            nud_minQtd.Value = 0;
+            rtb_desc.Clear();
+            pictureBoxImageProduto.Image = null;
+        }
         private void Form_Cadastro_Load(object sender, EventArgs e)
         {
             DataFornecedor();
             DataCategoria();
             DataTipo();
-
             kryptonDataGridViewCadastroProdutos.DataSource = Banco.ObterProdutos();
             kryptonDataGridViewCadastroProdutos.Sort(kryptonDataGridViewCadastroProdutos.Columns["ID Produto"], ListSortDirection.Descending);
+            kryptonDataGridViewCadastroProdutos.Columns[0].Width = 85;
+            kryptonDataGridViewCadastroProdutos.Columns[1].Width = 110;
+            kryptonDataGridViewCadastroProdutos.Columns[2].Width = 165;
+            kryptonDataGridViewCadastroProdutos.Columns[3].Width = 110;
+            kryptonDataGridViewCadastroProdutos.Columns[4].Width = 80;
+            kryptonDataGridViewCadastroProdutos.Columns[5].Width = 80;
+            kryptonDataGridViewCadastroProdutos.Columns[6].Width = 110;
+            kryptonDataGridViewCadastroProdutos.Columns[7].Width = 110;
+            kryptonDataGridViewCadastroProdutos.Columns[8].Width = 110;
+            kryptonDataGridViewCadastroProdutos.Columns[9].Width = 100;
+            kryptonDataGridViewCadastroProdutos.Columns[10].Width = 110;
         }
         private void DataFornecedor()
         {
@@ -102,8 +129,7 @@ namespace WindowsFormsApp1
             cb_tipo.DisplayMember = "nome_tipo";
             cb_tipo.ValueMember = "id_tipo";
         }
-
-        private void btn_pegaUrl_Click(object sender, EventArgs e)
+        private void btn_adicionaImagem_Click(object sender, EventArgs e)
         {
             /// ----------------------------------------------------------------------------------------
             /// Aqui pegamos o arquivo e setamos ele no nosso picture box, mas usamos o caminho original
@@ -131,7 +157,6 @@ namespace WindowsFormsApp1
             }
             pictureBoxImageProduto.ImageLocation = caminhoOrigem;
         }
-
         private void btn_insereProduto_Click(object sender, EventArgs e)
         {
             #region Tratando nossa imagem do produto
@@ -176,6 +201,7 @@ namespace WindowsFormsApp1
             produto.image = destinoCompleto;
 
             Banco.AdicionarProduto(produto);
+            LimparCampos();
             #endregion
             kryptonDataGridViewCadastroProdutos.DataSource = Banco.ObterProdutos();
             kryptonDataGridViewCadastroProdutos.Sort(kryptonDataGridViewCadastroProdutos.Columns["ID Produto"], ListSortDirection.Descending);

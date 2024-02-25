@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_pegaUrl = new System.Windows.Forms.Button();
             this.cb_Fornecedor = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_limpaCampos = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tb_urlImage = new System.Windows.Forms.TextBox();
-            this.btn_pegaUrl = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_adicionaImagem = new System.Windows.Forms.Button();
             this.pictureBoxImageProduto = new System.Windows.Forms.PictureBox();
             this.panel_gerencia = new System.Windows.Forms.Panel();
             this.btn_insereProduto = new System.Windows.Forms.Button();
@@ -64,6 +64,7 @@
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImageProduto)).BeginInit();
             this.panel_gerencia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_minQtd)).BeginInit();
@@ -76,6 +77,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_pegaUrl);
             this.groupBox1.Controls.Add(this.cb_Fornecedor);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.groupBox3);
@@ -102,6 +104,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Iserir produtos no estoque";
+            // 
+            // btn_pegaUrl
+            // 
+            this.btn_pegaUrl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_pegaUrl.Location = new System.Drawing.Point(772, 81);
+            this.btn_pegaUrl.Name = "btn_pegaUrl";
+            this.btn_pegaUrl.Size = new System.Drawing.Size(32, 23);
+            this.btn_pegaUrl.TabIndex = 18;
+            this.btn_pegaUrl.Text = "...";
+            this.btn_pegaUrl.UseVisualStyleBackColor = true;
             // 
             // cb_Fornecedor
             // 
@@ -140,48 +152,47 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.tb_urlImage);
-            this.groupBox3.Controls.Add(this.btn_pegaUrl);
+            this.groupBox3.Controls.Add(this.panel3);
             this.groupBox3.Controls.Add(this.pictureBoxImageProduto);
             this.groupBox3.Location = new System.Drawing.Point(830, 11);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(354, 226);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Imagem";
+            this.groupBox3.Text = "Imagem para o produto";
             // 
-            // label9
+            // panel3
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 21);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(190, 15);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Escolher imagem para o produto:";
+            this.panel3.Controls.Add(this.btn_adicionaImagem);
+            this.panel3.Location = new System.Drawing.Point(6, 179);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(151, 40);
+            this.panel3.TabIndex = 21;
             // 
-            // tb_urlImage
+            // btn_adicionaImagem
             // 
-            this.tb_urlImage.Location = new System.Drawing.Point(9, 40);
-            this.tb_urlImage.Name = "tb_urlImage";
-            this.tb_urlImage.Size = new System.Drawing.Size(303, 21);
-            this.tb_urlImage.TabIndex = 17;
-            // 
-            // btn_pegaUrl
-            // 
-            this.btn_pegaUrl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_pegaUrl.Location = new System.Drawing.Point(313, 39);
-            this.btn_pegaUrl.Name = "btn_pegaUrl";
-            this.btn_pegaUrl.Size = new System.Drawing.Size(32, 23);
-            this.btn_pegaUrl.TabIndex = 18;
-            this.btn_pegaUrl.Text = "...";
-            this.btn_pegaUrl.UseVisualStyleBackColor = true;
-            this.btn_pegaUrl.Click += new System.EventHandler(this.btn_pegaUrl_Click);
+            this.btn_adicionaImagem.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_adicionaImagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_adicionaImagem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_adicionaImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_adicionaImagem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_adicionaImagem.Image = global::WindowsFormsApp1.Properties.Resources.image;
+            this.btn_adicionaImagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_adicionaImagem.Location = new System.Drawing.Point(-5, -5);
+            this.btn_adicionaImagem.Name = "btn_adicionaImagem";
+            this.btn_adicionaImagem.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_adicionaImagem.Size = new System.Drawing.Size(159, 50);
+            this.btn_adicionaImagem.TabIndex = 9;
+            this.btn_adicionaImagem.Text = "        Selecionar Imagem";
+            this.btn_adicionaImagem.UseVisualStyleBackColor = false;
+            this.btn_adicionaImagem.Click += new System.EventHandler(this.btn_adicionaImagem_Click);
+            this.btn_adicionaImagem.MouseEnter += new System.EventHandler(this.btn_adicionaImagem_MouseEnter);
+            this.btn_adicionaImagem.MouseLeave += new System.EventHandler(this.btn_adicionaImagem_MouseLeave);
             // 
             // pictureBoxImageProduto
             // 
             this.pictureBoxImageProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxImageProduto.Location = new System.Drawing.Point(9, 67);
+            this.pictureBoxImageProduto.Location = new System.Drawing.Point(70, 20);
             this.pictureBoxImageProduto.Name = "pictureBoxImageProduto";
             this.pictureBoxImageProduto.Size = new System.Drawing.Size(215, 153);
             this.pictureBoxImageProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -392,8 +403,8 @@
             this.kryptonDataGridViewCadastroProdutos.AllowUserToDeleteRows = false;
             this.kryptonDataGridViewCadastroProdutos.AllowUserToResizeColumns = false;
             this.kryptonDataGridViewCadastroProdutos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridViewCadastroProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridViewCadastroProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.kryptonDataGridViewCadastroProdutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridViewCadastroProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridViewCadastroProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -429,7 +440,7 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImageProduto)).EndInit();
             this.panel_gerencia.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nud_minQtd)).EndInit();
@@ -462,8 +473,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBoxImageProduto;
         private System.Windows.Forms.Button btn_pegaUrl;
-        private System.Windows.Forms.TextBox tb_urlImage;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel_gerencia;
         private System.Windows.Forms.Button btn_insereProduto;
         private System.Windows.Forms.Panel panel2;
@@ -476,5 +485,7 @@
         private System.Windows.Forms.Button btn_limpaCampos;
         private System.Windows.Forms.ComboBox cb_Fornecedor;
         private System.Windows.Forms.OpenFileDialog openFileDialogIsertImageProduct;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btn_adicionaImagem;
     }
 }
