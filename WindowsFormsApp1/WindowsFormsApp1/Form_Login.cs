@@ -18,36 +18,29 @@ namespace WindowsFormsApp1
 
         public Color corControl = Color.FromArgb(240, 240, 240);
         public Color corControlLight = Color.FromArgb(227, 227, 227);
+
+        public Color corInterface = Color.FromArgb(1, 46, 63);
         #endregion
-
-        DataTable dataTable = null;
-
-        Form_Main form_main;
-        public Form_Login(Form_Main form)
-        {
-            InitializeComponent();
-            form_main = form;
-        }
 
         #region Buttons color Hover
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            btn_entrar.BackColor = corVerdePadrao;
+            btn_entrar.BackColor = corAzulPadrao;
         }
 
         private void btn_entrar_MouseLeave(object sender, EventArgs e)
         {
-            btn_entrar.BackColor = corAzulPadrao;
+            btn_entrar.BackColor = corVerdePadrao;
         }
 
         private void btn_cancel_MouseEnter(object sender, EventArgs e)
         {
-            btn_cancel.BackColor = corVerdePadrao;
+            btn_cancel.BackColor = corAzulPadrao;
         }
 
         private void btn_cancel_MouseLeave(object sender, EventArgs e)
         {
-            btn_cancel.BackColor = corAzulPadrao;
+            btn_cancel.BackColor = corVerdePadrao;
         }
 
         private void btn_info_MouseEnter(object sender, EventArgs e)
@@ -61,6 +54,18 @@ namespace WindowsFormsApp1
         }
         #endregion
 
+        DataTable dataTable = null;
+        Form_Main form_main;
+        public Form_Login(Form_Main form)
+        {
+            InitializeComponent();
+            form_main = form;
+        }
+        private void Form_Login_Load(object sender, EventArgs e)
+        {
+            //this.BackColor = corAzulPadrao;
+            this.ForeColor = corControlLight;
+        }
         private void btn_entrar_Click(object sender, EventArgs e)
         {
             string userName = ktb_Login.Text;
@@ -95,11 +100,9 @@ namespace WindowsFormsApp1
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+            form_main.Close();
         }
 
-        private void Form_Login_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
