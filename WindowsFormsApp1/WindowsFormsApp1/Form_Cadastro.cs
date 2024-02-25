@@ -73,9 +73,9 @@ namespace WindowsFormsApp1
         {
             string vQueryFornecedor = @"SELECT id_fornecedor, nome FROM fornecedor_produto ORDER BY id_fornecedor";
             cb_Fornecedor.Items.Clear();
-            cb_Fornecedor.Sorted = true;
-            cb_Fornecedor.MaxDropDownItems = 8;
-            cb_Fornecedor.IntegralHeight = false;
+            //cb_Fornecedor.Sorted = true;
+            //cb_Fornecedor.MaxDropDownItems = 8;
+            //cb_Fornecedor.IntegralHeight = false;
             cb_Fornecedor.DataSource = Banco.Consulta(vQueryFornecedor);
             cb_Fornecedor.DisplayMember = "nome";
             cb_Fornecedor.ValueMember = "id_fornecedor";
@@ -84,9 +84,9 @@ namespace WindowsFormsApp1
         {
             string vQueryCategoria = @"SELECT id_categoria, nome_categoria FROM categoria_produto ORDER BY id_categoria";
             cb_categoria.Items.Clear();
-            cb_categoria.Sorted = true;
-            cb_categoria.MaxDropDownItems = 8;
-            cb_categoria.IntegralHeight = false;
+            //cb_categoria.Sorted = true;
+            //cb_categoria.MaxDropDownItems = 8;
+            //cb_categoria.IntegralHeight = false;
             cb_categoria.DataSource = Banco.Consulta(vQueryCategoria);
             cb_categoria.DisplayMember = "nome_categoria";
             cb_categoria.ValueMember = "id_categoria";
@@ -95,9 +95,9 @@ namespace WindowsFormsApp1
         {
             string vQueryTipo = @"SELECT id_tipo, nome_tipo FROM tipo_produto ORDER BY id_tipo";
             cb_tipo.Items.Clear();
-            cb_tipo.Sorted = true;
-            cb_tipo.MaxDropDownItems = 8;
-            cb_tipo.IntegralHeight = false;
+            //cb_tipo.Sorted = true;
+            //cb_tipo.MaxDropDownItems = 8;
+            //cb_tipo.IntegralHeight = false;
             cb_tipo.DataSource = Banco.Consulta(vQueryTipo);
             cb_tipo.DisplayMember = "nome_tipo";
             cb_tipo.ValueMember = "id_tipo";
