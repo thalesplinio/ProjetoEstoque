@@ -71,7 +71,7 @@ namespace WindowsFormsApp1
         }
         private void DataFornecedor()
         {
-            string vQueryFornecedor = @"SELECT id_fornecedor, nome FROM fornecedor_produto";
+            string vQueryFornecedor = @"SELECT id_fornecedor, nome FROM fornecedor_produto ORDER BY id_fornecedor";
             cb_Fornecedor.Items.Clear();
             cb_Fornecedor.Sorted = true;
             cb_Fornecedor.MaxDropDownItems = 8;
@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
         }
         private void DataCategoria()
         {
-            string vQueryCategoria = @"SELECT id_categoria, nome_categoria FROM categoria_produto";
+            string vQueryCategoria = @"SELECT id_categoria, nome_categoria FROM categoria_produto ORDER BY id_categoria";
             cb_categoria.Items.Clear();
             cb_categoria.Sorted = true;
             cb_categoria.MaxDropDownItems = 8;
@@ -93,7 +93,7 @@ namespace WindowsFormsApp1
         }
         private void DataTipo()
         {
-            string vQueryTipo = @"SELECT id_tipo, nome_tipo FROM tipo_produto";
+            string vQueryTipo = @"SELECT id_tipo, nome_tipo FROM tipo_produto ORDER BY id_tipo";
             cb_tipo.Items.Clear();
             cb_tipo.Sorted = true;
             cb_tipo.MaxDropDownItems = 8;
@@ -105,12 +105,15 @@ namespace WindowsFormsApp1
 
         private void btn_pegaUrl_Click(object sender, EventArgs e)
         {
+            /// ----------------------------------------------------------------------------------------
+            /// Aqui pegamos o arquivo e setamos ele no nosso picture box, mas usamos o caminho original
+            /// no botao de salvar é aonde fazemos realmente a cópia do arquivo e mandamos o url desta
+            /// imagem copiada para o banco de dados
             caminhoOrigem = "";
             imagem = "";
             pastaDestino = Globais.caminhoImageProduct;
             destinoCompleto = "";
 
-            //openFileDialogIsertImageProduct.Filter = "Imagens (*.bmp, *.jpg, *.png)|*.bmp;*.jpg;*.png";
             openFileDialogIsertImageProduct.Filter = "Imagens (*.jpeg, *.jpg, *.png)|*.jpeg;*.jpg;*.png";
 
             if (openFileDialogIsertImageProduct.ShowDialog() == DialogResult.OK)
@@ -121,29 +124,20 @@ namespace WindowsFormsApp1
             }
             if (File.Exists(destinoCompleto))
             {
-                if (MessageBox.Show("Arquivo já existe no local de destino, deseja substituir?", "Mensagem de arquivo", MessageBoxButtons.YesNo) == DialogResult.No)
+                if (MessageBox.Show("Arquivo já existe no local de destino, deseja substituir?", "Substituir arquivo?", MessageBoxButtons.YesNo) == DialogResult.No)
                 {
                     return;
                 }
             }
-            // se sim copia a imagem
-            System.IO.File.Copy(caminhoOrigem, destinoCompleto, true);
-            // verificando se o arquivo foi copiado
-            if (File.Exists(destinoCompleto))
-            {
-                pictureBoxImageProduto.ImageLocation = destinoCompleto;
-                tb_urlImage.Text = imagem;
-            }
-            else
-            {
-                MessageBox.Show("Arquivo não foi copiado", "Mensagem de arquivo", MessageBoxButtons.OK);
-            }
+            pictureBoxImageProduto.ImageLocation = caminhoOrigem;
         }
 
         private void btn_insereProduto_Click(object sender, EventArgs e)
         {
-            #region tratando se imagem existe
-            //Verificando campo imagem
+            #region Tratando nossa imagem do produto
+            /// ----------------------------------------------------------------------------------------
+            /// Aqui copiamos nossa imagem e mandamos para nossa pasta no local do sistema e colcoamos 
+            /// a url dela no banco de dados
             if (destinoCompleto == "")
             {
                 if (MessageBox.Show("Nenhuma imagem foi selecionada para o produto, deseja continuar?", "Mensagem", MessageBoxButtons.YesNo) == DialogResult.No)
@@ -179,7 +173,7 @@ namespace WindowsFormsApp1
             int.Parse(produto.id_categoria = cb_categoria.SelectedValue.ToString());
             int.Parse(produto.id_tipo_produto = cb_tipo.SelectedValue.ToString());
             produto.descricao = rtb_desc.Text;
-            produto.image = tb_urlImage.Text;
+            produto.image = destinoCompleto;
 
             Banco.AdicionarProduto(produto);
             #endregion
