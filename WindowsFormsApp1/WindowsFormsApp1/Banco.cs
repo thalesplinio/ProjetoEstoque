@@ -807,29 +807,26 @@ namespace WindowsFormsApp1
                 var conexaoPropria = ConexaoBanco();
                 var command = conexaoPropria.CreateCommand();
                 command.CommandText = @"
-                    SELECT 
-                        id_produto as 'ID Produto',
-                        nome as 'Nome',
-                        marca as 'Marca',
-                        id_categoria as 'Categoria',
-                        descricao as 'Descrição',
-                        quantidade as 'Quantidade',
-                        quantidade_minima as 'Qtd. mínima',
-                        id_tipo_produto as 'Tipo de produto',
-                        data_criacao as 'Data de criação',
-                        data_atualizacao as 'Data de Atualização'
+                    SELECT
+                        prod.id_produto as 'ID Produto',
+                        fprod.nome as 'Fornecedor',
+                        prod.nome as 'Nome Produto',
+                        prod.marca as 'Marca Produto',
+                        prod.quantidade as 'Quantidade',
+                        prod.quantidade_minima as 'Qtd. Mínima',
+                        cProd.nome_categoria as 'Categoria',
+                        tProd.nome_tipo as 'Tipo de Produto',
+                        prod.descricao as 'Descrição',
+                        prod.data_criacao as 'Data Cadastro',
+                        prod.data_atualizacao as 'Data Atualização'
                     FROM
-                        produtos";
-
-                //nome as 'Nome',
-                //marca as 'Marca',
-                //id_categoria as 'Categoria',
-                //descricao as 'Descrição',
-                //quantidade as 'Quantidade,
-                //quantidade_minima as 'Qtd minima',
-                //id_tipo_produto as 'Tipo do produto',
-                //data_criacao as 'Data de cadastro',
-                //data_atualizacao as 'Data de atualização'
+                        produtos as prod
+                    INNER JOIN
+                        fornecedor_produto as fprod ON fprod.id_fornecedor = prod.id_fornecedor
+                    INNER JOIN
+                        categoria_produto as cProd ON cProd.id_categoria = prod.id_categoria
+                    INNER JOIN
+                        tipo_produto as tProd on tProd.id_tipo = prod.id_tipo_produto";
 
                 dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
                 dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta

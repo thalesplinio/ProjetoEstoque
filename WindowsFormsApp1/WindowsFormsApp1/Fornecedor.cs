@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    internal class Fornecedor
+    class Fornecedor
     {
         public Int32 id_fornecedor { get; set; }
         public string nome { get; set; }

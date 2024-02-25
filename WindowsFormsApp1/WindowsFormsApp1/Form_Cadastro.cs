@@ -65,41 +65,42 @@ namespace WindowsFormsApp1
             DataFornecedor();
             DataCategoria();
             DataTipo();
+
             kryptonDataGridViewCadastroProdutos.DataSource = Banco.ObterProdutos();
             kryptonDataGridViewCadastroProdutos.Sort(kryptonDataGridViewCadastroProdutos.Columns["ID Produto"], ListSortDirection.Descending);
         }
         private void DataFornecedor()
         {
-            string vQueryFornecedor = @"SELECT nome FROM fornecedor_produto";
+            string vQueryFornecedor = @"SELECT id_fornecedor, nome FROM fornecedor_produto";
             cb_Fornecedor.Items.Clear();
             cb_Fornecedor.Sorted = true;
             cb_Fornecedor.MaxDropDownItems = 8;
             cb_Fornecedor.IntegralHeight = false;
             cb_Fornecedor.DataSource = Banco.Consulta(vQueryFornecedor);
             cb_Fornecedor.DisplayMember = "nome";
-            cb_Fornecedor.ValueMember = "nome";
+            cb_Fornecedor.ValueMember = "id_fornecedor";
         }
         private void DataCategoria()
         {
-            string vQueryCategoria = @"SELECT nome_categoria FROM categoria_produto";
+            string vQueryCategoria = @"SELECT id_categoria, nome_categoria FROM categoria_produto";
             cb_categoria.Items.Clear();
             cb_categoria.Sorted = true;
             cb_categoria.MaxDropDownItems = 8;
             cb_categoria.IntegralHeight = false;
             cb_categoria.DataSource = Banco.Consulta(vQueryCategoria);
             cb_categoria.DisplayMember = "nome_categoria";
-            cb_categoria.ValueMember = "nome_categoria";
+            cb_categoria.ValueMember = "id_categoria";
         }
         private void DataTipo()
         {
-            string vQueryTipo = @"SELECT nome_tipo FROM tipo_produto";
+            string vQueryTipo = @"SELECT id_tipo, nome_tipo FROM tipo_produto";
             cb_tipo.Items.Clear();
             cb_tipo.Sorted = true;
             cb_tipo.MaxDropDownItems = 8;
             cb_tipo.IntegralHeight = false;
             cb_tipo.DataSource = Banco.Consulta(vQueryTipo);
             cb_tipo.DisplayMember = "nome_tipo";
-            cb_tipo.ValueMember = "nome_tipo";
+            cb_tipo.ValueMember = "id_tipo";
         }
 
         private void btn_pegaUrl_Click(object sender, EventArgs e)
@@ -167,19 +168,23 @@ namespace WindowsFormsApp1
             }
             #endregion
 
+            #region Inserindo produto
             Produtos produto = new Produtos();
-            produto.id_fornecedor = cb_Fornecedor.Text;
+            int.Parse(produto.id_fornecedor = cb_Fornecedor.SelectedValue.ToString());
             produto.id_usuario = form_main.lb_UserLogado.Text;
             produto.nome = tb_nomeProduto.Text;
             produto.marca = tb_marca.Text;
             produto.quantidade = nud_qtd.Text;
             produto.quantidade_minima = nud_minQtd.Text;
-            produto.id_categoria = cb_categoria.Text;
-            produto.id_tipo_produto = cb_tipo.Text;
+            int.Parse(produto.id_categoria = cb_categoria.SelectedValue.ToString());
+            int.Parse(produto.id_tipo_produto = cb_tipo.SelectedValue.ToString());
             produto.descricao = rtb_desc.Text;
             produto.image = tb_urlImage.Text;
 
             Banco.AdicionarProduto(produto);
+            #endregion
+            kryptonDataGridViewCadastroProdutos.DataSource = Banco.ObterProdutos();
+            kryptonDataGridViewCadastroProdutos.Sort(kryptonDataGridViewCadastroProdutos.Columns["ID Produto"], ListSortDirection.Descending);
         }
     }
 }
