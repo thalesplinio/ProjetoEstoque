@@ -206,6 +206,7 @@
             this.btn_listar.TabIndex = 3;
             this.btn_listar.Text = "     Listar produtos";
             this.btn_listar.UseVisualStyleBackColor = false;
+            this.btn_listar.Click += new System.EventHandler(this.btn_listar_Click);
             this.btn_listar.MouseEnter += new System.EventHandler(this.btn_listar_MouseEnter);
             this.btn_listar.MouseLeave += new System.EventHandler(this.btn_listar_MouseLeave);
             // 

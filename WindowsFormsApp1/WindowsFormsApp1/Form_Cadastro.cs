@@ -14,19 +14,6 @@ namespace WindowsFormsApp1
 {
     public partial class Form_Cadastro : Form
     {
-        // Globais
-        string caminhoOrigem = "";
-        string imagem = "";
-        string pastaDestino = Globais.caminhoImageProduct;
-        string destinoCompleto = "";
-
-        Form_Main form_main;
-        public Form_Cadastro(Form_Main f)
-        {
-            InitializeComponent();
-            form_main = f;
-        }
-
         #region Set Colors Butons
         private struct RGBColorsButtons
         {
@@ -68,6 +55,18 @@ namespace WindowsFormsApp1
         }
         #endregion
 
+        // Globais
+        string caminhoOrigem = "";
+        string imagem = "";
+        string pastaDestino = Globais.caminhoImageProduct;
+        string destinoCompleto = "";
+
+        Form_Main form_main;
+        public Form_Cadastro(Form_Main f)
+        {
+            InitializeComponent();
+            form_main = f;
+        }
         private void LimparCampos()
         {
             tb_nomeProduto.Clear();

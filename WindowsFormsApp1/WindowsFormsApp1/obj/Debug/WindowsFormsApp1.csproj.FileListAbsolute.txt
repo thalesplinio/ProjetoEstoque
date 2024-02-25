@@ -30,3 +30,4 @@ E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsForms
 E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Tipo.resources
 E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Fornecedores.resources
 E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_AddFornecedor.resources
+E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Listar_Produtos.resources

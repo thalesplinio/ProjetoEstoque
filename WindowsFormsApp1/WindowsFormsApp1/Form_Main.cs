@@ -190,5 +190,11 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btn_listar_Click(object sender, EventArgs e)
+        {
+            Listar_Produtos form_listarProdutos = new Listar_Produtos();
+            AbreFormularioBaseNivel(1, form_listarProdutos);
+        }
     }
 }

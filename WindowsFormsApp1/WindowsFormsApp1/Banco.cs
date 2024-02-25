@@ -840,5 +840,76 @@ namespace WindowsFormsApp1
         }
 
         #endregion
+
+        #region LISTAR PRODUTOS
+        public static DataTable ObterProdutosParaListar()
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT
+                        prod.id_produto as 'ID Produto',
+                        fprod.nome as 'Fornecedor',
+                        prod.nome as 'Nome Produto',
+                        prod.marca as 'Marca Produto',
+                        prod.quantidade as 'Quantidade',
+                        prod.quantidade_minima as 'Qtd. Mínima',
+                        cProd.nome_categoria as 'Categoria',
+                        tProd.nome_tipo as 'Tipo de Produto',
+                        prod.descricao as 'Descrição',
+                        prod.data_criacao as 'Data Cadastro',
+                        prod.data_atualizacao as 'Data Atualização'
+                    FROM
+                        produtos as prod
+                    INNER JOIN
+                        fornecedor_produto as fprod ON fprod.id_fornecedor = prod.id_fornecedor
+                    INNER JOIN
+                        categoria_produto as cProd ON cProd.id_categoria = prod.id_categoria
+                    INNER JOIN
+                        tipo_produto as tProd on tProd.id_tipo = prod.id_tipo_produto";
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static DataTable ObterDadosParaVisualizarProdutos(string id)
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT 
+                        *
+                    FROM
+                        produtos
+                    WHERE
+                        id_produto=" + id;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
     }
 }
