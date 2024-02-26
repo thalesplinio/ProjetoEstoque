@@ -12,12 +12,10 @@ namespace WindowsFormsApp1
 {
     public partial class Form_Listar_Produtos : Form
     {
-        DataTable dataTable = new DataTable();
         public Form_Listar_Produtos()
         {
             InitializeComponent();
         }
-
         private void Listar_Produtos_Load(object sender, EventArgs e)
         {
             kryptonDataGridViewListaProdutos.DataSource = Banco.ObterProdutosParaListar();
@@ -50,7 +48,6 @@ namespace WindowsFormsApp1
                 pictureBoxMostraItem.ImageLocation = dataTable.Rows[0].Field<string>("image").ToString();
             }
         }
-        
         private void ContaProdutos()
         {
             var dataTable = Banco.ObterQuantidade();
