@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Listar_Produtos : Form
+    public partial class Form_Listar_Produtos : Form
     {
-        public Listar_Produtos()
+        DataTable dataTable = new DataTable();
+        public Form_Listar_Produtos()
         {
             InitializeComponent();
         }
@@ -32,6 +33,7 @@ namespace WindowsFormsApp1
             kryptonDataGridViewListaProdutos.Columns[8].Width = 110;
             kryptonDataGridViewListaProdutos.Columns[9].Width = 100;
             kryptonDataGridViewListaProdutos.Columns[10].Width = 110;
+            ContaProdutos();
         }
         private void kryptonDataGridViewListaProdutos_SelectionChanged_1(object sender, EventArgs e)
         {
@@ -44,9 +46,17 @@ namespace WindowsFormsApp1
                 string idProduto = dataGridView.SelectedRows[0].Cells[0].Value.ToString(); // selecionando o id do usuario
                 dataTable = Banco.ObterDadosParaVisualizarProdutos(idProduto);
 
-                lb_idProduto.Text = dataTable.Rows[0].Field<Int64>("id_produto").ToString();
+                tb_idProduto.Text = dataTable.Rows[0].Field<Int64>("id_produto").ToString();
                 pictureBoxMostraItem.ImageLocation = dataTable.Rows[0].Field<string>("image").ToString();
             }
         }
+        
+        private void ContaProdutos()
+        {
+            var dataTable = Banco.ObterQuantidade();
+            int quantidadeTotal = Convert.ToInt32(dataTable.Rows[0][0]);
+            tb_itemEstoque.Text = $"{quantidadeTotal}";
+        }
+
     }
 }

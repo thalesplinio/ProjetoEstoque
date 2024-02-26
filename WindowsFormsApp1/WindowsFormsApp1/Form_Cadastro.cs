@@ -55,11 +55,12 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        // Globais
+        #region Globais
         string caminhoOrigem = "";
         string imagem = "";
         string pastaDestino = Globais.caminhoImageProduct;
         string destinoCompleto = "";
+        #endregion
 
         Form_Main form_main;
         public Form_Cadastro(Form_Main f)
@@ -204,6 +205,11 @@ namespace WindowsFormsApp1
             #endregion
             kryptonDataGridViewCadastroProdutos.DataSource = Banco.ObterProdutos();
             kryptonDataGridViewCadastroProdutos.Sort(kryptonDataGridViewCadastroProdutos.Columns["ID Produto"], ListSortDirection.Descending);
+        }
+
+        private void btn_limpaCampos_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
         }
     }
 }

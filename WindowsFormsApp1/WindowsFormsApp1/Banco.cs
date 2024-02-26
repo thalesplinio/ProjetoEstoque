@@ -910,6 +910,27 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }
+        public static DataTable ObterQuantidade()
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"SELECT SUM(quantidade) FROM produtos";
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         #endregion
     }
 }

@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cb_Fornecedor = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_limpaCampos = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_adicionaImagem = new System.Windows.Forms.Button();
+            this.pictureBoxImageProduto = new System.Windows.Forms.PictureBox();
             this.panel_gerencia = new System.Windows.Forms.Panel();
+            this.btn_insereProduto = new System.Windows.Forms.Button();
             this.cb_categoria = new System.Windows.Forms.ComboBox();
             this.rtb_desc = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,26 +56,22 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.kryptonDataGridViewCadastroProdutos = new Krypton.Toolkit.KryptonDataGridView();
             this.openFileDialogIsertImageProduct = new System.Windows.Forms.OpenFileDialog();
-            this.btn_limpaCampos = new System.Windows.Forms.Button();
-            this.btn_adicionaImagem = new System.Windows.Forms.Button();
-            this.pictureBoxImageProduto = new System.Windows.Forms.PictureBox();
-            this.btn_insereProduto = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImageProduto)).BeginInit();
             this.panel_gerencia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_minQtd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_qtd)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewCadastroProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImageProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -119,6 +119,26 @@
             this.panel1.Size = new System.Drawing.Size(135, 40);
             this.panel1.TabIndex = 21;
             // 
+            // btn_limpaCampos
+            // 
+            this.btn_limpaCampos.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_limpaCampos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_limpaCampos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_limpaCampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_limpaCampos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_limpaCampos.Image = global::WindowsFormsApp1.Properties.Resources.add;
+            this.btn_limpaCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_limpaCampos.Location = new System.Drawing.Point(-5, -5);
+            this.btn_limpaCampos.Name = "btn_limpaCampos";
+            this.btn_limpaCampos.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_limpaCampos.Size = new System.Drawing.Size(144, 50);
+            this.btn_limpaCampos.TabIndex = 9;
+            this.btn_limpaCampos.Text = "        Limpar campos";
+            this.btn_limpaCampos.UseVisualStyleBackColor = false;
+            this.btn_limpaCampos.Click += new System.EventHandler(this.btn_limpaCampos_Click);
+            this.btn_limpaCampos.MouseEnter += new System.EventHandler(this.btn_limpaCampos_MouseEnter);
+            this.btn_limpaCampos.MouseLeave += new System.EventHandler(this.btn_limpaCampos_MouseLeave);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.panel3);
@@ -138,6 +158,36 @@
             this.panel3.Size = new System.Drawing.Size(151, 40);
             this.panel3.TabIndex = 21;
             // 
+            // btn_adicionaImagem
+            // 
+            this.btn_adicionaImagem.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_adicionaImagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_adicionaImagem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_adicionaImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_adicionaImagem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_adicionaImagem.Image = global::WindowsFormsApp1.Properties.Resources.image;
+            this.btn_adicionaImagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_adicionaImagem.Location = new System.Drawing.Point(-5, -5);
+            this.btn_adicionaImagem.Name = "btn_adicionaImagem";
+            this.btn_adicionaImagem.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_adicionaImagem.Size = new System.Drawing.Size(159, 50);
+            this.btn_adicionaImagem.TabIndex = 9;
+            this.btn_adicionaImagem.Text = "        Selecionar Imagem";
+            this.btn_adicionaImagem.UseVisualStyleBackColor = false;
+            this.btn_adicionaImagem.Click += new System.EventHandler(this.btn_adicionaImagem_Click);
+            this.btn_adicionaImagem.MouseEnter += new System.EventHandler(this.btn_adicionaImagem_MouseEnter);
+            this.btn_adicionaImagem.MouseLeave += new System.EventHandler(this.btn_adicionaImagem_MouseLeave);
+            // 
+            // pictureBoxImageProduto
+            // 
+            this.pictureBoxImageProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxImageProduto.Location = new System.Drawing.Point(70, 20);
+            this.pictureBoxImageProduto.Name = "pictureBoxImageProduto";
+            this.pictureBoxImageProduto.Size = new System.Drawing.Size(215, 153);
+            this.pictureBoxImageProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxImageProduto.TabIndex = 19;
+            this.pictureBoxImageProduto.TabStop = false;
+            // 
             // panel_gerencia
             // 
             this.panel_gerencia.Controls.Add(this.btn_insereProduto);
@@ -145,6 +195,26 @@
             this.panel_gerencia.Name = "panel_gerencia";
             this.panel_gerencia.Size = new System.Drawing.Size(151, 40);
             this.panel_gerencia.TabIndex = 20;
+            // 
+            // btn_insereProduto
+            // 
+            this.btn_insereProduto.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_insereProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_insereProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_insereProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_insereProduto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_insereProduto.Image = global::WindowsFormsApp1.Properties.Resources.open_box;
+            this.btn_insereProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_insereProduto.Location = new System.Drawing.Point(-5, -5);
+            this.btn_insereProduto.Name = "btn_insereProduto";
+            this.btn_insereProduto.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_insereProduto.Size = new System.Drawing.Size(159, 50);
+            this.btn_insereProduto.TabIndex = 9;
+            this.btn_insereProduto.Text = "        Inserir Produto";
+            this.btn_insereProduto.UseVisualStyleBackColor = false;
+            this.btn_insereProduto.Click += new System.EventHandler(this.btn_insereProduto_Click);
+            this.btn_insereProduto.MouseEnter += new System.EventHandler(this.btn_insereProduto_MouseEnter);
+            this.btn_insereProduto.MouseLeave += new System.EventHandler(this.btn_insereProduto_MouseLeave);
             // 
             // cb_categoria
             // 
@@ -297,6 +367,15 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Cadastro de produtos";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 40);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.kryptonDataGridViewCadastroProdutos);
@@ -313,8 +392,8 @@
             this.kryptonDataGridViewCadastroProdutos.AllowUserToDeleteRows = false;
             this.kryptonDataGridViewCadastroProdutos.AllowUserToResizeColumns = false;
             this.kryptonDataGridViewCadastroProdutos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridViewCadastroProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridViewCadastroProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.kryptonDataGridViewCadastroProdutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridViewCadastroProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridViewCadastroProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -330,84 +409,6 @@
             // openFileDialogIsertImageProduct
             // 
             this.openFileDialogIsertImageProduct.FileName = "openFileDialog1";
-            // 
-            // btn_limpaCampos
-            // 
-            this.btn_limpaCampos.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_limpaCampos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_limpaCampos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_limpaCampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_limpaCampos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_limpaCampos.Image = global::WindowsFormsApp1.Properties.Resources.add;
-            this.btn_limpaCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_limpaCampos.Location = new System.Drawing.Point(-5, -5);
-            this.btn_limpaCampos.Name = "btn_limpaCampos";
-            this.btn_limpaCampos.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_limpaCampos.Size = new System.Drawing.Size(144, 50);
-            this.btn_limpaCampos.TabIndex = 9;
-            this.btn_limpaCampos.Text = "        Limpar campos";
-            this.btn_limpaCampos.UseVisualStyleBackColor = false;
-            this.btn_limpaCampos.MouseEnter += new System.EventHandler(this.btn_limpaCampos_MouseEnter);
-            this.btn_limpaCampos.MouseLeave += new System.EventHandler(this.btn_limpaCampos_MouseLeave);
-            // 
-            // btn_adicionaImagem
-            // 
-            this.btn_adicionaImagem.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_adicionaImagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_adicionaImagem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_adicionaImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_adicionaImagem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_adicionaImagem.Image = global::WindowsFormsApp1.Properties.Resources.image;
-            this.btn_adicionaImagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_adicionaImagem.Location = new System.Drawing.Point(-5, -5);
-            this.btn_adicionaImagem.Name = "btn_adicionaImagem";
-            this.btn_adicionaImagem.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_adicionaImagem.Size = new System.Drawing.Size(159, 50);
-            this.btn_adicionaImagem.TabIndex = 9;
-            this.btn_adicionaImagem.Text = "        Selecionar Imagem";
-            this.btn_adicionaImagem.UseVisualStyleBackColor = false;
-            this.btn_adicionaImagem.Click += new System.EventHandler(this.btn_adicionaImagem_Click);
-            this.btn_adicionaImagem.MouseEnter += new System.EventHandler(this.btn_adicionaImagem_MouseEnter);
-            this.btn_adicionaImagem.MouseLeave += new System.EventHandler(this.btn_adicionaImagem_MouseLeave);
-            // 
-            // pictureBoxImageProduto
-            // 
-            this.pictureBoxImageProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxImageProduto.Location = new System.Drawing.Point(70, 20);
-            this.pictureBoxImageProduto.Name = "pictureBoxImageProduto";
-            this.pictureBoxImageProduto.Size = new System.Drawing.Size(215, 153);
-            this.pictureBoxImageProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxImageProduto.TabIndex = 19;
-            this.pictureBoxImageProduto.TabStop = false;
-            // 
-            // btn_insereProduto
-            // 
-            this.btn_insereProduto.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_insereProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_insereProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_insereProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_insereProduto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_insereProduto.Image = global::WindowsFormsApp1.Properties.Resources.open_box;
-            this.btn_insereProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_insereProduto.Location = new System.Drawing.Point(-5, -5);
-            this.btn_insereProduto.Name = "btn_insereProduto";
-            this.btn_insereProduto.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_insereProduto.Size = new System.Drawing.Size(159, 50);
-            this.btn_insereProduto.TabIndex = 9;
-            this.btn_insereProduto.Text = "        Inserir Produto";
-            this.btn_insereProduto.UseVisualStyleBackColor = false;
-            this.btn_insereProduto.Click += new System.EventHandler(this.btn_insereProduto_Click);
-            this.btn_insereProduto.MouseEnter += new System.EventHandler(this.btn_insereProduto_MouseEnter);
-            this.btn_insereProduto.MouseLeave += new System.EventHandler(this.btn_insereProduto_MouseLeave);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 40);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // Form_Cadastro
             // 
@@ -429,15 +430,15 @@
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImageProduto)).EndInit();
             this.panel_gerencia.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nud_minQtd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_qtd)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewCadastroProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImageProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

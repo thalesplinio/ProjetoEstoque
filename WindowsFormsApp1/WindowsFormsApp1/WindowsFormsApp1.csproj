@@ -146,11 +146,11 @@
     </Compile>
     <Compile Include="Fornecedor.cs" />
     <Compile Include="Globais.cs" />
-    <Compile Include="Listar_Produtos.cs">
+    <Compile Include="Form_Listar_Produtos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Listar_Produtos.Designer.cs">
-      <DependentUpon>Listar_Produtos.cs</DependentUpon>
+    <Compile Include="Form_Listar_Produtos.Designer.cs">
+      <DependentUpon>Form_Listar_Produtos.cs</DependentUpon>
     </Compile>
     <Compile Include="Produtos.cs" />
     <Compile Include="Program.cs" />
@@ -194,8 +194,8 @@
     <EmbeddedResource Include="Form_Todos_Usuarios.resx">
       <DependentUpon>Form_Todos_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Listar_Produtos.resx">
-      <DependentUpon>Listar_Produtos.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Listar_Produtos.resx">
+      <DependentUpon>Form_Listar_Produtos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
