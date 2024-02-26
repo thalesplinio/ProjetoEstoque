@@ -183,7 +183,7 @@
             // 
             // btn_info
             // 
-            this.btn_info.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(31)))), ((int)(((byte)(49)))));
             this.btn_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_info.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_info.Image = global::WindowsFormsApp1.Properties.Resources.info;

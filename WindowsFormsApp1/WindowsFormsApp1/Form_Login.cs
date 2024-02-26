@@ -16,6 +16,9 @@ namespace WindowsFormsApp1
         public Color corAzulPadrao = Color.FromArgb(42, 49, 67); // #2A3143
         public Color corVerdePadrao = Color.FromArgb(45, 153, 97); // #136A3D
 
+        public Color corAzulPadraoForte = Color.FromArgb(16, 31, 49); // 
+        public Color corAzulPadraoClaro = Color.FromArgb(19, 37, 59); // 
+
         public Color corControl = Color.FromArgb(240, 240, 240);
         public Color corControlLight = Color.FromArgb(227, 227, 227);
 
@@ -45,12 +48,12 @@ namespace WindowsFormsApp1
 
         private void btn_info_MouseEnter(object sender, EventArgs e)
         {
-            btn_info.BackColor = corControlLight;
+            btn_info.BackColor = corAzulPadraoClaro;
         }
 
         private void btn_info_MouseLeave(object sender, EventArgs e)
         {
-            btn_info.BackColor = corControl;
+            btn_info.BackColor = corAzulPadraoForte;
         }
         #endregion
 

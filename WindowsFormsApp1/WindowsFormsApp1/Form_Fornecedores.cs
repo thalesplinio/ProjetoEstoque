@@ -130,7 +130,6 @@ namespace WindowsFormsApp1
                 tb_emailFornecedor.Text = dataTable.Rows[0].Field<string>("email").ToString();
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show(

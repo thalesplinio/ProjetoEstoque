@@ -31,30 +31,30 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.kryptonDataGridViewListaProdutos = new Krypton.Toolkit.KryptonDataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lb_idProduto = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lb_mostraQtd = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
-            this.pictureBoxMostraItem = new System.Windows.Forms.PictureBox();
             this.tb_buscaPorNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cb_BuscaCategoria = new System.Windows.Forms.ComboBox();
             this.cb_BuscaToipo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lb_idProduto = new System.Windows.Forms.Label();
+            this.pictureBoxMostraItem = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewListaProdutos)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -78,15 +78,6 @@
             this.label10.Size = new System.Drawing.Size(175, 25);
             this.label10.TabIndex = 3;
             this.label10.Text = "Todos os produtos";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 40);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
@@ -152,6 +143,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Efetuar buscas";
             // 
+            // lb_idProduto
+            // 
+            this.lb_idProduto.AutoSize = true;
+            this.lb_idProduto.Location = new System.Drawing.Point(997, 15);
+            this.lb_idProduto.Name = "lb_idProduto";
+            this.lb_idProduto.Size = new System.Drawing.Size(16, 15);
+            this.lb_idProduto.TabIndex = 23;
+            this.lb_idProduto.Text = "...";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -191,16 +191,6 @@
             this.kryptonTextBox1.StateCommon.Border.Rounding = 15F;
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.TabIndex = 8;
-            // 
-            // pictureBoxMostraItem
-            // 
-            this.pictureBoxMostraItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxMostraItem.Location = new System.Drawing.Point(926, 33);
-            this.pictureBoxMostraItem.Name = "pictureBoxMostraItem";
-            this.pictureBoxMostraItem.Size = new System.Drawing.Size(215, 153);
-            this.pictureBoxMostraItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxMostraItem.TabIndex = 19;
-            this.pictureBoxMostraItem.TabStop = false;
             // 
             // tb_buscaPorNome
             // 
@@ -252,14 +242,24 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Selecionar por tipo:";
             // 
-            // lb_idProduto
+            // pictureBoxMostraItem
             // 
-            this.lb_idProduto.AutoSize = true;
-            this.lb_idProduto.Location = new System.Drawing.Point(997, 15);
-            this.lb_idProduto.Name = "lb_idProduto";
-            this.lb_idProduto.Size = new System.Drawing.Size(16, 15);
-            this.lb_idProduto.TabIndex = 23;
-            this.lb_idProduto.Text = "...";
+            this.pictureBoxMostraItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxMostraItem.Location = new System.Drawing.Point(926, 33);
+            this.pictureBoxMostraItem.Name = "pictureBoxMostraItem";
+            this.pictureBoxMostraItem.Size = new System.Drawing.Size(215, 153);
+            this.pictureBoxMostraItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMostraItem.TabIndex = 19;
+            this.pictureBoxMostraItem.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 40);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Listar_Produtos
             // 
@@ -277,13 +277,13 @@
             this.Load += new System.EventHandler(this.Listar_Produtos_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewListaProdutos)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
