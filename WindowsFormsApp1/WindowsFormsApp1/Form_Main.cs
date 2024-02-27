@@ -196,5 +196,17 @@ namespace WindowsFormsApp1
             Form_Listar_Produtos form_listarProdutos = new Form_Listar_Produtos();
             AbreFormularioBaseNivel(1, form_listarProdutos);
         }
+
+        private void inserirMaterialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Cadastro form_Cadastro = new Form_Cadastro(this);
+            AbreFormularioBaseNivel(1, form_Cadastro);
+        }
+
+        private void listarMateriaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Listar_Produtos form_listarProdutos = new Form_Listar_Produtos();
+            AbreFormularioBaseNivel(1, form_listarProdutos);
+        }
     }
 }

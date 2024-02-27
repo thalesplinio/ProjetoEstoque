@@ -132,6 +132,12 @@
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Retirar_Produto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Retirar_Produto.Designer.cs">
+      <DependentUpon>Form_Retirar_Produto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Tipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Retirar_Produto.resx">
+      <DependentUpon>Form_Retirar_Produto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Tipo.resx">
       <DependentUpon>Form_Tipo.cs</DependentUpon>
