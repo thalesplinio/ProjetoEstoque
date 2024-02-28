@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Fornecedores));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -195,8 +196,8 @@
             this.kryptonDataGridViewFornecedor.AllowUserToDeleteRows = false;
             this.kryptonDataGridViewFornecedor.AllowUserToResizeColumns = false;
             this.kryptonDataGridViewFornecedor.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridViewFornecedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridViewFornecedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.kryptonDataGridViewFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridViewFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridViewFornecedor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -364,6 +365,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_Fornecedores";

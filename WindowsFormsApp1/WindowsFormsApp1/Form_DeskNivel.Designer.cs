@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DeskNivel));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lb_deskNivel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Orientação para inserir nível de usuário";
             // 
+            // lb_deskNivel
+            // 
+            this.lb_deskNivel.AutoSize = true;
+            this.lb_deskNivel.Location = new System.Drawing.Point(10, 37);
+            this.lb_deskNivel.Name = "lb_deskNivel";
+            this.lb_deskNivel.Size = new System.Drawing.Size(0, 13);
+            this.lb_deskNivel.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -54,14 +63,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Para os níveis:";
             // 
-            // lb_deskNivel
-            // 
-            this.lb_deskNivel.AutoSize = true;
-            this.lb_deskNivel.Location = new System.Drawing.Point(10, 37);
-            this.lb_deskNivel.Name = "lb_deskNivel";
-            this.lb_deskNivel.Size = new System.Drawing.Size(0, 13);
-            this.lb_deskNivel.TabIndex = 1;
-            // 
             // Form_DeskNivel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -69,6 +70,7 @@
             this.ClientSize = new System.Drawing.Size(391, 148);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_DeskNivel";

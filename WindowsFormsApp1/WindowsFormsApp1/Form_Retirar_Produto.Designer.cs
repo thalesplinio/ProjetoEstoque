@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Retirar_Produto));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,9 +41,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pictureBoxMostraProduto = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel_gerencia = new System.Windows.Forms.Panel();
             this.btn_novoFornecedor = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tb_descProduto = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -80,8 +81,8 @@
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel_gerencia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewRetiraProdutos)).BeginInit();
@@ -204,15 +205,6 @@
             this.pictureBoxMostraProduto.TabIndex = 20;
             this.pictureBoxMostraProduto.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logo_opac;
-            this.pictureBox2.Location = new System.Drawing.Point(262, 150);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(219, 190);
-            this.pictureBox2.TabIndex = 33;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel_gerencia
             // 
             this.panel_gerencia.Controls.Add(this.btn_novoFornecedor);
@@ -237,6 +229,15 @@
             this.btn_novoFornecedor.TabIndex = 6;
             this.btn_novoFornecedor.Text = "        Retirar produto";
             this.btn_novoFornecedor.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logo_opac;
+            this.pictureBox2.Location = new System.Drawing.Point(262, 150);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(219, 190);
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
             // 
             // groupBox4
             // 
@@ -435,8 +436,8 @@
             this.kryptonDataGridViewRetiraProdutos.AllowUserToDeleteRows = false;
             this.kryptonDataGridViewRetiraProdutos.AllowUserToResizeColumns = false;
             this.kryptonDataGridViewRetiraProdutos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridViewRetiraProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridViewRetiraProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.kryptonDataGridViewRetiraProdutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridViewRetiraProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridViewRetiraProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -554,6 +555,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_Retirar_Produto";
@@ -568,8 +570,8 @@
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel_gerencia.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);

@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Tipo));
             this.panel2 = new System.Windows.Forms.Panel();
             this.lb_tituloTipo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -181,8 +182,8 @@
             this.kryptonDataGridViewTipo.AllowUserToDeleteRows = false;
             this.kryptonDataGridViewTipo.AllowUserToResizeColumns = false;
             this.kryptonDataGridViewTipo.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridViewTipo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridViewTipo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.kryptonDataGridViewTipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridViewTipo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridViewTipo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -263,6 +264,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_Tipo";

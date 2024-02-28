@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_gerencia = new System.Windows.Forms.Panel();
             this.btn_gerenciar = new System.Windows.Forms.Button();
@@ -521,6 +522,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

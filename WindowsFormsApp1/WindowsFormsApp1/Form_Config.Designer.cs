@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Config));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControlConfig = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_addTipo = new System.Windows.Forms.Button();
@@ -40,16 +44,13 @@
             this.btn_addCategoria = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlConfig.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -106,6 +107,36 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Config. Produtos";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Location = new System.Drawing.Point(7, 155);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(244, 91);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Fornecedores de produto";
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(6, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(232, 36);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Adicionar um fornecedor de produto no sistema";
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(105, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Adicionar fornecedor";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 
@@ -179,36 +210,6 @@
             this.tabPage2.Text = "Config. Usuarios";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Location = new System.Drawing.Point(7, 155);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(244, 91);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Fornecedores de produto";
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(6, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(232, 36);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Adicionar um fornecedor de produto no sistema";
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(105, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Adicionar fornecedor";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form_Config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,6 +218,7 @@
             this.Controls.Add(this.tabControlConfig);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_Config";
@@ -227,11 +229,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControlConfig.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

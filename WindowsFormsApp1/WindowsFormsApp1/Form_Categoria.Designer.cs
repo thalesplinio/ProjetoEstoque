@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Categoria));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_removeCategoria = new System.Windows.Forms.Button();
@@ -149,8 +150,8 @@
             this.kryptonDataGridViewCategoria.AllowUserToDeleteRows = false;
             this.kryptonDataGridViewCategoria.AllowUserToResizeColumns = false;
             this.kryptonDataGridViewCategoria.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridViewCategoria.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridViewCategoria.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.kryptonDataGridViewCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridViewCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridViewCategoria.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -262,6 +263,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_Categoria";

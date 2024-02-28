@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{465DAE7D-C68E-4349-A703-304C63D43FEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeEstoque", "WindowsFormsApp1\ControleDeEstoque.csproj", "{465DAE7D-C68E-4349-A703-304C63D43FEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
             this.lb_Login = new System.Windows.Forms.Label();
             this.lb_subTitleLogin = new System.Windows.Forms.Label();
             this.ktb_Login = new Krypton.Toolkit.KryptonTextBox();
@@ -232,6 +233,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_Login";
