@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,6 +39,7 @@
             this.ktb_resultContProdutos = new Krypton.Toolkit.KryptonTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tb_itemEstoque = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBoxMostraItem = new System.Windows.Forms.PictureBox();
             this.tb_idProduto = new System.Windows.Forms.TextBox();
             this.btn_procurar = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.cb_BuscaToipo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -121,8 +121,8 @@
             this.kryptonDataGridViewListaProdutos.AllowUserToDeleteRows = false;
             this.kryptonDataGridViewListaProdutos.AllowUserToResizeColumns = false;
             this.kryptonDataGridViewListaProdutos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.kryptonDataGridViewListaProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.kryptonDataGridViewListaProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.kryptonDataGridViewListaProdutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridViewListaProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridViewListaProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -193,8 +193,18 @@
             this.tb_itemEstoque.TabIndex = 1;
             this.tb_itemEstoque.Text = "...";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(205, 15);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Total de itens registrado no estoque:";
+            // 
             // pictureBoxMostraItem
             // 
+            this.pictureBoxMostraItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBoxMostraItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxMostraItem.Location = new System.Drawing.Point(948, 36);
             this.pictureBoxMostraItem.Name = "pictureBoxMostraItem";
@@ -287,15 +297,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(219, 190);
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Total de itens registrado no estoque:";
             // 
             // Form_Listar_Produtos
             // 

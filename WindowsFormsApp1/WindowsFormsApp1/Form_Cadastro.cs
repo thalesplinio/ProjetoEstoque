@@ -206,7 +206,6 @@ namespace WindowsFormsApp1
             kryptonDataGridViewCadastroProdutos.DataSource = Banco.ObterProdutos();
             kryptonDataGridViewCadastroProdutos.Sort(kryptonDataGridViewCadastroProdutos.Columns["ID Produto"], ListSortDirection.Descending);
         }
-
         private void btn_limpaCampos_Click(object sender, EventArgs e)
         {
             LimparCampos();

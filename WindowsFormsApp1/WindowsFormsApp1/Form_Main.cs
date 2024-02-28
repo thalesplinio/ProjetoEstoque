@@ -208,5 +208,11 @@ namespace WindowsFormsApp1
             Form_Listar_Produtos form_listarProdutos = new Form_Listar_Produtos();
             AbreFormularioBaseNivel(1, form_listarProdutos);
         }
+
+        private void btn_retirar_Click(object sender, EventArgs e)
+        {
+            Form_Retirar_Produto form_Retirar_Produto = new Form_Retirar_Produto();
+            AbreFormularioBaseNivel(1, form_Retirar_Produto);
+        }
     }
 }
