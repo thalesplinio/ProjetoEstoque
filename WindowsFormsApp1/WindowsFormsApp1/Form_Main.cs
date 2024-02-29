@@ -12,20 +12,6 @@ namespace WindowsFormsApp1
 {
     public partial class Form_Main : Form
     {
-        DataTable dataTable = null;
-
-        public Form_Main()
-        {
-            InitializeComponent();
-            Form_Login form_Login = new Form_Login(this);
-            form_Login.ShowDialog();
-
-            DateTime date = DateTime.Now;
-            lb_date.Text = $"{date:D} {date:T}";
-
-            lb_owner.Text = Globais.versao;
-        }
-
         #region Set Colors Butons
         private struct RGBColorsButtons
         {
@@ -77,13 +63,25 @@ namespace WindowsFormsApp1
             btn_gerenciar.BackColor = RGBColorsButtons.corAzulPadrao;
         }
         #endregion
+        public Form_Main()
+        {
+            InitializeComponent();
+            Form_Login form_Login = new Form_Login(this);
+            form_Login.ShowDialog();
 
+            DateTime date = DateTime.Now;
+            lb_date.Text = $"{date:D} {date:T}";
+            lb_owner.Text = Globais.versao;
+        }
         private void tarocarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_Login form_Login = new Form_Login(this);
             form_Login.ShowDialog();
         }
+        private void Form_Main_Load(object sender, EventArgs e)
+        {
 
+        }
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // usuario deslogado
@@ -93,7 +91,6 @@ namespace WindowsFormsApp1
             this.Close();
 
         }
-
         private void Form_Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(MessageBox.Show(
@@ -105,7 +102,6 @@ namespace WindowsFormsApp1
                 e.Cancel = true;
             }
         }
-
         #region Restringindo acessos aos Relatórios de nivel -2
         private void AbreFormularioBaseNivel(int nivel, Form formulario)
         {
@@ -149,70 +145,72 @@ namespace WindowsFormsApp1
             // usuário logado Nivel 2
         }
         #endregion
-
         private void adicionarUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_AddUsuario form_AddUsuario = new Form_AddUsuario();
             AbreFormularioBaseNivel(2, form_AddUsuario);
         }
-
         private void verUsuáriosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Form_Todos_Usuarios form_Todos_Usuarios = new Form_Todos_Usuarios();
             AbreFormularioBaseNivel(2, form_Todos_Usuarios);
         }
-
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
             Form_Cadastro form_Cadastro = new Form_Cadastro(this);
             AbreFormularioBaseNivel(1, form_Cadastro);
         }
-
         private void configuraçõesGeraisToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_Config form_Config = new Form_Config();
             AbreFormularioBaseNivel(1, form_Config);
         }
-
         private void adicionarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_AddFornecedor form_AddFornecedor = new Form_AddFornecedor();
             AbreFormularioBaseNivel(1, form_AddFornecedor);
         }
-
         private void verFornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_Fornecedores form_Fornecedores = new Form_Fornecedores();
             AbreFormularioBaseNivel(1, form_Fornecedores);
         }
-
-        private void Form_Main_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_listar_Click(object sender, EventArgs e)
         {
             Form_Listar_Produtos form_listarProdutos = new Form_Listar_Produtos();
             AbreFormularioBaseNivel(1, form_listarProdutos);
         }
-
         private void inserirMaterialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_Cadastro form_Cadastro = new Form_Cadastro(this);
             AbreFormularioBaseNivel(1, form_Cadastro);
         }
-
         private void listarMateriaisToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_Listar_Produtos form_listarProdutos = new Form_Listar_Produtos();
             AbreFormularioBaseNivel(1, form_listarProdutos);
         }
-
         private void btn_retirar_Click(object sender, EventArgs e)
         {
             Form_Retirar_Produto form_Retirar_Produto = new Form_Retirar_Produto();
             AbreFormularioBaseNivel(1, form_Retirar_Produto);
+        }
+        private void retirarMateriaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Retirar_Produto form_Retirar_Produto = new Form_Retirar_Produto();
+            AbreFormularioBaseNivel(1, form_Retirar_Produto);
+        }
+
+        private void registrarCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Categoria form_Categoria = new Form_Categoria();
+            AbreFormularioBaseNivel(1, form_Categoria);
+        }
+
+        private void registrarTipoDeProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Tipo form_Tipo = new Form_Tipo();
+            AbreFormularioBaseNivel(1, form_Tipo);
         }
     }
 }

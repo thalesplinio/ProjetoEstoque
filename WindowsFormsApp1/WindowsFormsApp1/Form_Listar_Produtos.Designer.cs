@@ -40,7 +40,6 @@
             this.ktb_resultContProdutos = new Krypton.Toolkit.KryptonTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tb_itemEstoque = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBoxMostraItem = new System.Windows.Forms.PictureBox();
             this.tb_idProduto = new System.Windows.Forms.TextBox();
             this.btn_procurar = new System.Windows.Forms.Button();
@@ -177,31 +176,22 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tb_itemEstoque);
-            this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Location = new System.Drawing.Point(7, 65);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(309, 69);
             this.groupBox4.TabIndex = 26;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Itens em estoque";
+            this.groupBox4.Text = " Total de itens registrado no estoque";
             // 
             // tb_itemEstoque
             // 
-            this.tb_itemEstoque.AutoSize = true;
-            this.tb_itemEstoque.Location = new System.Drawing.Point(217, 30);
+            this.tb_itemEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_itemEstoque.Location = new System.Drawing.Point(6, 29);
             this.tb_itemEstoque.Name = "tb_itemEstoque";
-            this.tb_itemEstoque.Size = new System.Drawing.Size(16, 15);
+            this.tb_itemEstoque.Size = new System.Drawing.Size(297, 28);
             this.tb_itemEstoque.TabIndex = 1;
             this.tb_itemEstoque.Text = "...";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Total de itens registrado no estoque:";
+            this.tb_itemEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxMostraItem
             // 
@@ -323,7 +313,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -353,6 +342,5 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label tb_itemEstoque;
         private Krypton.Toolkit.KryptonTextBox ktb_resultContProdutos;
-        private System.Windows.Forms.Label label4;
     }
 }

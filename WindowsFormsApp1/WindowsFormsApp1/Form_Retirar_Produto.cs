@@ -83,24 +83,22 @@ namespace WindowsFormsApp1
                 int soma = num1 - num2;
                 Produtos produto = new Produtos();
                 produto.id_produto = tb_idProduto.Text;
-
                 Banco.AtualizarProdutoEstoque(produto, soma);
-                //if (num1 == 0)
-                //{
-                //    MessageBox.Show("REMOVE", "Mensagem");
-                //}
                 ContaProdutos();
                 tb_valorRetirada.Clear();
                 tb_descRetirada.Clear();
                 kryptonDataGridViewRetiraProdutos.DataSource = Banco.ObterProdutosParaListar();
                 kryptonDataGridViewRetiraProdutos.Sort(kryptonDataGridViewRetiraProdutos.Columns["ID Produto"], ListSortDirection.Descending);
-                //int linhaSelecionada = kryptonDataGridViewRetiraProdutos.SelectedRows[0].Index;
-                //kryptonDataGridViewRetiraProdutos[0, linhaSelecionada].Value = tb_idProduto.Text;
-                //kryptonDataGridViewRetiraProdutos[1, linhaSelecionada].Value = tb_idFornecedor.Text;
+                int linhaSelecionada = kryptonDataGridViewRetiraProdutos.SelectedRows[0].Index;
+                kryptonDataGridViewRetiraProdutos[0, linhaSelecionada].Value = tb_idProduto.Text;
+                kryptonDataGridViewRetiraProdutos[1, linhaSelecionada].Value = tb_idFornecedor.Text;
             }
             else if (num2 >= num1)
             {
-                MessageBox.Show("O produto NÃO TEM essa quantidade!, confira a quantidade", "Mensagem");
+                if (num1 == 0)
+                {
+                    MessageBox.Show("Este produto está em falta!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 return;
             }
         }

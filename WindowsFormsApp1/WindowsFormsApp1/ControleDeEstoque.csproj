@@ -324,6 +324,8 @@
     <None Include="bin\Debug\img\img 24\image.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\img\icon 16\category.png" />
+    <None Include="bin\Debug\img\icon 16\application.png" />
     <Content Include="icone.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

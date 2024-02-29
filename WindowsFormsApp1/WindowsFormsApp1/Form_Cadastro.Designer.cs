@@ -55,12 +55,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.nud_qtd = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.kryptonDataGridViewCadastroProdutos = new Krypton.Toolkit.KryptonDataGridView();
             this.openFileDialogIsertImageProduct = new System.Windows.Forms.OpenFileDialog();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -69,10 +69,10 @@
             this.panel_gerencia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_minQtd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_qtd)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewCadastroProdutos)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -97,7 +97,7 @@
             this.groupBox1.Controls.Add(this.nud_qtd);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 46);
+            this.groupBox1.Location = new System.Drawing.Point(12, 89);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1193, 245);
             this.groupBox1.TabIndex = 0;
@@ -346,43 +346,12 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Quantidade do produto:";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1215, 40);
-            this.panel2.TabIndex = 3;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(521, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(200, 25);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Cadastro de produtos";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 40);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.kryptonDataGridViewCadastroProdutos);
-            this.groupBox2.Location = new System.Drawing.Point(12, 297);
+            this.groupBox2.Location = new System.Drawing.Point(12, 340);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1193, 372);
+            this.groupBox2.Size = new System.Drawing.Size(1193, 329);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Produtos";
@@ -404,21 +373,52 @@
             this.kryptonDataGridViewCadastroProdutos.Name = "kryptonDataGridViewCadastroProdutos";
             this.kryptonDataGridViewCadastroProdutos.RowHeadersVisible = false;
             this.kryptonDataGridViewCadastroProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kryptonDataGridViewCadastroProdutos.Size = new System.Drawing.Size(1187, 353);
+            this.kryptonDataGridViewCadastroProdutos.Size = new System.Drawing.Size(1187, 310);
             this.kryptonDataGridViewCadastroProdutos.TabIndex = 1;
             // 
             // openFileDialogIsertImageProduct
             // 
             this.openFileDialogIsertImageProduct.FileName = "openFileDialog1";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1215, 40);
+            this.panel2.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.Control;
+            this.label10.Location = new System.Drawing.Point(521, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(200, 25);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Cadastro de produtos";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 40);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form_Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1215, 681);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -436,11 +436,11 @@
             this.panel_gerencia.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nud_minQtd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_qtd)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewCadastroProdutos)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewCadastroProdutos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -465,9 +465,6 @@
         private System.Windows.Forms.PictureBox pictureBoxImageProduto;
         private System.Windows.Forms.Panel panel_gerencia;
         private System.Windows.Forms.Button btn_insereProduto;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private Krypton.Toolkit.KryptonDataGridView kryptonDataGridViewCadastroProdutos;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -477,5 +474,8 @@
         private System.Windows.Forms.OpenFileDialog openFileDialogIsertImageProduct;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_adicionaImagem;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

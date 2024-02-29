@@ -54,17 +54,20 @@
             this.inserirMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarMateriaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retirarMateriaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerenciarEstoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tarocarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarTodosOsRegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarFornecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verFornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarCategoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarTipoDeProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosDeInserçãoDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeRetiradaDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -324,6 +327,8 @@
             this.registrosToolStripMenuItem,
             this.usuáriosToolStripMenuItem,
             this.fornecedoresToolStripMenuItem,
+            this.categoriaToolStripMenuItem,
+            this.tipoDeProdutoToolStripMenuItem,
             this.relatóriosToolStripMenuItem,
             this.configuraçõesToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
@@ -339,6 +344,7 @@
             this.inserirMaterialToolStripMenuItem,
             this.listarMateriaisToolStripMenuItem,
             this.retirarMateriaisToolStripMenuItem,
+            this.gerenciarEstoqueToolStripMenuItem,
             this.toolStripSeparator1,
             this.tarocarUsuárioToolStripMenuItem,
             this.sairToolStripMenuItem});
@@ -350,7 +356,7 @@
             // 
             this.inserirMaterialToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.open_box;
             this.inserirMaterialToolStripMenuItem.Name = "inserirMaterialToolStripMenuItem";
-            this.inserirMaterialToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.inserirMaterialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.inserirMaterialToolStripMenuItem.Text = "Inserir material";
             this.inserirMaterialToolStripMenuItem.Click += new System.EventHandler(this.inserirMaterialToolStripMenuItem_Click);
             // 
@@ -358,7 +364,7 @@
             // 
             this.listarMateriaisToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.completed_task;
             this.listarMateriaisToolStripMenuItem.Name = "listarMateriaisToolStripMenuItem";
-            this.listarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.listarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listarMateriaisToolStripMenuItem.Text = "Listar materiais";
             this.listarMateriaisToolStripMenuItem.Click += new System.EventHandler(this.listarMateriaisToolStripMenuItem_Click);
             // 
@@ -366,19 +372,27 @@
             // 
             this.retirarMateriaisToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.remove;
             this.retirarMateriaisToolStripMenuItem.Name = "retirarMateriaisToolStripMenuItem";
-            this.retirarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.retirarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.retirarMateriaisToolStripMenuItem.Text = "Retirar materiais";
+            this.retirarMateriaisToolStripMenuItem.Click += new System.EventHandler(this.retirarMateriaisToolStripMenuItem_Click);
+            // 
+            // gerenciarEstoqueToolStripMenuItem
+            // 
+            this.gerenciarEstoqueToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.configuration;
+            this.gerenciarEstoqueToolStripMenuItem.Name = "gerenciarEstoqueToolStripMenuItem";
+            this.gerenciarEstoqueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gerenciarEstoqueToolStripMenuItem.Text = "Gerenciar estoque";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(156, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // tarocarUsuárioToolStripMenuItem
             // 
             this.tarocarUsuárioToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.user;
             this.tarocarUsuárioToolStripMenuItem.Name = "tarocarUsuárioToolStripMenuItem";
-            this.tarocarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.tarocarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tarocarUsuárioToolStripMenuItem.Text = "Trocar usuário";
             this.tarocarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.tarocarUsuárioToolStripMenuItem_Click);
             // 
@@ -386,7 +400,7 @@
             // 
             this.sairToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources._switch;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -408,52 +422,66 @@
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarUsuáriosToolStripMenuItem,
             this.verUsuáriosToolStripMenuItem});
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
             this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(64, 19);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             // 
-            // adicionarUsuáriosToolStripMenuItem
-            // 
-            this.adicionarUsuáriosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.add_user;
-            this.adicionarUsuáriosToolStripMenuItem.Name = "adicionarUsuáriosToolStripMenuItem";
-            this.adicionarUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.adicionarUsuáriosToolStripMenuItem.Text = "Adicionar usuários";
-            this.adicionarUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.adicionarUsuáriosToolStripMenuItem_Click);
-            // 
             // verUsuáriosToolStripMenuItem
             // 
             this.verUsuáriosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.group;
             this.verUsuáriosToolStripMenuItem.Name = "verUsuáriosToolStripMenuItem";
-            this.verUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.verUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.verUsuáriosToolStripMenuItem.Text = "Ver usuários";
             this.verUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.verUsuáriosToolStripMenuItem_Click_1);
             // 
             // fornecedoresToolStripMenuItem
             // 
             this.fornecedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarFornecedorToolStripMenuItem,
             this.verFornecedoresToolStripMenuItem});
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
             this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(90, 19);
             this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
             // 
-            // adicionarFornecedorToolStripMenuItem
-            // 
-            this.adicionarFornecedorToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.delivery_truck;
-            this.adicionarFornecedorToolStripMenuItem.Name = "adicionarFornecedorToolStripMenuItem";
-            this.adicionarFornecedorToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.adicionarFornecedorToolStripMenuItem.Text = "Adicionar fornecedor";
-            this.adicionarFornecedorToolStripMenuItem.Click += new System.EventHandler(this.adicionarFornecedorToolStripMenuItem_Click);
-            // 
             // verFornecedoresToolStripMenuItem
             // 
             this.verFornecedoresToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.box_truck;
             this.verFornecedoresToolStripMenuItem.Name = "verFornecedoresToolStripMenuItem";
-            this.verFornecedoresToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.verFornecedoresToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.verFornecedoresToolStripMenuItem.Text = "Ver fornecedores";
             this.verFornecedoresToolStripMenuItem.Click += new System.EventHandler(this.verFornecedoresToolStripMenuItem_Click);
+            // 
+            // categoriaToolStripMenuItem
+            // 
+            this.categoriaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarCategoriaToolStripMenuItem});
+            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(133, 19);
+            this.categoriaToolStripMenuItem.Text = "Categoria do produto";
+            // 
+            // registrarCategoriaToolStripMenuItem
+            // 
+            this.registrarCategoriaToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.category;
+            this.registrarCategoriaToolStripMenuItem.Name = "registrarCategoriaToolStripMenuItem";
+            this.registrarCategoriaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.registrarCategoriaToolStripMenuItem.Text = "Registrar categoria";
+            this.registrarCategoriaToolStripMenuItem.Click += new System.EventHandler(this.registrarCategoriaToolStripMenuItem_Click);
+            // 
+            // tipoDeProdutoToolStripMenuItem
+            // 
+            this.tipoDeProdutoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarTipoDeProdutoToolStripMenuItem});
+            this.tipoDeProdutoToolStripMenuItem.Name = "tipoDeProdutoToolStripMenuItem";
+            this.tipoDeProdutoToolStripMenuItem.Size = new System.Drawing.Size(104, 19);
+            this.tipoDeProdutoToolStripMenuItem.Text = "Tipo de produto";
+            // 
+            // registrarTipoDeProdutoToolStripMenuItem
+            // 
+            this.registrarTipoDeProdutoToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.application;
+            this.registrarTipoDeProdutoToolStripMenuItem.Name = "registrarTipoDeProdutoToolStripMenuItem";
+            this.registrarTipoDeProdutoToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.registrarTipoDeProdutoToolStripMenuItem.Text = "Registrar tipo de produto";
+            this.registrarTipoDeProdutoToolStripMenuItem.Click += new System.EventHandler(this.registrarTipoDeProdutoToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -577,7 +605,6 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarTodosOsRegistrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verUsuáriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adicionarUsuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatóriosDeInserçãoDeProdutosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioDeRetiradaDeProdutosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioDeTodosOsMateriaisInseridosToolStripMenuItem;
@@ -590,8 +617,12 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lb_separador2;
         private System.Windows.Forms.ToolStripMenuItem fornecedoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adicionarFornecedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verFornecedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gerenciarEstoqueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeProdutoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarCategoriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarTipoDeProdutoToolStripMenuItem;
     }
 }
 
