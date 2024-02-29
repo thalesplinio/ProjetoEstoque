@@ -35,14 +35,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_descRetirada = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_valorRetirada = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pictureBoxMostraProduto = new System.Windows.Forms.PictureBox();
             this.panel_gerencia = new System.Windows.Forms.Panel();
-            this.btn_novoFornecedor = new System.Windows.Forms.Button();
+            this.btn_retiraProduto = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tb_descProduto = new System.Windows.Forms.TextBox();
@@ -137,9 +137,9 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.textBox2);
+            this.groupBox6.Controls.Add(this.tb_descRetirada);
             this.groupBox6.Controls.Add(this.label15);
-            this.groupBox6.Controls.Add(this.textBox1);
+            this.groupBox6.Controls.Add(this.tb_valorRetirada);
             this.groupBox6.Controls.Add(this.label14);
             this.groupBox6.Controls.Add(this.groupBox5);
             this.groupBox6.Controls.Add(this.panel_gerencia);
@@ -151,13 +151,13 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Retirar Produto";
             // 
-            // textBox2
+            // tb_descRetirada
             // 
-            this.textBox2.Location = new System.Drawing.Point(236, 83);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(268, 109);
-            this.textBox2.TabIndex = 22;
+            this.tb_descRetirada.Location = new System.Drawing.Point(236, 83);
+            this.tb_descRetirada.Multiline = true;
+            this.tb_descRetirada.Name = "tb_descRetirada";
+            this.tb_descRetirada.Size = new System.Drawing.Size(268, 109);
+            this.tb_descRetirada.TabIndex = 22;
             // 
             // label15
             // 
@@ -168,12 +168,12 @@
             this.label15.TabIndex = 21;
             this.label15.Text = "Descrição simples do produto:";
             // 
-            // textBox1
+            // tb_valorRetirada
             // 
-            this.textBox1.Location = new System.Drawing.Point(236, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(268, 21);
-            this.textBox1.TabIndex = 22;
+            this.tb_valorRetirada.Location = new System.Drawing.Point(236, 40);
+            this.tb_valorRetirada.Name = "tb_valorRetirada";
+            this.tb_valorRetirada.Size = new System.Drawing.Size(268, 21);
+            this.tb_valorRetirada.TabIndex = 22;
             // 
             // label14
             // 
@@ -207,28 +207,29 @@
             // 
             // panel_gerencia
             // 
-            this.panel_gerencia.Controls.Add(this.btn_novoFornecedor);
+            this.panel_gerencia.Controls.Add(this.btn_retiraProduto);
             this.panel_gerencia.Location = new System.Drawing.Point(353, 232);
             this.panel_gerencia.Name = "panel_gerencia";
             this.panel_gerencia.Size = new System.Drawing.Size(151, 40);
             this.panel_gerencia.TabIndex = 19;
             // 
-            // btn_novoFornecedor
+            // btn_retiraProduto
             // 
-            this.btn_novoFornecedor.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_novoFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_novoFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_novoFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_novoFornecedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_novoFornecedor.Image = global::WindowsFormsApp1.Properties.Resources.remove;
-            this.btn_novoFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_novoFornecedor.Location = new System.Drawing.Point(-5, -5);
-            this.btn_novoFornecedor.Name = "btn_novoFornecedor";
-            this.btn_novoFornecedor.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_novoFornecedor.Size = new System.Drawing.Size(159, 50);
-            this.btn_novoFornecedor.TabIndex = 6;
-            this.btn_novoFornecedor.Text = "        Retirar produto";
-            this.btn_novoFornecedor.UseVisualStyleBackColor = false;
+            this.btn_retiraProduto.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_retiraProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_retiraProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_retiraProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_retiraProduto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_retiraProduto.Image = global::WindowsFormsApp1.Properties.Resources.remove;
+            this.btn_retiraProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_retiraProduto.Location = new System.Drawing.Point(-5, -5);
+            this.btn_retiraProduto.Name = "btn_retiraProduto";
+            this.btn_retiraProduto.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_retiraProduto.Size = new System.Drawing.Size(159, 50);
+            this.btn_retiraProduto.TabIndex = 6;
+            this.btn_retiraProduto.Text = "        Retirar produto";
+            this.btn_retiraProduto.UseVisualStyleBackColor = false;
+            this.btn_retiraProduto.Click += new System.EventHandler(this.btn_retiraProduto_Click);
             // 
             // pictureBox2
             // 
@@ -619,11 +620,11 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.PictureBox pictureBoxMostraProduto;
         private System.Windows.Forms.Panel panel_gerencia;
-        private System.Windows.Forms.Button btn_novoFornecedor;
+        private System.Windows.Forms.Button btn_retiraProduto;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_descRetirada;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_valorRetirada;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox tb_quantidade;
         private System.Windows.Forms.Label label8;

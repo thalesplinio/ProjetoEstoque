@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 namespace WindowsFormsApp1
 {
@@ -66,7 +67,41 @@ namespace WindowsFormsApp1
                 tb_categoriaProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[6].Value.ToString();
                 tb_tipoProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[7].Value.ToString();
                 tb_descProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[8].Value.ToString();
+            }
+        }
 
+        private void btn_retiraProduto_Click(object sender, EventArgs e)
+        {
+            string valorAntigo = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[4].Value.ToString();
+            string valorNovo = tb_valorRetirada.Text;
+            int num1 = int.Parse(valorAntigo);
+            int num2 = int.Parse(valorNovo);
+
+            if (num2 <= num1)
+            {
+                MessageBox.Show("O produto TEM essa quantidade!, confira a quantidade", "Mensagem");
+                int soma = num1 - num2;
+                Produtos produto = new Produtos();
+                produto.id_produto = tb_idProduto.Text;
+
+                Banco.AtualizarProdutoEstoque(produto, soma);
+                //if (num1 == 0)
+                //{
+                //    MessageBox.Show("REMOVE", "Mensagem");
+                //}
+                ContaProdutos();
+                tb_valorRetirada.Clear();
+                tb_descRetirada.Clear();
+                kryptonDataGridViewRetiraProdutos.DataSource = Banco.ObterProdutosParaListar();
+                kryptonDataGridViewRetiraProdutos.Sort(kryptonDataGridViewRetiraProdutos.Columns["ID Produto"], ListSortDirection.Descending);
+                //int linhaSelecionada = kryptonDataGridViewRetiraProdutos.SelectedRows[0].Index;
+                //kryptonDataGridViewRetiraProdutos[0, linhaSelecionada].Value = tb_idProduto.Text;
+                //kryptonDataGridViewRetiraProdutos[1, linhaSelecionada].Value = tb_idFornecedor.Text;
+            }
+            else if (num2 >= num1)
+            {
+                MessageBox.Show("O produto NÃO TEM essa quantidade!, confira a quantidade", "Mensagem");
+                return;
             }
         }
     }

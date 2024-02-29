@@ -934,7 +934,7 @@ namespace WindowsFormsApp1
         #endregion
 
         #region RETIRAR PRODUTOS
-        public static DataTable ObterProdutosParaRetirar()
+        public static DataTable ObterProdutosParaRetirar(Produtos produto)
         {
             SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
             DataTable dataTable = new DataTable();  // preenche com as informações da consulta
@@ -976,6 +976,36 @@ namespace WindowsFormsApp1
             }
         }
 
+        public static void AtualizarProdutoEstoque(Produtos produtos, int quantidade)
+        {
+            try
+            {
+                DateTime data = DateTime.Now;
+                var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+
+                command.CommandText = @"
+                    UPDATE produtos 
+                        SET
+                            quantidade = @quantidade
+                        WHERE 
+                            id_produto = @id_produto";
+
+
+                command.Parameters.AddWithValue("@quantidade", quantidade);
+                command.Parameters.AddWithValue("@id_produto", produtos.id_produto);
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Produto foi retirado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conexaoPropria.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Não possível retirar o produto ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
         #endregion
     }
 }
