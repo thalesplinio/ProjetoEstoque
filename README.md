@@ -8,3 +8,4 @@
 > Sqlite Core 1.0.118 </br>
 
 Aplicação feita para fins de estudo.
+Projeto de uma aplicação para controle de estoque com gerenciamento de usuário.
