@@ -50,9 +50,16 @@ namespace WindowsFormsApp1
         }
         private void ContaProdutos()
         {
-            var dataTable = Banco.ObterQuantidade();
-            int quantidadeTotal = Convert.ToInt32(dataTable.Rows[0][0]);
-            tb_itemEstoque.Text = $"{quantidadeTotal}";
+            try
+            {
+                var dataTable = Banco.ObterQuantidade();
+                int quantidadeTotal = Convert.ToInt32(dataTable.Rows[0][0]);
+                tb_itemEstoque.Text = $"{quantidadeTotal}";
+            }
+            catch
+            {
+                tb_itemEstoque.Text = "Nenhum produto registrado";
+            }
         }
 
     }

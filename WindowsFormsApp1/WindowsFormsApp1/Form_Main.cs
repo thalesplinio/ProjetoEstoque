@@ -212,5 +212,17 @@ namespace WindowsFormsApp1
             Form_Tipo form_Tipo = new Form_Tipo();
             AbreFormularioBaseNivel(1, form_Tipo);
         }
+
+        private void btn_gerenciar_Click(object sender, EventArgs e)
+        {
+            Form_Gerencia_Estoque form_Gerencia_Estoque = new Form_Gerencia_Estoque();
+            AbreFormularioBaseNivel(2, form_Gerencia_Estoque);
+        }
+
+        private void gerenciarEstoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Gerencia_Estoque form_Gerencia_Estoque = new Form_Gerencia_Estoque();
+            AbreFormularioBaseNivel(2, form_Gerencia_Estoque);
+        }
     }
 }

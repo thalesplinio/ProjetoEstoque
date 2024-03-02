@@ -58,8 +58,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tarocarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarTodosOsRegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,11 +66,6 @@
             this.registrarCategoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarTipoDeProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatóriosDeInserçãoDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatórioDeRetiradaDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatórioDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesGeraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
@@ -127,6 +120,7 @@
             this.btn_gerenciar.TabIndex = 3;
             this.btn_gerenciar.Text = "        Gerenciar estoque";
             this.btn_gerenciar.UseVisualStyleBackColor = false;
+            this.btn_gerenciar.Click += new System.EventHandler(this.btn_gerenciar_Click);
             this.btn_gerenciar.MouseEnter += new System.EventHandler(this.btn_gerenciar_MouseEnter);
             this.btn_gerenciar.MouseLeave += new System.EventHandler(this.btn_gerenciar_MouseLeave);
             // 
@@ -324,12 +318,10 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
-            this.registrosToolStripMenuItem,
             this.usuáriosToolStripMenuItem,
             this.fornecedoresToolStripMenuItem,
             this.categoriaToolStripMenuItem,
             this.tipoDeProdutoToolStripMenuItem,
-            this.relatóriosToolStripMenuItem,
             this.configuraçõesToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -382,6 +374,7 @@
             this.gerenciarEstoqueToolStripMenuItem.Name = "gerenciarEstoqueToolStripMenuItem";
             this.gerenciarEstoqueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gerenciarEstoqueToolStripMenuItem.Text = "Gerenciar estoque";
+            this.gerenciarEstoqueToolStripMenuItem.Click += new System.EventHandler(this.gerenciarEstoqueToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -403,21 +396,6 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
-            // registrosToolStripMenuItem
-            // 
-            this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listarTodosOsRegistrosToolStripMenuItem});
-            this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
-            this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 19);
-            this.registrosToolStripMenuItem.Text = "Registros";
-            // 
-            // listarTodosOsRegistrosToolStripMenuItem
-            // 
-            this.listarTodosOsRegistrosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.notes;
-            this.listarTodosOsRegistrosToolStripMenuItem.Name = "listarTodosOsRegistrosToolStripMenuItem";
-            this.listarTodosOsRegistrosToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.listarTodosOsRegistrosToolStripMenuItem.Text = "Listar todos os registros";
             // 
             // usuáriosToolStripMenuItem
             // 
@@ -482,49 +460,6 @@
             this.registrarTipoDeProdutoToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.registrarTipoDeProdutoToolStripMenuItem.Text = "Registrar tipo de produto";
             this.registrarTipoDeProdutoToolStripMenuItem.Click += new System.EventHandler(this.registrarTipoDeProdutoToolStripMenuItem_Click);
-            // 
-            // relatóriosToolStripMenuItem
-            // 
-            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.relatóriosDeInserçãoDeProdutosToolStripMenuItem,
-            this.relatórioDeRetiradaDeProdutosToolStripMenuItem,
-            this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem,
-            this.relatórioDeUsuáriosToolStripMenuItem});
-            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
-            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 19);
-            this.relatóriosToolStripMenuItem.Text = "Relatórios";
-            // 
-            // relatóriosDeInserçãoDeProdutosToolStripMenuItem
-            // 
-            this.relatóriosDeInserçãoDeProdutosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.graph;
-            this.relatóriosDeInserçãoDeProdutosToolStripMenuItem.Name = "relatóriosDeInserçãoDeProdutosToolStripMenuItem";
-            this.relatóriosDeInserçãoDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.relatóriosDeInserçãoDeProdutosToolStripMenuItem.Text = "Relatórios de inserção de produtos";
-            this.relatóriosDeInserçãoDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.relatóriosDeInserçãoDeProdutosToolStripMenuItem_Click);
-            // 
-            // relatórioDeRetiradaDeProdutosToolStripMenuItem
-            // 
-            this.relatórioDeRetiradaDeProdutosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.graph;
-            this.relatórioDeRetiradaDeProdutosToolStripMenuItem.Name = "relatórioDeRetiradaDeProdutosToolStripMenuItem";
-            this.relatórioDeRetiradaDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.relatórioDeRetiradaDeProdutosToolStripMenuItem.Text = "Relatório de retirada de produtos";
-            this.relatórioDeRetiradaDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeRetiradaDeProdutosToolStripMenuItem_Click);
-            // 
-            // relatórioDeTodosOsMateriaisInseridosToolStripMenuItem
-            // 
-            this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.graph;
-            this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem.Name = "relatórioDeTodosOsMateriaisInseridosToolStripMenuItem";
-            this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem.Text = "Relatório de todos os materiais inseridos";
-            this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeTodosOsMateriaisInseridosToolStripMenuItem_Click);
-            // 
-            // relatórioDeUsuáriosToolStripMenuItem
-            // 
-            this.relatórioDeUsuáriosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.graph;
-            this.relatórioDeUsuáriosToolStripMenuItem.Name = "relatórioDeUsuáriosToolStripMenuItem";
-            this.relatórioDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.relatórioDeUsuáriosToolStripMenuItem.Text = "Relatório de usuários";
-            this.relatórioDeUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeUsuáriosToolStripMenuItem_Click);
             // 
             // configuraçõesToolStripMenuItem
             // 
@@ -594,21 +529,14 @@
         private System.Windows.Forms.Label lb_owner;
         private System.Windows.Forms.Label lb_date;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem registrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuraçõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inserirMaterialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarMateriaisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem retirarMateriaisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tarocarUsuárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listarTodosOsRegistrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verUsuáriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatóriosDeInserçãoDeProdutosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatórioDeRetiradaDeProdutosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatórioDeTodosOsMateriaisInseridosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatórioDeUsuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuraçõesGeraisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
         public System.Windows.Forms.Label lb_UserLogado;

@@ -368,7 +368,7 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 //throw ex;
-                MessageBox.Show($"Não foi removes o status ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Não foi remover o status ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         #endregion
@@ -1004,6 +1004,103 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show($"Não possível retirar o produto ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        #endregion
+
+        #region GERENCIAR ESTOQUE
+        public static DataTable ObterProdutosParaGerenciar()
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT
+                        prod.id_produto as 'ID Produto',
+                        fprod.nome as 'Fornecedor',
+                        prod.nome as 'Nome Produto',
+                        prod.marca as 'Marca Produto',
+                        prod.quantidade as 'Quantidade',
+                        prod.quantidade_minima as 'Qtd. Mínima',
+                        cProd.nome_categoria as 'Categoria',
+                        tProd.nome_tipo as 'Tipo de Produto',
+                        prod.descricao as 'Descrição',
+                        prod.data_criacao as 'Data Cadastro',
+                        prod.data_atualizacao as 'Data Atualização'
+                    FROM
+                        produtos as prod
+                    INNER JOIN
+                        fornecedor_produto as fprod ON fprod.id_fornecedor = prod.id_fornecedor
+                    INNER JOIN
+                        categoria_produto as cProd ON cProd.id_categoria = prod.id_categoria
+                    INNER JOIN
+                        tipo_produto as tProd on tProd.id_tipo = prod.id_tipo_produto";
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static void DeletarGerenciaProduto(string id)
+        {
+            DateTime data = DateTime.Now;
+            var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"DELETE FROM produtos WHERE id_produto=" + id;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                command.ExecuteNonQuery();
+                conexaoPropria.Close();
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                MessageBox.Show($"Não foi Atualizar usuario ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        public static void AtualizarGerenciaProdutos(Produtos produtos)
+        {
+            DateTime data = DateTime.Now;
+            var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    UPDATE 
+                        produtos
+                    SET
+                        id_fornecedor='" + produtos.id_fornecedor + "', nome= '" + produtos.nome + "', marca = '" + produtos.marca + "', quantidade = '" + produtos.quantidade + "', quantidade_minima = '" + produtos.quantidade_minima + "', id_categoria = '" + produtos.id_categoria + "', descricao = '" + produtos.descricao + "', id_tipo_produto = '" + produtos.id_tipo_produto + "', image = '" + produtos.image + "', data_atualizacao = '" + dataFormatada + "' WHERE id_usuario=" + produtos.id_produto;
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                command.ExecuteNonQuery();
+                MessageBox.Show("Produto atualizado com sucesso!", "Mensagem de atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conexaoPropria.Close();
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                MessageBox.Show($"Não foi Atualizar o produto ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         #endregion

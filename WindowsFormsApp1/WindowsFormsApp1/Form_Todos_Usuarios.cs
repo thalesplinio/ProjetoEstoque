@@ -173,6 +173,7 @@ namespace WindowsFormsApp1
             int linhaSelecionada = kryptonDataGridView1.SelectedRows[0].Index;
 
             Usuario usuario = new Usuario();
+
             usuario.id_usuario = Convert.ToInt32(tb_id.Text);
             usuario.nome_completo = tb_nomeCompleto.Text;
             usuario.nome_usuario = tb_nomeUsuario.Text;
@@ -181,6 +182,7 @@ namespace WindowsFormsApp1
             usuario.senha = tb_senha.Text;
             usuario.usuario_ativo = cb_statusUsuario.Text;
             usuario.nivel_acesso = Convert.ToInt32(Math.Round(nud_nivelAcesso.Value, 0));   // 0 = para 0 casas decimais
+
             Banco.AtualizarUsuario(usuario);
 
             kryptonDataGridView1.DataSource = Banco.ObterDadosUsuarioBanco();

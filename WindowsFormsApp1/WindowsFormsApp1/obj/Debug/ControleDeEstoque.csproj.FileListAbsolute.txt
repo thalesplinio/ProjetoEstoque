@@ -32,3 +32,38 @@ E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsForms
 E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ControleDeEstoque.csproj.CopyComplete
 E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 E:\Documentos\0 - Documentos\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.dll
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Krypton.Toolkit.dll
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Data.SQLite.dll
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.xml
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Krypton.Toolkit.xml
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Data.SQLite.xml
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ControleDeEstoque.csproj.AssemblyReference.cache
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_AddFornecedor.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_AddStatus.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_AddUsuario.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Cadastro.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Categoria.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Config.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_DeskNivel.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Fornecedores.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Main.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Login.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Retirar_Produto.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Tipo.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Todos_Usuarios.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Listar_Produtos.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ControleDeEstoque.csproj.GenerateResource.cache
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ControleDeEstoque.csproj.CoreCompileInputs.cache
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Controle.B26DD2FE.Up2Date
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Gerencia_Estoque.resources

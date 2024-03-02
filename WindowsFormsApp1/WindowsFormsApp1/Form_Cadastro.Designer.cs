@@ -97,7 +97,7 @@
             this.groupBox1.Controls.Add(this.nud_qtd);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 89);
+            this.groupBox1.Location = new System.Drawing.Point(12, 46);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1193, 245);
             this.groupBox1.TabIndex = 0;
@@ -349,7 +349,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.kryptonDataGridViewCadastroProdutos);
-            this.groupBox2.Location = new System.Drawing.Point(12, 340);
+            this.groupBox2.Location = new System.Drawing.Point(12, 297);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1193, 329);
             this.groupBox2.TabIndex = 4;
@@ -415,7 +415,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 681);
+            this.ClientSize = new System.Drawing.Size(1215, 638);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

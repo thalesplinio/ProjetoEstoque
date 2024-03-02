@@ -25,9 +25,16 @@ namespace WindowsFormsApp1
         }
         private void ContaProdutos()
         {
-            var dataTable = Banco.ObterQuantidade();
-            int quantidadeTotal = Convert.ToInt32(dataTable.Rows[0][0]);
-            lb_qtdProdutos.Text = $"{quantidadeTotal}";
+            try
+            {
+                var dataTable = Banco.ObterQuantidade();
+                int quantidadeTotal = Convert.ToInt32(dataTable.Rows[0][0]);
+                lb_qtdProdutos.Text = $"{quantidadeTotal}";
+            }
+            catch 
+            {
+                lb_qtdProdutos.Text = "Nenhum produto registrado";
+            }
         }
         private void ListaProdutosDGV()
         {
@@ -53,20 +60,27 @@ namespace WindowsFormsApp1
 
             if (contLinhas > 0)
             {
-                DataTable dataTable = new DataTable();
-                string idProduto = dataGridView.SelectedRows[0].Cells[0].Value.ToString(); // selecionando o id do usuario
-                dataTable = Banco.ObterDadosParaVisualizarProdutos(idProduto);
+                try
+                {
+                    DataTable dataTable = new DataTable();
+                    string idProduto = dataGridView.SelectedRows[0].Cells[0].Value.ToString(); // selecionando o id do usuario
+                    dataTable = Banco.ObterDadosParaVisualizarProdutos(idProduto);
 
-                pictureBoxMostraProduto.ImageLocation = dataTable.Rows[0].Field<string>("image").ToString();
-                tb_idProduto.Text = dataTable.Rows[0].Field<Int64>("id_produto").ToString();
-                tb_idFornecedor.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[1].Value.ToString();
-                tb_nomeProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[2].Value.ToString();
-                tb_marcaProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[3].Value.ToString();
-                tb_quantidade.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[4].Value.ToString();
-                tb_quantidadeMinima.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[5].Value.ToString();
-                tb_categoriaProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[6].Value.ToString();
-                tb_tipoProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[7].Value.ToString();
-                tb_descProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[8].Value.ToString();
+                    pictureBoxMostraProduto.ImageLocation = dataTable.Rows[0].Field<string>("image").ToString();
+                    tb_idProduto.Text = dataTable.Rows[0].Field<Int64>("id_produto").ToString();
+                    tb_idFornecedor.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[1].Value.ToString();
+                    tb_nomeProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[2].Value.ToString();
+                    tb_marcaProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[3].Value.ToString();
+                    tb_quantidade.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[4].Value.ToString();
+                    tb_quantidadeMinima.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[5].Value.ToString();
+                    tb_categoriaProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[6].Value.ToString();
+                    tb_tipoProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[7].Value.ToString();
+                    tb_descProduto.Text = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[8].Value.ToString();
+                }
+                catch
+                {
+                    return;
+                }
             }
         }
 
