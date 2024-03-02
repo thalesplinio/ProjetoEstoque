@@ -184,6 +184,7 @@ namespace WindowsFormsApp1
 
             #region Inserindo produto
             Produtos produto = new Produtos();
+
             int.Parse(produto.id_fornecedor = cb_Fornecedor.SelectedValue.ToString());
             produto.id_usuario = form_main.lb_UserLogado.Text;
             produto.nome = tb_nomeProduto.Text;

@@ -4,15 +4,23 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WindowsFormsApp1
 {
     public partial class Form_Gerencia_Estoque : Form
     {
+        #region Globais
+        string caminhoOrigem = "";
+        string imagem = "";
+        string pastaDestino = Globais.caminhoImageProduct;
+        string destinoCompleto = "";
+        #endregion
         public Form_Gerencia_Estoque()
         {
             InitializeComponent();
@@ -124,7 +132,81 @@ namespace WindowsFormsApp1
 
         private void btn_salvarAlteracao_Click(object sender, EventArgs e)
         {
+            #region Tratando nossa imagem do produto
+            /// ----------------------------------------------------------------------------------------
+            /// Aqui copiamos nossa imagem e mandamos para nossa pasta no local do sistema e colcoamos 
+            /// a url dela no banco de dados
+            pictureBoxMostraItem.ImageLocation = null;
+            if (destinoCompleto == "")
+            {
+                if (MessageBox.Show("Nenhuma imagem foi selecionada para o produto, deseja continuar?", "Mensagem", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            if (destinoCompleto != "")
+            {
+                System.IO.File.Copy(caminhoOrigem, destinoCompleto, true);
+                if (File.Exists(destinoCompleto))
+                {
+                    pictureBoxMostraItem.ImageLocation = destinoCompleto;
+                }
+                else
+                {
+                    if (MessageBox.Show("ERRO ao encontrar a imagem, deseja continuar?", "Mensagem", MessageBoxButtons.YesNo) == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
+            }
+            #endregion
 
+            #region alterando produto no banco
+            Produtos produtos = new Produtos();
+            produtos.id_produto = tb_idProduto.Text;
+            int.Parse(produtos.id_fornecedor = cb_Fornecedor.SelectedValue.ToString());
+            produtos.nome = tb_nomeProduto.Text;
+            produtos.marca = tb_marca.Text;
+            produtos.quantidade = nud_qtd.Text;
+            produtos.quantidade_minima = nud_minQtd.Text;
+            int.Parse(produtos.id_categoria = cb_categoria.SelectedValue.ToString());
+            int.Parse(produtos.id_tipo_produto = cb_tipo.SelectedValue.ToString());
+            produtos.descricao = rtb_desc.Text;
+            produtos.image = destinoCompleto;
+            MessageBox.Show($"{produtos.image}");
+            #endregion
+
+            Banco.AtualizarGerenciaProdutos(produtos);
+            kryptonDataGridViewGerenciaProdutos.DataSource = Banco.ObterProdutosParaListar();
+            kryptonDataGridViewGerenciaProdutos.Sort(kryptonDataGridViewGerenciaProdutos.Columns["ID Produto"], ListSortDirection.Descending);
+        }
+        private void btn_adicionaImagem_Click(object sender, EventArgs e)
+        {
+            /// ----------------------------------------------------------------------------------------
+            /// Aqui pegamos o arquivo e setamos ele no nosso picture box, mas usamos o caminho original
+            /// no botao de salvar é aonde fazemos realmente a cópia do arquivo e mandamos o url desta
+            /// imagem copiada para o banco de dados
+            caminhoOrigem = "";
+            imagem = "";
+            pastaDestino = Globais.caminhoImageProduct;
+            destinoCompleto = "";
+
+            openFileDialogAlterProduct.Filter = "Imagens (*.jpeg, *.jpg, *.png)|*.jpeg;*.jpg;*.png";
+
+            if (openFileDialogAlterProduct.ShowDialog() == DialogResult.OK)
+            {
+                caminhoOrigem = openFileDialogAlterProduct.FileName;   // retorna todo o caminho
+                imagem = openFileDialogAlterProduct.SafeFileName;      // somente o nome do arquivo
+                destinoCompleto = pastaDestino + imagem;                    // destino aonde ele vai ficar + nome do arquivo
+            }
+            if (File.Exists(destinoCompleto))
+            {
+                if (MessageBox.Show("Arquivo já existe no local de destino, deseja substituir?", "Substituir arquivo?", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            pictureBoxMostraItem.ImageLocation = caminhoOrigem;
         }
     }
 }
