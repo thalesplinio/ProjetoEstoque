@@ -348,7 +348,7 @@
             // 
             this.inserirMaterialToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.open_box;
             this.inserirMaterialToolStripMenuItem.Name = "inserirMaterialToolStripMenuItem";
-            this.inserirMaterialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inserirMaterialToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.inserirMaterialToolStripMenuItem.Text = "Inserir material";
             this.inserirMaterialToolStripMenuItem.Click += new System.EventHandler(this.inserirMaterialToolStripMenuItem_Click);
             // 
@@ -356,7 +356,7 @@
             // 
             this.listarMateriaisToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.completed_task;
             this.listarMateriaisToolStripMenuItem.Name = "listarMateriaisToolStripMenuItem";
-            this.listarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.listarMateriaisToolStripMenuItem.Text = "Listar materiais";
             this.listarMateriaisToolStripMenuItem.Click += new System.EventHandler(this.listarMateriaisToolStripMenuItem_Click);
             // 
@@ -364,7 +364,7 @@
             // 
             this.retirarMateriaisToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.remove;
             this.retirarMateriaisToolStripMenuItem.Name = "retirarMateriaisToolStripMenuItem";
-            this.retirarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.retirarMateriaisToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.retirarMateriaisToolStripMenuItem.Text = "Retirar materiais";
             this.retirarMateriaisToolStripMenuItem.Click += new System.EventHandler(this.retirarMateriaisToolStripMenuItem_Click);
             // 
@@ -372,20 +372,20 @@
             // 
             this.gerenciarEstoqueToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.configuration;
             this.gerenciarEstoqueToolStripMenuItem.Name = "gerenciarEstoqueToolStripMenuItem";
-            this.gerenciarEstoqueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gerenciarEstoqueToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.gerenciarEstoqueToolStripMenuItem.Text = "Gerenciar estoque";
             this.gerenciarEstoqueToolStripMenuItem.Click += new System.EventHandler(this.gerenciarEstoqueToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(166, 6);
             // 
             // tarocarUsuárioToolStripMenuItem
             // 
             this.tarocarUsuárioToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.user;
             this.tarocarUsuárioToolStripMenuItem.Name = "tarocarUsuárioToolStripMenuItem";
-            this.tarocarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tarocarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.tarocarUsuárioToolStripMenuItem.Text = "Trocar usuário";
             this.tarocarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.tarocarUsuárioToolStripMenuItem_Click);
             // 
@@ -393,7 +393,7 @@
             // 
             this.sairToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources._switch;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 

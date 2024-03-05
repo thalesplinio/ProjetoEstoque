@@ -62,5 +62,11 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void tb_buscaPorNome_TextChanged(object sender, EventArgs e)
+        {
+            Produtos produtos = new Produtos();
+            produtos.nome = tb_buscaPorNome.Text;
+            kryptonDataGridViewListaProdutos.DataSource = Banco.BuscaNomeProduto(produtos.nome);
+        }
     }
 }

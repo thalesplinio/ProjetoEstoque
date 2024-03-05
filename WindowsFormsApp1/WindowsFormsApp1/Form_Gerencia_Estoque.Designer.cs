@@ -34,7 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_procurar = new System.Windows.Forms.Button();
             this.tb_buscaPorNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -69,8 +68,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_adicionaImagem = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.openFileDialogAlterProduct = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -122,47 +121,40 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btn_procurar);
             this.groupBox2.Controls.Add(this.tb_buscaPorNome);
             this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 46);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(455, 76);
+            this.groupBox2.Size = new System.Drawing.Size(507, 76);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Efetuar buscas";
-            // 
-            // btn_procurar
-            // 
-            this.btn_procurar.Location = new System.Drawing.Point(367, 36);
-            this.btn_procurar.Name = "btn_procurar";
-            this.btn_procurar.Size = new System.Drawing.Size(75, 23);
-            this.btn_procurar.TabIndex = 2;
-            this.btn_procurar.Text = "Buscar";
-            this.btn_procurar.UseVisualStyleBackColor = true;
             // 
             // tb_buscaPorNome
             // 
             this.tb_buscaPorNome.Location = new System.Drawing.Point(6, 37);
             this.tb_buscaPorNome.Name = "tb_buscaPorNome";
-            this.tb_buscaPorNome.Size = new System.Drawing.Size(357, 20);
+            this.tb_buscaPorNome.Size = new System.Drawing.Size(495, 21);
             this.tb_buscaPorNome.TabIndex = 1;
+            this.tb_buscaPorNome.TextChanged += new System.EventHandler(this.tb_buscaPorNome_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.Size = new System.Drawing.Size(104, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Buscar por nome:";
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tb_itemEstoque);
-            this.groupBox4.Location = new System.Drawing.Point(473, 46);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(788, 46);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(309, 76);
+            this.groupBox4.Size = new System.Drawing.Size(245, 76);
             this.groupBox4.TabIndex = 26;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = " Total de itens registrado no estoque";
@@ -170,9 +162,9 @@
             // tb_itemEstoque
             // 
             this.tb_itemEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_itemEstoque.Location = new System.Drawing.Point(6, 29);
+            this.tb_itemEstoque.Location = new System.Drawing.Point(6, 30);
             this.tb_itemEstoque.Name = "tb_itemEstoque";
-            this.tb_itemEstoque.Size = new System.Drawing.Size(297, 28);
+            this.tb_itemEstoque.Size = new System.Drawing.Size(233, 28);
             this.tb_itemEstoque.TabIndex = 1;
             this.tb_itemEstoque.Text = "...";
             this.tb_itemEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -180,9 +172,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.kryptonDataGridViewGerenciaProdutos);
-            this.groupBox3.Location = new System.Drawing.Point(12, 355);
+            this.groupBox3.Location = new System.Drawing.Point(12, 343);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1272, 331);
+            this.groupBox3.Size = new System.Drawing.Size(1272, 343);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Clique duas vezes no item para mais detalhes";
@@ -204,7 +196,7 @@
             this.kryptonDataGridViewGerenciaProdutos.Name = "kryptonDataGridViewGerenciaProdutos";
             this.kryptonDataGridViewGerenciaProdutos.RowHeadersVisible = false;
             this.kryptonDataGridViewGerenciaProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kryptonDataGridViewGerenciaProdutos.Size = new System.Drawing.Size(1266, 312);
+            this.kryptonDataGridViewGerenciaProdutos.Size = new System.Drawing.Size(1266, 324);
             this.kryptonDataGridViewGerenciaProdutos.TabIndex = 1;
             this.kryptonDataGridViewGerenciaProdutos.SelectionChanged += new System.EventHandler(this.kryptonDataGridViewGerenciaProdutos_SelectionChanged);
             // 
@@ -233,7 +225,7 @@
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(12, 128);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1021, 221);
+            this.groupBox5.Size = new System.Drawing.Size(1021, 209);
             this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Dados completos do produto";
@@ -291,7 +283,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_salvarAlteracao);
-            this.panel2.Location = new System.Drawing.Point(740, 172);
+            this.panel2.Location = new System.Drawing.Point(736, 157);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(151, 40);
             this.panel2.TabIndex = 22;
@@ -317,7 +309,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btn_removeItem);
-            this.panel3.Location = new System.Drawing.Point(902, 172);
+            this.panel3.Location = new System.Drawing.Point(898, 157);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(111, 40);
             this.panel3.TabIndex = 23;
@@ -459,9 +451,10 @@
             this.groupBox6.Controls.Add(this.pictureBox3);
             this.groupBox6.Controls.Add(this.panel4);
             this.groupBox6.Controls.Add(this.pictureBoxMostraItem);
-            this.groupBox6.Location = new System.Drawing.Point(1039, 53);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(1036, 51);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(245, 296);
+            this.groupBox6.Size = new System.Drawing.Size(245, 286);
             this.groupBox6.TabIndex = 43;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Imagem do produto";
@@ -501,18 +494,18 @@
             this.btn_adicionaImagem.UseVisualStyleBackColor = false;
             this.btn_adicionaImagem.Click += new System.EventHandler(this.btn_adicionaImagem_Click);
             // 
+            // openFileDialogAlterProduct
+            // 
+            this.openFileDialogAlterProduct.FileName = "openFileDialog1";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logo_opac;
-            this.pictureBox2.Location = new System.Drawing.Point(788, 46);
+            this.pictureBox2.Location = new System.Drawing.Point(539, 9);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(219, 190);
             this.pictureBox2.TabIndex = 44;
             this.pictureBox2.TabStop = false;
-            // 
-            // openFileDialogAlterProduct
-            // 
-            this.openFileDialogAlterProduct.FileName = "openFileDialog1";
             // 
             // Form_Gerencia_Estoque
             // 
@@ -565,7 +558,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label tb_itemEstoque;
-        private System.Windows.Forms.Button btn_procurar;
         private System.Windows.Forms.TextBox tb_buscaPorNome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -597,8 +589,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btn_adicionaImagem;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.OpenFileDialog openFileDialogAlterProduct;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

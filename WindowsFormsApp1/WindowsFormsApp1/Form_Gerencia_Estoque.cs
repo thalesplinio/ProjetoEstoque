@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -24,6 +26,26 @@ namespace WindowsFormsApp1
         public Form_Gerencia_Estoque()
         {
             InitializeComponent();
+        }
+        private void Form_Gerencia_Estoque_Load(object sender, EventArgs e)
+        {
+            kryptonDataGridViewGerenciaProdutos.DataSource = Banco.ObterProdutosParaListar();
+            kryptonDataGridViewGerenciaProdutos.Sort(kryptonDataGridViewGerenciaProdutos.Columns["ID Produto"], ListSortDirection.Descending);
+            kryptonDataGridViewGerenciaProdutos.Columns[0].Width = 85;
+            kryptonDataGridViewGerenciaProdutos.Columns[1].Width = 110;
+            kryptonDataGridViewGerenciaProdutos.Columns[2].Width = 185;
+            kryptonDataGridViewGerenciaProdutos.Columns[3].Width = 110;
+            kryptonDataGridViewGerenciaProdutos.Columns[4].Width = 80;
+            kryptonDataGridViewGerenciaProdutos.Columns[5].Width = 80;
+            kryptonDataGridViewGerenciaProdutos.Columns[6].Width = 110;
+            kryptonDataGridViewGerenciaProdutos.Columns[7].Width = 110;
+            kryptonDataGridViewGerenciaProdutos.Columns[8].Width = 170;
+            kryptonDataGridViewGerenciaProdutos.Columns[9].Width = 100;
+            kryptonDataGridViewGerenciaProdutos.Columns[10].Width = 110;
+            ContaProdutos();
+            DataFornecedor();
+            DataCategoria();
+            DataTipo();
         }
         private void DataFornecedor()
         {
@@ -65,27 +87,6 @@ namespace WindowsFormsApp1
                 tb_itemEstoque.Text = "Nenhum produto registrado";
             }
         }
-        private void Form_Gerencia_Estoque_Load(object sender, EventArgs e)
-        {
-            kryptonDataGridViewGerenciaProdutos.DataSource = Banco.ObterProdutosParaListar();
-            kryptonDataGridViewGerenciaProdutos.Sort(kryptonDataGridViewGerenciaProdutos.Columns["ID Produto"], ListSortDirection.Descending);
-            kryptonDataGridViewGerenciaProdutos.Columns[0].Width = 85;
-            kryptonDataGridViewGerenciaProdutos.Columns[1].Width = 110;
-            kryptonDataGridViewGerenciaProdutos.Columns[2].Width = 185;
-            kryptonDataGridViewGerenciaProdutos.Columns[3].Width = 110;
-            kryptonDataGridViewGerenciaProdutos.Columns[4].Width = 80;
-            kryptonDataGridViewGerenciaProdutos.Columns[5].Width = 80;
-            kryptonDataGridViewGerenciaProdutos.Columns[6].Width = 110;
-            kryptonDataGridViewGerenciaProdutos.Columns[7].Width = 110;
-            kryptonDataGridViewGerenciaProdutos.Columns[8].Width = 170;
-            kryptonDataGridViewGerenciaProdutos.Columns[9].Width = 100;
-            kryptonDataGridViewGerenciaProdutos.Columns[10].Width = 110;
-            ContaProdutos();
-            DataFornecedor();
-            DataCategoria();
-            DataTipo();
-        }
-
         private void kryptonDataGridViewGerenciaProdutos_SelectionChanged(object sender, EventArgs e)
         {
             DataGridView dataGridView = (DataGridView)sender;
@@ -116,20 +117,23 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
         private void btn_removeItem_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Deseja realmente excluir este produto?", "Confirmar exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (res == DialogResult.Yes)
-            {
+            {                
+                // Apagando a imagem / se tiver foto apaga
+                if (File.Exists(pictureBoxMostraItem.ImageLocation))
+                {
+                    File.Delete(pictureBoxMostraItem.ImageLocation);
+                }
+                // -----------------
                 Banco.DeletarGerenciaProduto(tb_idProduto.Text);
-
                 kryptonDataGridViewGerenciaProdutos.DataSource = Banco.ObterProdutosParaGerenciar();
                 kryptonDataGridViewGerenciaProdutos.Sort(kryptonDataGridViewGerenciaProdutos.Columns["ID Produto"], ListSortDirection.Descending);
             }
         }
-
         private void btn_salvarAlteracao_Click(object sender, EventArgs e)
         {
             #region Tratando nossa imagem do produto
@@ -163,6 +167,7 @@ namespace WindowsFormsApp1
 
             #region alterando produto no banco
             Produtos produtos = new Produtos();
+
             produtos.id_produto = tb_idProduto.Text;
             int.Parse(produtos.id_fornecedor = cb_Fornecedor.SelectedValue.ToString());
             produtos.nome = tb_nomeProduto.Text;
@@ -207,6 +212,12 @@ namespace WindowsFormsApp1
                 }
             }
             pictureBoxMostraItem.ImageLocation = caminhoOrigem;
+        }
+        private void tb_buscaPorNome_TextChanged(object sender, EventArgs e)
+        {
+            Produtos produtos = new Produtos();
+            produtos.nome = tb_buscaPorNome.Text;
+            kryptonDataGridViewGerenciaProdutos.DataSource = Banco.BuscaNomeProduto(produtos.nome);
         }
     }
 }

@@ -37,20 +37,15 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.kryptonDataGridViewListaProdutos = new Krypton.Toolkit.KryptonDataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ktb_resultContProdutos = new Krypton.Toolkit.KryptonTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tb_itemEstoque = new System.Windows.Forms.Label();
+            this.tb_buscaPorNome = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxMostraItem = new System.Windows.Forms.PictureBox();
             this.tb_idProduto = new System.Windows.Forms.TextBox();
-            this.btn_procurar = new System.Windows.Forms.Button();
-            this.tb_buscaPorNome = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cb_BuscaCategoria = new System.Windows.Forms.ComboBox();
-            this.cb_BuscaToipo = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -58,8 +53,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewListaProdutos)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraItem)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -95,7 +91,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox5);
+            this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 47);
@@ -138,47 +137,21 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.ktb_resultContProdutos);
-            this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.Controls.Add(this.pictureBoxMostraItem);
-            this.groupBox2.Controls.Add(this.tb_idProduto);
-            this.groupBox2.Controls.Add(this.btn_procurar);
             this.groupBox2.Controls.Add(this.tb_buscaPorNome);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.cb_BuscaCategoria);
-            this.groupBox2.Controls.Add(this.cb_BuscaToipo);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Location = new System.Drawing.Point(6, 20);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1178, 199);
+            this.groupBox2.Size = new System.Drawing.Size(374, 69);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Efetuar buscas";
             // 
-            // ktb_resultContProdutos
-            // 
-            this.ktb_resultContProdutos.Location = new System.Drawing.Point(7, 141);
-            this.ktb_resultContProdutos.Multiline = true;
-            this.ktb_resultContProdutos.Name = "ktb_resultContProdutos";
-            this.ktb_resultContProdutos.ReadOnly = true;
-            this.ktb_resultContProdutos.Size = new System.Drawing.Size(684, 48);
-            this.ktb_resultContProdutos.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
-            this.ktb_resultContProdutos.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.ktb_resultContProdutos.StateCommon.Border.Rounding = 15F;
-            this.ktb_resultContProdutos.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ktb_resultContProdutos.TabIndex = 27;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tb_itemEstoque);
-            this.groupBox4.Location = new System.Drawing.Point(7, 65);
+            this.groupBox4.Location = new System.Drawing.Point(6, 95);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(309, 69);
+            this.groupBox4.Size = new System.Drawing.Size(269, 69);
             this.groupBox4.TabIndex = 26;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = " Total de itens registrado no estoque";
@@ -186,65 +159,20 @@
             // tb_itemEstoque
             // 
             this.tb_itemEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_itemEstoque.Location = new System.Drawing.Point(6, 29);
+            this.tb_itemEstoque.Location = new System.Drawing.Point(6, 21);
             this.tb_itemEstoque.Name = "tb_itemEstoque";
-            this.tb_itemEstoque.Size = new System.Drawing.Size(297, 28);
+            this.tb_itemEstoque.Size = new System.Drawing.Size(257, 28);
             this.tb_itemEstoque.TabIndex = 1;
             this.tb_itemEstoque.Text = "...";
             this.tb_itemEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBoxMostraItem
-            // 
-            this.pictureBoxMostraItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBoxMostraItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxMostraItem.Location = new System.Drawing.Point(948, 36);
-            this.pictureBoxMostraItem.Name = "pictureBoxMostraItem";
-            this.pictureBoxMostraItem.Size = new System.Drawing.Size(215, 153);
-            this.pictureBoxMostraItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxMostraItem.TabIndex = 19;
-            this.pictureBoxMostraItem.TabStop = false;
-            // 
-            // tb_idProduto
-            // 
-            this.tb_idProduto.Location = new System.Drawing.Point(1018, 12);
-            this.tb_idProduto.Name = "tb_idProduto";
-            this.tb_idProduto.ReadOnly = true;
-            this.tb_idProduto.Size = new System.Drawing.Size(145, 21);
-            this.tb_idProduto.TabIndex = 24;
-            // 
-            // btn_procurar
-            // 
-            this.btn_procurar.Location = new System.Drawing.Point(367, 36);
-            this.btn_procurar.Name = "btn_procurar";
-            this.btn_procurar.Size = new System.Drawing.Size(75, 23);
-            this.btn_procurar.TabIndex = 24;
-            this.btn_procurar.Text = "Buscar";
-            this.btn_procurar.UseVisualStyleBackColor = true;
             // 
             // tb_buscaPorNome
             // 
             this.tb_buscaPorNome.Location = new System.Drawing.Point(6, 37);
             this.tb_buscaPorNome.Name = "tb_buscaPorNome";
-            this.tb_buscaPorNome.Size = new System.Drawing.Size(357, 21);
+            this.tb_buscaPorNome.Size = new System.Drawing.Size(362, 21);
             this.tb_buscaPorNome.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(694, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Selecionar por Categoria:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(944, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 15);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "ID Produto:";
+            this.tb_buscaPorNome.TextChanged += new System.EventHandler(this.tb_buscaPorNome_TextChanged);
             // 
             // label3
             // 
@@ -255,39 +183,54 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Buscar por nome:";
             // 
-            // cb_BuscaCategoria
-            // 
-            this.cb_BuscaCategoria.FormattingEnabled = true;
-            this.cb_BuscaCategoria.Location = new System.Drawing.Point(697, 36);
-            this.cb_BuscaCategoria.Name = "cb_BuscaCategoria";
-            this.cb_BuscaCategoria.Size = new System.Drawing.Size(232, 23);
-            this.cb_BuscaCategoria.TabIndex = 1;
-            // 
-            // cb_BuscaToipo
-            // 
-            this.cb_BuscaToipo.FormattingEnabled = true;
-            this.cb_BuscaToipo.Location = new System.Drawing.Point(459, 36);
-            this.cb_BuscaToipo.Name = "cb_BuscaToipo";
-            this.cb_BuscaToipo.Size = new System.Drawing.Size(232, 23);
-            this.cb_BuscaToipo.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(456, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Selecionar por tipo:";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logo_opac;
-            this.pictureBox2.Location = new System.Drawing.Point(697, 37);
+            this.pictureBox2.Location = new System.Drawing.Point(723, 29);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(219, 190);
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBoxMostraItem
+            // 
+            this.pictureBoxMostraItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBoxMostraItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxMostraItem.Location = new System.Drawing.Point(6, 40);
+            this.pictureBoxMostraItem.Name = "pictureBoxMostraItem";
+            this.pictureBoxMostraItem.Size = new System.Drawing.Size(215, 153);
+            this.pictureBoxMostraItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMostraItem.TabIndex = 25;
+            this.pictureBoxMostraItem.TabStop = false;
+            // 
+            // tb_idProduto
+            // 
+            this.tb_idProduto.Location = new System.Drawing.Point(76, 16);
+            this.tb_idProduto.Name = "tb_idProduto";
+            this.tb_idProduto.ReadOnly = true;
+            this.tb_idProduto.Size = new System.Drawing.Size(145, 21);
+            this.tb_idProduto.TabIndex = 27;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(2, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 15);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "ID Produto:";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.pictureBoxMostraItem);
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Controls.Add(this.tb_idProduto);
+            this.groupBox5.Location = new System.Drawing.Point(948, 20);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(233, 199);
+            this.groupBox5.TabIndex = 28;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Imagem do produto";
             // 
             // Form_Listar_Produtos
             // 
@@ -313,8 +256,10 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraItem)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -327,20 +272,15 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox tb_buscaPorNome;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cb_BuscaCategoria;
-        private System.Windows.Forms.ComboBox cb_BuscaToipo;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBoxMostraItem;
         private System.Windows.Forms.GroupBox groupBox3;
         private Krypton.Toolkit.KryptonDataGridView kryptonDataGridViewListaProdutos;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btn_procurar;
-        private System.Windows.Forms.TextBox tb_idProduto;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label tb_itemEstoque;
-        private Krypton.Toolkit.KryptonTextBox ktb_resultContProdutos;
+        private System.Windows.Forms.PictureBox pictureBoxMostraItem;
+        private System.Windows.Forms.TextBox tb_idProduto;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }

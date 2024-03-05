@@ -213,7 +213,5 @@ namespace WindowsFormsApp1
             Form_DeskNivel form_DeskNivel = new Form_DeskNivel();
             form_DeskNivel.ShowDialog();
         }
-
-
     }
 }
