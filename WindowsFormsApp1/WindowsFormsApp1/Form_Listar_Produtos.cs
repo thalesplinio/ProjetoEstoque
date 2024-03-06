@@ -46,6 +46,8 @@ namespace WindowsFormsApp1
 
                 tb_idProduto.Text = dataTable.Rows[0].Field<Int64>("id_produto").ToString();
                 pictureBoxMostraItem.ImageLocation = dataTable.Rows[0].Field<string>("image").ToString();
+                label_Qtd.Text = dataTable.Rows[0].Field<Int64>("quantidade").ToString();
+                label_QtdMin.Text = dataTable.Rows[0].Field<Int64>("quantidade_minima").ToString();
             }
         }
         private void ContaProdutos()

@@ -34,28 +34,34 @@
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.pictureBoxMostraItem = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tb_idProduto = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tb_itemEstoque = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.kryptonDataGridViewListaProdutos = new Krypton.Toolkit.KryptonDataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.tb_itemEstoque = new System.Windows.Forms.Label();
             this.tb_buscaPorNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxMostraItem = new System.Windows.Forms.PictureBox();
-            this.tb_idProduto = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label_Qtd = new System.Windows.Forms.Label();
+            this.label_QtdMin = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewListaProdutos)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraItem)).BeginInit();
-            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -91,10 +97,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.groupBox5);
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 47);
@@ -103,6 +110,84 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Todos os materiais";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 15);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Quantidade deste item:";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.pictureBoxMostraItem);
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Controls.Add(this.tb_idProduto);
+            this.groupBox5.Location = new System.Drawing.Point(948, 20);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(233, 199);
+            this.groupBox5.TabIndex = 28;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Imagem do produto";
+            // 
+            // pictureBoxMostraItem
+            // 
+            this.pictureBoxMostraItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBoxMostraItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxMostraItem.Location = new System.Drawing.Point(6, 40);
+            this.pictureBoxMostraItem.Name = "pictureBoxMostraItem";
+            this.pictureBoxMostraItem.Size = new System.Drawing.Size(215, 153);
+            this.pictureBoxMostraItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMostraItem.TabIndex = 25;
+            this.pictureBoxMostraItem.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(2, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 15);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "ID Produto:";
+            // 
+            // tb_idProduto
+            // 
+            this.tb_idProduto.Location = new System.Drawing.Point(76, 16);
+            this.tb_idProduto.Name = "tb_idProduto";
+            this.tb_idProduto.ReadOnly = true;
+            this.tb_idProduto.Size = new System.Drawing.Size(145, 21);
+            this.tb_idProduto.TabIndex = 27;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logo_opac;
+            this.pictureBox2.Location = new System.Drawing.Point(36, 29);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(219, 190);
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.tb_itemEstoque);
+            this.groupBox4.Location = new System.Drawing.Point(426, 20);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(269, 69);
+            this.groupBox4.TabIndex = 26;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = " Total de itens registrado no estoque";
+            // 
+            // tb_itemEstoque
+            // 
+            this.tb_itemEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_itemEstoque.Location = new System.Drawing.Point(6, 21);
+            this.tb_itemEstoque.Name = "tb_itemEstoque";
+            this.tb_itemEstoque.Size = new System.Drawing.Size(257, 28);
+            this.tb_itemEstoque.TabIndex = 1;
+            this.tb_itemEstoque.Text = "...";
+            this.tb_itemEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox3
             // 
@@ -139,38 +224,18 @@
             // 
             this.groupBox2.Controls.Add(this.tb_buscaPorNome);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(6, 20);
+            this.groupBox2.Location = new System.Drawing.Point(338, 95);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(374, 69);
+            this.groupBox2.Size = new System.Drawing.Size(435, 69);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Efetuar buscas";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.tb_itemEstoque);
-            this.groupBox4.Location = new System.Drawing.Point(6, 95);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(269, 69);
-            this.groupBox4.TabIndex = 26;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = " Total de itens registrado no estoque";
-            // 
-            // tb_itemEstoque
-            // 
-            this.tb_itemEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_itemEstoque.Location = new System.Drawing.Point(6, 21);
-            this.tb_itemEstoque.Name = "tb_itemEstoque";
-            this.tb_itemEstoque.Size = new System.Drawing.Size(257, 28);
-            this.tb_itemEstoque.TabIndex = 1;
-            this.tb_itemEstoque.Text = "...";
-            this.tb_itemEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tb_buscaPorNome
             // 
             this.tb_buscaPorNome.Location = new System.Drawing.Point(6, 37);
             this.tb_buscaPorNome.Name = "tb_buscaPorNome";
-            this.tb_buscaPorNome.Size = new System.Drawing.Size(362, 21);
+            this.tb_buscaPorNome.Size = new System.Drawing.Size(423, 21);
             this.tb_buscaPorNome.TabIndex = 5;
             this.tb_buscaPorNome.TextChanged += new System.EventHandler(this.tb_buscaPorNome_TextChanged);
             // 
@@ -183,54 +248,44 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Buscar por nome:";
             // 
-            // pictureBox2
+            // groupBox6
             // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logo_opac;
-            this.pictureBox2.Location = new System.Drawing.Point(723, 29);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(219, 190);
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
+            this.groupBox6.Controls.Add(this.label_QtdMin);
+            this.groupBox6.Controls.Add(this.label6);
+            this.groupBox6.Controls.Add(this.label_Qtd);
+            this.groupBox6.Controls.Add(this.label1);
+            this.groupBox6.Location = new System.Drawing.Point(280, 171);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(662, 48);
+            this.groupBox6.TabIndex = 30;
+            this.groupBox6.TabStop = false;
             // 
-            // pictureBoxMostraItem
+            // label_Qtd
             // 
-            this.pictureBoxMostraItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBoxMostraItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxMostraItem.Location = new System.Drawing.Point(6, 40);
-            this.pictureBoxMostraItem.Name = "pictureBoxMostraItem";
-            this.pictureBoxMostraItem.Size = new System.Drawing.Size(215, 153);
-            this.pictureBoxMostraItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxMostraItem.TabIndex = 25;
-            this.pictureBoxMostraItem.TabStop = false;
+            this.label_Qtd.AutoSize = true;
+            this.label_Qtd.Location = new System.Drawing.Point(137, 21);
+            this.label_Qtd.Name = "label_Qtd";
+            this.label_Qtd.Size = new System.Drawing.Size(16, 15);
+            this.label_Qtd.TabIndex = 30;
+            this.label_Qtd.Text = "...";
             // 
-            // tb_idProduto
+            // label_QtdMin
             // 
-            this.tb_idProduto.Location = new System.Drawing.Point(76, 16);
-            this.tb_idProduto.Name = "tb_idProduto";
-            this.tb_idProduto.ReadOnly = true;
-            this.tb_idProduto.Size = new System.Drawing.Size(145, 21);
-            this.tb_idProduto.TabIndex = 27;
+            this.label_QtdMin.AutoSize = true;
+            this.label_QtdMin.Location = new System.Drawing.Point(538, 21);
+            this.label_QtdMin.Name = "label_QtdMin";
+            this.label_QtdMin.Size = new System.Drawing.Size(16, 15);
+            this.label_QtdMin.TabIndex = 32;
+            this.label_QtdMin.Text = "...";
             // 
-            // label5
+            // label6
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(2, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 15);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "ID Produto:";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.pictureBoxMostraItem);
-            this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Controls.Add(this.tb_idProduto);
-            this.groupBox5.Location = new System.Drawing.Point(948, 20);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(233, 199);
-            this.groupBox5.TabIndex = 28;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Imagem do produto";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(353, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(179, 15);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Quantidade mínima deste item:";
             // 
             // Form_Listar_Produtos
             // 
@@ -251,15 +306,17 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewListaProdutos)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostraItem)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -282,5 +339,10 @@
         private System.Windows.Forms.TextBox tb_idProduto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label_QtdMin;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label_Qtd;
     }
 }

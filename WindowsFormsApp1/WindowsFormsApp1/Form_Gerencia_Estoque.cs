@@ -17,12 +17,56 @@ namespace WindowsFormsApp1
 {
     public partial class Form_Gerencia_Estoque : Form
     {
+        #region Set Colors Butons
+        private struct RGBColorsButtons
+        {
+            public static Color corAzulPadrao = Color.FromArgb(42, 49, 67); // #2A3143
+            public static Color corVerdePadrao = Color.FromArgb(45, 153, 97); // #136A3D
+
+            public static Color corControl = Color.FromArgb(240, 240, 240);
+            public static Color corControlLight = Color.FromArgb(227, 227, 227);
+        }
+        #endregion
+
+        #region Buttons Hover Color
+        private void btn_salvarAlteracao_MouseEnter(object sender, EventArgs e)
+        {
+            btn_salvarAlteracao.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_salvarAlteracao_MouseLeave(object sender, EventArgs e)
+        {
+            btn_salvarAlteracao.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+
+        private void btn_removeItem_MouseEnter(object sender, EventArgs e)
+        {
+            btn_removeItem.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_removeItem_MouseLeave(object sender, EventArgs e)
+        {
+            btn_removeItem.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+
+        private void btn_adicionaImagem_MouseEnter(object sender, EventArgs e)
+        {
+            btn_adicionaImagem.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_adicionaImagem_MouseLeave(object sender, EventArgs e)
+        {
+            btn_adicionaImagem.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+        #endregion
+
         #region Globais
         string caminhoOrigem = "";
         string imagem = "";
         string pastaDestino = Globais.caminhoImageProduct;
         string destinoCompleto = "";
         #endregion
+
         public Form_Gerencia_Estoque()
         {
             InitializeComponent();

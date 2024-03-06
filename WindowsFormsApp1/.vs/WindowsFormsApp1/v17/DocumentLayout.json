@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|c:\\users\\thalesplinio\\documents\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\form_retirar_produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\form_retirar_produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|c:\\users\\thalesplinio\\documents\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\form_listar_produtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\form_listar_produtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|c:\\users\\thalesplinio\\documents\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\form_retirar_produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\form_retirar_produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|c:\\users\\thalesplinio\\documents\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\form_listar_produtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\form_listar_produtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|c:\\users\\thalesplinio\\documents\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\form_listar_produtos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\form_listar_produtos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 178,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,27 +30,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form_Retirar_Produto.cs",
-              "DocumentMoniker": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Retirar_Produto.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form_Retirar_Produto.cs",
-              "ToolTip": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Retirar_Produto.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Form_Retirar_Produto.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowGgAAAArAAAA",
+              "DocumentIndex": 2,
+              "Title": "Form_Listar_Produtos.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Listar_Produtos.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form_Listar_Produtos.Designer.cs",
+              "ToolTip": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Listar_Produtos.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form_Listar_Produtos.Designer.cs",
+              "ViewState": "AQIAAOoAAAAAAAAAAADgvyABAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T23:14:30.41Z",
+              "WhenOpened": "2024-03-06T23:38:26.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form_Retirar_Produto.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Retirar_Produto.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form_Retirar_Produto.cs",
-              "ToolTip": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Retirar_Produto.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp1\\Form_Retirar_Produto.cs [Design]",
+              "Title": "Form_Listar_Produtos.cs",
+              "DocumentMoniker": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Listar_Produtos.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form_Listar_Produtos.cs",
+              "ToolTip": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Listar_Produtos.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form_Listar_Produtos.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAWwDEAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T23:14:29.385Z",
+              "WhenOpened": "2024-03-06T23:35:46.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form_Listar_Produtos.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Listar_Produtos.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form_Listar_Produtos.cs",
+              "ToolTip": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Listar_Produtos.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form_Listar_Produtos.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T23:35:28.17Z",
               "EditorCaption": " [Design]"
             }
           ]

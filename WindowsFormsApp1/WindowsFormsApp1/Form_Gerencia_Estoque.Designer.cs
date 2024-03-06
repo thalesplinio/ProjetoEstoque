@@ -305,6 +305,8 @@
             this.btn_salvarAlteracao.Text = "        Salvar alterações";
             this.btn_salvarAlteracao.UseVisualStyleBackColor = false;
             this.btn_salvarAlteracao.Click += new System.EventHandler(this.btn_salvarAlteracao_Click);
+            this.btn_salvarAlteracao.MouseEnter += new System.EventHandler(this.btn_salvarAlteracao_MouseEnter);
+            this.btn_salvarAlteracao.MouseLeave += new System.EventHandler(this.btn_salvarAlteracao_MouseLeave);
             // 
             // panel3
             // 
@@ -331,6 +333,8 @@
             this.btn_removeItem.Text = "      Remover";
             this.btn_removeItem.UseVisualStyleBackColor = false;
             this.btn_removeItem.Click += new System.EventHandler(this.btn_removeItem_Click);
+            this.btn_removeItem.MouseEnter += new System.EventHandler(this.btn_removeItem_MouseEnter);
+            this.btn_removeItem.MouseLeave += new System.EventHandler(this.btn_removeItem_MouseLeave);
             // 
             // nud_qtd
             // 
@@ -493,6 +497,8 @@
             this.btn_adicionaImagem.Text = "        Alterar imagem";
             this.btn_adicionaImagem.UseVisualStyleBackColor = false;
             this.btn_adicionaImagem.Click += new System.EventHandler(this.btn_adicionaImagem_Click);
+            this.btn_adicionaImagem.MouseEnter += new System.EventHandler(this.btn_adicionaImagem_MouseEnter);
+            this.btn_adicionaImagem.MouseLeave += new System.EventHandler(this.btn_adicionaImagem_MouseLeave);
             // 
             // openFileDialogAlterProduct
             // 

@@ -305,6 +305,8 @@
             this.btn_retiraProduto.Text = "        Retirar produto";
             this.btn_retiraProduto.UseVisualStyleBackColor = false;
             this.btn_retiraProduto.Click += new System.EventHandler(this.btn_retiraProduto_Click);
+            this.btn_retiraProduto.MouseEnter += new System.EventHandler(this.btn_retiraProduto_MouseEnter);
+            this.btn_retiraProduto.MouseLeave += new System.EventHandler(this.btn_retiraProduto_MouseLeave);
             // 
             // pictureBox2
             // 

@@ -13,11 +13,32 @@ namespace WindowsFormsApp1
 {
     public partial class Form_Retirar_Produto : Form
     {
+        #region Set Colors Butons
+        private struct RGBColorsButtons
+        {
+            public static Color corAzulPadrao = Color.FromArgb(42, 49, 67); // #2A3143
+            public static Color corVerdePadrao = Color.FromArgb(45, 153, 97); // #136A3D
+
+            public static Color corControl = Color.FromArgb(240, 240, 240);
+            public static Color corControlLight = Color.FromArgb(227, 227, 227);
+        }
+        #endregion
+
+        #region Buttons Hover Color
+        private void btn_retiraProduto_MouseEnter(object sender, EventArgs e)
+        {
+            btn_retiraProduto.BackColor = RGBColorsButtons.corVerdePadrao;
+        }
+
+        private void btn_retiraProduto_MouseLeave(object sender, EventArgs e)
+        {
+            btn_retiraProduto.BackColor = RGBColorsButtons.corAzulPadrao;
+        }
+        #endregion
         public Form_Retirar_Produto()
         {
             InitializeComponent();
         }
-
         private void Form_Retirar_Produto_Load(object sender, EventArgs e)
         {
             ListaProdutosDGV();
@@ -52,7 +73,6 @@ namespace WindowsFormsApp1
             kryptonDataGridViewRetiraProdutos.Columns[9].Width = 100;
             kryptonDataGridViewRetiraProdutos.Columns[10].Width = 110;
         }
-
         private void kryptonDataGridViewRetiraProdutos_SelectionChanged(object sender, EventArgs e)
         {
             DataGridView dataGridView = (DataGridView)sender;
@@ -83,7 +103,6 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
         private void btn_retiraProduto_Click(object sender, EventArgs e)
         {
             string valorAntigo = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[4].Value.ToString();
@@ -127,7 +146,6 @@ namespace WindowsFormsApp1
             }
 
         }
-
         private void tb_buscaPorNome_TextChanged(object sender, EventArgs e)
         {
             Produtos produtos = new Produtos();
