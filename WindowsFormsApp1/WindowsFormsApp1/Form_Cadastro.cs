@@ -160,7 +160,7 @@ namespace WindowsFormsApp1
             /// a url dela no banco de dados
             if (destinoCompleto == "")
             {
-                if (MessageBox.Show("Nenhuma imagem foi selecionada para o produto, deseja continuar?", "Mensagem", MessageBoxButtons.YesNo) == DialogResult.No)
+                if (MessageBox.Show("Nenhuma imagem foi selecionada para o produto, deseja continuar?", "Mensagem", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 {
                     return;
                 }
@@ -182,22 +182,51 @@ namespace WindowsFormsApp1
             }
             #endregion
 
-            #region Inserindo produto
-            Produtos produto = new Produtos();
+            #region tratando campos
+            if (tb_nomeProduto.Text == "")
+            {
+                label_tituloNomeProduto.ForeColor = Color.Red;
+                label_tituloNomeProduto.Text = "Nome do produto: *";
+            }
+            else if (tb_marca.Text == "")
+            {
+                label_tituloNomeMarca.ForeColor = Color.Red;
+                label_tituloNomeMarca.Text = "Marca: *";
+            }
+            else if (nud_qtd.Value == 0)
+            {
+                label_tituloNomeQtd.ForeColor = Color.Red;
+                label_tituloNomeQtd.Text = "Quantidade do produto: *";
+            }
+            else if (nud_minQtd.Value == 0)
+            {
+                label_tituloNomeQtdMin.ForeColor = Color.Red;
+                label_tituloNomeQtdMin.Text = "Quantidade mínima em estoque: *";
+            }
+            else
+            {
+                #region Inserindo produto
+                Produtos produto = new Produtos();
 
-            int.Parse(produto.id_fornecedor = cb_Fornecedor.SelectedValue.ToString());
-            produto.id_usuario = form_main.lb_UserLogado.Text;
-            produto.nome = tb_nomeProduto.Text;
-            produto.marca = tb_marca.Text;
-            produto.quantidade = nud_qtd.Text;
-            produto.quantidade_minima = nud_minQtd.Text;
-            int.Parse(produto.id_categoria = cb_categoria.SelectedValue.ToString());
-            int.Parse(produto.id_tipo_produto = cb_tipo.SelectedValue.ToString());
-            produto.descricao = rtb_desc.Text;
-            produto.image = destinoCompleto;
+                int.Parse(produto.id_fornecedor = cb_Fornecedor.SelectedValue.ToString());
+                produto.id_usuario = form_main.lb_UserLogado.Text;
+                produto.nome = tb_nomeProduto.Text;
+                produto.marca = tb_marca.Text;
+                produto.quantidade = nud_qtd.Text;
+                produto.quantidade_minima = nud_minQtd.Text;
+                int.Parse(produto.id_categoria = cb_categoria.SelectedValue.ToString());
+                int.Parse(produto.id_tipo_produto = cb_tipo.SelectedValue.ToString());
+                produto.descricao = rtb_desc.Text;
+                produto.image = destinoCompleto;
 
-            Banco.AdicionarProduto(produto);
-            LimparCampos();
+                Banco.AdicionarProduto(produto);
+                LimparCampos();
+                label_tituloNomeProduto.ForeColor = Color.Black;
+                label_tituloNomeMarca.ForeColor = Color.Black;
+                label_tituloNomeQtd.ForeColor = Color.Black;
+                label_tituloNomeQtdMin.ForeColor = Color.Black;
+                #endregion
+            }
             #endregion
             kryptonDataGridViewCadastroProdutos.DataSource = Banco.ObterProdutos();
             kryptonDataGridViewCadastroProdutos.Sort(kryptonDataGridViewCadastroProdutos.Columns["ID Produto"], ListSortDirection.Descending);

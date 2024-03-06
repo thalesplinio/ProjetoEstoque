@@ -140,7 +140,7 @@ namespace WindowsFormsApp1
             /// ----------------------------------------------------------------------------------------
             /// Aqui copiamos nossa imagem e mandamos para nossa pasta no local do sistema e colcoamos 
             /// a url dela no banco de dados
-            pictureBoxMostraItem.ImageLocation = null;
+            //pictureBoxMostraItem.ImageLocation = null;
             if (destinoCompleto == "")
             {
                 if (MessageBox.Show("Nenhuma imagem foi selecionada para o produto, deseja continuar?", "Mensagem", MessageBoxButtons.YesNo) == DialogResult.No)

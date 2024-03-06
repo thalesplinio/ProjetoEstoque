@@ -45,16 +45,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tb_marca = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_tituloNomeMarca = new System.Windows.Forms.Label();
             this.tb_nomeProduto = new System.Windows.Forms.TextBox();
             this.cb_tipo = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_tituloNomeProduto = new System.Windows.Forms.Label();
             this.nud_minQtd = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label_tituloNomeQtdMin = new System.Windows.Forms.Label();
             this.nud_qtd = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label_tituloNomeQtd = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.kryptonDataGridViewCadastroProdutos = new Krypton.Toolkit.KryptonDataGridView();
             this.openFileDialogIsertImageProduct = new System.Windows.Forms.OpenFileDialog();
@@ -86,16 +86,16 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.tb_marca);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label_tituloNomeMarca);
             this.groupBox1.Controls.Add(this.tb_nomeProduto);
             this.groupBox1.Controls.Add(this.cb_tipo);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label_tituloNomeProduto);
             this.groupBox1.Controls.Add(this.nud_minQtd);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label_tituloNomeQtdMin);
             this.groupBox1.Controls.Add(this.nud_qtd);
-            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label_tituloNomeQtd);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 46);
             this.groupBox1.Name = "groupBox1";
@@ -258,14 +258,14 @@
             this.tb_marca.Size = new System.Drawing.Size(245, 21);
             this.tb_marca.TabIndex = 5;
             // 
-            // label3
+            // label_tituloNomeMarca
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Marca:";
+            this.label_tituloNomeMarca.AutoSize = true;
+            this.label_tituloNomeMarca.Location = new System.Drawing.Point(7, 109);
+            this.label_tituloNomeMarca.Name = "label_tituloNomeMarca";
+            this.label_tituloNomeMarca.Size = new System.Drawing.Size(45, 15);
+            this.label_tituloNomeMarca.TabIndex = 4;
+            this.label_tituloNomeMarca.Text = "Marca:";
             // 
             // tb_nomeProduto
             // 
@@ -282,14 +282,14 @@
             this.cb_tipo.Size = new System.Drawing.Size(245, 23);
             this.cb_tipo.TabIndex = 15;
             // 
-            // label2
+            // label_tituloNomeProduto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nome do produto:";
+            this.label_tituloNomeProduto.AutoSize = true;
+            this.label_tituloNomeProduto.Location = new System.Drawing.Point(7, 65);
+            this.label_tituloNomeProduto.Name = "label_tituloNomeProduto";
+            this.label_tituloNomeProduto.Size = new System.Drawing.Size(106, 15);
+            this.label_tituloNomeProduto.TabIndex = 2;
+            this.label_tituloNomeProduto.Text = "Nome do produto:";
             // 
             // nud_minQtd
             // 
@@ -316,14 +316,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Fornecedor:";
             // 
-            // label7
+            // label_tituloNomeQtdMin
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(262, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(187, 15);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Quantidade mínima em estoque:";
+            this.label_tituloNomeQtdMin.AutoSize = true;
+            this.label_tituloNomeQtdMin.Location = new System.Drawing.Point(262, 65);
+            this.label_tituloNomeQtdMin.Name = "label_tituloNomeQtdMin";
+            this.label_tituloNomeQtdMin.Size = new System.Drawing.Size(187, 15);
+            this.label_tituloNomeQtdMin.TabIndex = 12;
+            this.label_tituloNomeQtdMin.Text = "Quantidade mínima em estoque:";
             // 
             // nud_qtd
             // 
@@ -337,14 +337,14 @@
             this.nud_qtd.Size = new System.Drawing.Size(120, 21);
             this.nud_qtd.TabIndex = 11;
             // 
-            // label6
+            // label_tituloNomeQtd
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(262, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 15);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Quantidade do produto:";
+            this.label_tituloNomeQtd.AutoSize = true;
+            this.label_tituloNomeQtd.Location = new System.Drawing.Point(262, 21);
+            this.label_tituloNomeQtd.Name = "label_tituloNomeQtd";
+            this.label_tituloNomeQtd.Size = new System.Drawing.Size(136, 15);
+            this.label_tituloNomeQtd.TabIndex = 10;
+            this.label_tituloNomeQtd.Text = "Quantidade do produto:";
             // 
             // groupBox2
             // 
@@ -448,9 +448,9 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tb_marca;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_tituloNomeMarca;
         private System.Windows.Forms.TextBox tb_nomeProduto;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_tituloNomeProduto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtb_desc;
         private System.Windows.Forms.Label label5;
@@ -459,9 +459,9 @@
         private System.Windows.Forms.ComboBox cb_tipo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown nud_minQtd;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label_tituloNomeQtdMin;
         private System.Windows.Forms.NumericUpDown nud_qtd;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label_tituloNomeQtd;
         private System.Windows.Forms.PictureBox pictureBoxImageProduto;
         private System.Windows.Forms.Panel panel_gerencia;
         private System.Windows.Forms.Button btn_insereProduto;

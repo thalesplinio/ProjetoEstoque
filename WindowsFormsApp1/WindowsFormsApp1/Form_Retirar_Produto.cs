@@ -87,34 +87,45 @@ namespace WindowsFormsApp1
         private void btn_retiraProduto_Click(object sender, EventArgs e)
         {
             string valorAntigo = kryptonDataGridViewRetiraProdutos.CurrentRow.Cells[4].Value.ToString();
-            string valorNovo = tb_valorRetirada.Text;
-            int num1 = int.Parse(valorAntigo);
-            int num2 = int.Parse(valorNovo);
 
-            if (num2 <= num1)
+            if (tb_valorRetirada.Text == "")
             {
-                MessageBox.Show("O produto TEM essa quantidade!, confira a quantidade", "Mensagem");
-                int soma = num1 - num2;
-                Produtos produto = new Produtos();
-                produto.id_produto = tb_idProduto.Text;
-                Banco.AtualizarProdutoEstoque(produto, soma);
-                ContaProdutos();
-                tb_valorRetirada.Clear();
-                tb_descRetirada.Clear();
-                kryptonDataGridViewRetiraProdutos.DataSource = Banco.ObterProdutosParaListar();
-                kryptonDataGridViewRetiraProdutos.Sort(kryptonDataGridViewRetiraProdutos.Columns["ID Produto"], ListSortDirection.Descending);
-                int linhaSelecionada = kryptonDataGridViewRetiraProdutos.SelectedRows[0].Index;
-                kryptonDataGridViewRetiraProdutos[0, linhaSelecionada].Value = tb_idProduto.Text;
-                kryptonDataGridViewRetiraProdutos[1, linhaSelecionada].Value = tb_idFornecedor.Text;
+                labelTituloValorRetirada.ForeColor = Color.Red;
+                labelTituloValorRetirada.Text = "Quantidade para retirada: *";
             }
-            else if (num2 >= num1)
+            else
             {
-                if (num1 == 0)
+                string valorNovo = tb_valorRetirada.Text;
+                int num1 = int.Parse(valorAntigo);
+                int num2 = int.Parse(valorNovo);
+
+                if (num2 <= num1)
                 {
-                    MessageBox.Show("Este produto está em falta!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // MessageBox.Show("O produto TEM essa quantidade!, confira a quantidade", "Mensagem");
+                    int soma = num1 - num2;
+                    Produtos produto = new Produtos();
+                    produto.id_produto = tb_idProduto.Text;
+                    Banco.AtualizarProdutoEstoque(produto, soma);
+                    ContaProdutos();
+                    labelTituloValorRetirada.ForeColor = Color.Black;
+                    tb_valorRetirada.Clear();
+                    tb_descRetirada.Clear();
+                    kryptonDataGridViewRetiraProdutos.DataSource = Banco.ObterProdutosParaListar();
+                    kryptonDataGridViewRetiraProdutos.Sort(kryptonDataGridViewRetiraProdutos.Columns["ID Produto"], ListSortDirection.Descending);
+                    int linhaSelecionada = kryptonDataGridViewRetiraProdutos.SelectedRows[0].Index;
+                    kryptonDataGridViewRetiraProdutos[0, linhaSelecionada].Value = tb_idProduto.Text;
+                    kryptonDataGridViewRetiraProdutos[1, linhaSelecionada].Value = tb_idFornecedor.Text;
                 }
-                return;
+                else if (num2 >= num1)
+                {
+                    if (num1 == 0)
+                    {
+                        MessageBox.Show("Este produto está em falta!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    return;
+                }
             }
+
         }
 
         private void tb_buscaPorNome_TextChanged(object sender, EventArgs e)

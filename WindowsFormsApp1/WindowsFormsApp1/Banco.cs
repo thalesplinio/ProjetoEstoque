@@ -1086,7 +1086,7 @@ namespace WindowsFormsApp1
             {
                 var conexaoPropria = ConexaoBanco();
                 var command = conexaoPropria.CreateCommand();
-                command.CommandText = @"UPDATE produtos SET id_fornecedor='" + produtos.id_fornecedor + "', nome='" + produtos.nome + "', marca='" + produtos.marca + "', quantidade='" + produtos.quantidade + "', quantidade_minima='" + produtos.quantidade_minima + "', id_categoria='" + produtos.id_categoria + "', id_tipo_produto='" + produtos.id_tipo_produto + "', descricao='" + produtos.descricao + "', image='" + produtos.image + "' WHERE id_produto=" + produtos.id_produto;
+                command.CommandText = @"UPDATE produtos SET id_fornecedor='" + produtos.id_fornecedor + "', nome='" + produtos.nome + "', marca='" + produtos.marca + "', quantidade='" + produtos.quantidade + "', quantidade_minima='" + produtos.quantidade_minima + "', id_categoria='" + produtos.id_categoria + "', id_tipo_produto='" + produtos.id_tipo_produto + "', descricao='" + produtos.descricao + "', image='" + produtos.image + "', data_atualizacao='"+dataFormatada+"' WHERE id_produto=" + produtos.id_produto;
 
                 dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
                 command.ExecuteNonQuery();
