@@ -20,7 +20,9 @@ namespace WindowsFormsApp1
         #region Conexao banco
         public static SQLiteConnection ConexaoBanco()
         {
-            conexao = new SQLiteConnection($@"Data Source={Globais.caminhoBanco}{Globais.nomeBanco}");
+
+            string caminhoBancoDeDados = $@"{Globais.caminhoBanco}{Globais.nomeBanco}";
+            conexao = new SQLiteConnection($@"Data Source={caminhoBancoDeDados}");
             conexao.Open();
             return conexao;
         }
@@ -1096,7 +1098,7 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 //throw ex;
-                MessageBox.Show($"Não foi Atualizar o produto ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Não foi possivel atualizar o produto ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public static DataTable BuscaNomeProduto(string parametro)

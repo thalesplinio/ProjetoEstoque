@@ -68,6 +68,7 @@ namespace WindowsFormsApp1
         {
             //this.BackColor = corAzulPadrao;
             this.ForeColor = corControlLight;
+            Banco.ConexaoBanco();
         }
         private void btn_entrar_Click(object sender, EventArgs e)
         {
