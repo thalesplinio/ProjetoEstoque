@@ -209,7 +209,7 @@ namespace WindowsFormsApp1
                 Produtos produto = new Produtos();
 
                 int.Parse(produto.id_fornecedor = cb_Fornecedor.SelectedValue.ToString());
-                produto.id_usuario = form_main.lb_UserLogado.Text;
+                produto.id_usuario = form_main.lb_idLogado.Text;
                 produto.nome = tb_nomeProduto.Text;
                 produto.marca = tb_marca.Text;
                 produto.quantidade = nud_qtd.Text;

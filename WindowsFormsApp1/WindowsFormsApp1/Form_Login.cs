@@ -90,6 +90,7 @@ namespace WindowsFormsApp1
             if(dataTable.Rows.Count == 1)
             {
                 // usuario logado
+                form_main.lb_idLogado.Text = dataTable.Rows[0].Field<Int64>("id_usuario").ToString();
                 form_main.lb_UserLogado.Text = dataTable.Rows[0].Field<string>("nome_usuario");
                 Globais.nivel = int.Parse(dataTable.Rows[0].Field<Int64>("nivel_acesso").ToString());
                 Globais.logado = true;

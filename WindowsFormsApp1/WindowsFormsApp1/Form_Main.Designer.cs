@@ -68,6 +68,9 @@
             this.registrarTipoDeProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesGeraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatorioDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lb_idLogado = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_gerencia.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,6 +87,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.panel1.Controls.Add(this.lb_idLogado);
             this.panel1.Controls.Add(this.panel_gerencia);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel_logo);
@@ -322,7 +326,8 @@
             this.fornecedoresToolStripMenuItem,
             this.categoriaToolStripMenuItem,
             this.tipoDeProdutoToolStripMenuItem,
-            this.configuraçõesToolStripMenuItem});
+            this.configuraçõesToolStripMenuItem,
+            this.relatóriosToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -477,6 +482,32 @@
             this.configuraçõesGeraisToolStripMenuItem.Text = "Configurações gerais";
             this.configuraçõesGeraisToolStripMenuItem.Click += new System.EventHandler(this.configuraçõesGeraisToolStripMenuItem_Click);
             // 
+            // relatóriosToolStripMenuItem
+            // 
+            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.relatorioDeUsuáriosToolStripMenuItem});
+            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 19);
+            this.relatóriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // relatorioDeUsuáriosToolStripMenuItem
+            // 
+            this.relatorioDeUsuáriosToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.notes;
+            this.relatorioDeUsuáriosToolStripMenuItem.Name = "relatorioDeUsuáriosToolStripMenuItem";
+            this.relatorioDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.relatorioDeUsuáriosToolStripMenuItem.Text = "Relatorio de usuários";
+            this.relatorioDeUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.relatorioDeUsuáriosToolStripMenuItem_Click);
+            // 
+            // lb_idLogado
+            // 
+            this.lb_idLogado.AutoSize = true;
+            this.lb_idLogado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.lb_idLogado.Location = new System.Drawing.Point(1086, 15);
+            this.lb_idLogado.Name = "lb_idLogado";
+            this.lb_idLogado.Size = new System.Drawing.Size(16, 13);
+            this.lb_idLogado.TabIndex = 3;
+            this.lb_idLogado.Text = "...";
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,6 +524,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Main_FormClosing);
             this.Load += new System.EventHandler(this.Form_Main_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel_gerencia.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -551,6 +583,9 @@
         private System.Windows.Forms.ToolStripMenuItem tipoDeProdutoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarCategoriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarTipoDeProdutoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatorioDeUsuáriosToolStripMenuItem;
+        public System.Windows.Forms.Label lb_idLogado;
     }
 }
 

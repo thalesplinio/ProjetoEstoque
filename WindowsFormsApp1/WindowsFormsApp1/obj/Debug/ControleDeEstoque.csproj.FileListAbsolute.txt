@@ -67,3 +67,4 @@ C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFo
 C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Gerencia_Estoque.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Relatorio_Usuario.resources

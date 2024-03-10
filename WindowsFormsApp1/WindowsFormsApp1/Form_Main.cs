@@ -224,5 +224,11 @@ namespace WindowsFormsApp1
             Form_Gerencia_Estoque form_Gerencia_Estoque = new Form_Gerencia_Estoque();
             AbreFormularioBaseNivel(2, form_Gerencia_Estoque);
         }
+
+        private void relatorioDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Relatorio_Usuario form_Relatorio_Usuario = new Form_Relatorio_Usuario();
+            AbreFormularioBaseNivel(2, form_Relatorio_Usuario);
+        }
     }
 }

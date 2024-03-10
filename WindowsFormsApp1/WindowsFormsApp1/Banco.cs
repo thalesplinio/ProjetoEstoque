@@ -1144,5 +1144,145 @@ namespace WindowsFormsApp1
             }
         }
         #endregion
+
+        #region RELATÓRIOS
+        #region Relatório de inserção de usuários
+        public static DataTable ObterProdutosParaParaRelatorioUsuario()
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = @"
+                    SELECT
+                        prod.id_produto as 'ID Produto',
+                        usu.nome_usuario as 'Usuário',
+                        prod.nome as 'Nome Produto',
+                        fprod.nome as 'Fornecedor',
+                        prod.marca as 'Marca Produto',
+                        cProd.nome_categoria as 'Categoria',
+                        prod.descricao as 'Descrição',
+                        prod.quantidade as 'Quantidade total',
+                        prod.quantidade_minima as 'Qtd. Mínima',
+                        tProd.nome_tipo as 'Tipo de Produto',
+                        prod.data_criacao as 'Data Cadastro',
+                        prod.data_atualizacao as 'Data Atualização'
+                    FROM
+                        produtos as prod
+                    INNER JOIN
+                        usuarios as usu ON usu.id_usuario = prod.id_usuario
+                    INNER JOIN
+                        fornecedor_produto as fprod ON fprod.id_fornecedor = prod.id_fornecedor
+                    INNER JOIN
+                        categoria_produto as cProd ON cProd.id_categoria = prod.id_categoria
+                    INNER JOIN
+                        tipo_produto as tProd on tProd.id_tipo = prod.id_tipo_produto";
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static DataTable BuscaNomeProdutoPorUsuarios(string parametro)
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = $@"
+                    SELECT
+                        prod.id_produto as 'ID Produto',
+                        usu.nome_usuario as 'Usuário',
+                        prod.nome as 'Nome Produto',
+                        fprod.nome as 'Fornecedor',
+                        prod.marca as 'Marca Produto',
+                        cProd.nome_categoria as 'Categoria',
+                        prod.descricao as 'Descrição',
+                        prod.quantidade as 'Quantidade total',
+                        prod.quantidade_minima as 'Qtd. Mínima',
+                        tProd.nome_tipo as 'Tipo de Produto',
+                        prod.data_criacao as 'Data Cadastro',
+                        prod.data_atualizacao as 'Data Atualização'
+                    FROM
+                        produtos as prod
+                    INNER JOIN
+                        usuarios as usu ON usu.id_usuario = prod.id_usuario
+                    INNER JOIN
+                        fornecedor_produto as fprod ON fprod.id_fornecedor = prod.id_fornecedor
+                    INNER JOIN
+                        categoria_produto as cProd ON cProd.id_categoria = prod.id_categoria
+                    INNER JOIN
+                        tipo_produto as tProd on tProd.id_tipo = prod.id_tipo_produto
+                    WHERE usu.nome_usuario LIKE '%{parametro}%'";
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static DataTable ObterQuantidadePorUsuario(string nomeUsuario)
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = $@"
+                SELECT
+	                SUM(prod.quantidade) AS 'Quantidade Total',
+                    prod.id_produto as 'ID Produto',
+                    usu.nome_usuario as 'Usuário',
+                    prod.nome as 'Nome Produto',
+                    fprod.nome as 'Fornecedor',
+                    prod.marca as 'Marca Produto',
+                    cProd.nome_categoria as 'Categoria',
+                    prod.descricao as 'Descrição',
+                    prod.quantidade as 'Quantidade total',
+                    prod.quantidade_minima as 'Qtd. Mínima',
+                    tProd.nome_tipo as 'Tipo de Produto',
+                    prod.data_criacao as 'Data Cadastro',
+                    prod.data_atualizacao as 'Data Atualização'
+                FROM
+                    produtos as prod
+                INNER JOIN
+                    usuarios as usu ON usu.id_usuario = prod.id_usuario
+                INNER JOIN
+                    fornecedor_produto as fprod ON fprod.id_fornecedor = prod.id_fornecedor
+                INNER JOIN
+                    categoria_produto as cProd ON cProd.id_categoria = prod.id_categoria
+                INNER JOIN
+                    tipo_produto as tProd on tProd.id_tipo = prod.id_tipo_produto
+                WHERE usu.nome_usuario LIKE '%{nomeUsuario}%'";
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+        #endregion
     }
 }
