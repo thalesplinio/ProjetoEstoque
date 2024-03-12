@@ -1191,6 +1191,36 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }
+        public static DataTable ObterQuantidadeDeProdutosPorUsuario(string parametro)
+        {
+            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+
+            try
+            {
+                var conexaoPropria = ConexaoBanco();
+                var command = conexaoPropria.CreateCommand();
+                command.CommandText = $@"SELECT
+	                COUNT(*),
+	                prod.id_produto as 'ID Produto',
+	                usu.nome_usuario as 'Usuário'
+                FROM
+	                produtos as prod
+                INNER JOIN
+	                usuarios as usu ON usu.id_usuario = prod.id_usuario
+                WHERE
+	                usu.nome_usuario='{parametro}'";
+
+                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+                dataAdapter.Fill(dataTable);    // preenchendo com as informações da consulta
+                conexaoPropria.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public static DataTable BuscaNomeProdutoPorUsuarios(string parametro)
         {
             SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco

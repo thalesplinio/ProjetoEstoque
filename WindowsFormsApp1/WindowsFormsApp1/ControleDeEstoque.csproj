@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="Banco.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="EventosDePaginaPdf.cs" />
     <Compile Include="Form_AddFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>

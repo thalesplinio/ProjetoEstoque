@@ -70,19 +70,37 @@ namespace WindowsFormsApp1
             if (saveFileDialogPDF.ShowDialog() == DialogResult.OK)
             {
                 nomeArquivo = saveFileDialogPDF.FileName;
-                #region Configuração das paginas 
+                #region Configuração das paginas
                 var pixelPorMilimetro = 72 / 25.2f;
                 Document doc = new Document(PageSize.A4.Rotate(), 15 * pixelPorMilimetro, 15 * pixelPorMilimetro, 15 * pixelPorMilimetro, 20 * pixelPorMilimetro);
                 var arquivo = new FileStream(nomeArquivo, FileMode.Create);
-                var write = PdfWriter.GetInstance(doc, arquivo);
+                var writer = PdfWriter.GetInstance(doc, arquivo);
+
+                #region Calculo da quantidade de paginas do documento
+                var dataTable = Banco.ObterQuantidadeDeProdutosPorUsuario(produtos.id_usuario);
+                int quantidade = Convert.ToInt32(dataTable.Rows[0][0]);
+                //MessageBox.Show($"{quantidade}");
+                int totalDePaginas = 1;
+                int totalDeLinhas = quantidade;
+                if(totalDeLinhas > 24) 
+                {
+                    totalDePaginas += (int)Math.Ceiling((totalDeLinhas - 24) / 29f);
+                }
+                // data e hora da geração - paginação
+                writer.PageEvent = new EventosDePaginaPdf(totalDePaginas);
                 doc.Open();
+                #endregion
 
                 #region Utilites
-                fonteBase = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, false);
-                var fonteParagrafo = new iTextSharp.text.Font(fonteBase, 24, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
-                var fonteSubtitulo = new iTextSharp.text.Font(fonteBase, 10, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+                int tamFontTitulo = 24;
+                int tamFontSubtitulo = 10;
+                int tamFontInfoUsuario = 8;
                 int tamanhoFontTituloTabela = 10;
                 int tamanhoTabelaContent = 8;
+                fonteBase = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, false);
+                var fonteParagrafo = new iTextSharp.text.Font(fonteBase, tamFontTitulo, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+                var fonteSubtitulo = new iTextSharp.text.Font(fonteBase, tamFontSubtitulo, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+                var fonteInfoUsuario = new iTextSharp.text.Font(fonteBase, tamFontInfoUsuario, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
                 #endregion
 
                 #region Titulo
@@ -99,7 +117,7 @@ namespace WindowsFormsApp1
                 #endregion
 
                 #region Subtitulo com nome de usuário
-                var tituloNomeUsuario = new Paragraph($"Nome de usuário: {lb_nomeUsuario.Text}\nQuantidade inserido pelo usuário: {lb_quantidadeInserida.Text} registros.\n\n", fonteSubtitulo);
+                var tituloNomeUsuario = new Paragraph($"Nome de usuário: {lb_nomeUsuario.Text}\nQuantidade inserido pelo usuário: {lb_quantidadeInserida.Text} registros.\n\n", fonteInfoUsuario);
                 tituloNomeUsuario.Alignment = Element.ALIGN_LEFT;
                 //tituloNomeUsuario.SpacingAfter = 4; // adicionando espaço depois do paragrafo 2
                 doc.Add(tituloNomeUsuario);
