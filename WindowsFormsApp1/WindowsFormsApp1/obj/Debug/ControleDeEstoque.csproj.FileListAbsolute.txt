@@ -68,3 +68,6 @@ C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFo
 C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Gerencia_Estoque.resources
 C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Relatorio_Usuario.resources
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\itextsharp.dll
+C:\Users\ThalesPlinio\Documents\GitHub\ProjetoEstoque\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\itextsharp.xml

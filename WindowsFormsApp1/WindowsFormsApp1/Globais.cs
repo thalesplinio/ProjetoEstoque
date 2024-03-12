@@ -16,5 +16,7 @@ namespace WindowsFormsApp1
         public static string nomeBanco = "banco_estoque.db";
         public static string caminhoBanco = $@"{caminho}\banco\";
         public static string caminhoImageProduct = $@"{caminho}\image_product\";
+
+        public static string caminhoIconeSitemaPDF = $@"{caminho}\img\icone.png";
     }
 }

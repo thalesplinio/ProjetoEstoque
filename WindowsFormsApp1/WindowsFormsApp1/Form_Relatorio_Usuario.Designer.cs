@@ -34,6 +34,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel_gerencia = new System.Windows.Forms.Panel();
+            this.btn_novoFornecedor = new System.Windows.Forms.Button();
+            this.label0 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lb_qtdInsertUsuario = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -41,9 +45,13 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tb_buscaNomeUsuarioRelatorio = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.saveFileDialogPDF = new System.Windows.Forms.SaveFileDialog();
+            this.lb_nomeUsuario = new System.Windows.Forms.Label();
+            this.lb_quantidadeInserida = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.panel_gerencia.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewListaProdutosRelatorioUsuario)).BeginInit();
@@ -67,7 +75,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(314, 9);
+            this.label10.Location = new System.Drawing.Point(549, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(194, 25);
             this.label10.TabIndex = 3;
@@ -84,6 +92,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lb_quantidadeInserida);
+            this.groupBox1.Controls.Add(this.lb_nomeUsuario);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.panel_gerencia);
+            this.groupBox1.Controls.Add(this.label0);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -96,10 +109,54 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar relatórios";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(369, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 15);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Quantidade inserida:";
+            // 
+            // panel_gerencia
+            // 
+            this.panel_gerencia.Controls.Add(this.btn_novoFornecedor);
+            this.panel_gerencia.Location = new System.Drawing.Point(1144, 42);
+            this.panel_gerencia.Name = "panel_gerencia";
+            this.panel_gerencia.Size = new System.Drawing.Size(151, 40);
+            this.panel_gerencia.TabIndex = 29;
+            // 
+            // btn_novoFornecedor
+            // 
+            this.btn_novoFornecedor.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.btn_novoFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.btn_novoFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_novoFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_novoFornecedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_novoFornecedor.Image = global::WindowsFormsApp1.Properties.Resources.add;
+            this.btn_novoFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_novoFornecedor.Location = new System.Drawing.Point(-5, -5);
+            this.btn_novoFornecedor.Name = "btn_novoFornecedor";
+            this.btn_novoFornecedor.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btn_novoFornecedor.Size = new System.Drawing.Size(159, 50);
+            this.btn_novoFornecedor.TabIndex = 6;
+            this.btn_novoFornecedor.Text = "        Salvar em PDF";
+            this.btn_novoFornecedor.UseVisualStyleBackColor = false;
+            this.btn_novoFornecedor.Click += new System.EventHandler(this.btn_novoFornecedor_Click);
+            // 
+            // label0
+            // 
+            this.label0.AutoSize = true;
+            this.label0.Location = new System.Drawing.Point(369, 30);
+            this.label0.Name = "label0";
+            this.label0.Size = new System.Drawing.Size(105, 15);
+            this.label0.TabIndex = 28;
+            this.label0.Text = "Nome de usuário:";
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.lb_qtdInsertUsuario);
-            this.groupBox4.Location = new System.Drawing.Point(369, 21);
+            this.groupBox4.Location = new System.Drawing.Point(653, 20);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(331, 55);
             this.groupBox4.TabIndex = 2;
@@ -167,11 +224,29 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.logo_opac;
-            this.pictureBox2.Location = new System.Drawing.Point(780, -44);
+            this.pictureBox2.Location = new System.Drawing.Point(990, -24);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(219, 190);
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
+            // 
+            // lb_nomeUsuario
+            // 
+            this.lb_nomeUsuario.AutoSize = true;
+            this.lb_nomeUsuario.Location = new System.Drawing.Point(480, 30);
+            this.lb_nomeUsuario.Name = "lb_nomeUsuario";
+            this.lb_nomeUsuario.Size = new System.Drawing.Size(16, 15);
+            this.lb_nomeUsuario.TabIndex = 31;
+            this.lb_nomeUsuario.Text = "...";
+            // 
+            // lb_quantidadeInserida
+            // 
+            this.lb_quantidadeInserida.AutoSize = true;
+            this.lb_quantidadeInserida.Location = new System.Drawing.Point(496, 55);
+            this.lb_quantidadeInserida.Name = "lb_quantidadeInserida";
+            this.lb_quantidadeInserida.Size = new System.Drawing.Size(16, 15);
+            this.lb_quantidadeInserida.TabIndex = 32;
+            this.lb_quantidadeInserida.Text = "...";
             // 
             // Form_Relatorio_Usuario
             // 
@@ -191,6 +266,8 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panel_gerencia.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewListaProdutosRelatorioUsuario)).EndInit();
@@ -214,5 +291,12 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lb_qtdInsertUsuario;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogPDF;
+        private System.Windows.Forms.Label label0;
+        private System.Windows.Forms.Panel panel_gerencia;
+        private System.Windows.Forms.Button btn_novoFornecedor;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_quantidadeInserida;
+        private System.Windows.Forms.Label lb_nomeUsuario;
     }
 }
