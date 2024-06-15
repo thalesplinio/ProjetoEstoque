@@ -1,0 +1,42 @@
+Pastas:
+
+Models: (Criar) Armazene classes que representam os dados da sua aplicação (ex: Categoria.cs, Fornecedor.cs, Produto.cs, Status.cs, Usuario.cs).
+Views: (Criar) Coloque os arquivos .cs que definem as interfaces visuais dos formulários aqui (ex: Form_AddFornecedor.cs, Form_Categoria.cs, etc.).
+Controllers: (Criar) Separe a lógica de negócio nessas classes (opcional nesta etapa inicial).
+Helpers: (Opcional) Crie esta pasta para classes utilitárias que auxiliam em tarefas repetitivas (ex: EventosDePaginaPDF.cs se ela contém funções gerais para criação de PDFs).
+Properties: Mantenha essa pasta padrão do Visual Studio.
+References: Mantenha essa pasta padrão do Visual Studio.
+Bin: Mantenha essa pasta padrão do Visual Studio.
+Arquivos:
+
+Mova todos os arquivos .cs relacionados a formulários para a pasta Views.
+Mova Banco.cs para a pasta Models se ela lida com acesso a dados. Se for lógica de negócio específica do banco, considere a pasta Controllers (futuramente).
+Mova Globais.cs para a pasta Helpers se ela contém funções globais reutilizáveis.
+Exclua todos os arquivos .Design.cs e .resx pois o Visual Studio os recria automaticamente quando você modifica o formulário no designer.
+O arquivo Program.cs pode permanecer na raiz do projeto.
+Exemplo de estrutura final:
+
+ControleDeEstoque
+    Properties
+    References
+    Bin
+    Models/
+        Categoria.cs
+        Fornecedor.cs
+        Produto.cs
+        Status.cs
+        Usuario.cs
+        Banco.cs (se acessa dados)
+    Views/
+        Form_AddFornecedor.cs
+        Form_Categoria.cs
+        ... (outros arquivos .cs de formulários)
+    Helpers/ (opcional)
+        EventosDePaginaPDF.cs
+        Globais.cs (se contém funções globais)
+    Program.cs
+Lembre-se:
+
+Esta é uma estrutura inicial, você pode adaptá-la conforme a complexidade do seu projeto.
+Utilize namespaces para organizar ainda mais o código dentro de cada pasta.
+Mantenha os nomes dos arquivos e classes claros e descritivos.

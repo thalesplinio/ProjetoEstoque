@@ -3,31 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|c:\\users\\thalesplinio\\documents\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\form_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\form_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|c:\\users\\thalesplinio\\documents\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\form_relatorio_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\form_relatorio_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-<<<<<<< HEAD
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\windowsformsapp1\\globais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\globais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\windowsformsapp1\\form_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\form_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\windowsformsapp1\\banco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\banco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\windowsformsapp1\\form_relatorio_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\form_relatorio_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
->>>>>>> 08f95cae9c4475fdd7163cfcf05d3e93a70bd11c
+      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|c:\\users\\thalesplinio\\documents\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\views\\form_relatorio_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\views\\form_relatorio_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,7 +13,6 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-<<<<<<< HEAD
           "DockedWidth": 178,
           "SelectedChildIndex": 1,
           "Children": [
@@ -47,91 +23,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form_Cadastro.cs",
-              "DocumentMoniker": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Cadastro.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form_Cadastro.cs",
-              "ToolTip": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Cadastro.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Form_Cadastro.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAxwDwAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-30T12:30:42.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form_Cadastro.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Cadastro.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form_Cadastro.cs",
-              "ToolTip": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Cadastro.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp1\\Form_Cadastro.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-30T12:30:41.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Globais.cs",
-              "DocumentMoniker": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Globais.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Globais.cs",
-              "ToolTip": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Globais.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Globais.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-30T12:28:50.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Banco.cs",
-              "DocumentMoniker": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Banco.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Banco.cs",
-              "ToolTip": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Banco.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Banco.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-30T12:27:48.239Z"
-            },
-            {
-=======
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
->>>>>>> 08f95cae9c4475fdd7163cfcf05d3e93a70bd11c
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Form_Relatorio_Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Relatorio_Usuario.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form_Relatorio_Usuario.cs",
-              "ToolTip": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Relatorio_Usuario.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Form_Relatorio_Usuario.cs",
-<<<<<<< HEAD
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Views\\Form_Relatorio_Usuario.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Views\\Form_Relatorio_Usuario.cs",
+              "ToolTip": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Views\\Form_Relatorio_Usuario.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Views\\Form_Relatorio_Usuario.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAmwKcAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T23:18:42.5Z"
-=======
-              "ViewState": "AQIAAIUAAAAAAAAAAAAAAJAAAABaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T22:35:12.536Z",
+              "WhenOpened": "2024-06-15T14:55:41.526Z",
               "EditorCaption": ""
->>>>>>> 08f95cae9c4475fdd7163cfcf05d3e93a70bd11c
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form_Relatorio_Usuario.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Relatorio_Usuario.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form_Relatorio_Usuario.cs",
-              "ToolTip": "C:\\Users\\ThalesPlinio\\Documents\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Form_Relatorio_Usuario.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp1\\Form_Relatorio_Usuario.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< HEAD
-              "WhenOpened": "2024-03-12T23:18:41.212Z"
-=======
-              "WhenOpened": "2024-06-02T22:35:10.148Z",
-              "EditorCaption": " [Design]"
->>>>>>> 08f95cae9c4475fdd7163cfcf05d3e93a70bd11c
             }
           ]
         }

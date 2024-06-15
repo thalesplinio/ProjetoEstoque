@@ -79,159 +79,159 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Banco.cs" />
-    <Compile Include="Categoria.cs" />
-    <Compile Include="EventosDePaginaPdf.cs" />
-    <Compile Include="Form_AddFornecedor.cs">
+    <Compile Include="Controllers\Banco.cs" />
+    <Compile Include="Models\Categoria.cs" />
+    <Compile Include="Helpers\EventosDePaginaPdf.cs" />
+    <Compile Include="Views\Form_AddFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_AddFornecedor.Designer.cs">
+    <Compile Include="Views\Form_AddFornecedor.Designer.cs">
       <DependentUpon>Form_AddFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_AddStatus.cs">
+    <Compile Include="Views\Form_AddStatus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_AddStatus.Designer.cs">
+    <Compile Include="Views\Form_AddStatus.Designer.cs">
       <DependentUpon>Form_AddStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_AddUsuario.cs">
+    <Compile Include="Views\Form_AddUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_AddUsuario.Designer.cs">
+    <Compile Include="Views\Form_AddUsuario.Designer.cs">
       <DependentUpon>Form_AddUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Cadastro.cs">
+    <Compile Include="Views\Form_Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Cadastro.Designer.cs">
+    <Compile Include="Views\Form_Cadastro.Designer.cs">
       <DependentUpon>Form_Cadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Categoria.cs">
+    <Compile Include="Views\Form_Categoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Categoria.Designer.cs">
+    <Compile Include="Views\Form_Categoria.Designer.cs">
       <DependentUpon>Form_Categoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Config.cs">
+    <Compile Include="Views\Form_Config.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Config.Designer.cs">
+    <Compile Include="Views\Form_Config.Designer.cs">
       <DependentUpon>Form_Config.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_DeskNivel.cs">
+    <Compile Include="Views\Form_DeskNivel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_DeskNivel.Designer.cs">
+    <Compile Include="Views\Form_DeskNivel.Designer.cs">
       <DependentUpon>Form_DeskNivel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Fornecedores.cs">
+    <Compile Include="Views\Form_Fornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Fornecedores.Designer.cs">
+    <Compile Include="Views\Form_Fornecedores.Designer.cs">
       <DependentUpon>Form_Fornecedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Gerencia_Estoque.cs">
+    <Compile Include="Views\Form_Gerencia_Estoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Gerencia_Estoque.Designer.cs">
+    <Compile Include="Views\Form_Gerencia_Estoque.Designer.cs">
       <DependentUpon>Form_Gerencia_Estoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Main.cs">
+    <Compile Include="Views\Form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Main.Designer.cs">
+    <Compile Include="Views\Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Login.cs">
+    <Compile Include="Views\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Login.Designer.cs">
+    <Compile Include="Views\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Relatorio_Usuario.cs">
+    <Compile Include="Views\Form_Relatorio_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Relatorio_Usuario.Designer.cs">
+    <Compile Include="Views\Form_Relatorio_Usuario.Designer.cs">
       <DependentUpon>Form_Relatorio_Usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Retirar_Produto.cs">
+    <Compile Include="Views\Form_Retirar_Produto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Retirar_Produto.Designer.cs">
+    <Compile Include="Views\Form_Retirar_Produto.Designer.cs">
       <DependentUpon>Form_Retirar_Produto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Tipo.cs">
+    <Compile Include="Views\Form_Tipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Tipo.Designer.cs">
+    <Compile Include="Views\Form_Tipo.Designer.cs">
       <DependentUpon>Form_Tipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Todos_Usuarios.cs">
+    <Compile Include="Views\Form_Todos_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Todos_Usuarios.Designer.cs">
+    <Compile Include="Views\Form_Todos_Usuarios.Designer.cs">
       <DependentUpon>Form_Todos_Usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fornecedor.cs" />
-    <Compile Include="Globais.cs" />
-    <Compile Include="Form_Listar_Produtos.cs">
+    <Compile Include="Models\Fornecedor.cs" />
+    <Compile Include="Helpers\Globais.cs" />
+    <Compile Include="Views\Form_Listar_Produtos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Listar_Produtos.Designer.cs">
+    <Compile Include="Views\Form_Listar_Produtos.Designer.cs">
       <DependentUpon>Form_Listar_Produtos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Produtos.cs" />
+    <Compile Include="Models\Produtos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Status.cs" />
-    <Compile Include="Tipo.cs" />
-    <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="Form_AddFornecedor.resx">
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\Tipo.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <EmbeddedResource Include="Views\Form_AddFornecedor.resx">
       <DependentUpon>Form_AddFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_AddStatus.resx">
+    <EmbeddedResource Include="Views\Form_AddStatus.resx">
       <DependentUpon>Form_AddStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_AddUsuario.resx">
+    <EmbeddedResource Include="Views\Form_AddUsuario.resx">
       <DependentUpon>Form_AddUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Cadastro.resx">
+    <EmbeddedResource Include="Views\Form_Cadastro.resx">
       <DependentUpon>Form_Cadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Categoria.resx">
+    <EmbeddedResource Include="Views\Form_Categoria.resx">
       <DependentUpon>Form_Categoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Config.resx">
+    <EmbeddedResource Include="Views\Form_Config.resx">
       <DependentUpon>Form_Config.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_DeskNivel.resx">
+    <EmbeddedResource Include="Views\Form_DeskNivel.resx">
       <DependentUpon>Form_DeskNivel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Fornecedores.resx">
+    <EmbeddedResource Include="Views\Form_Fornecedores.resx">
       <DependentUpon>Form_Fornecedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Gerencia_Estoque.resx">
+    <EmbeddedResource Include="Views\Form_Gerencia_Estoque.resx">
       <DependentUpon>Form_Gerencia_Estoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Main.resx">
+    <EmbeddedResource Include="Views\Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Login.resx">
+    <EmbeddedResource Include="Views\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Relatorio_Usuario.resx">
+    <EmbeddedResource Include="Views\Form_Relatorio_Usuario.resx">
       <DependentUpon>Form_Relatorio_Usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Retirar_Produto.resx">
+    <EmbeddedResource Include="Views\Form_Retirar_Produto.resx">
       <DependentUpon>Form_Retirar_Produto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Tipo.resx">
+    <EmbeddedResource Include="Views\Form_Tipo.resx">
       <DependentUpon>Form_Tipo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Todos_Usuarios.resx">
+    <EmbeddedResource Include="Views\Form_Todos_Usuarios.resx">
       <DependentUpon>Form_Todos_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Listar_Produtos.resx">
+    <EmbeddedResource Include="Views\Form_Listar_Produtos.resx">
       <DependentUpon>Form_Listar_Produtos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
