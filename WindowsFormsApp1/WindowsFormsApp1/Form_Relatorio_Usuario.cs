@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
                 #endregion
 
                 #region Subtitulo
-                var subtitulo = new Paragraph("Resumo de relatórios de inserção de produtos por usuário.", fonteSubtitulo);
+                var subtitulo = new Paragraph("Relatórios de inserção de produtos por usuário.", fonteSubtitulo);
                 subtitulo.Alignment = Element.ALIGN_LEFT;
                 //subtitulo.SpacingAfter = 4; // adicionando espaço depois do paragrafo 2
                 doc.Add(subtitulo);
@@ -145,7 +145,7 @@ namespace WindowsFormsApp1
                 #region Criando tabela do banco 
 
                 var tabela = new PdfPTable(12);
-                float[] larguraColunas = { 0.6f, 0.9f, 2f, 1f, 1.4f, 0.9f, 1.5f, 0.6f, 0.6f, 0.9f, 1.5f, 1.5f };
+                float[] larguraColunas = { 0.6f, 0.9f, 2f, 1f, 1.4f, 0.9f, 1.1f, 0.8f, 0.8f, 0.9f, 1.4f, 1.4f };
                 tabela.SetWidths(larguraColunas);
                 tabela.DefaultCell.BorderWidth = 1;
                 tabela.WidthPercentage = 100;
@@ -157,9 +157,15 @@ namespace WindowsFormsApp1
                 CriarCelulaTexto(tabela, "Fornecedor", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
                 CriarCelulaTexto(tabela, "Marca Produto", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
                 CriarCelulaTexto(tabela, "Categoria", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
+<<<<<<< HEAD
                 CriarCelulaTexto(tabela, "Descrição", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
                 CriarCelulaTexto(tabela, "Quantidade total", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
                 CriarCelulaTexto(tabela, "Qtd. Mínima", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
+=======
+                CriarCelulaTexto(tabela, "Descrição", PdfPCell.ALIGN_CENTER, false, false, tamanhoFontTituloTabela);
+                CriarCelulaTexto(tabela, "Qtd. Max", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
+                CriarCelulaTexto(tabela, "Qtd. Min", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
+>>>>>>> 08f95cae9c4475fdd7163cfcf05d3e93a70bd11c
                 CriarCelulaTexto(tabela, "Tipo de Produto", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
                 CriarCelulaTexto(tabela, "Data Cadastro", PdfPCell.ALIGN_CENTER, false, false, tamanhoFontTituloTabela);
                 CriarCelulaTexto(tabela, "Data Atualização", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
