@@ -811,9 +811,9 @@ namespace WindowsFormsApp1
                 command.CommandText = @"
                     SELECT
                         prod.id_produto as 'ID Produto',
-                        fprod.nome as 'Fornecedor',
                         prod.nome as 'Nome Produto',
                         prod.marca as 'Marca Produto',
+                        fprod.nome as 'Fornecedor',
                         prod.quantidade as 'Quantidade',
                         prod.quantidade_minima as 'Qtd. Mínima',
                         cProd.nome_categoria as 'Categoria',
@@ -840,7 +840,6 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }
-
         #endregion
 
         #region LISTAR PRODUTOS
@@ -856,9 +855,9 @@ namespace WindowsFormsApp1
                 command.CommandText = @"
                     SELECT
                         prod.id_produto as 'ID Produto',
-                        fprod.nome as 'Fornecedor',
                         prod.nome as 'Nome Produto',
                         prod.marca as 'Marca Produto',
+                        fprod.nome as 'Fornecedor',
                         prod.quantidade as 'Quantidade',
                         prod.quantidade_minima as 'Qtd. Mínima',
                         cProd.nome_categoria as 'Categoria',
@@ -948,9 +947,9 @@ namespace WindowsFormsApp1
                 command.CommandText = @"
                     SELECT
                         prod.id_produto as 'ID Produto',
-                        fprod.nome as 'Fornecedor',
                         prod.nome as 'Nome Produto',
                         prod.marca as 'Marca Produto',
+                        fprod.nome as 'Fornecedor',
                         prod.quantidade as 'Quantidade',
                         prod.quantidade_minima as 'Qtd. Mínima',
                         cProd.nome_categoria as 'Categoria',
@@ -977,7 +976,6 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }
-
         public static void AtualizarProdutoEstoque(Produtos produtos, int quantidade)
         {
             try
@@ -1023,9 +1021,9 @@ namespace WindowsFormsApp1
                 command.CommandText = @"
                     SELECT
                         prod.id_produto as 'ID Produto',
-                        fprod.nome as 'Fornecedor',
                         prod.nome as 'Nome Produto',
                         prod.marca as 'Marca Produto',
+                        fprod.nome as 'Fornecedor',
                         prod.quantidade as 'Quantidade',
                         prod.quantidade_minima as 'Qtd. Mínima',
                         cProd.nome_categoria as 'Categoria',
@@ -1113,9 +1111,9 @@ namespace WindowsFormsApp1
                 command.CommandText = $@"
                     SELECT
                         prod.id_produto as 'ID Produto',
-                        fprod.nome as 'Fornecedor',
                         prod.nome as 'Nome Produto',
                         prod.marca as 'Marca Produto',
+                        fprod.nome as 'Fornecedor',
                         prod.quantidade as 'Quantidade',
                         prod.quantidade_minima as 'Qtd. Mínima',
                         cProd.nome_categoria as 'Categoria',
@@ -1161,8 +1159,8 @@ namespace WindowsFormsApp1
                         prod.id_produto as 'ID Produto',
                         usu.nome_usuario as 'Usuário',
                         prod.nome as 'Nome Produto',
-                        fprod.nome as 'Fornecedor',
                         prod.marca as 'Marca Produto',
+                        fprod.nome as 'Fornecedor',
                         cProd.nome_categoria as 'Categoria',
                         prod.descricao as 'Descrição',
                         prod.quantidade as 'Quantidade total',
@@ -1235,8 +1233,8 @@ namespace WindowsFormsApp1
                         prod.id_produto as 'ID Produto',
                         usu.nome_usuario as 'Usuário',
                         prod.nome as 'Nome Produto',
-                        fprod.nome as 'Fornecedor',
                         prod.marca as 'Marca Produto',
+                        fprod.nome as 'Fornecedor',
                         cProd.nome_categoria as 'Categoria',
                         prod.descricao as 'Descrição',
                         prod.quantidade as 'Quantidade total',
@@ -1281,8 +1279,8 @@ namespace WindowsFormsApp1
                     prod.id_produto as 'ID Produto',
                     usu.nome_usuario as 'Usuário',
                     prod.nome as 'Nome Produto',
-                    fprod.nome as 'Fornecedor',
                     prod.marca as 'Marca Produto',
+                    fprod.nome as 'Fornecedor',
                     cProd.nome_categoria as 'Categoria',
                     prod.descricao as 'Descrição',
                     prod.quantidade as 'Quantidade total',

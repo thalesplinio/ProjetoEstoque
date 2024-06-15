@@ -39,8 +39,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btn_info = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_addStatus = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.lb_dataAlteracaoCadastro = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -80,7 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_nivelAcesso)).BeginInit();
@@ -166,7 +163,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.panel6);
-            this.groupBox2.Controls.Add(this.panel5);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.lb_dataAlteracaoCadastro);
             this.groupBox2.Controls.Add(this.label12);
@@ -224,34 +220,6 @@
             this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
             this.btn_info.MouseEnter += new System.EventHandler(this.btn_info_MouseEnter);
             this.btn_info.MouseLeave += new System.EventHandler(this.btn_info_MouseLeave);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btn_addStatus);
-            this.panel5.Location = new System.Drawing.Point(646, 66);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(114, 35);
-            this.panel5.TabIndex = 39;
-            // 
-            // btn_addStatus
-            // 
-            this.btn_addStatus.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.btn_addStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.btn_addStatus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_addStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_addStatus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_addStatus.Image = global::WindowsFormsApp1.Properties.Resources.clipboard;
-            this.btn_addStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_addStatus.Location = new System.Drawing.Point(-3, -7);
-            this.btn_addStatus.Name = "btn_addStatus";
-            this.btn_addStatus.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btn_addStatus.Size = new System.Drawing.Size(120, 50);
-            this.btn_addStatus.TabIndex = 10;
-            this.btn_addStatus.Text = "        Criar status";
-            this.btn_addStatus.UseVisualStyleBackColor = false;
-            this.btn_addStatus.Click += new System.EventHandler(this.btn_addStatus_Click);
-            this.btn_addStatus.MouseEnter += new System.EventHandler(this.btn_addStatus_MouseEnter);
-            this.btn_addStatus.MouseLeave += new System.EventHandler(this.btn_addStatus_MouseLeave);
             // 
             // label11
             // 
@@ -598,7 +566,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel6.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -651,8 +618,6 @@
         private System.Windows.Forms.Label lb_dataAlteracaoCadastro;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btn_addStatus;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btn_info;
     }

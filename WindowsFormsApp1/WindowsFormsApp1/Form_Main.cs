@@ -230,5 +230,11 @@ namespace WindowsFormsApp1
             Form_Relatorio_Usuario form_Relatorio_Usuario = new Form_Relatorio_Usuario();
             AbreFormularioBaseNivel(2, form_Relatorio_Usuario);
         }
+
+        private void adicionarStatusDeUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_AddStatus form_AddStatus = new Form_AddStatus();
+            AbreFormularioBaseNivel(2, form_AddStatus);
+        }
     }
 }

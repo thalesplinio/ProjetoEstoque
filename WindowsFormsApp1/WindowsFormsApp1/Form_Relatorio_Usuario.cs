@@ -54,7 +54,10 @@ namespace WindowsFormsApp1
             }
             catch
             {
-                lb_qtdInsertUsuario.Text = "Nenhum produto registrado";
+                var dataTableCont = Banco.ObterQuantidadePorUsuario(produtos.id_usuario);
+                int quantidadeTotal = Convert.ToInt32(dataTableCont.Rows[0][0]);
+                lb_quantidadeInserida.Text = $"{quantidadeTotal}";
+                //lb_qtdInsertUsuario.Text = "Nenhum produto registrado";
             }
         }
         private void btn_novoFornecedor_Click(object sender, EventArgs e)
@@ -154,7 +157,7 @@ namespace WindowsFormsApp1
                 CriarCelulaTexto(tabela, "Fornecedor", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
                 CriarCelulaTexto(tabela, "Marca Produto", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
                 CriarCelulaTexto(tabela, "Categoria", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
-                CriarCelulaTexto(tabela, "Descrição", PdfPCell.ALIGN_CENTER, false, false, tamanhoFontTituloTabela);
+                CriarCelulaTexto(tabela, "Descrição", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
                 CriarCelulaTexto(tabela, "Quantidade total", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
                 CriarCelulaTexto(tabela, "Qtd. Mínima", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);
                 CriarCelulaTexto(tabela, "Tipo de Produto", PdfPCell.ALIGN_LEFT, false, false, tamanhoFontTituloTabela);

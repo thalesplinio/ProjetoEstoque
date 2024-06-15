@@ -31,15 +31,6 @@ namespace WindowsFormsApp1
         #endregion
 
         #region Buttons Hover Color
-        private void btn_addStatus_MouseEnter(object sender, EventArgs e)
-        {
-            btn_addStatus.BackColor = RGBColorsButtons.corVerdePadrao;
-        }
-
-        private void btn_addStatus_MouseLeave(object sender, EventArgs e)
-        {
-            btn_addStatus.BackColor = RGBColorsButtons.corAzulPadrao;
-        }
         private void btn_info_MouseEnter(object sender, EventArgs e)
         {
             btn_info.BackColor = RGBColorsButtons.corControlLight;
@@ -114,12 +105,10 @@ namespace WindowsFormsApp1
             cb_statusUsuario.DisplayMember = "nome_status";
             cb_statusUsuario.ValueMember = "nome_status";
         }
-
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void btn_novoUsuario_Click(object sender, EventArgs e)
         {
             tb_nomeCompleto.Clear();
@@ -135,7 +124,6 @@ namespace WindowsFormsApp1
             kryptonDataGridView1.DataSource = Banco.ObterDadosUsuarioBanco();
             kryptonDataGridView1.Sort(kryptonDataGridView1.Columns["ID Usuário"], ListSortDirection.Descending);
         }
-
         private void kryptonDataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             DataGridView dataGridView = (DataGridView)sender;
@@ -167,7 +155,6 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
             int linhaSelecionada = kryptonDataGridView1.SelectedRows[0].Index;
@@ -189,7 +176,6 @@ namespace WindowsFormsApp1
             kryptonDataGridView1.Sort(kryptonDataGridView1.Columns["ID Usuário"], ListSortDirection.Descending);
             kryptonDataGridView1.CurrentCell = kryptonDataGridView1[0, linhaSelecionada];
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Deseja realmente excluir este usuário?", "Confirmar exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -201,13 +187,6 @@ namespace WindowsFormsApp1
                 kryptonDataGridView1.Sort(kryptonDataGridView1.Columns["ID Usuário"], ListSortDirection.Descending);
             }
         }
-
-        private void btn_addStatus_Click(object sender, EventArgs e)
-        {
-            Form_AddStatus form_AddStatus = new Form_AddStatus();
-            form_AddStatus.ShowDialog();
-        }
-
         private void btn_info_Click(object sender, EventArgs e)
         {
             Form_DeskNivel form_DeskNivel = new Form_DeskNivel();

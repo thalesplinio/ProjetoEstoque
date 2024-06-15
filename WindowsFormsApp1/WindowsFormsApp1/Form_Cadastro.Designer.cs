@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Cadastro));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cb_Fornecedor = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_limpaCampos = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -51,7 +50,6 @@
             this.label_tituloNomeProduto = new System.Windows.Forms.Label();
             this.nud_minQtd = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label_tituloNomeQtdMin = new System.Windows.Forms.Label();
             this.nud_qtd = new System.Windows.Forms.NumericUpDown();
             this.label_tituloNomeQtd = new System.Windows.Forms.Label();
@@ -61,6 +59,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cb_Fornecedor = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -78,6 +78,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cb_Fornecedor);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.panel_gerencia);
@@ -92,7 +93,6 @@
             this.groupBox1.Controls.Add(this.label_tituloNomeProduto);
             this.groupBox1.Controls.Add(this.nud_minQtd);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label_tituloNomeQtdMin);
             this.groupBox1.Controls.Add(this.nud_qtd);
             this.groupBox1.Controls.Add(this.label_tituloNomeQtd);
@@ -103,14 +103,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Iserir produtos no estoque";
-            // 
-            // cb_Fornecedor
-            // 
-            this.cb_Fornecedor.FormattingEnabled = true;
-            this.cb_Fornecedor.Location = new System.Drawing.Point(10, 38);
-            this.cb_Fornecedor.Name = "cb_Fornecedor";
-            this.cb_Fornecedor.Size = new System.Drawing.Size(245, 23);
-            this.cb_Fornecedor.TabIndex = 22;
             // 
             // panel1
             // 
@@ -253,7 +245,7 @@
             // 
             // tb_marca
             // 
-            this.tb_marca.Location = new System.Drawing.Point(10, 128);
+            this.tb_marca.Location = new System.Drawing.Point(10, 84);
             this.tb_marca.Name = "tb_marca";
             this.tb_marca.Size = new System.Drawing.Size(245, 21);
             this.tb_marca.TabIndex = 5;
@@ -261,7 +253,7 @@
             // label_tituloNomeMarca
             // 
             this.label_tituloNomeMarca.AutoSize = true;
-            this.label_tituloNomeMarca.Location = new System.Drawing.Point(7, 109);
+            this.label_tituloNomeMarca.Location = new System.Drawing.Point(7, 65);
             this.label_tituloNomeMarca.Name = "label_tituloNomeMarca";
             this.label_tituloNomeMarca.Size = new System.Drawing.Size(45, 15);
             this.label_tituloNomeMarca.TabIndex = 4;
@@ -269,7 +261,7 @@
             // 
             // tb_nomeProduto
             // 
-            this.tb_nomeProduto.Location = new System.Drawing.Point(10, 84);
+            this.tb_nomeProduto.Location = new System.Drawing.Point(10, 40);
             this.tb_nomeProduto.Name = "tb_nomeProduto";
             this.tb_nomeProduto.Size = new System.Drawing.Size(245, 21);
             this.tb_nomeProduto.TabIndex = 3;
@@ -285,7 +277,7 @@
             // label_tituloNomeProduto
             // 
             this.label_tituloNomeProduto.AutoSize = true;
-            this.label_tituloNomeProduto.Location = new System.Drawing.Point(7, 65);
+            this.label_tituloNomeProduto.Location = new System.Drawing.Point(7, 21);
             this.label_tituloNomeProduto.Name = "label_tituloNomeProduto";
             this.label_tituloNomeProduto.Size = new System.Drawing.Size(106, 15);
             this.label_tituloNomeProduto.TabIndex = 2;
@@ -306,15 +298,6 @@
             this.label8.Size = new System.Drawing.Size(99, 15);
             this.label8.TabIndex = 14;
             this.label8.Text = "Típo do material:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Fornecedor:";
             // 
             // label_tituloNomeQtdMin
             // 
@@ -411,6 +394,23 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // cb_Fornecedor
+            // 
+            this.cb_Fornecedor.FormattingEnabled = true;
+            this.cb_Fornecedor.Location = new System.Drawing.Point(10, 128);
+            this.cb_Fornecedor.Name = "cb_Fornecedor";
+            this.cb_Fornecedor.Size = new System.Drawing.Size(245, 23);
+            this.cb_Fornecedor.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 15);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Fornecedor:";
+            // 
             // Form_Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,7 +451,6 @@
         private System.Windows.Forms.Label label_tituloNomeMarca;
         private System.Windows.Forms.TextBox tb_nomeProduto;
         private System.Windows.Forms.Label label_tituloNomeProduto;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtb_desc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cb_categoria;
@@ -470,12 +469,13 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_limpaCampos;
-        private System.Windows.Forms.ComboBox cb_Fornecedor;
         private System.Windows.Forms.OpenFileDialog openFileDialogIsertImageProduct;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_adicionaImagem;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cb_Fornecedor;
+        private System.Windows.Forms.Label label1;
     }
 }

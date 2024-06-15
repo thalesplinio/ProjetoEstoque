@@ -351,6 +351,7 @@
   <ItemGroup>
     <None Include="bin\Debug\img\icon 16\category.png" />
     <None Include="bin\Debug\img\icon 16\application.png" />
+    <None Include="bin\Debug\img\icon 16\social-status .png" />
     <Content Include="icone.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
