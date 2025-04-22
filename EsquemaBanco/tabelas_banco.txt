@@ -1,4 +1,7 @@
-CREATE TABLE fornecedor_produto (
+CREATE DATABASE dbestoque;
+USE dbestoque;
+
+CREATE TABLE IF NOT EXISTS fornecedor_produto (
 	id_fornecedor				INTEGER PRIMARY KEY AUTOINCREMENT,
 	nome						VARCHAR(255) NOT NULL,
 	cnpj						VARCHAR(15) NOT NULL,
@@ -6,15 +9,28 @@ CREATE TABLE fornecedor_produto (
 	telefone					VARCHAR(15) NOT NULL,
 	email						VARCHAR(255) NOT NULL,
 	data_criacao_cadastro		DATETIME,
-	data_atualizacao_cadastro	DATETIME,
+	data_atualizacao_cadastro	DATETIME
 );
 
-CREATE TABLE categoria_produto (
+CREATE TABLE IF NOT EXISTS categoria_produto (
 	id_categoria				INTEGER PRIMARY KEY AUTOINCREMENT,
-	nome						VARCHAR(255) NOT NULL,
+	nome						VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE produtos (
+CREATE TABLE IF NOT EXISTS usuarios (
+	id_usuario					INTEGER  PRIMARY KEY AUTOINCREMENT,
+	nome_completo_usuario		VARCHAR(255) NOT NULL,
+	nome_usuario				VARCHAR(255) NOT NULL UNIQUE,
+	email						VARCHAR(255) NOT NULL,
+	telefone					VARCHAR(14),
+	senha						VARCHAR(30) NOT NULL,
+	nivel_de_acesso				--- seria o campo enumerado "ENUM - NIVEL_DE_ACESSO"
+	status_usuario				--- seria o campo enumerado "ENUM - STATUS_USUARIO"
+	data_criacao_cadastro		DATETIME,
+	data_atualizacao_cadastro	DATETIME
+);
+
+CREATE TABLE IF NOT EXISTS produtos (
 	id_produto					INTEGER PRIMARY KEY AUTOINCREMENT,
 	id_usuario					INTEGER,
 	id_fornecedor				INTEGER,
@@ -26,7 +42,7 @@ CREATE TABLE produtos (
 	quantidade					INTEGER,
 	quantidade_minima			INTEGER,
 	id_tipo_produto				INTEGER,
-	image						VARCHAR(255),
+	imagem_produto				VARCHAR(255),
 	data_criacao_cadastro		DATETIME,
 	data_atualizacao_cadastro	DATETIME,
 
@@ -36,25 +52,27 @@ CREATE TABLE produtos (
 	FOREIGN KEY(id_usuario) REFERENCES usuarios(id_usuario)
 );
 
-CREATE TABLE status_usuario (
-	id_status					INTEGER PRIMARY KEY AUTOINCREMENT,
-	nome						VARCHAR(255) NOT NULL,
-);
+/*
+	CREATE TABLE IF NOT EXISTS status_usuario (
+		id_status					INTEGER PRIMARY KEY AUTOINCREMENT,
+		nome						VARCHAR(255) NOT NULL
+	);
 
-CREATE TABLE tipo_produto (
-	id_tipo						INTEGER  PRIMARY KEY AUTOINCREMENT,
-	nome						VARCHAR(255) NOT NULL,
-);
+	CREATE TABLE IF NOT EXISTS tipo_produto (
+		id_tipo						INTEGER  PRIMARY KEY AUTOINCREMENT,
+		nome						VARCHAR(255) NOT NULL
+	);
+*/
 
-CREATE TABLE usuarios (
-	id_usuario					INTEGER  PRIMARY KEY AUTOINCREMENT,
-	nome_completo_usuario		VARCHAR(255) NOT NULL,
-	nome_usuario				VARCHAR(255) NOT NULL UNIQUE,
-	email						VARCHAR(255) NOT NULL,
-	telefone					VARCHAR(14),
-	senha						VARCHAR(30) NOT NULL,
-	usuario_ativo				VARCHAR(255) DEFAULT 'A',
-	nivel_acesso				INTEGER NOT NULL,
-	data_criacao_cadastro		DATETIME,
-	data_atualizacao_cadastro	DATETIME,
-);
+"ENUM - STATUS_USUARIO"
+<<enum constant>> ATIVO
+<<enum constant>> INATIVO
+<<enum constant>> BLOQUEADO
+<<enum constant>> SUSPENSO
+
+"ENUM - NIVEL_DE_ACESSO"
+<<enum constant>> VISUALIZADOR
+<<enum constant>> OPERADOR
+<<enum constant>> GERENTE
+<<enum constant>> ADMINISTRADOR
+
