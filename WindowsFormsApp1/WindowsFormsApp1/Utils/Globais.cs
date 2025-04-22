@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -18,5 +20,21 @@ namespace WindowsFormsApp1
         public static string caminhoImageProduct = $@"{caminho}\image_product\";
 
         public static string caminhoIconeSitemaPDF = $@"{caminho}\img\icone.png";
+
+
+        public static string nomeBancoTESTE = "DBestoque.db";
+        public static string caminhoBancoTESTE = $@"{caminho}\bancoTESTE\";
+
+        public static void CreatePathBankTeste()
+        {
+            if (!Directory.Exists(caminhoBancoTESTE))
+            {
+                Directory.CreateDirectory(caminhoBancoTESTE);
+            }
+            else
+            {
+                MessageBox.Show("Não conseguimos criar a pasta do banco TESTE", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

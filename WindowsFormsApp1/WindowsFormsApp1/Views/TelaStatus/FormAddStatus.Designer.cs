@@ -89,7 +89,7 @@
             this.btn_addCategoria.TabIndex = 10;
             this.btn_addCategoria.Text = "        Adicionar";
             this.btn_addCategoria.UseVisualStyleBackColor = false;
-            this.btn_addCategoria.Click += new System.EventHandler(this.btn_addStatus_Click);
+            //this.btn_addCategoria.Click += new System.EventHandler(this.btn_addStatus_Click);
             this.btn_addCategoria.MouseEnter += new System.EventHandler(this.btn_addStatus_MouseEnter);
             this.btn_addCategoria.MouseLeave += new System.EventHandler(this.btn_addStatus_MouseLeave);
             // 

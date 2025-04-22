@@ -57,15 +57,15 @@ namespace WindowsFormsApp1
             kryptonDataGridViewStatus.Columns[0].Width = 100;
             kryptonDataGridViewStatus.Columns[1].Width = 315;
         }
-        private void btn_addStatus_Click(object sender, EventArgs e)
-        {
-            StatusUsuarioModel status = new StatusUsuarioModel();
-            status.nome_status = tb_nomeStatus.Text;
-            Banco.AdicionarStatus(status);
-            tb_nomeStatus.Clear();
-            kryptonDataGridViewStatus.DataSource = Banco.ObterStatus();
-            kryptonDataGridViewStatus.Sort(kryptonDataGridViewStatus.Columns["ID status"], ListSortDirection.Descending);
-        }
+        //private void btn_addStatus_Click(object sender, EventArgs e)
+        //{
+        //    StatusUsuarioModel status = new StatusUsuarioModel();
+        //    status.nome_status = tb_nomeStatus.Text;
+        //    Banco.AdicionarStatus(status);
+        //    tb_nomeStatus.Clear();
+        //    kryptonDataGridViewStatus.DataSource = Banco.ObterStatus();
+        //    kryptonDataGridViewStatus.Sort(kryptonDataGridViewStatus.Columns["ID status"], ListSortDirection.Descending);
+        //}
 
         private void kryptonDataGridViewStatus_SelectionChanged(object sender, EventArgs e)
         {

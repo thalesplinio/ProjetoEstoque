@@ -1,0 +1,116 @@
+CREATE DATABASE dbestoque;
+USE dbestoque;
+
+CREATE TABLE IF NOT EXISTS fornecedor_produto (
+	id_fornecedor				INTEGER PRIMARY KEY AUTO_INCREMENT,
+	nome						VARCHAR(255) NOT NULL,
+	cnpj						VARCHAR(15) NOT NULL,
+	endereco					VARCHAR(255) NOT NULL,
+	telefone					VARCHAR(15) NOT NULL,
+	email						VARCHAR(255) NOT NULL,
+	data_criacao_cadastro		DATETIME,
+	data_atualizacao_cadastro	DATETIME
+);
+
+CREATE TABLE IF NOT EXISTS categoria_produto (
+	id_categoria				INTEGER PRIMARY KEY AUTO_INCREMENT,
+	nome						VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tipo_produto (
+	id_tipo						INTEGER  PRIMARY KEY AUTO_INCREMENT,
+	nome						VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS usuarios (
+	id_usuario					INTEGER  PRIMARY KEY AUTO_INCREMENT,
+	nome_completo_usuario		VARCHAR(255) NOT NULL,
+	nome_usuario				VARCHAR(255) NOT NULL UNIQUE,
+	email						VARCHAR(255) NOT NULL,
+	telefone					VARCHAR(14),
+	senha						VARCHAR(30) NOT NULL,
+	nivel_de_acesso				INTEGER NOT NULL,	/* "ENUM - NIVEL_DE_ACESSO" */
+	status_usuario				INTEGER NOT NULL,	/* "ENUM - STATUS_USUARIO"  */
+	data_criacao_cadastro		DATETIME,
+	data_atualizacao_cadastro	DATETIME
+);
+
+CREATE TABLE IF NOT EXISTS produtos (
+	id_produto					INTEGER PRIMARY KEY AUTO_INCREMENT,
+	id_usuario					INTEGER,
+	id_fornecedor				INTEGER,
+
+	nome						VARCHAR(255),
+	marca						VARCHAR(100),
+	id_categoria				INTEGER,
+	descricao					VARCHAR(255),
+	quantidade					INTEGER,
+	quantidade_minima			INTEGER,
+	id_tipo_produto				INTEGER,
+	imagem_produto				VARCHAR(255),
+	data_criacao_cadastro		DATETIME,
+	data_atualizacao_cadastro	DATETIME,
+
+	FOREIGN KEY(id_usuario) REFERENCES usuarios(id_usuario),
+	FOREIGN KEY(id_fornecedor) REFERENCES fornecedor_produto(id_fornecedor),
+	FOREIGN KEY(id_categoria) REFERENCES categoria_produto(id_categoria),
+	FOREIGN KEY(id_tipo_produto) REFERENCES tipo_produto(id_tipo)
+);
+
+INSERT INTO fornecedor_produto 
+    (nome, cnpj, endereco, telefone, email, data_criacao_cadastro, data_atualizacao_cadastro) 
+VALUES 
+    ("fornecedor 1", "123456-121/21", "rua tal tal", "067 3333 4444", "for1@email.com", "2024-04-03 12:00:00", NULL);
+    
+INSERT INTO categoria_produto 
+    (nome) 
+VALUES 
+    ("categoria 1");
+    
+INSERT INTO tipo_produto 
+    (nome) 
+VALUES 
+    ("tipo 1");
+    
+INSERT INTO usuarios 
+    (nome_completo_usuario, nome_usuario, email, telefone, senha, nivel_de_acesso, status_usuario, data_criacao_cadastro, data_atualizacao_cadastro) 
+VALUES 
+    ("user 1 nome completo", "user1", "user1@email.com", "067 6767 6868", 'user1senha', 3, 0, "2024-04-03 12:00:00", NULL);   
+
+
+INSERT INTO produtos 
+    (id_usuario, id_fornecedor, nome, marca, id_categoria, descricao, quantidade, quantidade_minima, id_tipo_produto, imagem_produto, data_criacao_cadastro, data_atualizacao_cadastro) 
+VALUES 
+    (1, 1, "mouse pad para mesa", "Husky", 1, "Mouse pad preto 80x30, anti derrapante", 30, 10, 1, "E:\Documentos\Meus_Documentos_Disco\GitHub\ProjetoEstoque\WindowsFormsApp1", "2024-04-03 12:00:00", NULL);   
+
+SELECT * FROM fornecedor_produto;
+SELECT * FROM categoria_produto;
+SELECT * FROM tipo_produto;
+SELECT * FROM usuarios;
+SELECT * FROM produtos;
+SELECT * FROM fornecedor_produto;
+SELECT * FROM categoria_produto;
+SELECT * FROM tipo_produto;
+SELECT * FROM usuarios;
+SELECT * FROM produtos;
+
+/*
+	CREATE TABLE IF NOT EXISTS status_usuario (
+		id_status					INTEGER PRIMARY KEY AUTOINCREMENT,
+		nome						VARCHAR(255) NOT NULL
+	);
+
+*/
+/*
+	"ENUM - STATUS_USUARIO"
+	<<enum constant>> ATIVO
+	<<enum constant>> INATIVO
+	<<enum constant>> BLOQUEADO
+	<<enum constant>> SUSPENSO
+
+	"ENUM - NIVEL_DE_ACESSO"
+	<<enum constant>> VISUALIZADOR
+	<<enum constant>> OPERADOR
+	<<enum constant>> GERENTE
+	<<enum constant>> ADMINISTRADOR
+*/

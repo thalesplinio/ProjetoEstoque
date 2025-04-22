@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|e:\\documentos\\meus_documentos_disco\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\views\\telagestaousuario\\formadicionarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\views\\telagestaousuario\\formadicionarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|e:\\documentos\\meus_documentos_disco\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\data\\createdatabasetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\data\\createdatabasetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|e:\\documentos\\meus_documentos_disco\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\models\\usuario\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\models\\usuario\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|e:\\documentos\\meus_documentos_disco\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\data\\createdatabaseinitialdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\data\\createdatabaseinitialdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|e:\\documentos\\meus_documentos_disco\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\models\\usuario\\statususuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\models\\usuario\\statususuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|e:\\documentos\\meus_documentos_disco\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\data\\connectionbank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\data\\connectionbank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|e:\\documentos\\meus_documentos_disco\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\views\\telagestaousuario\\formadicionarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\views\\telagestaousuario\\formadicionarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|e:\\documentos\\meus_documentos_disco\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\views\\telalogin\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\windowsformsapp1\\views\\telalogin\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\views\\telalogin\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|e:\\documentos\\meus_documentos_disco\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\views\\telalogin\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\views\\telalogin\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\windowsformsapp1\\data\\banco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\data\\banco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|e:\\documentos\\meus_documentos_disco\\github\\projetoestoque\\windowsformsapp1\\windowsformsapp1\\reports\\eventosdepaginapdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{465DAE7D-C68E-4349-A703-304C63D43FEA}|WindowsFormsApp1\\ControleDeEstoque.csproj|solutionrelative:windowsformsapp1\\reports\\eventosdepaginapdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,108 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StatusUsuarioModel.cs",
-              "DocumentMoniker": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Models\\Usuario\\StatusUsuarioModel.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Models\\Usuario\\StatusUsuarioModel.cs",
-              "ToolTip": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Models\\Usuario\\StatusUsuarioModel.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Models\\Usuario\\StatusUsuarioModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T13:38:27.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuarioModel.cs",
-              "DocumentMoniker": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Models\\Usuario\\UsuarioModel.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Models\\Usuario\\UsuarioModel.cs",
-              "ToolTip": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Models\\Usuario\\UsuarioModel.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Models\\Usuario\\UsuarioModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T13:38:25.472Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormAdicionarUsuario.cs",
-              "DocumentMoniker": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Views\\TelaGestaoUsuario\\FormAdicionarUsuario.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Views\\TelaGestaoUsuario\\FormAdicionarUsuario.cs",
-              "ToolTip": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Views\\TelaGestaoUsuario\\FormAdicionarUsuario.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Views\\TelaGestaoUsuario\\FormAdicionarUsuario.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T13:35:49.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FormAdicionarUsuario.cs [Design]",
-              "DocumentMoniker": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Views\\TelaGestaoUsuario\\FormAdicionarUsuario.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Views\\TelaGestaoUsuario\\FormAdicionarUsuario.cs",
-              "ToolTip": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Views\\TelaGestaoUsuario\\FormAdicionarUsuario.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp1\\Views\\TelaGestaoUsuario\\FormAdicionarUsuario.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T13:35:45.454Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "FormLogin.cs",
               "DocumentMoniker": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Views\\TelaLogin\\FormLogin.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Views\\TelaLogin\\FormLogin.cs",
               "ToolTip": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Views\\TelaLogin\\FormLogin.cs",
               "RelativeToolTip": "WindowsFormsApp1\\Views\\TelaLogin\\FormLogin.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T13:35:30.987Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormLogin.cs [Design]",
-              "DocumentMoniker": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Views\\TelaLogin\\FormLogin.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Views\\TelaLogin\\FormLogin.cs",
-              "ToolTip": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Views\\TelaLogin\\FormLogin.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp1\\Views\\TelaLogin\\FormLogin.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "CreateDatabaseInitialData.cs",
+              "DocumentMoniker": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Data\\CreateDatabaseInitialData.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Data\\CreateDatabaseInitialData.cs",
+              "ToolTip": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Data\\CreateDatabaseInitialData.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Data\\CreateDatabaseInitialData.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T13:35:29.282Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EventosDePaginaPdf.cs",
-              "DocumentMoniker": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Reports\\EventosDePaginaPdf.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Reports\\EventosDePaginaPdf.cs",
-              "ToolTip": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Reports\\EventosDePaginaPdf.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Reports\\EventosDePaginaPdf.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T13:06:11.014Z",
+              "WhenOpened": "2025-04-22T15:41:25.208Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Banco.cs",
-              "DocumentMoniker": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Data\\Banco.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Data\\Banco.cs",
-              "ToolTip": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Data\\Banco.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Data\\Banco.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAgwGQAAAA/AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ConnectionBank.cs",
+              "DocumentMoniker": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Data\\ConnectionBank.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Data\\ConnectionBank.cs",
+              "ToolTip": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Data\\ConnectionBank.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Data\\ConnectionBank.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADgvzEAAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T13:05:35.591Z",
+              "WhenOpened": "2025-04-22T15:40:19.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateDatabaseTable.cs",
+              "DocumentMoniker": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Data\\CreateDatabaseTable.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Data\\CreateDatabaseTable.cs",
+              "ToolTip": "E:\\Documentos\\Meus_Documentos_Disco\\GitHub\\ProjetoEstoque\\WindowsFormsApp1\\WindowsFormsApp1\\Data\\CreateDatabaseTable.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Data\\CreateDatabaseTable.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwBsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T15:39:44.966Z",
               "EditorCaption": ""
             }
           ]

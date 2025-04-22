@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Data;
 
 namespace WindowsFormsApp1
 {
@@ -69,7 +70,19 @@ namespace WindowsFormsApp1
             //this.BackColor = corAzulPadrao;
             this.ForeColor = corControlLight;
             Banco.ConexaoBanco();
+            CreateDataBase();
         }
+
+        // TODO: TESTE BANCO NOVO - 
+        private void CreateDataBase()
+        {
+            Globais.CreatePathBankTeste();
+            string dataBaseCompletePath = $@"{Globais.caminhoBancoTESTE}{Globais.nomeBancoTESTE}";
+            ConnectionBank.CreateDataBasesIfNotExists(dataBaseCompletePath);
+        }
+
+
+
         private void btn_entrar_Click(object sender, EventArgs e)
         {
             string userName = ktb_Login.Text;

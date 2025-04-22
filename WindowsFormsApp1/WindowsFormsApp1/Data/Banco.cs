@@ -277,25 +277,25 @@ namespace WindowsFormsApp1
         #endregion
 
         #region AdicionarStatus / ObterStatus / ExcluirStatus / ObterDadosStatusParaEdicao
-        public static void AdicionarStatus(StatusUsuarioModel status)
-        {
-            try
-            {
-                var conexaoPropria = ConexaoBanco();
-                var command = conexaoPropria.CreateCommand();
+        //public static void AdicionarStatus(StatusUsuarioModel status)
+        //{
+        //    try
+        //    {
+        //        var conexaoPropria = ConexaoBanco();
+        //        var command = conexaoPropria.CreateCommand();
 
-                command.CommandText = @"INSERT INTO status_usuario (nome_status) VALUES (@nome_status)";
-                command.Parameters.AddWithValue("nome_status", status.nome_status);
+        //        command.CommandText = @"INSERT INTO status_usuario (nome_status) VALUES (@nome_status)";
+        //        command.Parameters.AddWithValue("nome_status", status.nome_status);
 
-                command.ExecuteNonQuery();
-                MessageBox.Show("Status de usuário registrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                conexaoPropria.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Não foi possivel cadastrar status do usuário ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
+        //        command.ExecuteNonQuery();
+        //        MessageBox.Show("Status de usuário registrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        conexaoPropria.Close();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Não foi possivel cadastrar status do usuário ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //}
         public static DataTable ObterStatus()
         {
             SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
