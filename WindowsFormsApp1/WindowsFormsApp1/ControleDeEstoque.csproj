@@ -79,160 +79,160 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\Banco.cs" />
-    <Compile Include="Models\Categoria.cs" />
-    <Compile Include="Helpers\EventosDePaginaPdf.cs" />
-    <Compile Include="Views\Form_AddFornecedor.cs">
+    <Compile Include="Data\Banco.cs" />
+    <Compile Include="Models\Categoria\CategoriaModel.cs" />
+    <Compile Include="Reports\EventosDePaginaPdf.cs" />
+    <Compile Include="Views\TelaGestaoFornecedor\FormAdicionarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_AddFornecedor.Designer.cs">
-      <DependentUpon>Form_AddFornecedor.cs</DependentUpon>
+    <Compile Include="Views\TelaGestaoFornecedor\FormAdicionarFornecedor.Designer.cs">
+      <DependentUpon>FormAdicionarFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_AddStatus.cs">
+    <Compile Include="Views\TelaStatus\FormAddStatus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_AddStatus.Designer.cs">
-      <DependentUpon>Form_AddStatus.cs</DependentUpon>
+    <Compile Include="Views\TelaStatus\FormAddStatus.Designer.cs">
+      <DependentUpon>FormAddStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_AddUsuario.cs">
+    <Compile Include="Views\TelaGestaoUsuario\FormAdicionarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_AddUsuario.Designer.cs">
-      <DependentUpon>Form_AddUsuario.cs</DependentUpon>
+    <Compile Include="Views\TelaGestaoUsuario\FormAdicionarUsuario.Designer.cs">
+      <DependentUpon>FormAdicionarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_Cadastro.cs">
+    <Compile Include="Views\TelaCadastroProduto\FormCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_Cadastro.Designer.cs">
-      <DependentUpon>Form_Cadastro.cs</DependentUpon>
+    <Compile Include="Views\TelaCadastroProduto\FormCadastro.Designer.cs">
+      <DependentUpon>FormCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_Categoria.cs">
+    <Compile Include="Views\TelaCadastroCategoria\FormCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_Categoria.Designer.cs">
-      <DependentUpon>Form_Categoria.cs</DependentUpon>
+    <Compile Include="Views\TelaCadastroCategoria\FormCategoria.Designer.cs">
+      <DependentUpon>FormCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_Config.cs">
+    <Compile Include="Views\TelaConfiguracao\FormConfiguracao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_Config.Designer.cs">
-      <DependentUpon>Form_Config.cs</DependentUpon>
+    <Compile Include="Views\TelaConfiguracao\FormConfiguracao.Designer.cs">
+      <DependentUpon>FormConfiguracao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_DeskNivel.cs">
+    <Compile Include="Views\TelaDescricaoNivel\FormDescricaoDeNivelAcesso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_DeskNivel.Designer.cs">
-      <DependentUpon>Form_DeskNivel.cs</DependentUpon>
+    <Compile Include="Views\TelaDescricaoNivel\FormDescricaoDeNivelAcesso.Designer.cs">
+      <DependentUpon>FormDescricaoDeNivelAcesso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_Fornecedores.cs">
+    <Compile Include="Views\TelaGestaoFornecedor\FormFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_Fornecedores.Designer.cs">
-      <DependentUpon>Form_Fornecedores.cs</DependentUpon>
+    <Compile Include="Views\TelaGestaoFornecedor\FormFornecedores.Designer.cs">
+      <DependentUpon>FormFornecedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_Gerencia_Estoque.cs">
+    <Compile Include="Views\TelaGerenciarEstoque\FormGerenciaEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_Gerencia_Estoque.Designer.cs">
-      <DependentUpon>Form_Gerencia_Estoque.cs</DependentUpon>
+    <Compile Include="Views\TelaGerenciarEstoque\FormGerenciaEstoque.Designer.cs">
+      <DependentUpon>FormGerenciaEstoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_Main.cs">
+    <Compile Include="Views\TelaInicial\FormTelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_Main.Designer.cs">
-      <DependentUpon>Form_Main.cs</DependentUpon>
+    <Compile Include="Views\TelaInicial\FormTelaInicial.Designer.cs">
+      <DependentUpon>FormTelaInicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_Login.cs">
+    <Compile Include="Views\TelaLogin\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_Login.Designer.cs">
-      <DependentUpon>Form_Login.cs</DependentUpon>
+    <Compile Include="Views\TelaLogin\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_Relatorio_Usuario.cs">
+    <Compile Include="Views\TelaRelatorioDeUsuario\FormRelatorioDeUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_Relatorio_Usuario.Designer.cs">
-      <DependentUpon>Form_Relatorio_Usuario.cs</DependentUpon>
+    <Compile Include="Views\TelaRelatorioDeUsuario\FormRelatorioDeUsuario.Designer.cs">
+      <DependentUpon>FormRelatorioDeUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_Retirar_Produto.cs">
+    <Compile Include="Views\TelaRetirarProduto\FormRetirarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_Retirar_Produto.Designer.cs">
-      <DependentUpon>Form_Retirar_Produto.cs</DependentUpon>
+    <Compile Include="Views\TelaRetirarProduto\FormRetirarProduto.Designer.cs">
+      <DependentUpon>FormRetirarProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_Tipo.cs">
+    <Compile Include="Views\TelaCadastroTipoProduto\FormTipoProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_Tipo.Designer.cs">
-      <DependentUpon>Form_Tipo.cs</DependentUpon>
+    <Compile Include="Views\TelaCadastroTipoProduto\FormTipoProduto.Designer.cs">
+      <DependentUpon>FormTipoProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_Todos_Usuarios.cs">
+    <Compile Include="Views\TelaGestaoUsuario\FormTodosUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_Todos_Usuarios.Designer.cs">
-      <DependentUpon>Form_Todos_Usuarios.cs</DependentUpon>
+    <Compile Include="Views\TelaGestaoUsuario\FormTodosUsuarios.Designer.cs">
+      <DependentUpon>FormTodosUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Fornecedor.cs" />
-    <Compile Include="Helpers\Globais.cs" />
-    <Compile Include="Views\Form_Listar_Produtos.cs">
+    <Compile Include="Models\Fornecedor\FornecedorModel.cs" />
+    <Compile Include="Utils\Globais.cs" />
+    <Compile Include="Views\TelaListarProdutos\FormListarProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_Listar_Produtos.Designer.cs">
-      <DependentUpon>Form_Listar_Produtos.cs</DependentUpon>
+    <Compile Include="Views\TelaListarProdutos\FormListarProdutos.Designer.cs">
+      <DependentUpon>FormListarProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Produtos.cs" />
+    <Compile Include="Models\Produto\ProdutosModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Status.cs" />
-    <Compile Include="Models\Tipo.cs" />
-    <Compile Include="Models\Usuario.cs" />
-    <EmbeddedResource Include="Views\Form_AddFornecedor.resx">
-      <DependentUpon>Form_AddFornecedor.cs</DependentUpon>
+    <Compile Include="Models\Usuario\StatusUsuarioModel.cs" />
+    <Compile Include="Models\TipoProduto\TipoProdutoModel.cs" />
+    <Compile Include="Models\Usuario\UsuarioModel.cs" />
+    <EmbeddedResource Include="Views\TelaGestaoFornecedor\FormAdicionarFornecedor.resx">
+      <DependentUpon>FormAdicionarFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_AddStatus.resx">
-      <DependentUpon>Form_AddStatus.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaStatus\FormAddStatus.resx">
+      <DependentUpon>FormAddStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_AddUsuario.resx">
-      <DependentUpon>Form_AddUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaGestaoUsuario\FormAdicionarUsuario.resx">
+      <DependentUpon>FormAdicionarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_Cadastro.resx">
-      <DependentUpon>Form_Cadastro.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaCadastroProduto\FormCadastro.resx">
+      <DependentUpon>FormCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_Categoria.resx">
-      <DependentUpon>Form_Categoria.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaCadastroCategoria\FormCategoria.resx">
+      <DependentUpon>FormCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_Config.resx">
-      <DependentUpon>Form_Config.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaConfiguracao\FormConfiguracao.resx">
+      <DependentUpon>FormConfiguracao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_DeskNivel.resx">
-      <DependentUpon>Form_DeskNivel.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaDescricaoNivel\FormDescricaoDeNivelAcesso.resx">
+      <DependentUpon>FormDescricaoDeNivelAcesso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_Fornecedores.resx">
-      <DependentUpon>Form_Fornecedores.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaGestaoFornecedor\FormFornecedores.resx">
+      <DependentUpon>FormFornecedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_Gerencia_Estoque.resx">
-      <DependentUpon>Form_Gerencia_Estoque.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaGerenciarEstoque\FormGerenciaEstoque.resx">
+      <DependentUpon>FormGerenciaEstoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_Main.resx">
-      <DependentUpon>Form_Main.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaInicial\FormTelaInicial.resx">
+      <DependentUpon>FormTelaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_Login.resx">
-      <DependentUpon>Form_Login.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaLogin\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_Relatorio_Usuario.resx">
-      <DependentUpon>Form_Relatorio_Usuario.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaRelatorioDeUsuario\FormRelatorioDeUsuario.resx">
+      <DependentUpon>FormRelatorioDeUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_Retirar_Produto.resx">
-      <DependentUpon>Form_Retirar_Produto.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaRetirarProduto\FormRetirarProduto.resx">
+      <DependentUpon>FormRetirarProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_Tipo.resx">
-      <DependentUpon>Form_Tipo.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaCadastroTipoProduto\FormTipoProduto.resx">
+      <DependentUpon>FormTipoProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_Todos_Usuarios.resx">
-      <DependentUpon>Form_Todos_Usuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaGestaoUsuario\FormTodosUsuarios.resx">
+      <DependentUpon>FormTodosUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_Listar_Produtos.resx">
-      <DependentUpon>Form_Listar_Produtos.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TelaListarProdutos\FormListarProdutos.resx">
+      <DependentUpon>FormListarProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -353,6 +353,14 @@
     <None Include="bin\Debug\img\icon 16\application.png" />
     <None Include="bin\Debug\img\icon 16\social-status .png" />
     <Content Include="icone.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\Categoria\DAO\" />
+    <Folder Include="Models\Fornecedor\DAO\" />
+    <Folder Include="Models\Produto\DAO\" />
+    <Folder Include="Models\TipoProduto\DAO\" />
+    <Folder Include="Models\Usuario\DAO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
