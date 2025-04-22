@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,9 @@ namespace WindowsFormsApp1
 {
     enum EnumStatusUsuario
     {
-        Ativo = 0,
-        Inativo = 1,
-        Bloqueado = 2,
-        Suspenso = 3,
+        Ativo = 1,
+        Inativo = 2,
+        Bloqueado = 3,
+        Suspenso = 4,
     }
 }

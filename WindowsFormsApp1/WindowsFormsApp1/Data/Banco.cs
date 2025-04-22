@@ -77,79 +77,79 @@ namespace WindowsFormsApp1
 
         #region Funções Form_AddUsuario / NovoUsuario - ExisteUserName
 
-        public static void NovoUsuario(UsuarioModel usuario)
-        {
-            // verificando se o usuário existe
-            if (ExisteUserName(usuario))
-            {
-                MessageBox.Show("Nome de usuário já existe!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            // inserindo no banco
-            try
-            {
-                DateTime data = DateTime.Now;
-                var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+        //public static void NovoUsuario(UsuarioModel usuario)
+        //{
+        //    // verificando se o usuário existe
+        //    if (ExisteUserName(usuario))
+        //    {
+        //        MessageBox.Show("Nome de usuário já existe!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        return;
+        //    }
+        //    // inserindo no banco
+        //    try
+        //    {
+        //        DateTime data = DateTime.Now;
+        //        var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
 
-                var conexaoPropria = ConexaoBanco();
-                var command = conexaoPropria.CreateCommand();
+        //        var conexaoPropria = ConexaoBanco();
+        //        var command = conexaoPropria.CreateCommand();
 
-                command.CommandText = @"
-                    INSERT INTO usuarios 
-                        (
-                            nome_completo, nome_usuario, email, telefone, 
-                            senha, data_cadastro, usuario_ativo, nivel_acesso
-                        ) 
-                    VALUES 
-                        (
-                            @nome_completo, @nome_usuario, @email, @telefone, @senha, @data_cadastro, @usuario_ativo, @nivel_acesso
-                        )";
-                command.Parameters.AddWithValue("nome_completo", usuario.nome_completo);
-                command.Parameters.AddWithValue("nome_usuario", usuario.nome_usuario);
-                command.Parameters.AddWithValue("email", usuario.email);
-                command.Parameters.AddWithValue("telefone", usuario.telefone);
-                command.Parameters.AddWithValue("senha", usuario.senha);
-                command.Parameters.AddWithValue("data_cadastro", dataFormatada);
-                command.Parameters.AddWithValue("usuario_ativo", usuario.usuario_ativo);
-                command.Parameters.AddWithValue("nivel_acesso", usuario.nivel_acesso);
+        //        command.CommandText = @"
+        //            INSERT INTO usuarios 
+        //                (
+        //                    nome_completo, nome_usuario, email, telefone, 
+        //                    senha, data_cadastro, usuario_ativo, nivel_acesso
+        //                ) 
+        //            VALUES 
+        //                (
+        //                    @nome_completo, @nome_usuario, @email, @telefone, @senha, @data_cadastro, @usuario_ativo, @nivel_acesso
+        //                )";
+        //        command.Parameters.AddWithValue("nome_completo", usuario.nome_completo);
+        //        command.Parameters.AddWithValue("nome_usuario", usuario.nome_usuario);
+        //        command.Parameters.AddWithValue("email", usuario.email);
+        //        command.Parameters.AddWithValue("telefone", usuario.telefone);
+        //        command.Parameters.AddWithValue("senha", usuario.senha);
+        //        command.Parameters.AddWithValue("data_cadastro", dataFormatada);
+        //        command.Parameters.AddWithValue("usuario_ativo", usuario.usuario_ativo);
+        //        command.Parameters.AddWithValue("nivel_acesso", usuario.nivel_acesso);
 
-                command.ExecuteNonQuery();
-                MessageBox.Show("Usuário cadastrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                conexaoPropria.Close();
-            }
-            catch ( Exception ex) 
-            {
-                MessageBox.Show($"Não foi possivel cadastrar usuario ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
+        //        command.ExecuteNonQuery();
+        //        MessageBox.Show("Usuário cadastrado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        conexaoPropria.Close();
+        //    }
+        //    catch ( Exception ex) 
+        //    {
+        //        MessageBox.Show($"Não foi possivel cadastrar usuario ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //}
 
         /// Rotinas gerais para verificar se já existe um usuário com o mesmo nome
-        public static bool ExisteUserName(UsuarioModel usuario)
-        {
-            bool res;
-            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
-            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+        //public static bool ExisteUserName(UsuarioModel usuario)
+        //{
+        //    bool res;
+        //    SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+        //    DataTable dataTable = new DataTable();  // preenche com as informações da consulta
 
-            var conexaoPropria = ConexaoBanco();
-            var command  = conexaoPropria.CreateCommand();
-            command.CommandText = "SELECT nome_usuario FROM usuarios WHERE nome_usuario='"+usuario.nome_usuario+"'";
+        //    var conexaoPropria = ConexaoBanco();
+        //    var command  = conexaoPropria.CreateCommand();
+        //    command.CommandText = "SELECT nome_usuario FROM usuarios WHERE nome_usuario='"+usuario.nome_usuario+"'";
 
-            // verificando numero de linhas retornadas
-            dataAdapter = new SQLiteDataAdapter(command.CommandText, conexaoPropria);
-            dataAdapter.Fill(dataTable);
+        //    // verificando numero de linhas retornadas
+        //    dataAdapter = new SQLiteDataAdapter(command.CommandText, conexaoPropria);
+        //    dataAdapter.Fill(dataTable);
             
-            if(dataTable.Rows.Count > 0)
-            {
-                // encontrou resultado
-                res = true;
-            }
-            else
-            {
-                res = false;
-            }
-            conexaoPropria.Close();
-            return res;
-        }
+        //    if(dataTable.Rows.Count > 0)
+        //    {
+        //        // encontrou resultado
+        //        res = true;
+        //    }
+        //    else
+        //    {
+        //        res = false;
+        //    }
+        //    conexaoPropria.Close();
+        //    return res;
+        //}
 
         #endregion
 
@@ -217,35 +217,35 @@ namespace WindowsFormsApp1
             }
         }
 
-        public static void AtualizarUsuario(UsuarioModel usuario)
-        {
-            DateTime data = DateTime.Now;
-            var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
+        //public static void AtualizarUsuario(UsuarioModel usuario)
+        //{
+        //    DateTime data = DateTime.Now;
+        //    var dataFormatada = $"{data:yyyy-MM-dd HH:mm:ss}";
 
-            SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
-            DataTable dataTable = new DataTable();  // preenche com as informações da consulta
+        //    SQLiteDataAdapter dataAdapter = null;   // Consulta - comando sql, conexao banco
+        //    DataTable dataTable = new DataTable();  // preenche com as informações da consulta
 
-            try
-            {
-                var conexaoPropria = ConexaoBanco();
-                var command = conexaoPropria.CreateCommand();
-                command.CommandText = @"
-                    UPDATE 
-                        usuarios
-                    SET
-                        nome_completo='"+usuario.nome_completo+"', nome_usuario= '"+usuario.nome_usuario+"', email = '"+usuario.email+"', telefone = '"+usuario.telefone+"', senha = '"+usuario.senha+"', usuario_ativo = '"+usuario.usuario_ativo+"', nivel_acesso = '"+usuario.nivel_acesso+"', data_atualizacao = '"+dataFormatada+"' WHERE id_usuario="+usuario.id_usuario;
+        //    try
+        //    {
+        //        var conexaoPropria = ConexaoBanco();
+        //        var command = conexaoPropria.CreateCommand();
+        //        command.CommandText = @"
+        //            UPDATE 
+        //                usuarios
+        //            SET
+        //                nome_completo='"+usuario.nome_completo+"', nome_usuario= '"+usuario.nome_usuario+"', email = '"+usuario.email+"', telefone = '"+usuario.telefone+"', senha = '"+usuario.senha+"', usuario_ativo = '"+usuario.usuario_ativo+"', nivel_acesso = '"+usuario.nivel_acesso+"', data_atualizacao = '"+dataFormatada+"' WHERE id_usuario="+usuario.id_usuario;
 
-                dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
-                command.ExecuteNonQuery();
-                MessageBox.Show("Usuário atualizado com sucesso!", "Mensagem de atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                conexaoPropria.Close();
-            }
-            catch (Exception ex)
-            {
-                //throw ex;
-                MessageBox.Show($"Não foi Atualizar usuario ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
+        //        dataAdapter = new SQLiteDataAdapter(command.CommandText, ConexaoBanco());
+        //        command.ExecuteNonQuery();
+        //        MessageBox.Show("Usuário atualizado com sucesso!", "Mensagem de atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        conexaoPropria.Close();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        //throw ex;
+        //        MessageBox.Show($"Não foi Atualizar usuario ERRO - {ex}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //    }
+        //}
 
         #region DeletarUsuario
         public static void DeletarUsuario(string id)

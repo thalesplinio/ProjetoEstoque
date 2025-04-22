@@ -31,10 +31,6 @@ namespace WindowsFormsApp1
             {
                 Directory.CreateDirectory(caminhoBancoTESTE);
             }
-            else
-            {
-                MessageBox.Show("Não conseguimos criar a pasta do banco TESTE", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Controllers;
+using WindowsFormsApp1.Models.Usuario.Enum;
 
 namespace WindowsFormsApp1
 {
@@ -88,18 +90,19 @@ namespace WindowsFormsApp1
         {
             // Criando novo usuário
             UsuarioModel usuario = new UsuarioModel();
-            usuario.nome_completo = tb_nomeCompleto.Text;
-            usuario.nome_usuario = tb_nomeUsuario.Text;
-            usuario.email = tb_email.Text;
-            usuario.telefone = mtb_telefone.Text;
-            usuario.senha = tb_senha.Text;
+            usuario.NomeCompleto = tb_nomeCompleto.Text;
+            usuario.NomeDeUsuario = tb_nomeUsuario.Text;
+            usuario.Email = tb_email.Text;
+            usuario.Telefone = mtb_telefone.Text;
+            usuario.Senha = tb_senha.Text;
 
             string rSenha = tb_repeteSenha.Text;
 
-            usuario.usuario_ativo = cb_statusUsuario.Text;
-            usuario.nivel_acesso = Convert.ToInt32(Math.Round(nud_nivelAcesso.Value,0));    // 0 = zero casas decimais
+            usuario.StatusUsuario = (EnumStatusUsuario)cb_statusUsuario.SelectedItem;
+            usuario.NivelDeAcesso = (EnumNivelDeAcesso)cb_nivelAcesso.SelectedItem;    // 0 = zero casas decimais
 
-            Banco.NovoUsuario(usuario);
+            //Banco.NovoUsuario(usuario);
+            UsuarioController.NovoUsuario(usuario);
             LimpaCampos();
         }
         private void btn_Cancelar_Click(object sender, EventArgs e)
@@ -120,7 +123,7 @@ namespace WindowsFormsApp1
             tb_senha.Clear();
             tb_repeteSenha.Clear();
             cb_statusUsuario.Text = "";
-            nud_nivelAcesso.Value = 0;
+            cb_nivelAcesso.Text = "";
             tb_nomeCompleto.Focus();
         }
         private void btn_addStatus_Click(object sender, EventArgs e)

@@ -81,7 +81,7 @@ VALUES
 INSERT INTO produtos 
     (id_usuario, id_fornecedor, nome, marca, id_categoria, descricao, quantidade, quantidade_minima, id_tipo_produto, imagem_produto, data_criacao_cadastro, data_atualizacao_cadastro) 
 VALUES 
-    (1, 1, "mouse pad para mesa", "Husky", 1, "Mouse pad preto 80x30, anti derrapante", 30, 10, 1, "E:\Documentos\Meus_Documentos_Disco\GitHub\ProjetoEstoque\WindowsFormsApp1", "2024-04-03 12:00:00", NULL);   
+    (1, 1, "mouse pad para mesa", "Husky", 1, "Mouse pad preto 80x30, anti derrapante", 30, 10, 1, "Z:\fotos\foto1.jpg", "2024-04-03 12:00:00", NULL);   
 
 SELECT * FROM fornecedor_produto;
 SELECT * FROM categoria_produto;

@@ -4,20 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Models.Usuario.Enum;
 
 namespace WindowsFormsApp1
 {
     internal class UsuarioModel
     {
-        public Int32 id_usuario {  get; set; }
-        public string nome_completo { get; set; }
-        public string nome_usuario { get; set; }
-        public string email {  get; set; }
-        public string telefone { get; set; }
-        public string senha { get; set; }
-        public DateTime data_cadastro { get; set; }
-        public string usuario_ativo { get; set; }
-        public Int32 nivel_acesso { get; set; }
-        public DateTime data_atualizacao { get; set; }
+        public Int32 IdUsuario {  get; set; }
+        public string NomeCompleto { get; set; }
+        public string NomeDeUsuario { get; set; }
+        public string Email {  get; set; }
+        public string Telefone { get; set; }
+        public string Senha { get; set; }
+        public EnumNivelDeAcesso NivelDeAcesso { get; set; }
+        public EnumStatusUsuario StatusUsuario { get; set; }
+        public DateTime DataDeCadastro { get; set; } = DateTime.Now;
+        public DateTime DataDeAtualizacao { get; set; }
     }
 }

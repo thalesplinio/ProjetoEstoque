@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Controllers;
+using WindowsFormsApp1.Models.Usuario.Enum;
 
 namespace WindowsFormsApp1
 {
@@ -99,11 +101,11 @@ namespace WindowsFormsApp1
             kryptonDataGridView1.Columns[7].Width = 80;
             kryptonDataGridView1.Columns[8].Width = 120;
 
-            string vQueryStatus = @"SELECT nome_status FROM status_usuario";
-            cb_statusUsuario.Items.Clear();
-            cb_statusUsuario.DataSource = Banco.Consulta(vQueryStatus);
-            cb_statusUsuario.DisplayMember = "nome_status";
-            cb_statusUsuario.ValueMember = "nome_status";
+            //string vQueryStatus = @"SELECT nome_status FROM status_usuario";
+            //cb_statusUsuario.Items.Clear();
+            //cb_statusUsuario.DataSource = Enum.GetValues(typeof(EnumStatusUsuario));
+            //cb_statusUsuario.DisplayMember = "nome_status";
+            //cb_statusUsuario.ValueMember = "nome_status";
         }
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
@@ -161,16 +163,17 @@ namespace WindowsFormsApp1
 
             UsuarioModel usuario = new UsuarioModel();
 
-            usuario.id_usuario = Convert.ToInt32(tb_id.Text);
-            usuario.nome_completo = tb_nomeCompleto.Text;
-            usuario.nome_usuario = tb_nomeUsuario.Text;
-            usuario.email = tb_email.Text;
-            usuario.telefone = mtb_telefone.Text;
-            usuario.senha = tb_senha.Text;
-            usuario.usuario_ativo = cb_statusUsuario.Text;
-            usuario.nivel_acesso = Convert.ToInt32(Math.Round(nud_nivelAcesso.Value, 0));   // 0 = para 0 casas decimais
+            usuario.IdUsuario = Convert.ToInt32(tb_id.Text);
+            usuario.NomeCompleto = tb_nomeCompleto.Text;
+            usuario.NomeDeUsuario = tb_nomeUsuario.Text;
+            usuario.Email = tb_email.Text;
+            usuario.Telefone = mtb_telefone.Text;
+            usuario.Senha = tb_senha.Text;
 
-            Banco.AtualizarUsuario(usuario);
+            usuario.StatusUsuario = (EnumStatusUsuario)cb_statusUsuario.SelectedItem;
+            usuario.NivelDeAcesso = (EnumNivelDeAcesso)cb_statusUsuario.SelectedItem;
+
+            UsuarioController.NovoUsuario(usuario);
 
             kryptonDataGridView1.DataSource = Banco.ObterDadosUsuarioBanco();
             kryptonDataGridView1.Sort(kryptonDataGridView1.Columns["ID Usuário"], ListSortDirection.Descending);

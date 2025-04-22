@@ -42,9 +42,7 @@
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.panel_gerencia = new System.Windows.Forms.Panel();
             this.btn_novoUsuario = new System.Windows.Forms.Button();
-            this.nud_nivelAcesso = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
-            this.cb_statusUsuario = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tb_repeteSenha = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,6 +60,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cb_nivelAcesso = new Krypton.Toolkit.KryptonComboBox();
+            this.cb_statusUsuario = new Krypton.Toolkit.KryptonComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -69,10 +69,11 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_gerencia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_nivelAcesso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb_nivelAcesso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb_statusUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -89,15 +90,15 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cb_statusUsuario);
+            this.groupBox2.Controls.Add(this.cb_nivelAcesso);
             this.groupBox2.Controls.Add(this.panel5);
             this.groupBox2.Controls.Add(this.panel4);
             this.groupBox2.Controls.Add(this.mtb_telefone);
             this.groupBox2.Controls.Add(this.panel3);
             this.groupBox2.Controls.Add(this.panel2);
             this.groupBox2.Controls.Add(this.panel_gerencia);
-            this.groupBox2.Controls.Add(this.nud_nivelAcesso);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.cb_statusUsuario);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.tb_repeteSenha);
             this.groupBox2.Controls.Add(this.label8);
@@ -122,7 +123,7 @@
             // 
             this.panel5.Controls.Add(this.btn_info);
             this.panel5.Cursor = System.Windows.Forms.Cursors.Help;
-            this.panel5.Location = new System.Drawing.Point(555, 82);
+            this.panel5.Location = new System.Drawing.Point(602, 79);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(29, 27);
             this.panel5.TabIndex = 20;
@@ -264,13 +265,6 @@
             this.btn_novoUsuario.MouseEnter += new System.EventHandler(this.btn_novoUsuario_MouseEnter);
             this.btn_novoUsuario.MouseLeave += new System.EventHandler(this.btn_novoUsuario_MouseLeave);
             // 
-            // nud_nivelAcesso
-            // 
-            this.nud_nivelAcesso.Location = new System.Drawing.Point(429, 85);
-            this.nud_nivelAcesso.Name = "nud_nivelAcesso";
-            this.nud_nivelAcesso.Size = new System.Drawing.Size(120, 21);
-            this.nud_nivelAcesso.TabIndex = 8;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -280,23 +274,10 @@
             this.label10.TabIndex = 14;
             this.label10.Text = "Nível de acesso do usuário:";
             // 
-            // cb_statusUsuario
-            // 
-            this.cb_statusUsuario.FormattingEnabled = true;
-            this.cb_statusUsuario.ItemHeight = 15;
-            this.cb_statusUsuario.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "D"});
-            this.cb_statusUsuario.Location = new System.Drawing.Point(429, 37);
-            this.cb_statusUsuario.Name = "cb_statusUsuario";
-            this.cb_statusUsuario.Size = new System.Drawing.Size(170, 23);
-            this.cb_statusUsuario.TabIndex = 7;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(426, 17);
+            this.label9.Location = new System.Drawing.Point(426, 22);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(105, 15);
             this.label9.TabIndex = 12;
@@ -442,7 +423,29 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // Form_AddUsuario
+            // cb_nivelAcesso
+            // 
+            this.cb_nivelAcesso.DropDownWidth = 170;
+            this.cb_nivelAcesso.IntegralHeight = false;
+            this.cb_nivelAcesso.Location = new System.Drawing.Point(429, 85);
+            this.cb_nivelAcesso.Name = "cb_nivelAcesso";
+            this.cb_nivelAcesso.Size = new System.Drawing.Size(170, 21);
+            this.cb_nivelAcesso.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.cb_nivelAcesso.TabIndex = 21;
+            this.cb_nivelAcesso.Text = "---- Selecione -----";
+            // 
+            // cb_statusUsuario
+            // 
+            this.cb_statusUsuario.DropDownWidth = 170;
+            this.cb_statusUsuario.IntegralHeight = false;
+            this.cb_statusUsuario.Location = new System.Drawing.Point(429, 41);
+            this.cb_statusUsuario.Name = "cb_statusUsuario";
+            this.cb_statusUsuario.Size = new System.Drawing.Size(170, 21);
+            this.cb_statusUsuario.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.cb_statusUsuario.TabIndex = 22;
+            this.cb_statusUsuario.Text = "---- Selecione ----";
+            // 
+            // FormAdicionarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -453,7 +456,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form_AddUsuario";
+            this.Name = "FormAdicionarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar usuário do sistema";
             this.Load += new System.EventHandler(this.Form_AddUsuario_Load);
@@ -466,11 +469,12 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_gerencia.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nud_nivelAcesso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb_nivelAcesso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb_statusUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -488,9 +492,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tb_nomeCompleto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown nud_nivelAcesso;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cb_statusUsuario;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tb_repeteSenha;
         private System.Windows.Forms.Label label8;
@@ -510,5 +512,7 @@
         private System.Windows.Forms.TextBox tb_email;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btn_info;
+        private Krypton.Toolkit.KryptonComboBox cb_nivelAcesso;
+        private Krypton.Toolkit.KryptonComboBox cb_statusUsuario;
     }
 }

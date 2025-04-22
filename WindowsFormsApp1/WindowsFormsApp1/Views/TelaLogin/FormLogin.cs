@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Controllers;
 using WindowsFormsApp1.Data;
+using WindowsFormsApp1.Models.Usuario.DAO;
 
 namespace WindowsFormsApp1
 {
@@ -81,8 +83,6 @@ namespace WindowsFormsApp1
             ConnectionBank.CreateDataBasesIfNotExists(dataBaseCompletePath);
         }
 
-
-
         private void btn_entrar_Click(object sender, EventArgs e)
         {
             string userName = ktb_Login.Text;
@@ -95,23 +95,21 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            string sqlQuery = @"SELECT * FROM usuarios WHERE nome_usuario='"+userName+"' AND senha='"+password+"'";
-            dataTable = Banco.Consulta(sqlQuery);
+            dataTable = UsuarioController.obterLoginUsuario(userName, password);
 
-            // 1 = logado
-            // 0 = nao encontrado
-            if(dataTable.Rows.Count == 1)
+            if (dataTable.Rows.Count == 1)
             {
                 // usuario logado
                 form_main.lb_idLogado.Text = dataTable.Rows[0].Field<Int64>("id_usuario").ToString();
                 form_main.lb_UserLogado.Text = dataTable.Rows[0].Field<string>("nome_usuario");
-                Globais.nivel = int.Parse(dataTable.Rows[0].Field<Int64>("nivel_acesso").ToString());
+                Globais.nivel = int.Parse(dataTable.Rows[0].Field<Int64>("nivel_de_acesso").ToString());
                 Globais.logado = true;
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Usuário não encontrado", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Usuário não encontrado", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Status de acesso não permitido, consulte o admin", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 ktb_Login.Focus();
             }
         }
@@ -120,7 +118,5 @@ namespace WindowsFormsApp1
             this.Close();
             form_main.Close();
         }
-
-
     }
 }

@@ -12,7 +12,13 @@ namespace WindowsFormsApp1.Data
     class ConnectionBank
     {
         private static SQLiteConnection _connection;
+        private static string MyDatabasePathConnection = $"Data Source={Globais.caminhoBancoTESTE}{Globais.nomeBancoTESTE};Version=3";
 
+        /// <summary>
+        /// Cria conexão com o banco de dados, mas é necessário passar o caminho do banco
+        /// </summary>
+        /// <param name="dataBasePath">Passar o local do banco de dados</param>
+        /// <returns>Conexão aberta</returns>
         public static SQLiteConnection GetConnection(string dataBasePath)
         {
             if(_connection == null)
@@ -22,7 +28,22 @@ namespace WindowsFormsApp1.Data
             }
             return _connection;
         }
-
+        /// <summary>
+        /// Cria a conexão com banco sem precisar do caminho da base de dados
+        /// </summary>
+        /// <returns>Conexão aberta</returns>
+        public static SQLiteConnection GetMyConnection()
+        {
+            if (_connection == null)
+            {
+                _connection = new SQLiteConnection(MyDatabasePathConnection);
+                _connection.Open();
+            }
+            return _connection;
+        }
+        /// <summary>
+        /// Fecha a conexão do banco de dados
+        /// </summary>
         public static void CloseConnection()
         {
             if (_connection != null)
@@ -31,7 +52,11 @@ namespace WindowsFormsApp1.Data
                 _connection = null;
             }
         }
-
+        /// <summary>
+        /// Responsável por criar a base de dados e o usuário admin
+        /// Primeiro usuário do sistema com privilégios.
+        /// </summary>
+        /// <param name="dataBasePath">Passar o local do banco de dados</param>
         public static void CreateDataBasesIfNotExists(string dataBasePath)
         {
             if (!File.Exists(dataBasePath))

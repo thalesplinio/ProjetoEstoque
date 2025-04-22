@@ -79,11 +79,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Data\Banco.cs" />
     <Compile Include="Data\ConnectionBank.cs" />
     <Compile Include="Data\CreateDatabaseInitialData.cs" />
     <Compile Include="Data\CreateDatabaseTable.cs" />
     <Compile Include="Models\Categoria\CategoriaModel.cs" />
+    <Compile Include="Models\Usuario\DAO\UsuarioConsultaDAO.cs" />
+    <Compile Include="Models\Usuario\DAO\UsuarioModelDAO.cs" />
     <Compile Include="Models\Usuario\Enum\EnumNivelDeAcesso.cs" />
     <Compile Include="Reports\EventosDePaginaPdf.cs" />
     <Compile Include="Views\TelaGestaoFornecedor\FormAdicionarFornecedor.cs">
@@ -359,12 +362,10 @@
     <Content Include="icone.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Models\Categoria\DAO\" />
     <Folder Include="Models\Fornecedor\DAO\" />
     <Folder Include="Models\Produto\DAO\" />
     <Folder Include="Models\TipoProduto\DAO\" />
-    <Folder Include="Models\Usuario\DAO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
