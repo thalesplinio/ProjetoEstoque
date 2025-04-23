@@ -1,7 +1,7 @@
 <h1 style="text-align:center;">Projeto controle e gestão de estoque com C# Windowns Forms</h1>
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
-[![Maintainer](https://img.shields.io/badge/Licence-MIT-blue)](https://github.com/thalesplinio/blog_website_django/blob/main/LICENSE)
+[![Maintainer](https://img.shields.io/badge/Licence-MIT-blue)](https://github.com/thalesplinio/ProjetoEstoque/blob/main/LICENC)
 
 <p align="center">
     <img src="WindowsFormsApp1/WindowsFormsApp1/imgprojeto/01img.png" alt="Tela inicial do site já preenchida" width="900px"/>
