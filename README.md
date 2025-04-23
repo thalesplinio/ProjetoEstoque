@@ -4,7 +4,7 @@
 [![Maintainer](https://img.shields.io/badge/Licence-MIT-blue)](https://github.com/thalesplinio/blog_website_django/blob/main/LICENSE)
 
 <p align="center">
-    <img src="WindowsFormsApp1/WindowsFormsApp1/imgprojeto/01img.png" alt="Tela inicial do site já preenchida" width="400px"/>
+    <img src="WindowsFormsApp1/WindowsFormsApp1/imgprojeto/01img.png" alt="Tela inicial do site já preenchida" width="900px"/>
 </p>
 
 <p align="center">
